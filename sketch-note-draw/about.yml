@@ -1,0 +1,45 @@
+name: sketch-note-draw
+version: 0.0.3
+desc: |
+  Simple sketching program, with clean interface.
+
+  - Infinite canvas
+  - Zoom in/out
+  - Also usable with one hand (single thumb)
+  - Automatically saves current sketch with timestamp, when loading, or creating a new one.
+  - Undo support
+
+  Made it because I wanted a tool to make quick sketches / napkin-notes.
+
+phonegap: {}
+html:
+  body: |
+    <style>
+      body { font-family: sans-serif; }
+      #info { 
+        text-align: center; 
+        position: absolute;
+        transition: opacity 0.5s;
+        text-shadow: 2px 2px 2px white, 
+                     -2px -2px 2px white, 
+                     2px -2px 2px white,
+                     -2px 2px 2px white
+      }
+    </style>
+    <canvas id=canvas></canvas>
+    <div id=info>
+      touch + move = draw<br>
+      dual-touch = pan/zoom<br>
+      <br>
+      if you <i class="fa fa-heart-o"></i> it<br>
+      tell your friends<br>
+      <br>
+      more on solsort.com<br>
+    </div>
+    <div id=buttons></div>
+  css:
+    - font-awesome/css/font-awesome.min.css
+bower: {}
+files:
+  - font-awesome/css/font-awesome.min.css 
+  - font-awesome/fonts/fontawesome-webfont.ttf

@@ -1,0 +1,54 @@
+body {
+    font: 18px "Open Sans Condensed";
+    margin: 0;
+    padding: 0;
+    background: #999;
+};
+
+.transform (@arg) {
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: @arg;
+    -moz-transform-origin: 0 0;
+    -moz-transform: @arg;
+    -ms-transform-origin: 0 0;
+    -ms-transform: @arg;
+    -o-transform-origin: 0 0;
+    -o-transform: @arg;
+    transform-origin: 0 0;
+    transform: @arg;
+}
+
+
+.header {
+    text-align: center;
+    position: fixed;
+    z-index: 100;
+    top: 19em;
+    left: 0em;
+    width: 18em;
+    height: 1.5em;
+    background: rgba(255,255,255,0.95);
+    box-shadow: -0.2em 0.2em 0.5em rgba(0,0,0,0.4);
+    .transform(rotate(270deg));
+};
+
+h1 {
+    margin: 0.5em;
+    padding: 0;
+    text-align: center;
+}
+
+.slide {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18em;
+    height: 18em;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.4);
+    transition: 2s;
+    -webkit-transition: 2s;
+    .transform(scale(0.01, 0.01));
+}

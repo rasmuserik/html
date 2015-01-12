@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+        <!-- Slide engine from https://github.com/hakimel/reveal.js/ -->
+
+		<meta charset="utf-8">
+
+		<title>JavaScript Implementations</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Rasmus Erik">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+        <img src="http://solsort.com/img/solsort512x512.png" style="position: fixed; height: 8ex; width: 8ex; top:2ex; left: 2ex; border:none; vertical-align: text-bottom">
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+                <h1 style="font-size: 290%">JavaScript <br/> Implementations</h1>
+                <p> <small>12.12.12<br/><a href="http://copenhagenjs.dk">CopenhagenJS</a> talk by <a href="http://rasmuserik.com">Rasmus Erik</a></small> </p>
+				</section>
+
+
+                <section>
+                    <h3>The Talk</h3>
+                    <ul>
+                        <li>How: &nbsp; interactive - interrupt, ask questions</li>
+                        <li>Why: &nbsp; brush up on state of JavaScript engines</li>
+                    </ul>
+                    <h3 style="margin-top: 2ex;">Rasmus Erik</h3>
+                    <ul>
+                        <li>CS / programming language geek, LightScript</li>
+                        <li>Work includes bugfixes in Rhino and SpiderMonkey</li>
+                    </ul>
+				</section>
+
+                <section>
+                    <h4>Outline</h4>
+                    <h2>Major open source <br/> implementations</h2>
+                    <!-- why these four -->
+                    (SpiderMonkey, JavaScriptCore, v8, Nashorn/Rhino)
+                    <h2 style="margin-top: 60px;">Selected engine features</h2>
+                    (inline cache, hidden classes, values, gc)
+				</section>
+
+                <section>
+                    <h2>SpiderMonkey</h2>
+                    <ul>
+                        <li>JavaScript engine for Firefox</li>
+                        <li>Used in Adobe Acrobat, CouchDB, MongoDB, Riak,&nbsp;...</li>
+                        <li>Trace-, Jäger-, and IonMonkey</li>
+                    </ul>
+				</section>
+
+                <section>
+                    <h2>JavaScriptCore</h2>
+                    <ul>
+                        <li>JavaScript engine for Safari</li>
+                        <li>Used in Qt 4.7+, ...</li>
+                        <li>Low-level interpreter, Baseline JIT, DFG JIT</li>
+                    </ul>
+				</section>
+
+                <section>
+                    <h2>v8</h2>
+                    <ul>
+                        <li>JavaScript engine for Chrome</li> <!-- history -->
+                        <li>Used in node.js, CouchBase, ...</li> <!-- uses in general -->
+                        <li>Full compiler, optimising compiler</li> <!-- about this specific compiler -->
+                    </ul>
+				</section>
+
+                <section>
+                        <h2>Nashorn/Rhino</h2>
+                        <ul>
+                            <li>JavaScript engine for Java</li>
+                            <li>Used in Java-scripting, node.js-api in progress.</li>
+                            <li>Piggybacking on JVM (jit, gc, ...)</li>
+                        </ul>
+				</section>
+
+                <section>
+                    <h4>Outline</h4>
+                    <h2>Major open source <br/> implementations</h2>
+                    (SpiderMonkey, JavaScriptCore, v8, Nashorn/Rhino)
+                    <h2 style="margin-top: 60px;">Selected engine features</h2>
+                    <!-- That matters! why -->
+                    (inline cache, hidden classes, values, gc)
+				</section>
+
+                <section>
+                    <h2>Inline cache</h2>
+                    <ul>
+                        <li>Cache type information at execution point</li>
+                        <li>v8 fast monomorphic, SpiderMonkey PICs, <br/>LLIN external, invoke dynamic</li>
+                        <li>Fast when same type at code</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Hidden classes and types</h2>
+                    <ul>
+                        <li>Add property to object → change class</li>
+                        <li>Fast property access</li>
+                        <li>Initialise objects in same order</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Values and unboxing</h2>
+                    <ul>
+                        <li>SMI (small int), v8</li>
+                        <li>NaN-boxing, JSC and SpiderMonkey</li>
+                        <li>Java objects, Rhino/Nashorn</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Generational Garbage Collection</h2>
+                    <ul>
+                        <li>Young generation: copying GC. Older: mark'n'compact</li>
+                        <li>In v8 and JVM, not in JSC(on its way) or SpiderMonkey</li>
+                        <li>Fast for short lived objects</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>Outline</h4>
+                    <h2>Major open source <br/> implementations</h2>
+                    (SpiderMonkey, JavaScriptCore, v8, Nashorn/Rhino)
+                    <h2 style="margin-top: 60px;">Selected engine features</h2>
+                    (inline cache, hidden classes, values, gc)
+				</section>
+
+                <section>
+                    <h2 style="margin-bottom: 4ex">Questions...</h2>
+                    <small>Feedback on the presentation is very welcome, <br/>
+                        Rasmus Erik <script>document.write("&#64;");</script> solsort.dk</small>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: "simple", //Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

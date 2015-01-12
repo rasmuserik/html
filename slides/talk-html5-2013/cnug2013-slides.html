@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>HTML5 - a developer perspective</title>
+        <meta name="author" content="Rasmus Erik">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="reveal/css/reveal.min.css">
+        <link rel="stylesheet" href="slidestyle.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet 
+        <script>
+            document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+        -->
+
+        <!--[if lt IE 9]>
+        <script src="reveal/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <img style="position: fixed; top:8px; left: 100%; margin-left: -56px;" src="solsort.png">
+        <div id="timer" style="position: fixed; top: 8px; left: 8px;"></div>
+        <script>
+            var t0 = Date.now();
+            setInterval(function() {
+                var d = new Date();
+                document.getElementById("timer").innerHTML = 
+                   d.getHours() + ":" + (100 + d.getMinutes() + "").slice(1) + "<br>" +
+//                   Math.round((Date.now() - t0)/60/1000) +
+                   "";
+            }, 1000)
+        </script>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+                <h1>HTML5</h1>
+                <h3>- a developer perspective</h3>
+                <br>
+                <p style="font-size: 100%"><a href="http://rasmuserik.com/html5">rasmuserik.com/html5</a></p>
+                </section>
+
+                <section><h2>Point of view</h2>
+                <br>
+                <p>
+                    HTML5: standard library standard <br>for the most ubiquitous platform</li>
+                </p>
+                <br>
+                <p>
+                    Rasmus Erik: freelance Computer Scientist
+                </p>
+                </section>
+                <section><h2>Content</h2>
+                <br>
+                <p>API features: GUI • System</p>
+                <br>
+                <p>Api tour - live coding of a photo booth</p>
+                <br>
+                <p>Concrete cases</p>
+                </section>
+
+                <section><h2>GUI</h2>
+                <ul>
+                    <li>Graphics: <em>canvas</em>, svg, webgl</li>
+                    <li>Media: audio, <em>video, media-capture</em></li>
+                    <li>CSS3: media queries, <em>animations, shadow</em>, 3d-transform, fonts...</li>
+                    <li>Input: touch, device-orientation, geolocation</li>
+                    <li>Misc: MathML, <em>fullscreen, contenteditable</em>, drag-n-drop</li>
+                </ul>
+                </section>
+
+                <section><h2>System</h2>
+                <ul>
+                    <li>Storage: <em>localStorage</em>, indexeddb, fileapi</li>
+                    <li>Network: websockets, xhr2(cors, binary), protocol handlers, webrtc</li>
+                    <li>Code execution: webworkers, cross-document-messaging, offline-apps, async script loading</li>
+                    <li>Misc: <em>typed arrays</em>, history api, <em>microdata/semantic-web</em></li>
+                </ul>
+                </section>
+
+                <section>
+                <section data-markdown>
+                ## Live code tour
+                - Plain raw HTML5+JavaScript from scratch
+                - with webkit prefixes
+                - Quick'n'dirty: no fallback, feature detection nor unit tests
+                </section>
+
+                <section>
+                <h3>Building a photo booth</h3>
+                Minimal HTML5, Video playback, Canvas,<br>
+                CSS3 animations, Video capture, Fullscreen<br>
+                Pixel access and typed arrays, Local Storage<br>
+                Microdata and editable content
+                </section>
+
+                <section>
+                <h3>Minimal HTML5 document</h3>
+                <pre style="font-size: 36px;"><code style="width: 100%">&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+        &lt;title>title&lt;/title>
+    &lt;/head>
+    &lt;body>
+    &lt;/body>
+&lt;/html>
+</code></pre></section>
+
+                <section>
+                <h3>Video playback</h3>
+                <pre style="font-size: 36px;"><code style="width: 100%">&lt;video id=video controls autoplay loop>
+    &lt;source src=demo.ogv 
+            type="video/ogg">
+&lt;/video>
+</code></pre></section>
+                <section>
+                <h3>Canvas</h3>
+                <pre style="font-size: 36px;"><code style="width: 100%">&lt;canvas id=canvas width=640 height=480>
+&lt;/canvas>
+</code></pre>
+<pre style="font-size: 36px;"><code style="width: 100%">var ctx = canvas.getContext("2d");
+function shot() {
+    ctx.drawImage(video, 0, 0);
+}
+</code></pre></section>
+                <section>
+                <h3>Video capture</h3>
+                <pre style="font-size: 30px;"><code style="width: 100%">function capture() {
+    navigator.webkitGetUserMedia({video:true}, 
+            function(stream) {
+        video.src = URL.createObjectURL(stream)
+            }, function(err) {});
+}</code></pre></section>
+
+                <section>
+                <h3>CSS3 and animation</h3>
+                <pre style="font-size: 30px;"><code style="width: 100%">.anim { position: absolute; transition: all 2s;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5); }
+.left { left: 0px; width: 640px; }
+.right { left: 680px; width: 120px; } </code></pre>
+                <pre style="font-size: 30px;"><code style="width: 100%">&lt;video class="anim left" ...
+&lt;canvas class="anim right" ... </code></pre>
+                <pre style="font-size: 30px;"><code style="width: 100%">function swap() {
+    var t = video.className;
+    video.className = canvas.className;
+    canvas.className = t;
+}</code></pre>
+                </section>
+
+                <section>
+                <h3>Canvas pixel access</h3>
+                <pre style="font-size: 30px;"><code style="width: 100%">function invertRed() {
+    imData = ctx.getImageData(0,0,640,480);
+    data = imData.data;
+    for(var i = 0; i < data.length; i += 4) {
+        data[i] = 255 - data[i]
+    }
+    ctx.putImageData(imData,0,0);
+}</code></pre>
+                <p>Implicit typed array access</p>
+                </section>
+
+                <section>
+                <h3>Save/load to local storage</h3>
+                <pre style="font-size: 30px;"><code style="width: 100%">function save() {
+    localStorage.setItem("image", 
+        canvas.toDataURL("image/jpeg", 0.8));
+}</code></pre>
+                <pre style="font-size: 30px;"><code style="width: 100%">function load() {
+    var img = new Image();
+    img.onload = function() {
+        ctx.drawImage(img, 0, 0);
+    }
+    img.src = localStorage.getItem("image");
+}</code></pre>
+                </section>
+
+                <section>
+                <h3>Fullscreen</h3>
+                <pre style="font-size: 40px;"><code style="width: 100%">function fullscreen() {
+    canvas.webkitRequestFullScreen();
+}</code></pre></section>
+
+                <section>
+                <h3>Microdata, contenteditable</h3>
+                <pre style="font-size: 30px;"><code style="width: 100%">&lt;div itemscope itemtype="http://schema.org/Thing">
+    &lt;div>Title: 
+        &lt;span itemprop=name contenteditable>
+            Untitled
+        &lt;/span>
+    &lt;/div>
+    &lt;div>Author: 
+        &lt;span itemprop=description contenteditable>
+            Some descriptive text...
+        &lt;/span>
+    &lt;/div>
+&lt;/div>
+</code></pre>
+</section>
+                </section>
+
+                <section>
+                <section data-markdown>
+                ## Concrete cases
+
+
+                --------
+
+                
+                Languages
+
+                Libraries
+
+                Packaging
+                </section>
+                <section>
+                <h2>Languages</h2>
+                <ul>
+                <li>JavaScript/HTML5 is a target platform</li>
+                <li>TypeScript, GWT, Emscripten, ClojureScript, CoffeeScript, ...</li>
+                <li>Sample CoffeeScript solution: <a href="http://dragimation.solsort.com/">dragimation.solsort.com</a></li>
+                </ul>
+                </section>
+                <section>
+                <h2>Libraries</h2>
+                <ul>
+                <li>HTML5 is just the bottom of the pyramid of giants on whoose shoulders we stand</li>
+                <li>D3.js using example on localhost</li>
+                </ul>
+                </section>
+                <section>
+                <p>Packaging - not just web</p>
+                <img src=IMG_4770-notescore.jpg>
+                <p>Cordova/PhoneGap &rarr; mobile+desktop
+                </section>
+                <section>
+                <p>Real world</p>
+                <img src=IMG_2596-eurocards.jpg>
+                </section>
+                </section>
+                <section>
+                <h3>State of the art</h3>
+                <p>Unreal Engine: 1+MLoC C++ code<br> ported to HTML5 in 4 days.</p>
+                <video src=demo.ogv autoplay loop controls>
+                </video>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                //theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                //transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                transition: "linear",
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                // { src: 'reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>

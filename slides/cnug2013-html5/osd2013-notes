@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>HTML5 Hacks and Highlights</title>
+        <meta name="author" content="Rasmus Erik">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="reveal/css/reveal.min.css">
+        <link rel="stylesheet" href="slidestyle.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet 
+        <script>
+            document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+        -->
+
+        <!--[if lt IE 9]>
+        <script src="reveal/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <img style="position: fixed; top:8px; left: 100%; margin-left: -56px;" src="solsort.png">
+        <div id="timer" style="position: fixed; top: 8px; left: 8px;"></div>
+        <script>
+            var t0 = Date.now();
+            setInterval(function() {
+                var d = new Date();
+                document.getElementById("timer").innerHTML = 
+                   d.getHours() + ":" + (100 + d.getMinutes() + "").slice(1) + "<br>" +
+//                   Math.round((Date.now() - t0)/60/1000) +
+                   "";
+            }, 1000)
+        </script>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+                <h1>HTML5</h1>
+                <h3>Hacks and Highlights</h3>
+                <br>
+                <p style="font-size: 100%"><a href="http://rasmuserik.com/html5">rasmuserik.com/html5</a></p>
+                </section>
+
+                <section><h2>Content</h2>
+                <p>
+                Introductions
+                </p>
+                <hr/>
+                <ol>
+                    <li>HTML5/JS as a platform</li>
+                    <li>Tour of the APIs</li>
+                    <li>Tools: infrastructure and languages</li>
+                </ol>
+                <hr/>
+                <p>
+                Details
+                </p>
+                </section>
+
+                <section><h2>Rasmus Erik</h2>
+                <ul>
+                    <li>Programming language geek</li>
+                    <li>Developer at Dansk BiblioteksCenter<br>
+                        and freelance computer scientist</li>
+                    <li>CS/platform viewpoint,<br> not web-developer approach</li>
+                </ul>
+                </section>
+
+                <section><h2>You?</h2>
+                <ul>
+                    <li class="fragment">Hacks C or Java?</li>
+                    <li class="fragment">Web Developers?</li>
+                    <li class="fragment">Don't make software?</li>
+                    <li class="fragment">Groks JavaScript?</li>
+                    <li class="fragment">Unix users?</li>
+                    <li class="fragment">Know HTML5?</li>
+                </ul>
+                </section>
+
+                <!--section data-markdown>
+                ## Objectives
+
+                - Platform and packaging
+                - High level overview of the HTML5 APIs
+                - Major languages targeting Javascript
+                - Open source development infrastructure
+                </section-->
+
+                <section>
+                <h1>Platform</h1>
+                <p><small><em>Platform</em> • APIs • Tools</small></p>
+                <br/>
+                <p>HTML5/JavaScript • Why? • What?</p>
+                <p>Packaging targets</p>
+                </section>
+
+                <section>
+                <section>
+                <h3>Why?</h3>
+                    <em>#1</em> easy distribution, and wide deployment
+                <hr/>
+                <br>
+                <h3>What?</h3>
+                <ul>
+                    <li>JavaScript: dynamic, somewhat<br> functional, scripting&nbsp;language<br> with good&nbsp;virtual&nbsp;machines</li> 
+                    <li>HTML5: APIs and more</li>
+                </ul>
+                </section>
+                <section><h2>Major Engines</h2>
+                <br>
+                <table style="vertical-align: middle; font-size: 80%; line-height: 1em;">
+                    <tr>
+                        <td rowspan="2" style="vertical-align:middle">WebKit</td>
+                        <td rowspan="2" style="vertical-align:middle">50%</td>
+                        <td>v8</td>
+                        <td>Chrome, (Opera), node.js, CouchBase, ...</td></tr>
+                    <tr style="padding-bottom: 1em;">
+                        <td>JavaScriptCore</td>
+                        <td>Safari, Qt, ...</td></tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr style="padding-bottom: 1em;">
+                        <td>Gecko</td>
+                        <td>20%</td>
+                        <td>SpiderMonkey</td>
+                        <td>Mozilla Firefox, Adobe Acrobat, CouchDB, MongoDB, Riak, ...</td></tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td>Trident</td>
+                        <td>25%</td>
+                        <td>Chakra</td>
+                        <td>Internet Explorer</td></tr>
+
+                </table>
+                </section>
+                </section>
+
+                <section>
+                <section data-markdown>
+                ## Targets
+                - Browser: offline apps - cache manifest, marketplaces, add-ons
+                - Mobile: web vs. hybrid, meta-tags, PhoneGap aka. Apache Cordova
+                - Desktop: node-webkit, Cordova, Gnome&nbsp;and&nbsp;Windows&nbsp;apps
+                - Server: PhantomJS, node.js, (Nashorn/Rhino, NoSQL)
+                </section>
+
+
+                <section data-markdown>
+                ## Web 
+                - Web apps
+                - Offline via cache manifest
+                - Browser apps
+                - Browser add-ons
+                </section>
+
+                <section data-markdown>
+                ## Mobile
+                - Mobile webpages
+                    - Special meta-tags
+                    - Different WebKits
+                - PhoneGap aka. Apache Cordova
+                </section>
+
+                <section data-markdown>
+                ## Desktop
+                - node-webkit
+                - Apache Cordova (Qt+OS-X+Windows)
+                - Gjs: Gnome apps in JavaScript, SpiderMonkey
+                - Windows Store apps - JavaScript
+                - appjs, xulrunner, ...
+                </section>
+
+                <section data-markdown>
+                ## Server
+                - PhantomJS - headless webkit
+                - node.js - many HTML5 APIs available as npm-modules
+                - NoSQL (JS÷HTML5): MongoDB, Riak, CouchDB, CouchBase, ...
+                - Java (JS÷HTML5): Nashorn, Rhino, RingoJS
+                </section>
+                </section>
+
+                <section><h1>APIs</h1>
+                <br/>
+                <p>Platform • <em>APIs</em> • Tools</p>
+                <br/>
+                <p>Graphics and User Interfacing</p>
+                <p>System APIs</p>
+                </section>
+                <!--TODO: GUI-APIs, System APIs -->
+
+        
+                <section>
+                <section class="transition-cube cube">
+                    <h2>GUI</h2>
+                    <ul>
+                    <li>Graphics: canvas, svg, webgl</li>
+                    <li>Media: audio, video, media-capture, webrtc</li>
+                    <li>CSS3: media queries, animations, shadow, 3d-transform, fonts...</li>
+                    <li>Input: touch, device-orientation, geolocation</li>
+                    <li>Misc: MathML, fullscreen, contenteditable, drag-n-drop</li>
+                    </ul>
+                </section>
+                <section>
+                <h2>Canvas Example</h2>
+                Trace 40 random walks.
+                <pre style="font-size: 24px;"><code contenteditable="true">var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+var buf = ctx.getImageData(0, 0, canvas.width, canvas.height);
+for(var i = 0; i < 40; ++i) {
+    var x = canvas.width / 2, y = canvas.height / 2;
+    for(var j = 0; j &lt; 50000; ++j) {
+        x = (x + Math.random() * 5 - 2)|0;
+        y = (y + Math.random() * 5 - 2)|0;
+        buf.data[x * 4 + y * 4 * canvas.width] += 10; 
+    } 
+}
+ctx.putImageData(buf, 0, 0);</code></pre></section>
+                <section>
+                    <canvas id="canvas" width="800" height="600">
+                    </canvas>
+                    <script>
+                    var canvas = document.getElementById("canvas");
+                    var ctx = canvas.getContext("2d");
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    var buf = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    for(var i = 0; i < 40; ++i) {
+                        var x = canvas.width / 2, y = canvas.height / 2;
+                        for(var j = 0; j < 50000; ++j) {
+                            x = (x + Math.random() * 5 - 2)|0;
+                            y = (y + Math.random() * 5 - 2)|0;
+                            buf.data[x * 4 + y * 4 * canvas.width] += 10; } }
+                    ctx.putImageData(buf, 0, 0);
+                    </script>
+                </section>
+                <section data-markdown>
+                ## Graphics
+
+                - 2d Canvas
+                - Vector SVG (not Android 2.3)
+                - 3d WebGL, (Khronos, not w3c), based on OpenGL ES 2.0, Firefox, Chrome, disabled in Safari by default
+                </section>
+
+                <section data-markdown>
+                ## Media
+
+                - audio
+                - video
+                - media-capture
+                - webrtc
+                </section>
+
+                <section data-markdown>
+                ## GUI
+                
+                - media queries
+                - drag-and-drop
+                - CSS3: animations shadows border-radius..
+                - contenteditable
+                - mathml
+                - fonts
+                - fullscreen
+
+                </section>
+
+                <section data-markdown>
+                ## Input
+
+                - touch-events
+                - device-orientation
+                - GPS
+                </section>
+                </section>
+
+                <section>
+                <section>
+                    <h2>System</h2>
+                    <ul>
+                    <li>Storage: localStorage, websql, indexeddb, fileapi</li>
+                    <li>Network: websockets, xhr2(cors, binary), protocol handlers, webrtc</li>
+                    <li>Code execution: webworkers, cross-document-messaging, offline-apps, async script loading</li>
+                    <li>Misc: typed arrays, history api, microdata/semantic-web</li>
+                    </ul>
+                </section>
+                <section data-markdown>
+                ## Storage
+
+                - localStorage
+                - websql and indexeddb
+                - fileapi
+                </section>
+
+                <section data-markdown>
+                ## Network
+
+                - websockets
+                - webrtc
+                - protocol handler
+                - xhr • cross-origin resource sharing • binary data
+                </section>
+
+                <section data-markdown>
+                ## Code execution
+
+                - webworkers
+                - cross-document messaging
+                - offline-apps
+                - asynchronous script loading
+                </section>
+
+                <section data-markdown>
+                ## Misc
+                - typed arrays
+                - history api
+                - microdata / semantic web
+                </section>
+                </section>
+
+                <section><h1 style="font-size:300%">Infrastructure <br>&amp; Languages</h1>
+                <p>Platform • APIs • <em>Tools</em></p>
+                <br/>
+                <p>GitHub • Travis CI</p>
+                <p>C • Java • More languages</p>
+                </section>
+
+                <section>
+                <section data-markdown>
+                ### Infrastructure
+
+                - GitHub - code sharing and collaboration
+                    - _the_ place for open source JavaScript
+                - Travis-CI - continous integration
+
+
+                </section>
+                <section data-markdown>
+                ## GitHub
+                - Open Source collaboration 
+                - JavaScript is most used language here, with 21% (feb 2013)
+                - Popular starred (feb 2013): bootstrap, _node,_ jquery, html5-boilerplate, _rails,_ impress.js, d3, backbone, font-awesome, _homebrew_
+                </section>
+
+                <section data-markdown>
+                ## Travis CI
+                - Continous Integration server for open source projects
+                - GitHub integration
+                - Simple config: `package.json` &amp; `.travis.yml`
+                - Can test HTML5 in headless browser (phantomjs or firefox + xvfb)
+                </section>
+                <section>
+                <h2>package.json</h2>
+                <pre style="font-size: 36px;"><code>{ "name": "MyApp",
+  "version": "0.0.0",
+  "scripts": {"test": "./runTests.sh"} }</code></pre>
+  <br>
+                <h2>.travis.yml</h2>
+                <pre style="font-size: 36px;"><code>language: node_js
+node_js:
+    - 0.8</code></pre>
+                </section>
+                </section>
+                
+                <section>
+                <section>
+                <h3>Emscripten • LLVM • C/C++</h3>
+
+                <ul>
+                <li>Low-level virtual machine: C/C++ <br> Fortran, Ada, Haskell, ...</li>
+                <li>
+                    Python,
+                    Lua,
+                    LaTeX,
+                    gnuplot,
+                    OpenTTD,
+                    Cube&nbsp;2:&nbsp;Sauerbraten,
+                    OpenDUNE,
+                    zlib,
+                    Poppler,
+                    FreeType,
+                    libSDL,
+                    SQLite,
+                    Qt,
+                    ...
+                </li>
+                <li>Useful for porting existing C/C++ code to run in JavaScript</li>
+                <li>Moderate performance cost</li>
+                </ul>
+                </section>
+                <section data-markdown>
+                ## Getting started
+
+                1. Install llvm/clang-3.2 from http://llvm.org/releases/download.html#3.2
+                2. git clone git@github.com:kripken/emscripten.git
+                3. emscripten/emcc src.cc -o dst.[html|js]
+                </section>
+                <section><h2>C code</h2>
+                <br>
+                <pre style="font-size: 36px;"><code>
+  #include &lt;stdio.h&gt;
+  int main() {
+      int i = 10;
+      while(--i) {
+          printf("Countdown %d\n", i);
+      }
+  }
+                </code></pre></section>
+                <section>
+                <h2>Compiled `-O0`</h2>
+                <pre style="font-size: 24px;"><code>  while(1) switch(label) {
+    case 2:
+      var $1;
+      var $i;
+      $1=0;
+      $i=10;
+      label = 3; break;
+    case 3:
+      var $3=$i;
+      var $4=((($3)-(1))|0);
+      $i=$4;
+      var $5=(($4)|(0))!=0;
+      if ($5) { label = 4; break; } else { label = 5; break; }
+    case 4:
+      var $7=$i;
+      var $8=_printf(((5242880)|0), (tempInt=STACKTOP,STACKTOP = (STACKTOP + 4)|0,assert(STACKTOP|0 < STACK_MAX|0),HEAP32[((tempInt)>>2)]=$7,tempInt));
+      label = 3; break;
+    case 5:
+      var $10=$1;
+      STACKTOP = __stackBase__;
+      return $10;
+                </code></pre></section>
+                <section>
+                <h2>Compiled -O2</h2>
+                <pre style="font-size: 24px;"><code style="width: 100%">  
+  r1 = STACKTOP;
+  _printf(5242880, (tempInt = STACKTOP, STACKTOP = STACKTOP + 4 | 0, HEAP32[tempInt >> 2] = 9, tempInt));
+  _printf(5242880, (tempInt = STACKTOP, STACKTOP = STACKTOP + 4 | 0, HEAP32[tempInt >> 2] = 8, tempInt));
+  _printf(5242880, (tempInt = STACKTOP, STACKTOP = STACKTOP + 4 | 0, HEAP32[tempInt >> 2] = 7, tempInt));
+  _printf(5242880, (tempInt = STACKTOP, STACKTOP = STACKTOP + 4 | 0, HEAP32[tempInt >> 2] = 6, tempInt));
+  _printf(5242880, (tempInt = STACKTOP, STACKTOP = STACKTOP + 4 | 0, HEAP32[tempInt >> 2] = 5, tempInt));
+  _printf(5242880, (tempInt = STACKTOP, STACKTOP = STACKTOP + 4 | 0, HEAP32[tempInt >> 2] = 4, tempInt));
+  _printf(5242880, (tempInt = STACKTOP, STACKTOP = STACKTOP + 4 | 0, HEAP32[tempInt >> 2] = 3, tempInt));
+  _printf(5242880, (tempInt = STACKTOP, STACKTOP = STACKTOP + 4 | 0, HEAP32[tempInt >> 2] = 2, tempInt));
+  _printf(5242880, (tempInt = STACKTOP, STACKTOP = STACKTOP + 4 | 0, HEAP32[tempInt >> 2] = 1, tempInt));
+  STACKTOP = r1;
+                 </code></pre></section>
+                </section>
+
+
+                <section>
+                <section data-markdown>
+                ## Java • GWT
+                - Write JavaScript via Java
+                - Build on Java: developers, project-scalability, static typing, tooling, ...
+                - New Java-APIs for web-applications
+                </section>
+
+                <section data-markdown>
+                ## Getting started
+
+                - eclipse-plugin - should be easy for eclipse users, - or:
+
+                1. get/extract http://google-web-toolkit.googlecode.com/files/gwt-2.5.0.zip
+                2. ./gwt-2.5.0/webAppCreator -out AppName com.rasmuserik.AppName
+                3. cd AppName; ant devmode
+                </section>
+                <section>
+                <h3>Sample canvas program</h3>
+                <pre style="font-size: 24px;"><code style="width: 100%">package com.rasmuserik.client;
+
+import com.google.gwt.core.client.*;
+import com.google.gwt.dom.client.*;
+import com.google.gwt.canvas.dom.client.Context2d;
+
+public class AppName implements EntryPoint {
+  public void onModuleLoad() {
+    CanvasElement canvas = (CanvasElement)
+        (Element)DOM.getElementById("canvas");
+    Context2d ctx = canvas.getContext2d();
+    ctx.fillText("Hello HTML5 GWT", 0, 20);
+  }
+} </code></pre></section>
+                </section>
+
+
+                <section>
+                <section data-markdown>
+                ## More Languages
+                - TypeScript - traditional oop and optional typing
+                - Closure Compiler - type annotation in comments, optimising compiler
+                - CoffeScript - syntactic sugar, literate programming
+                - ClojureScript - clojure for JavaScript
+                - HaXe, Dart and more on altjs.org
+                </section>
+
+                <section>
+                <h4>Optional Typing <br> TypeScript &amp; Closure Compiler</h4>
+                <hr/>
+                <ul>
+                    <li>Typing for tooling and development scalability</li>
+                    <li>Google Closure Compiler - optimising JavaScript to JavaScript compiler, <br>with type-annotations in comments</li>
+                    <li>Microsoft TypeScript - JavaScript-superset with type-annotations, classes etc.</li>
+                </ul>
+                </section>
+
+                <section data-markdown>
+                ## CoffeeScript
+                - Syntactic sugar, avoid-boilerplate, array-comprehensions, simpler function definitions...
+                - Fixes some JavaScript quirks
+                - Hosted language
+                - Literate programming
+                </section>
+
+                <section data-markdown>
+                ## ClojuerScript etc.
+                - ClojureScript - Clojure for JavaScript
+                    - Data structure performance depend on generational garbage collector, currently only in v8
+                - Dart, HaXe, and more on altjs.org
+                </section>
+                </section>
+
+                <section data-markdown>
+                # Details
+
+                - HTML5/JavaScript - the engines
+                - APIs - overview and example
+                - GitHub-fun, and continous integration
+                - Emscripten - how it work, C in JavaScript
+                - GWT - getting started
+                - More languages: CoffeScript, TypeScript, Closure Compiler, ClojureScript, ...
+                </section>
+                <section>
+                <h1>Talk done</h1>
+                <p>- now go out build something awesome :)</p>
+                <br>
+                <br>
+                <br>
+                <p>Slides:</p>
+                <p style="font-size: 100%"><a href="http://rasmuserik.com/html5">rasmuserik.com/html5</a></p>
+
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                //theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                //transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                transition: "linear",
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                // { src: 'reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>

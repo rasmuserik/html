@@ -1,0 +1,22 @@
+{
+  "name": "lightscript-solsort",
+  "version": "0.3.0",
+  "author": "Rasmus Erik Voel Jensen",
+  "homepage": "http://solsort.com/",
+  "description": "the lightscript programming language and solsort web site",
+  "dependencies": {
+    "request": "*",
+    "async": "*",
+    "gm": "*",
+    "markdown": "*",
+    "express": "*",
+    "socket.io": "*",
+    "socket.io-client": "*"
+  },
+  "scripts": {
+    "test": "node root/solsort.js compile && node root/solsort.js prettyprint && diff solsort.ls root/solsort.pp && node root/solsort.js test"
+  },
+  "engines": {
+    "node": "*"
+  }
+}

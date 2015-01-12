@@ -1,0 +1,14 @@
+{
+  "name": "single-touch-snake",
+  "version": "0.0.4",
+  "description": "Simple snake game. Actually an user interface experiment to figure out a single button or touch/not-touch can be used to an object moving in 2d.",
+  "keywords": [],
+  "authors": [
+    "Rasmus Erik Voel Jensen (solsort.com)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rasmuserik/single-touch-snake.git"
+  },
+  "dependencies": {}
+}

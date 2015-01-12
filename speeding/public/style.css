@@ -1,0 +1,100 @@
+body {
+  font: 14px Arial, sans-serif;
+}
+.frame {
+  margin: 20px;
+  border: none;
+  border-top: 2px solid #eee;
+}
+#visualisation {
+  position: relative;
+}
+#correct {
+  background: #0092b6;
+  color: #fff;
+  margin: 1px;
+  padding: -1px;
+}
+#wrong {
+  background: #f28c00;
+  color: #fff;
+  margin: 1px;
+  padding: -1px;
+}
+.separated {
+  border-right: 2px solid #eee;
+}
+.label {
+  position: absolute;
+  font: 10px arial, sans-serif;
+  background: #888;
+  color: #fff;
+  padding: 1px;
+  padding-right: 5px;
+  border-radius: 2px;
+}
+.bar {
+  height: 8px;
+  position: absolute;
+  background: #0092b6;
+}
+.bar:hover {
+  background: #00afda;
+}
+.hoverInfo {
+  font: 12px arial, sans-serif;
+  position: absolute;
+  background: #333;
+  color: #fff;
+  padding: 2px;
+  border-radius: 2px;
+  display: none;
+}
+.speedLine {
+  margin-top: -3px;
+  position: absolute;
+  height: 10px;
+  width: 2px;
+  background: #000;
+}
+.offenders {
+  background: #f28c00;
+}
+.offenders:hover {
+  background: #ffa800;
+}
+#score {
+  margin-left: 30px;
+}
+.scoreInfo {
+  display: inline-block;
+  font-size: 28px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.scoreTitle {
+  margin: 10px 0px 0px 0px;
+  font-size: 14px;
+  display: block;
+}
+.scoreBlock {
+  display: inline-block;
+}
+.scoreBar {
+  font-size: 14px;
+  display: inline-block;
+  background: #f28c00;
+  width: 180px;
+  height: 30px;
+}
+.scoreBarOk {
+  display: inline-block;
+  color: #fff;
+  background: #0092b6;
+  height: 30px;
+}
+.scoreBarText {
+  display: inline-block;
+  height: 20px;
+  margin: 8px 0px 2px 5px;
+}

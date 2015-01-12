@@ -1,0 +1,35 @@
+<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>visualisering af relationer</title> <meta name=description content=""> <meta name=viewport content="width=device-width"> <link rel="shortcut icon" href=/6df2b309.favicon.ico> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel=stylesheet href=styles/db4badba.main.css> <style>.relvis-request {
+        display: none;
+      }
+      .relvis-disabled {
+        display: none;
+      }
+      .relvis-enabled {
+      }</style>  <body> <script src=scripts/e2386b39.main.js></script> <script src=scripts/ce898ec3.vendor.js></script> <script>$(function(){
+            relvis.init({
+                apiUrl: 'https://dev.vejlebib.dk/ting-visual-relation',
+                relatedUrl: 'http://relvis.solsort.com/relvis-api',
+                logUrl: 'http://relvis.solsort.com/_relvis_log.js',
+                topMargin: 100,
+                bottomMargin: 50,
+                loadingCover: 'http://relvis.solsort.com/icons/solsort.png',
+                clickHandle: function(o) {
+                  console.log('click', o);
+                },
+                closeHandle: function() {
+                  console.log('close');
+                  relvis.close();
+                }
+            });
+            relvis.drawBackground = function(ctx, x, y, w, h) {
+              ctx.fillStyle = '#cac';
+              ctx.fillRect(x,y,w,h);
+            };
+            relvis.open('circular', '870970-basis:28855346');
+            setInterval(function() {
+              console.log('here');
+              relvis.topMargin = Math.random() * 200;
+              relvis.requestRedraw();
+            }, 5000);
+
+        });</script>  

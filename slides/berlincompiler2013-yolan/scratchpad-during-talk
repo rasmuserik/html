@@ -1,0 +1,37 @@
+;; some scheme comment
+(defn (foo bar baz)
+   (cond 
+    {
+    }
+       (blah ...)
+       (blah2 ..)))
+
+
+if ( ) {
+}
+
+function (a, b) {
+ c
+}
+
+[*{} [*() function a b] c]
+
+mymacro(ba bal) {foop } {boop}
+
+( { [
+
+hjh { .. }
+
+
+- parsed ast
+- macro transformation
+- simple ast
+
+
+[ [a b]
+  [a c]
+  [r 2]]
+
+{a b
+ a c 
+ r 2}

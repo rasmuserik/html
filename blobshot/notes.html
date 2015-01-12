@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>BlobShot</title> 
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/> 
+    </head>
+    <body style="font-family: Sans-Serif; margin: 10%">
+        <h1><tt>hackathon.5apps.com results</tt></h1>
+        <h2>Code at <a href="http://github.com/rasmuserik/">github.com/rasmuserik</a></h2>
+        <ul>
+            <li>Changed some oldstuff into blackberry apps: </li>
+            <li>HTML5/Blackberry arcade game</li>
+            <li>Progress on new programming language on top of javascript</li>
+        </ul>
+        <h2>Oldstuff -> blackberry</h2>
+        <ul>
+            <li><a href="http://solsort.dk/planetcute">CuteEngine</a></li>
+            <li><a href="http://combigame.com">CombiGame</a></li>
+        </ul>
+        <h2>Arcade game from scratch</h2>
+        <p>Written in a new programming language on top of html5</p>
+        <p><a href="http://solsort.dk/blobshot">http://solsort.dk/blobshot</a></p>
+        <p><a href="https://github.com/rasmuserik/yolan/blob/master/src/blobshot.yl">github:rasmuserik/yolan/src/blobshot.yl</a></p>
+        <h2>Macro-system-improvements (Tree-matching/templating). Testing.</h2>
+        <p>Language: minimalistic JavaScript/Lisp bastard, for meta-programming and domain specific languages.</p>
+        <p>Compiles to JavaScript. Compiler written in the language itself</p>
+        <hr />
+
+        <h4>Why</h4>
+        <p>Old increment syntax</p>
+        <pre>
+        [set i [i + 1]]
+        </pre>
+        <p>New increment syntax</p>
+        <pre>
+        [inc i]
+        </pre>
+        <p>Macro rule</p>
+        <pre>
+        [macros codeTransform
+            '[inc ?var]
+            '[set ?var [?var + 1]]]
+        </pre>
+        <h4>What?</h4>
+        <ul>
+            <li>Tree matching function</li>
+            <li>Tree template function</li>
+            <li>Macro utilities and new syntactic constructs</li>
+        </ul>
+        <hr />
+        <p>→ All occurrences of <tt>[set i [i + 1]]</tt> and similar in code changed automagically to <tt>[inc i]</tt></p>
+        <h4>travis-setup</h4>
+    </body>
+</html>

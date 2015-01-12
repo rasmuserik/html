@@ -1,0 +1,9 @@
+name: art-quiz
+title: Årstalsquiz for kunstværker
+tags: [app, prototype, hack4dk, touch friendly, dynamic layout, smk, open content, statens museum for kunst, årstal]
+desc: 
+  Kunstquiz, - hvornår er kunstværkerne skabt?
+
+  Lavet på hack4dk hackathonen i 2013, og anvender open content kunstværker fra Statens Museum for Kunst. 
+bower: {}
+phonegap: {}

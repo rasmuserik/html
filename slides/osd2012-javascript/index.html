@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>solsort.dk - Rasmus Erik Voel Jensen</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:400' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                font-family: 'Ubuntu', sans-serif;
+                margin: 10pt; padding: 10pt;
+                font-size: 14pt;
+            }
+            pre {
+                font-family: 'Ubuntu', sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Serious JavaScript</h1>
+
+        <ul>
+            <li><a href="slides.html">Slides</a> just made to run fullscreen in chrome (may work in other modern web browser)</li>
+        </ul>
+        <ul>
+            <li>Links from the talk<ul>
+                <li><a href="http://pivotal.github.com/jasmine/">Jasmine</a> for unit testing</li>
+                <li><a href="http://seleniumhq.org/">Selenium</a> for user interface testing</li>
+                <li><a href="http://about.travis-ci.org/">Travis CI</a> for continous integration service on open source projects</li>
+                <li><a href="http://code.google.com/p/jsdoc-toolkit/">JSDoc</a> for API documentation, with <a href="https://developers.google.com/closure/">Closure tools</a> for exploiting the type annotations</li>
+                <li><a href="http://jashkenas.github.com/docco/">Docco</a> for literate programming</li>
+                <li><a href="http://wiki.commonjs.org/wiki/Modules/1.0">CommonJS Modules</a> for modules (mainly server side), can be used in browser with tools such as: <a href="http://ender.no.de">Ender</a>, <a href="https://github.com/substack/node-browserify">Browserify</a>, ..., or wrapped in <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">Asynchronous Module Definition</a> and loaded with tools such as <a href="http://requirejs.org/">RequireJS</a></li>
+                <li><a href="http://www.w3.org/TR/html5/offline.html">Cache manifest</a> for offline web-apps</a></li>
+                <li><a href="http://npmjs.org/">Node Package Manager</a> for packaging and distributing server-side modules</li>
+                <li><a href="http://phonegap.com/">PhoneGap</a> aka. Apache Cordova, for packaging for mobile phones</li>
+            </ul></li>
+        </ul>
+        <h2>Sample .travis.yml for setting up javascript test</h2>
+<pre>
+language: node_js
+node_js:
+  - 0.4
+  - 0.6
+</pre>
+        <h2>Sample output from Docco after processing a JavaScript program with literate documentation</h2>
+        Available <a href="http://dbc-as.github.com/selenese-runner/docs/selenese-runner.html">here</a>.
+        <h2>Sample package.json for publishing a project</h2>
+<pre>
+{
+  "name": "selenese-runner",
+  "version": "0.0.12",
+  "author": "Rasmus Jensen, DBC-as",
+  "homepage": "http://github.com/DBC-as/selenese-runner",
+  "description": "Automated execution of selenese scripts (tests made in selenium-ide)",
+  "dependencies": {
+    "soda": "*",
+    "async": "*",
+    "request": "*"
+  },
+  "licenses": [{"type": "GPLv3", "url": "https://raw.github.com/DBC-as/selenese-runner/master/COPYING"}],
+  "engines": {"node": "*"},
+  "main": "lib/selenese-runner.js",
+  "scripts": {
+    "test": "./test.sh"
+  }
+}
+</pre>
+    <h2>Example of CommonJS module<h2>
+<h3>hello.js</h3>
+<pre>
+// Simple module to demonstrate `exports`
+exports.printHello = function(name) {
+    console.log('Hello ' + name);
+}
+</pre>
+
+<h3>main.js</h3>
+<pre>
+// Simple module, to demonstrate `require`
+var helloModule = require('hello');
+helloModule.printHello('Module');
+</pre>
+
+
+
+
+
+
+        <!--
+
+
+        Transcript:
+
+        Serious JavaScript
+
+        This presentation consist of two parts
+        first we'll set the baseline and look at
+        what is javascript
+        from a computer science / programminglanguage perspective
+
+        and then the second part will explore how to approach
+        serious javascript development
+
+        a ubiquitous somewhat functional scripting language
+
+
+        javascript is the language most easily deployed 
+        for mobile applications
+
+        it is also the language that are in most webbrowsers
+
+
+        in addition to this javascript is also being run or used on servers
+        and it even runs on some embedded systems
+
+        in javascript you can even use anonymous functions
+        and it got closures right which is a lot better
+        than most mainstream language
+
+
+        regular expressions and string processing is a natural part of the language
+
+
+        and that have several applications
+        1) it means that the language is less toolable
+
+
+        so thet is the bad side of dynamic type system
+        the good part is that it 
+
+        in the last couple of years there has been a competition
+        between the webbrowsers for making 
+
+
+
+        the have quite advanced
+
+
+        <h1><a href="slides.html">Slides</a></h1>
+        designed for a 4:3 ratio screen with modern browser: firefox, chrome or safari.
+        <h1>Links</h1>
+        TBD
+        <h1>Draft/Transcript of speech</h1>
+        Currently in progress.
+
+
+
+<h2>Intro</h2><pre>
+Serious JavaScript
+this presentation consist of two parts
+first we'll set the baseline and look at
+what is javascript
+from a computer science and programming language perspective.
+and what is it that makes it such an interesting language
+
+then the seocnd part explores the aproach to developing serious javascript applications,
+best practices.
+
+</pre><h2>What?</h2><pre>
+but first what is javascript
+
+if we were to describe javascript in a single sentence, htat could be
+
+ubiquitous somewhat functional scripting language with quirks and good performance
+
+ubiquitous that means that is is everywhere
+
+</pre><h3>Ubiquitous</h3><pre>
+javascript is the most easily deployed language for mobile applications
+
+it is also the language that are on most webbrowsers
+and it is a language that is often used to script as an interenal scripting language in applications
+
+as well as scripting language in servers and even in some embedded systems
+it is the most ubiquitous language for end user applications because it is everywhere.
+
+</pre><h3>Somewhat Functional</h3><pre>
+javascript is also a somewhat functional language
+
+I like functional programming, it is very expressive
+
+functions in javascript is first class language
+which means that you can pass them around and use higher order functions
+
+it is also possible to define ananyumouns founcions
+
+and javascript ahs gotten closures right
+
+this is a lot better than a lot of the mainstream
+it is actually rare in mainstream languages that they got functions and closures correct
+
+still it is only a somewhat functional language
+
+does not have tail call optimisation
+and it data structures are mostly mutable
+
+it does not have a natural immutable data structure for list processing
+which is usually used a lot in functional programming
+
+</pre><h3>Scripting Language</h3><pre>
+javascript is a scripting language
+it has regular expressions and string processing integrated in the language
+as well as hashmap s, which is called objects in javascipt, as a natural part of the language, datastructure
+
+as a scripting language it is also dynamicly type
+this implies that it is very quick to prototype things in it
+but at the same time you loose a lot of safety
+
+errors may be caught at runtime instead of compile time , if they are called at all,
+and as an dynamic language it is much less toolable
+
+you can get less help from the developmnent environment
+
+or it is more difficult for the development environment to integrate with the language
+
+</pre><h3>Quirky</h3><pre>
+javascript also has a lot of quirks, it was designed and implemente very quickly
+
+there are some severe semantic issues
+
+so if you are going to do serious javascript development
+you really have to learn 
+
+
+</pre><h3>Good performance</h3><pre>
+javascript is also very interesting because its virtual machines
+has very good performance.
+a couple of years ago the webbrowsers started to compete on javascript on performance
+and implmentations of javascript engines
+
+I would venture to say that the javascript implementations tha
+
+
+</pre><h3>Transition</h3><pre>
+so that was a bit about what javascript is
+and and what's so interesting about it
+
+next how do we approach serious javascript development
+
+</pre><h2>How?</h2><pre>
+        So, how can we approach serious javascript development.
+
+        first we write the tests for our code,
+        then we document what it is to do,
+        then we write the code with style
+        and finally we package it for distribution
+
+</pre><h3>Testing</h3><pre>
+        Javascript is a dynamic language
+        and that makes testing even more important
+
+        We can look at test on different levels.
+
+        There is the unit testing, or internal testing,
+        which is written within the program.
+        There are many frameworks for this,
+        of which Jasmine seems to be
+        the most popular one.
+        (We are using that,
+        or sometimes just write the tests frameworkless).
+
+        On a higher level there is system testing.
+        JavaScript often use web technology
+        for user interfaces,
+        and there are several tools 
+        for automating web application testing.
+        Selenium is a good bet,
+        as it remote controls 
+        most of the different browsers,
+        and also has GUI for test development
+        which means it can be done by non-developer-testers.
+
+
+</pre><h3>Documentating</h3><pre>
+        When documenting, we both
+        write general project documentation,
+        and also within the code
+
+        In javascript there are several approaches
+        to documenting api's, 
+        but the most promising seems to be jsdoc.
+        it is similar to javadoc or doxygen,
+        but has added the option
+        to add type annotations
+        which may later be used
+        for some static type checking of the code
+
+        As a supplement to this
+        literate programming 
+        is beginning to be popular
+        in the javascript community
+
+        Essentially we write the code 
+        as if it were to be read
+        my programmers as well as machines.
+
+        docco is a nice tool for this
+        which extracts documentation
+        written in markdown
+        and format it in
+        two nicely formatted columns
+        one with the docs
+        and another with the code
+        nicely aligned with eachother.
+
+</pre><h3>Code Style</h3><pre>
+</pre><h3>Packaging</h3><pre>
+</pre><h2>Outro</h2><pre>
+        Questions, catch me later.
+        </pre>
+
+        <hr />
+
+
+
+
+<pre>
+# Presentation
+
+Serious JavaScript
+
+This talk consists of two parts.
+
+First we'll set the baseline
+and look at: what is JavaScript
+
+from a computer science 
+programming language perspective
+
+and also
+why is it interesting
+and should be take seriously
+
+
+Then the second part is about
+how to approach
+serious javascript development
+and best practices
+
+
+- so What is JavaScript?
+
+## Slide 1
+
+If we should define it in a single sentence,
+it could be:
+
+an ubiquitous 
+somewhat functional 
+asynchronous 
+dynamic 
+scripting language 
+with prototypal object model 
+and quirks. 
+
+
+Ubiquitous
+- it is everywhere.
+
+That is also what 
+makes JavaScript
+so interesting.
+
+JavaScript is the most easily deployed language
+for applications on mobile phones
+
+and it is also the language
+that is in most webbrowsers.
+
+tons of different applications
+has it embedded for scripting
+
+an JavaScript also runs very well for servers
+
+and even in some embedded systems.
+
+
+-----
+
+somewhat functional
+i like functional programming a lot
+it's very expressive
+
+functions in jsvascript are first class values
+that means you can pass them around and
+use higher order functions.
+They can even be defined anonymously
+and javascript got closures correct
+that is a lot better than most mainstream languages
+
+it is only somewhat functional
+because it is missing tail recursion
+
+and mosts of javascript datastructures are mutable
+
+it doesn't have a natural datastructure
+for immutable lists
+which are usually used in functional programming
+
+
+--------
+
+Asynchronous,
+a lot of the engines
+does not support
+multiple threads
+
+This is not as big an issue
+as you might expect.
+
+A lot of the libraries are asynchronous
+so when you are reading a file, waiting for a timeout,
+or writing to the network,
+the execution is not blocked,
+but instead you just
+pass a callback
+to the readfile or timeout function.
+And this will then be called when the desired action has finished.
+
+This actually performes well
+as long as the application
+is not cpu-bound.
+
+Cpu-heavy applications
+must yield to stay responsive,
+but on the other hand
+we are released from locks.
+
+
+
+Dynamic means that 
+types are resolved at runtime.
+
+This means less toolability,
+and that errors are not caught at compiletime.
+This is a trade-off against stability 
+for rapid prototyping.
+
+
+
+Scripting language
+
+regular expressions are a part of the language
+and hashmap is the usual datastructure
+
+
+
+prototypal inheritance
+
+
+--------
+
+one of the quirks of javascript is that tha language don't have builtin support for modules
+
+fortunately recently a lot of the implementors 
+found common ground, for how to define and load modules.
+especially for application scripting and server side
+
+In a commonjs modules, symbols can be exported
+by assigning them as properties
+on the special exports object.
+Similarly modules can be loaded
+via the require function
+that returns the desired module as an object.
+
+Unfortunately this doesn't work in browsers
+The require function blocks,
+and module loading in browsers must be asynchronous.
+The approach here instead is asynchrounus module definition
+which essentially wraps commonjs modules in a closure.
+
+
+For this, there are tools like
+requirejs, enderjs and browserify.
+
+In the future there will be harmony.
+Harmony is the next version of JavaScript
+and it contains syntax for modules.
+It is even possible to experiment with it now
+as Traceour recently has been released.
+It is an open source tool for compiling JavaScript from the future to now.
+</pre>
+-->
+</body>
+</html>

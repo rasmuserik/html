@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.solsort.blobshot"
+        version   = "1.0.0">
+
+    <name>Blobshot</name>
+
+    <description>
+        Red blobs are attacking and you have to help the green blobs to keep them at bay for as long as possible. 
+        Simple arcade game, created during the weekend hackathon at 5apps in Berlin, and (open source) code available at http://github.com/rasmuserik/.
+
+        Click on the screen to launch a green blob, - the longer you wait the larger the blob will be. Each green blob costs 1 score.
+        When red and green blobs collide, they disappear, and you get 20 score. Get as high a score as possible before the red blobs gets through your defences :)
+    </description>
+
+    <author href="http://solsort.com/" email="blobshot@solsort.com">
+        Rasmus Erik
+    </author>
+
+    <preference name="orientation" value="landscape" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="android-minSdkVersion" value="8" />
+    <preference name="prerendered-icon" value="false" />
+    <icon src="icon.png" />
+    <gap:splash src="splash.png" />
+    <preference name="permissions" value="none"/>
+</widget>

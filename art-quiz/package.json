@@ -1,0 +1,23 @@
+{
+  "version": "0.0.2",
+  "name": "art-quiz",
+  "description": "Hack4dk hackathon hack: touch friendly art quiz using open images from Statens Museum for Kunst",
+  "keywords": [
+    "app",
+    "prototype",
+    "hack4dk",
+    "touch friendly",
+    "dynamic layout",
+    "smk",
+    "open content",
+    "statens museum for kunst",
+    "årstal"
+  ],
+  "authors": [
+    "Rasmus Erik Voel Jensen (solsort.com)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rasmuserik/art-quiz.git"
+  }
+}

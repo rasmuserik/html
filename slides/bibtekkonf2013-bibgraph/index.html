@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Visualisering fra "Andre Der Har Lånt"-data</title>
+        <meta name="author" content="Rasmus Erik">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="reveal/css/reveal.min.css">
+        <link rel="stylesheet" href="slidestyle.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet 
+        <script>
+            document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+        -->
+
+        <!--[if lt IE 9]>
+        <script src="reveal/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <img style="position: fixed; top:8px; left: 100%; margin-left: -150px;" src="dbc.png">
+        <div id="timer" style="position: fixed; top: 8px; left: 8px;"></div>
+        <script>
+            var t0 = Date.now();
+            setInterval(function() {
+                var d = new Date();
+                document.getElementById("timer").innerHTML = 
+                   d.getHours() + ":" + (100 + d.getMinutes() + "").slice(1) + "<br>" +
+//                   Math.round((Date.now() - t0)/60/1000) +
+                   "";
+            }, 1000)
+        </script>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+                <h1 style="font-size: 300%">Visualisering <br><small>fra ADHL-data</small></h1>
+                <p style="font-size: 80%">BibTekKonf &nbsp; Oktober 2013</p>
+                <hr/>
+                <p style="font-size: 80%">Martin Møller Jensen (DBC)<br>Rasmus Erik Voel Jensen (<a href="http://solsort.dk">solsort.dk</a>)</p>
+                </section>
+
+                <!--
+                20 min inkl. spørgsmål
+
+                - Intro
+                  - ADHL (Andre der har lånt) indeholder statistik for millioner af co-lån.
+                  - Data mining og visualisering af disse, må kunne bruges til inspiration og navigation i materialer.
+                  - Demo af proof-of-concept, motivation og perspektiver. Relevansmål og implementering
+                - DEMO
+                  - prototype / proof-of-concept
+                - Motivation og perspektiver
+                  - ITD-thursday - Rasmus Erik hack
+                  - "genre" udenfor almindelig klassifikation
+                  - Værktøj til besvarelse af inspirationsspørgsmål
+                  - Gå på opdagelse mellem materialer online
+                - Relevansgraf for bøger
+                  - Vægtning: P(A|B)P(B|A)
+                  - Større-end-hukommelse databehandling
+                  - Graf-generering via traversering med deterministisk støj og pre-branching
+                - Teknik: node.js og HTML5
+                  - Backend-hack i node.js og LevelDB
+                  - Visualisering med D3.js, DOM og Canvas
+                  - Mobil usability og `touchend`-bug
+                  - Let indlejring med HTML5 data-attributter
+                - The END
+                  - http://dbc-bibgraph.solsort.com/ 
+                    (flyttes til http://labs.dbc.dk)
+                  - Spørgsmål
+                -->
+
+                <section><h2>Indhold</h2>
+                <ul>
+                  <li>Bagrund</li>
+                  <li>Demo</li>
+                  <li>Relevansgraf for biblioteksmaterialer</li>
+                  <li>Visualiseringsimplementation</li>
+              </ul>
+                </section>
+
+                <section><h2>Baggrund</h2>
+                <ul>
+                <li>ADHL (Andre der har lånt) indeholder statistik for millioner af co-lån.</li>
+                <li>Data mining og visualisering af disse, må kunne bruges til inspiration og navigation i materialer.</li>
+                  <li>DBC ITD-thursday - Rasmus Erik hack</li>
+                  <!--li>"Genre" udenfor almindelig klassifkation</li>
+                  <li>Værktøj til besvarelse af inspirationsspørgsmål</li>
+                  <li>Gå på opdagelse i materialer online</li-->
+                </ul>
+                </section>
+
+                <section>
+                <h1>DEMO</h1>
+                <p>prototype / proof-of-concept</p>
+                </section>
+
+                <section><h2 style="font-size: 190%">Relevansgraf for biblioteksmaterialer</h2>
+                <ul>
+                  <li>Vægtning: <strong>P(A|B)P(B|A)</strong> <br>- relevante frem for populære titler</li>
+                  <li>Graf-generering via traversering med deterministisk støj og pre-branching <br>- undgår lokale maksima</li>
+                  <li>Større-end-hukommelse data</li>
+                </ul>
+                </section>
+
+                <section><h2 style="font-size: 190%">Visualiserings&shy;implementation</h2>
+                <ul>
+                  <li>Backend: hack med node.js og LevelDB, burde blive egentlig DBC web service</li>
+                  <li>Tegnet med D3.js, DOM og Canvas</li>
+                  <li>Mobil usability og `touchend`-bug</li>
+                  <li>Indlejring med HTML5 data-attributter</li>
+                </ul>
+                </section>
+
+                <section>
+                <p style="font-size: 150%"><strong>Konklusion:</strong>
+                <p> Værktøj til opdagelse, navigation og <br>"genre" for biblioteksmaterialer, <br>kan skabes ud fra lån-statistik.</p>
+                <p style="font-size:150%"><strong>Spørgsmål?</strong><br><br></p>
+                <p>Demo: <a href="http://dbc-bibgraph.solsort.com/">dbc-bibgraph.solsort.com</a> (flyttes&nbsp;til&nbsp;labs.dbc.dk)</p>
+
+                </section>
+            </div>
+
+        </div>
+
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                //theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                //transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                transition: "linear",
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                // { src: 'reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+        <script src="/_logger.js"></script>
+    </body>
+</html>

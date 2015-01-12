@@ -1,0 +1,37 @@
+{
+  "name": "onetwo360-viewer",
+  "version": "0.1.0",
+  "devDependencies": {
+    "express": "~3.4.8",
+    "uglify-js": "~2.4.12",
+    "reputil": "0.0.7"
+  },
+  "description": "Widget for showing OneTwo360 images/animations",
+  "keywords": [],
+  "author": ["Rasmus Erik Voel Jensen (solsort.com)", "hammerti.me"],
+  "scripts": {
+    "prepublish": "reputil build; ./node_modules/.bin/uglifyjs -m -c warnings=false -d isNodeJs=false,runTest=false onetwo360.js > onetwo360.min.js; git add onetwo360.min.js README.md",
+    "start": "",
+    "test": "phantomjs phantom.js & node ./onetwo360.js test"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onetwo360/360-viewer.git"
+  },
+  "dependencies": {
+  },
+  "testling": {
+    "html": "test.html",
+    "browsers": [
+      "ie/7..latest",
+      "chrome/27..canary",
+      "firefox/22..nightly",
+      "safari/5.0.5..latest",
+      "opera/11.6..next",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/4.2"
+    ]
+  }
+}

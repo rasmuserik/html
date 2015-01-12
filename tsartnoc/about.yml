@@ -1,0 +1,14 @@
+title: Tsar Tnoc
+desc: Simple game, walking around in a world, collecting contrast icons, and avoiding monsters. Developed during a ludum dare hackathon.
+name: tsartnoc
+tags: [app, game, ludum dare, hackathon]
+date: 2012-07-15
+repos: rasmuserik/app-tsartnoc
+html:
+  css: ["style.css"]
+  body: '<iframe id="ifr" src="public/game.html" width=800 height=480></iframe>'
+links:
+  web_app: http://solsort.com/tsartnoc/
+phonegap:
+  orientation: landscape
+  fullscreen: true
