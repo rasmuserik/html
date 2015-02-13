@@ -943,6 +943,8 @@ do ->
     ["div.items"].concat items
     ["hr"]
     ["div.entries"].concat entries
+    ["script", {src:"/react.min.js"}, ""]
+    ["script", {src:"/solsort.js"}, ""]
   ]
 
 
