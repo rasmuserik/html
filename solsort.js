@@ -62,7 +62,7 @@ function ba(a) {
   return a[ca] || (a[ca] = ++da);
 }
 var ca = "closure_uid_" + (1E9 * Math.random() >>> 0), da = 0;
-function fa(a, b, c) {
+function ea(a, b, c) {
   return a.call.apply(a.bind, arguments);
 }
 function ga(a, b, c) {
@@ -82,7 +82,7 @@ function ga(a, b, c) {
   };
 }
 function ha(a, b, c) {
-  ha = Function.prototype.bind && -1 != Function.prototype.bind.toString().indexOf("native code") ? fa : ga;
+  ha = Function.prototype.bind && -1 != Function.prototype.bind.toString().indexOf("native code") ? ea : ga;
   return ha.apply(null, arguments);
 }
 ;function ia(a) {
@@ -1541,13 +1541,13 @@ h.S = function(a, b) {
 };
 h.Cd = !0;
 h.call = function() {
-  function a(a, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, ea, R) {
+  function a(a, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, fa, R) {
     a = this.v;
-    return gd.mc ? gd.mc(a, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, ea, R) : gd.call(null, a, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, ea, R);
+    return gd.mc ? gd.mc(a, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, fa, R) : gd.call(null, a, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, fa, R);
   }
-  function b(a, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, ea) {
+  function b(a, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, fa) {
     a = this;
-    return a.v.eb ? a.v.eb(b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, ea) : a.v.call(null, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, ea);
+    return a.v.eb ? a.v.eb(b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, fa) : a.v.call(null, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka, fa);
   }
   function c(a, b, c, d, e, f, g, l, p, q, r, v, u, B, K, H, J, Q, M, ka) {
     a = this;
@@ -1617,7 +1617,7 @@ h.call = function() {
     a = this;
     return a.v.o ? a.v.o(b, c, d) : a.v.call(null, b, c, d);
   }
-  function ea(a, b, c) {
+  function fa(a, b, c) {
     a = this;
     return a.v.h ? a.v.h(b, c) : a.v.call(null, b, c);
   }
@@ -1636,7 +1636,7 @@ h.call = function() {
       case 2:
         return ka.call(this, R, Ta);
       case 3:
-        return ea.call(this, R, Ta, Xa);
+        return fa.call(this, R, Ta, Xa);
       case 4:
         return Q.call(this, R, Ta, Xa, ab);
       case 5:
@@ -1680,7 +1680,7 @@ h.call = function() {
   };
   R.e = fb;
   R.h = ka;
-  R.o = ea;
+  R.o = fa;
   R.F = Q;
   R.la = M;
   R.fb = K;
@@ -1765,12 +1765,12 @@ h.bb = function(a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M) {
 h.cb = function(a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q) {
   return this.v.cb ? this.v.cb(a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q) : this.v.call(null, a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q);
 };
-h.eb = function(a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea) {
-  return this.v.eb ? this.v.eb(a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea) : this.v.call(null, a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea);
+h.eb = function(a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa) {
+  return this.v.eb ? this.v.eb(a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa) : this.v.call(null, a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa);
 };
-h.Hd = function(a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea, ka) {
+h.Hd = function(a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa, ka) {
   var fb = this.v;
-  return gd.mc ? gd.mc(fb, a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea, ka) : gd.call(null, fb, a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea, ka);
+  return gd.mc ? gd.mc(fb, a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa, ka) : gd.call(null, fb, a, b, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa, ka);
 };
 function Rc(a, b) {
   return ed(a) && !(a ? a.A & 262144 || a.Nd || (a.A ? 0 : w(vb, a)) : w(vb, a)) ? new fd(a, b) : null == a ? null : wb(a, b);
@@ -2753,27 +2753,27 @@ function he(a, b, c) {
   if (15 === b) {
     return a.Za ? a.Za(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K) : a.Za ? a.Za(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K) : a.call(null, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K);
   }
-  var M = Ya(Q), ea = Za(Q);
+  var M = Ya(Q), fa = Za(Q);
   if (16 === b) {
     return a.$a ? a.$a(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M) : a.$a ? a.$a(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M) : a.call(null, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M);
   }
-  var Q = Ya(ea), ka = Za(ea);
+  var Q = Ya(fa), ka = Za(fa);
   if (17 === b) {
     return a.ab ? a.ab(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q) : a.ab ? a.ab(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q) : a.call(null, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q);
   }
-  var ea = Ya(ka), fb = Za(ka);
+  var fa = Ya(ka), fb = Za(ka);
   if (18 === b) {
-    return a.bb ? a.bb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea) : a.bb ? a.bb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea) : a.call(null, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea);
+    return a.bb ? a.bb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa) : a.bb ? a.bb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa) : a.call(null, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa);
   }
   ka = Ya(fb);
   fb = Za(fb);
   if (19 === b) {
-    return a.cb ? a.cb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea, ka) : a.cb ? a.cb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea, ka) : a.call(null, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea, ka);
+    return a.cb ? a.cb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa, ka) : a.cb ? a.cb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa, ka) : a.call(null, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa, ka);
   }
   var R = Ya(fb);
   Za(fb);
   if (20 === b) {
-    return a.eb ? a.eb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea, ka, R) : a.eb ? a.eb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea, ka, R) : a.call(null, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, ea, ka, R);
+    return a.eb ? a.eb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa, ka, R) : a.eb ? a.eb(c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa, ka, R) : a.call(null, c, d, e, f, g, l, p, q, r, v, u, B, H, J, K, M, Q, fa, ka, R);
   }
   throw Error("Only up to 20 arguments supported on functions");
 }
@@ -12626,7 +12626,76 @@ function mp(a) {
 }
 ;var rp = [y("git pull \x26\x26"), y("cd ../webroot \x26\x26"), y("git pull \x26\x26"), y("cp solsort.js ../solsort/solsort.js")].join("");
 Rm("update-server-from-webroot", function() {
-  return qn(rp);
+  var a = Z(1);
+  W(function(a) {
+    return function() {
+      var c = function() {
+        return function(a) {
+          return function() {
+            function b(c) {
+              for (;;) {
+                var d;
+                a: {
+                  try {
+                    for (;;) {
+                      var f = a(c);
+                      if (!O(f, V)) {
+                        d = f;
+                        break a;
+                      }
+                    }
+                  } catch (g) {
+                    if (g instanceof Object) {
+                      c[5] = g, ak(c), d = V;
+                    } else {
+                      throw g;
+                    }
+                  }
+                }
+                if (!O(d, V)) {
+                  return d;
+                }
+              }
+            }
+            function c() {
+              var a = [null, null, null, null, null, null, null, null];
+              a[0] = d;
+              a[1] = 1;
+              return a;
+            }
+            var d = null, d = function(a) {
+              switch(arguments.length) {
+                case 0:
+                  return c.call(this);
+                case 1:
+                  return b.call(this, a);
+              }
+              throw Error("Invalid arity: " + arguments.length);
+            };
+            d.j = c;
+            d.e = b;
+            return d;
+          }();
+        }(function() {
+          return function(a) {
+            var b = a[1];
+            if (1 === b) {
+              var b = new A(null, "update-server", "update-server", -82539246, null), c = qn(rp);
+              a[7] = b;
+              return Y(a, 2, c);
+            }
+            return 2 === b ? (b = a[7], b = Sm.l(G([b, a[2]], 0)), Zj(a, b)) : null;
+          };
+        }(a), a);
+      }(), d = function() {
+        var d = c.j ? c.j() : c.call(null);
+        d[6] = a;
+        return d;
+      }();
+      return X(d);
+    };
+  }(a));
+  return a;
 });
 function sp() {
   var a = Z(1);
@@ -13622,14 +13691,14 @@ function Vp(a, b) {
                       }());
                     };
                   }(r, B, K, q, r, v, u, B, H, J, K, c, a);
-                }(), Q = K.onupgradeneeded = M, ea = function() {
+                }(), Q = K.onupgradeneeded = M, fa = function() {
                   return function() {
                     return function(a) {
                       xq();
                       return console.log(new A(null, "error", "error", 661562495, null), a);
                     };
                   }(r, B, K, q, r, v, u, B, H, J, K, M, Q, c, a);
-                }(), ka = K.onerror = ea, d = K.onsuccess = function() {
+                }(), ka = K.onerror = fa, d = K.onsuccess = function() {
                   return function(a) {
                     return function(b) {
                       xq();
@@ -13637,7 +13706,7 @@ function Vp(a, b) {
                       ve.h ? ve.h(uq, b) : ve.call(null, uq, b);
                       return tj(a);
                     };
-                  }(r, B, K, q, r, v, u, B, H, J, K, M, Q, ea, ka, c, a);
+                  }(r, B, K, q, r, v, u, B, H, J, K, M, Q, fa, ka, c, a);
                 }();
                 b[8] = q;
                 b[9] = Q;
@@ -13834,21 +13903,21 @@ function Vp(a, b) {
                       }(a, b, c, d, e, f, g, l, p, q), null, null);
                     };
                   }(r, u, B, q, r, v, u, B, d, b);
-                }(), J = F.e ? F.e(sq) : F.call(null, sq), K = J.e ? J.e(a) : J.call(null, a), M = H.e ? H.e(K) : H.call(null, K), Q = Bg(M), ea = function() {
+                }(), J = F.e ? F.e(sq) : F.call(null, sq), K = J.e ? J.e(a) : J.call(null, a), M = H.e ? H.e(K) : H.call(null, K), Q = Bg(M), fa = function() {
                   return function(a) {
                     return function() {
                       xq();
                       return nk(a, !0);
                     };
                   }(r, u, B, q, r, v, u, B, H, J, K, M, Q, d, b);
-                }(), ka = u.oncomplete = ea, fb = function() {
+                }(), ka = u.oncomplete = fa, fb = function() {
                   return function(a) {
                     return function() {
                       xq();
                       Pg.l(G(["commit error"], 0));
                       return tj(a);
                     };
-                  }(r, u, B, q, r, v, u, B, H, J, K, M, Q, ea, ka, d, b);
+                  }(r, u, B, q, r, v, u, B, H, J, K, M, Q, fa, ka, d, b);
                 }(), R = u.onerror = fb, e = u.onabort = function() {
                   return function(a) {
                     return function() {
@@ -13856,7 +13925,7 @@ function Vp(a, b) {
                       Pg.l(G(["commit abort"], 0));
                       return tj(a);
                     };
-                  }(r, u, B, q, r, v, u, B, H, J, K, M, Q, ea, ka, fb, R, d, b);
+                  }(r, u, B, q, r, v, u, B, H, J, K, M, Q, fa, ka, fb, R, d, b);
                 }(), Yg = xe.F(sq, ad, a, wf);
                 c[7] = Q;
                 c[8] = ka;
@@ -13994,14 +14063,14 @@ function Vp(a, b) {
                       }(a, b, c, d, e, f, g, l, p, q, r, v), null, null);
                     };
                   }(u, B, J, K, v, u, B, H, J, K, e, c);
-                }(), Q = M.e ? M.e(b) : M.call(null, b), ea = Bg(Q), f = J.oncomplete = function() {
+                }(), Q = M.e ? M.e(b) : M.call(null, b), fa = Bg(Q), f = J.oncomplete = function() {
                   return function(a, b) {
                     return function() {
                       return nk(a, F.e ? F.e(b) : F.call(null, b));
                     };
-                  }(u, B, J, K, v, u, B, H, J, K, M, Q, ea, e, c);
+                  }(u, B, J, K, v, u, B, H, J, K, M, Q, fa, e, c);
                 }();
-                d[9] = ea;
+                d[9] = fa;
                 d[10] = v;
                 d[11] = f;
                 return Y(d, 5, u);
@@ -14283,13 +14352,13 @@ function Vp(a, b) {
                       }
                     }() ? $d(Q.na(), q($b(g))) : $d(Q.na(), null);
                   }
-                  var ea = C(g);
-                  return Pc(kk(Cq(a, ea), function(a, b, c, d, e, f) {
+                  var fa = C(g);
+                  return Pc(kk(Cq(a, fa), function(a, b, c, d, e, f) {
                     return function(b) {
                       e[a] = b;
                       return 0 >= xe.h(f, Ed) ? nk(d, e) : null;
                     };
-                  }(ea, g, f, b, c, d)), q(tc(g)));
+                  }(fa, g, f, b, c, d)), q(tc(g)));
                 }
                 return null;
               }
@@ -14918,7 +14987,7 @@ var Rq = se.j ? se.j() : se.call(null), Sq = function(a) {
               return b[2] = null, b[1] = 5, V;
             }
             if (12 === c) {
-              var p = b[8], q = b[9], ea = b[18], B = b[14], ka = b[19], v = b[11], fb = b[2], R = function() {
+              var p = b[8], q = b[9], fa = b[18], B = b[14], ka = b[19], v = b[11], fb = b[2], R = function() {
                 var a = ka;
                 return ve.h ? ve.h(Rq, a) : ve.call(null, Rq, a);
               }(), Yg = q.src = ka, Ta = q.volume = 1, Xa = q.play(), ab = document.getElementById("save"), d = ab.onclick = function() {
@@ -14926,7 +14995,7 @@ var Rq = se.j ? se.j() : se.call(null), Sq = function(a) {
                   return function() {
                     return Oq(c);
                   };
-                }(v, q, ka, p, B, ea, p, q, ea, B, ka, v, fb, R, Yg, Ta, Xa, ab, c, a);
+                }(v, q, ka, p, B, fa, p, q, fa, B, ka, v, fb, R, Yg, Ta, Xa, ab, c, a);
               }(), u = F.e ? F.e(Pq) : F.call(null, Pq), u = Qq("playback", u);
               b[20] = R;
               b[21] = Ta;
@@ -14936,7 +15005,7 @@ var Rq = se.j ? se.j() : se.call(null), Sq = function(a) {
               b[25] = Xa;
               return Y(b, 13, u);
             }
-            return 2 === c ? (v = b[11], d = b[2], q = document.getElementById("video"), b[9] = q, b[11] = d, b[1] = t(d) ? 3 : 4, V) : 11 === c ? (b[2] = null, b[1] = 12, V) : 9 === c ? (ea = b[18], d = b[2], ka = URL.createObjectURL(d), u = F.e ? F.e(Rq) : F.call(null, Rq), b[18] = d, b[19] = ka, b[1] = t(u) ? 10 : 11, V) : 5 === c ? (b[26] = b[2], b[2] = null, b[1] = 6, V) : 10 === c ? (d = F.e ? F.e(Rq) : F.call(null, Rq), d = URL.revokeObjectURL(d), b[2] = d, b[1] = 12, V) : 8 === c ? (p = b[8], 
+            return 2 === c ? (v = b[11], d = b[2], q = document.getElementById("video"), b[9] = q, b[11] = d, b[1] = t(d) ? 3 : 4, V) : 11 === c ? (b[2] = null, b[1] = 12, V) : 9 === c ? (fa = b[18], d = b[2], ka = URL.createObjectURL(d), u = F.e ? F.e(Rq) : F.call(null, Rq), b[18] = d, b[19] = ka, b[1] = t(u) ? 10 : 11, V) : 5 === c ? (b[26] = b[2], b[2] = null, b[1] = 6, V) : 10 === c ? (d = F.e ? F.e(Rq) : F.call(null, Rq), d = URL.revokeObjectURL(d), b[2] = d, b[1] = 12, V) : 8 === c ? (p = b[8], 
             B = b[14], r = b[10], d = b[2], u = p.stop(), r = URL.revokeObjectURL(r), b[27] = d, b[28] = r, b[29] = u, Y(b, 9, B)) : null;
           };
         }(a), a);
@@ -15169,7 +15238,7 @@ function Vq(a) {
               return M = c[14], c[1] = t(M) ? 16 : 17, V;
             }
             if (16 === d) {
-              var e = c[12], K = c[13], M = c[14], J = C(K), K = tc(K), Q = U, ea = C(D(M)), M = C(M), e = Vc.h(e, new T(null, 2, 5, Q, [ea, M], null));
+              var e = c[12], K = c[13], M = c[14], J = C(K), K = tc(K), Q = U, fa = C(D(M)), M = C(M), e = Vc.h(e, new T(null, 2, 5, Q, [fa, M], null));
               c[12] = e;
               c[13] = K;
               c[14] = J;
@@ -15645,15 +15714,15 @@ function cr() {
                     return sm(a, /,/);
                   };
                 }(v, p, q, r, v, u, B, H, J, c, a);
-              }(), M = S.e(K), Q = new A(null, "bib", "bib", -491285877, null), ea = Zm(G([Q, "traversing 46186845 loans and finding patrons loans"], 0)), d = S.e(function() {
+              }(), M = S.e(K), Q = new A(null, "bib", "bib", -491285877, null), fa = Zm(G([Q, "traversing 46186845 loans and finding patrons loans"], 0)), d = S.e(function() {
                 return function(a) {
                   return function(b) {
                     var c = L(b, 0);
                     b = L(b, 1);
                     return new T(null, 2, 5, U, [c, [ia(b), a[ia(b)]]], null);
                   };
-                }(v, p, q, r, v, u, B, H, J, K, M, Q, ea, c, a);
-              }()), d = qe(M, ea, d, G([an], 0)), d = br("tmp/coloans.csv", mj, d);
+                }(v, p, q, r, v, u, B, H, J, K, M, Q, fa, c, a);
+              }()), d = qe(M, fa, d, G([an], 0)), d = br("tmp/coloans.csv", mj, d);
               b[8] = J;
               return Y(b, 7, d);
             }
