@@ -12094,7 +12094,7 @@ Rm("style", function() {
   return a;
 });
 function $o(a) {
-  return{"http-headers":{"Content-Type":"text/html;charset\x3dUTF-8"}, content:[y("\x3c!DOCTYPE html\x3e\x3chtml\x3e\x3chead\x3e"), y("\x3ctitle\x3e"), y(function() {
+  return{"http-headers":{"Content-Type":"text/html;charset\x3dUTF-8"}, content:[y('\x3c!DOCTYPE html\x3e\x3chtml manifest\x3d"/solsort.appcache"\x3e\x3chead\x3e'), y("\x3ctitle\x3e"), y(function() {
     var b = Vh.e(a);
     return t(b) ? b : "solsort.com";
   }()), y("\x3c/title\x3e"), y('\x3cmeta http-equiv\x3d"Content-Type" content\x3d"text/html;charset\x3dUTF-8"\x3e'), y('\x3cmeta http-equiv\x3d"X-UA-Compatible" content\x3d"IE\x3dedge,chrome\x3d1"\x3e'), y('\x3cmeta name\x3d"viewport" content\x3d"'), y("width\x3ddevice-width, initial-scale\x3d1.0"), y(t(jh.e(a)) ? ", minimum-scale\x3d1.0, maximum-scale\x3d1.0, user-scalable\x3d0" : ""), y('"\x3e'), y('\x3cmeta name\x3d"format-detection" content\x3d"telephone\x3dno"\x3e'), y("\x3clink href\x3d/style.css rel\x3dstylesheet\x3e"), 
@@ -12934,8 +12934,8 @@ Rm("dev-server", function() {
             if (1 === b) {
               var b = Sm.l(G([new A(null, "dev-server", "dev-server", -1383637135, null), new A(null, "start", "start", 1285322546, null)], 0)), c = up(), d = tp(), p = hk(1E3);
               a[7] = c;
-              a[8] = b;
-              a[9] = d;
+              a[8] = d;
+              a[9] = b;
               return Y(a, 2, p);
             }
             return 2 === b ? (b = a[2], c = sn(), a[10] = b, a[11] = c, Zj(a, !0)) : null;
@@ -12951,7 +12951,9 @@ Rm("dev-server", function() {
   }(a));
   return a;
 });
-t(en) && Jm("reload", function() {
+t(en) && ("undefined" !== typeof applicationCache && (applicationCache.onupdateready = function() {
+  return location.reload();
+}), Jm("reload", function() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -13025,7 +13027,7 @@ t(en) && Jm("reload", function() {
     };
   }(a));
   return a;
-});
+}));
 Rm("rasmuserik", function() {
   return new m(null, 4, [Kh, "html", Vh, "Rasmus Erik - solsort.com", Hh, new m(null, 2, [Ti, new m(null, 2, [pi, Uh, Nh, 0], null), Gi, new m(null, 3, [Oi, 12, pi, Uh, yi, kj], null)], null), lj, new T(null, 5, 5, U, [ai, new m(null, 1, [Yh, new m(null, 1, [yi, Wh], null)], null), new T(null, 4, 5, U, [ai, new m(null, 1, [Yh, new m(null, 6, [Di, dh, sh, 720, yi, Wh, Oi, 16, Nh, 60, Bi, 60], null)], null), new T(null, 2, 5, U, [fj, new m(null, 2, [Oh, "/icons/rasmus-erik-voel-jensen", Yh, new m(null, 
   7, [ij, 120, Fh, 120, th, 60, ti, Ni, jj, 15, hh, 15, Si, "0px 0px 2px #000"], null)], null)], null), new T(null, 4, 5, U, [ai, new m(null, 1, [Yh, new m(null, 6, [Di, dh, ti, Ni, yi, Wh, oj, 4, jj, 15, hh, 15], null)], null), new T(null, 3, 5, U, [Ti, new m(null, 1, [Yh, new m(null, 1, [Bi, 10], null)], null), "Rasmus\u00a0Erik Voel\u00a0Jensen"], null), new T(null, 10, 5, U, [ai, new m(null, 1, [Yh, new m(null, 1, [Oi, "100%"], null)], null), "CEO\u00a0", new T(null, 3, 5, U, [hj, new m(null, 
@@ -16435,8 +16437,8 @@ h.S = function(a, b) {
 h.X = function(a, b) {
   return md(b) ? eb(this, z.h(b, 0), z.h(b, 1)) : Ka(Ua, this, b);
 };
-Rm("hello", function(a) {
-  return new m(null, 2, [Kh, "html", lj, new T(null, 8, 5, U, [ai, "hello ", jr("world"), (new kr("foo")).ic(null), (new lr("foo", null, null, null)).ic(null), new T(null, 2, 5, U, [ai, [y("this is: "), y(a)].join("")], null), new T(null, 2, 5, U, [ai, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "#hello/foo"], null), "foo"], null)], null), new T(null, 2, 5, U, [ai, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "#hello/bar"], null), "bar"], null)], null)], null)], null);
+Rm("example", function(a) {
+  return new m(null, 2, [Kh, "html", lj, new T(null, 8, 5, U, [ai, "Does it work? ", jr("world"), (new kr("foo")).ic(null), (new lr("foo", null, null, null)).ic(null), new T(null, 2, 5, U, [ai, [y("this is: "), y(a)].join("")], null), new T(null, 2, 5, U, [ai, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "#hello/foo"], null), "foo"], null)], null), new T(null, 2, 5, U, [ai, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "#hello/bar"], null), "bar"], null)], null)], null)], null);
 });
 if (t(fn)) {
   var mr = function() {
