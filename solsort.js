@@ -12627,7 +12627,7 @@ function mp(a) {
   };
   kn.e ? kn.e(qp) : kn.call(null, qp);
 }
-;var rp = [y("git pull \x26\x26"), y("cd ../webroot \x26\x26"), y("git pull \x26\x26"), y("cp solsort.js ../solsort/solsort.js")].join("");
+;var rp = [y("git pull \x26\x26"), y("cd ../webroot \x26\x26"), y("git checkout . \x26\x26"), y("git pull \x26\x26"), y("cp solsort.js ../solsort/solsort.js")].join("");
 Rm("update-server-from-webroot", function() {
   var a = Z(1);
   W(function(a) {
