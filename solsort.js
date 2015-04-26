@@ -364,13 +364,13 @@ var db = function db(b, c) {
     throw x("IAssociative.-contains-key?", b);
   }
   return d.call(null, b, c);
-}, eb = function eb(b, c, d) {
+}, fb = function fb(b, c, d) {
   if (b ? b.Ta : b) {
     return b.Ta(b, c, d);
   }
   var e;
-  e = eb[k(null == b ? null : b)];
-  if (!e && (e = eb._, !e)) {
+  e = fb[k(null == b ? null : b)];
+  if (!e && (e = fb._, !e)) {
     throw x("IAssociative.-assoc", b);
   }
   return e.call(null, b, c, d);
@@ -1467,7 +1467,7 @@ var ad = function ad() {
   }
 };
 ad.o = function(a, b, c) {
-  return null != a ? eb(a, b, c) : bd([b], [c]);
+  return null != a ? fb(a, b, c) : bd([b], [c]);
 };
 ad.l = function(a, b, c, d) {
   for (;;) {
@@ -1625,14 +1625,14 @@ h.call = function() {
     a = this;
     return a.v.e ? a.v.e(b) : a.v.call(null, b);
   }
-  function fb(a) {
+  function eb(a) {
     a = this;
     return a.v.j ? a.v.j() : a.v.call(null);
   }
   var R = null, R = function(R, Ta, Xa, ab, nb, tb, xb, Eb, Nb, Vb, Fb, yc, Wb, dd, Gd, de, Ie, Kf, Zg, Li, Rk, qo) {
     switch(arguments.length) {
       case 1:
-        return fb.call(this, R);
+        return eb.call(this, R);
       case 2:
         return ka.call(this, R, Ta);
       case 3:
@@ -1678,7 +1678,7 @@ h.call = function() {
     }
     throw Error("Invalid arity: " + arguments.length);
   };
-  R.e = fb;
+  R.e = eb;
   R.h = ka;
   R.o = fa;
   R.F = Q;
@@ -1769,8 +1769,8 @@ h.eb = function(a, b, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa) {
   return this.v.eb ? this.v.eb(a, b, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa) : this.v.call(null, a, b, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa);
 };
 h.Hd = function(a, b, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka) {
-  var fb = this.v;
-  return gd.mc ? gd.mc(fb, a, b, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka) : gd.call(null, fb, a, b, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka);
+  var eb = this.v;
+  return gd.mc ? gd.mc(eb, a, b, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka) : gd.call(null, eb, a, b, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka);
 };
 function Rc(a, b) {
   return ed(a) && !(a ? a.A & 262144 || a.Nd || (a.A ? 0 : w(vb, a)) : w(vb, a)) ? new fd(a, b) : null == a ? null : wb(a, b);
@@ -1848,14 +1848,18 @@ function wd(a, b) {
     if (c > d) {
       c = 1;
     } else {
-      a: {
-        for (d = 0;;) {
-          var e = vd(Yc(a, d), Yc(b, d));
-          if (0 === e && d + 1 < c) {
-            d += 1;
-          } else {
-            c = e;
-            break a;
+      if (0 === c) {
+        c = 0;
+      } else {
+        a: {
+          for (d = 0;;) {
+            var e = vd(Yc(a, d), Yc(b, d));
+            if (0 === e && d + 1 < c) {
+              d += 1;
+            } else {
+              c = e;
+              break a;
+            }
           }
         }
       }
@@ -2761,17 +2765,17 @@ function he(a, b, c) {
   if (17 === b) {
     return a.ab ? a.ab(c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q) : a.ab ? a.ab(c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q) : a.call(null, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q);
   }
-  var fa = Ya(ka), fb = Za(ka);
+  var fa = Ya(ka), eb = Za(ka);
   if (18 === b) {
     return a.bb ? a.bb(c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa) : a.bb ? a.bb(c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa) : a.call(null, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa);
   }
-  ka = Ya(fb);
-  fb = Za(fb);
+  ka = Ya(eb);
+  eb = Za(eb);
   if (19 === b) {
     return a.cb ? a.cb(c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka) : a.cb ? a.cb(c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka) : a.call(null, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka);
   }
-  var R = Ya(fb);
-  Za(fb);
+  var R = Ya(eb);
+  Za(eb);
   if (20 === b) {
     return a.eb ? a.eb(c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka, R) : a.eb ? a.eb(c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka, R) : a.call(null, c, d, e, f, g, l, p, q, r, u, v, B, H, J, K, M, Q, fa, ka, R);
   }
@@ -4541,7 +4545,7 @@ h.Ta = function(a, b, c) {
       e[d + 1] = c;
       return new m(this.meta, this.w + 1, e, null);
     }
-    return wb(eb(Ae(wf, this), b, c), this.meta);
+    return wb(fb(Ae(wf, this), b, c), this.meta);
   }
   if (c === this.k[a + 1]) {
     return this;
@@ -4562,7 +4566,7 @@ h.S = function(a, b) {
 };
 h.X = function(a, b) {
   if (md(b)) {
-    return eb(this, z.h(b, 0), z.h(b, 1));
+    return fb(this, z.h(b, 0), z.h(b, 1));
   }
   for (var c = this, d = n(b);;) {
     if (null == d) {
@@ -4570,7 +4574,7 @@ h.X = function(a, b) {
     }
     var e = C(d);
     if (md(e)) {
-      c = eb(c, z.h(e, 0), z.h(e, 1)), d = D(d);
+      c = fb(c, z.h(e, 0), z.h(e, 1)), d = D(d);
     } else {
       throw Error("conj on a map takes map entries or seqables of map entries");
     }
@@ -5345,7 +5349,7 @@ h.S = function(a, b) {
 };
 h.X = function(a, b) {
   if (md(b)) {
-    return eb(this, z.h(b, 0), z.h(b, 1));
+    return fb(this, z.h(b, 0), z.h(b, 1));
   }
   for (var c = this, d = n(b);;) {
     if (null == d) {
@@ -5353,7 +5357,7 @@ h.X = function(a, b) {
     }
     var e = C(d);
     if (md(e)) {
-      c = eb(c, z.h(e, 0), z.h(e, 1)), d = D(d);
+      c = fb(c, z.h(e, 0), z.h(e, 1)), d = D(d);
     } else {
       throw Error("conj on a map takes map entries or seqables of map entries");
     }
@@ -6004,7 +6008,7 @@ h.S = function(a, b) {
 };
 h.X = function(a, b) {
   if (md(b)) {
-    return eb(this, z.h(b, 0), z.h(b, 1));
+    return fb(this, z.h(b, 0), z.h(b, 1));
   }
   for (var c = this, d = n(b);;) {
     if (null == d) {
@@ -6012,7 +6016,7 @@ h.X = function(a, b) {
     }
     var e = C(d);
     if (md(e)) {
-      c = eb(c, z.h(e, 0), z.h(e, 1)), d = D(d);
+      c = fb(c, z.h(e, 0), z.h(e, 1)), d = D(d);
     } else {
       throw Error("conj on a map takes map entries or seqables of map entries");
     }
@@ -6072,7 +6076,7 @@ var pg = function pg() {
   return pg.l(b);
 };
 pg.l = function(a) {
-  a = a instanceof Aa ? a.k : Ca(a);
+  a = a instanceof Aa && 0 === a.i ? a.k : Ca(a);
   return xf(a, !0, !1);
 };
 pg.J = 0;
@@ -7392,8 +7396,8 @@ function Mj(a, b) {
     return this.Qd;
   }, Nj.prototype.Wb = function() {
     return this.C;
-  }, Nj.uc = !0, Nj.tc = "cljs.core.async.impl.channels/t18730", Nj.Rc = function(b, d) {
-    return Kb(d, "cljs.core.async.impl.channels/t18730");
+  }, Nj.uc = !0, Nj.tc = "cljs.core.async.impl.channels/t18784", Nj.Rc = function(b, d) {
+    return Kb(d, "cljs.core.async.impl.channels/t18784");
   });
   return new Nj(Oj, b, uf);
 };
@@ -7633,8 +7637,8 @@ function Vj(a, b) {
     return!0;
   }, Wj.prototype.rd = function() {
     return this.sa;
-  }, Wj.uc = !0, Wj.tc = "cljs.core.async.impl.ioc-helpers/t22571", Wj.Rc = function(b, d) {
-    return Kb(d, "cljs.core.async.impl.ioc-helpers/t22571");
+  }, Wj.uc = !0, Wj.tc = "cljs.core.async.impl.ioc-helpers/t22625", Wj.Rc = function(b, d) {
+    return Kb(d, "cljs.core.async.impl.ioc-helpers/t22625");
   });
   return new Wj(Xj, b, uf);
 };
@@ -7895,8 +7899,8 @@ function hk(a) {
     return!0;
   }, qj.prototype.rd = function() {
     return this.sa;
-  }, qj.uc = !0, qj.tc = "cljs.core.async/t19864", qj.Rc = function(b, d) {
-    return Kb(d, "cljs.core.async/t19864");
+  }, qj.uc = !0, qj.tc = "cljs.core.async/t19918", qj.Rc = function(b, d) {
+    return Kb(d, "cljs.core.async/t19918");
   });
   return new qj(ik, b, uf);
 };
@@ -9969,10 +9973,10 @@ function tm(a) {
 ;var um = function(a) {
   var b = new im, c = new jm, d = new km, e = new lm, f = new mm, g = new nm, l = new om, p = tg.l(G([bd([Wf, Qd, m, Sf, ef, Aa, N, Nd, Ud, $e, df, Uf, sg, pf, T, Md, Nc, ug, mg, rg, We, xg, Zd, A, ch, zg, ag], [e, d, e, d, d, d, b, d, d, g, d, d, d, d, g, d, d, f, e, d, d, f, d, c, l, d, d]), Qh.e(null)], 0)), q = Td(a);
   a = fm({objectBuilder:function(a, b, c, d, e, f, g, l, p) {
-    return function(q, ka, fb) {
+    return function(q, ka, eb) {
       return Bd(function() {
         return function(a, b, c) {
-          a.push(ka.e ? ka.e(b) : ka.call(null, b), fb.e ? fb.e(c) : fb.call(null, c));
+          a.push(ka.e ? ka.e(b) : ka.call(null, b), eb.e ? eb.e(c) : eb.call(null, c));
           return a;
         };
       }(a, b, c, d, e, f, g, l, p), ["^ "], q);
@@ -10573,23 +10577,23 @@ function pn(a) {
                       };
                     }(u, l, p, q, r, u, f, a, b, c, d);
                   }());
-                  e[8] = v;
-                  e[9] = q;
-                  e[10] = 0;
+                  e[8] = q;
+                  e[9] = v;
                   e[7] = u;
+                  e[10] = 0;
                   e[2] = null;
                   e[1] = 2;
                   return V;
                 }
                 if (2 === f) {
-                  return v = e[10], l = e[7], v = v < l.length - 1, e[1] = t(v) ? 4 : 5, V;
+                  return l = e[7], v = e[10], v = v < l.length - 1, e[1] = t(v) ? 4 : 5, V;
                 }
                 if (3 === f) {
                   var v = e[2], B = d.resume();
                   e[11] = v;
                   return Zj(e, B);
                 }
-                return 4 === f ? (v = e[10], l = e[7], v = [y(l[v]), y("\n")].join(""), Yj(e, 7, b, v)) : 5 === f ? (e[2] = null, e[1] = 6, V) : 6 === f ? (v = e[2], e[2] = v, e[1] = 3, V) : 7 === f ? (v = e[10], e[12] = e[2], e[10] = v + 1, e[2] = null, e[1] = 2, V) : null;
+                return 4 === f ? (l = e[7], v = e[10], v = [y(l[v]), y("\n")].join(""), Yj(e, 7, b, v)) : 5 === f ? (e[2] = null, e[1] = 6, V) : 6 === f ? (v = e[2], e[2] = v, e[1] = 3, V) : 7 === f ? (v = e[10], e[12] = e[2], e[10] = v + 1, e[2] = null, e[1] = 2, V) : null;
               };
             }(a, b, c, d), a, b, c, d);
           }(), f = function() {
@@ -10697,7 +10701,1528 @@ function rn(a) {
   }(b));
   return b;
 }
-;function sn() {
+;var sn, tn = uf;
+sn = P ? P(tn) : se.call(null, tn);
+function un(a) {
+  Sm.l(G([new A(null, "broadcast", "broadcast", -884158897, null), a, null], 0));
+  for (var b = n(rf(F.e ? F.e(sn) : F.call(null, sn))), c = null, d = 0, e = 0;;) {
+    if (e < d) {
+      var f = c.N(null, e);
+      ym(f, a, null);
+      e += 1;
+    } else {
+      if (b = n(b)) {
+        c = b, nd(c) ? (b = Zb(c), d = $b(c), c = b, f = I(b), b = d, d = f) : (f = C(c), ym(f, a, null), b = D(c), c = null, d = 0), e = 0;
+      } else {
+        return null;
+      }
+    }
+  }
+}
+function vn(a) {
+  return(F.e ? F.e(sn) : F.call(null, sn)).call(null, a.pid).send(JSON.stringify(a));
+}
+if (t(fn)) {
+  require("ws");
+  var wn = function(a) {
+    return function(b) {
+      b = JSON.parse(b);
+      b.src = [y("ws:"), y(a)].join("");
+      Fm(b);
+      return Sm.l(G([new A(null, "ws", "ws", 1727372970, null), a, new A(null, "msg", "msg", 254428083, null), b], 0));
+    };
+  }, xn = function(a) {
+    return function() {
+      Sm.l(G([new A(null, "ws", "ws", 1727372970, null), a, new A(null, "close", "close", -819286187, null)], 0));
+      xe.o(Im, cd, a);
+      return xe.o(sn, cd, a);
+    };
+  }, yn = function(a) {
+    Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "start", "start", 1285322546, null)], 0));
+    var b = require("ws");
+    a = new b.Server({server:a});
+    a.on("connection", function(a, b) {
+      return function(e) {
+        Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "incoming-connection", "incoming-connection", 468545616, null), e], 0));
+        e.send(JSON.stringify({pid:Hm}));
+        return e.on("message", function() {
+          return function(a) {
+            a = JSON.parse(a);
+            var b = a.pid;
+            return t(b) ? (e.removeAllListeners("message"), e.on("message", wn(b)), e.on("close", xn(b)), xe.F(Im, ad, b, vn), xe.F(sn, ad, b, e), Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "added-client", "added-client", -1763956854, null), b, F.e ? F.e(sn) : F.call(null, sn)], 0))) : Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "error-unexpected-first-message", "error-unexpected-first-message", 1748325049, null), a], 0));
+          };
+        }(a, b));
+      };
+    }(b, a));
+  };
+}
+if (t(en)) {
+  var zn = Z(1);
+  W(function(a) {
+    return function() {
+      var b = function() {
+        return function(a) {
+          return function() {
+            function b(c) {
+              for (;;) {
+                var e;
+                a: {
+                  try {
+                    for (;;) {
+                      var f = a(c);
+                      if (!O(f, V)) {
+                        e = f;
+                        break a;
+                      }
+                    }
+                  } catch (g) {
+                    if (g instanceof Object) {
+                      c[5] = g, ak(c), e = V;
+                    } else {
+                      throw g;
+                    }
+                  }
+                }
+                if (!O(e, V)) {
+                  return e;
+                }
+              }
+            }
+            function c() {
+              var a = [null, null, null, null, null, null, null, null, null];
+              a[0] = g;
+              a[1] = 1;
+              return a;
+            }
+            var g = null, g = function(a) {
+              switch(arguments.length) {
+                case 0:
+                  return c.call(this);
+                case 1:
+                  return b.call(this, a);
+              }
+              throw Error("Invalid arity: " + arguments.length);
+            };
+            g.j = c;
+            g.e = b;
+            return g;
+          }();
+        }(function() {
+          return function(a) {
+            var b = a[1];
+            if (1 === b) {
+              return a[2] = null, a[1] = 2, V;
+            }
+            if (2 === b) {
+              return b = hk(55E3), Y(a, 4, b);
+            }
+            if (3 === b) {
+              return b = a[2], Zj(a, b);
+            }
+            if (4 === b) {
+              var b = a[2], c = un("keep-alive");
+              a[7] = c;
+              a[8] = b;
+              a[2] = null;
+              a[1] = 2;
+              return V;
+            }
+            return null;
+          };
+        }(a), a);
+      }(), c = function() {
+        var c = b.j ? b.j() : b.call(null);
+        c[6] = a;
+        return c;
+      }();
+      return X(c);
+    };
+  }(zn));
+  var An = E.h(-1, location.origin.indexOf("solsort")) ? E.h("http", location.origin.slice(0, 4)) ? [y(location.origin.replace(/https?/, "ws")), y("/ws/")].join("") : "ws://ws.solsort.com/ws/" : "ws://ws.solsort.com/ws/", Cn = function Bn() {
+    Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "connect", "connect", -1421607536, null)], 0));
+    var b = new WebSocket(An);
+    b.onopen = function(b) {
+      return function() {
+        return b.send(JSON.stringify({pid:Hm}));
+      };
+    }(b);
+    b.onerror = function() {
+      return function(b) {
+        Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "error", "error", 661562495, null)], 0));
+        return console.log(b);
+      };
+    }(b);
+    b.onclose = function(b) {
+      return function(d) {
+        Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "close", "close", -819286187, null), d], 0));
+        d = Z(1);
+        W(function(b, c) {
+          return function() {
+            var d = function() {
+              return function(b) {
+                return function() {
+                  function c(d) {
+                    for (;;) {
+                      var e;
+                      a: {
+                        try {
+                          for (;;) {
+                            var f = b(d);
+                            if (!O(f, V)) {
+                              e = f;
+                              break a;
+                            }
+                          }
+                        } catch (g) {
+                          if (g instanceof Object) {
+                            d[5] = g, ak(d), e = V;
+                          } else {
+                            throw g;
+                          }
+                        }
+                      }
+                      if (!O(e, V)) {
+                        return e;
+                      }
+                    }
+                  }
+                  function d() {
+                    var b = [null, null, null, null, null, null, null, null];
+                    b[0] = e;
+                    b[1] = 1;
+                    return b;
+                  }
+                  var e = null, e = function(b) {
+                    switch(arguments.length) {
+                      case 0:
+                        return d.call(this);
+                      case 1:
+                        return c.call(this, b);
+                    }
+                    throw Error("Invalid arity: " + arguments.length);
+                  };
+                  e.j = d;
+                  e.e = c;
+                  return e;
+                }();
+              }(function() {
+                return function(b) {
+                  var c = b[1];
+                  if (1 === c) {
+                    return c = hk(1E3), Y(b, 2, c);
+                  }
+                  if (2 === c) {
+                    var c = b[2], d = Bn();
+                    b[7] = c;
+                    return Zj(b, d);
+                  }
+                  return null;
+                };
+              }(b, c), b, c);
+            }(), l = function() {
+              var c = d.j ? d.j() : d.call(null);
+              c[6] = b;
+              return c;
+            }();
+            return X(l);
+          };
+        }(d, b));
+        return d;
+      };
+    }(b);
+    return b.onmessage = function(b) {
+      return function(d) {
+        Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "message", "message", 1234475525, null)], 0));
+        d = JSON.parse(d.data);
+        var e = d.pid;
+        return t(e) ? (b.onmessage = function(b, c) {
+          return function(b) {
+            b = JSON.parse(b.data);
+            b.src = [y("ws:"), y(c)].join("");
+            Fm(b);
+            return Sm.l(G([new A(null, "ws", "ws", 1727372970, null), c, new A(null, "msg", "msg", 254428083, null), b], 0));
+          };
+        }(d, e, b), b.onclose = function(b, c) {
+          return function(b) {
+            Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "close", "close", -819286187, null), b, c], 0));
+            xe.o(sn, cd, c);
+            xe.o(Im, cd, c);
+            return kn.e ? kn.e(Bn) : kn.call(null, Bn);
+          };
+        }(d, e, b), xe.F(sn, ad, e, b), xe.F(Im, ad, e, vn), Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "added-client", "added-client", -1763956854, null), e, F.e ? F.e(sn) : F.call(null, sn)], 0))) : Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "error-unexpected-first-message", "error-unexpected-first-message", 1748325049, null), d], 0));
+      };
+    }(b);
+  };
+  kn.e ? kn.e(Cn) : kn.call(null, Cn);
+}
+function Dn(a) {
+  var b = G([lh, !0], 0), c = rd(b) ? ie(te, b) : b, d = Zc(c, fi), e = Zc(c, Ii), f = Zc(c, lh);
+  if (t(t(f) ? en : f)) {
+    return mn([y(a), y("?callback\x3d")].join(""));
+  }
+  var g = Z(null), l = new jn;
+  l.open(t(d) ? "POST" : "GET", a, !0);
+  t(e) && (l.withCredentials = !0);
+  l.onreadystatechange = function(a, b) {
+    return function() {
+      var c = b.DONE;
+      return E.h(b.readyState, t(c) ? c : 4) ? (c = b.responseText, t(c) ? nk(a, c) : tj(a)) : null;
+    };
+  }(g, l, b, c, d, e, f);
+  l.send();
+  return g;
+}
+;var En = "undefined" !== typeof window && null != window.document, Fn = new ug(null, new m(null, 2, ["aria", null, "data", null], null), null);
+function Hn(a) {
+  return 2 > I(a) ? a.toUpperCase() : [y(a.substring(0, 1).toUpperCase()), y(a.substring(1))].join("");
+}
+function In(a) {
+  if ("string" === typeof a) {
+    return a;
+  }
+  a = Td(a);
+  var b = sm(a, /-/), c = L(b, 0), b = Id(b, 1);
+  return t(Fn.e ? Fn.e(c) : Fn.call(null, c)) ? a : je(y, c, S.h(Hn, b));
+}
+var Jn = !1;
+if ("undefined" === typeof Kn) {
+  var Kn, Ln = uf;
+  Kn = P ? P(Ln) : se.call(null, Ln);
+}
+function Mn(a, b) {
+  try {
+    var c = Jn;
+    Jn = !0;
+    try {
+      return React.render(a.j ? a.j() : a.call(null), b, function() {
+        return function() {
+          var c = Jn;
+          Jn = !1;
+          try {
+            return xe.F(Kn, ad, b, new T(null, 2, 5, U, [a, b], null)), null;
+          } finally {
+            Jn = c;
+          }
+        };
+      }(c));
+    } finally {
+      Jn = c;
+    }
+  } catch (d) {
+    if (d instanceof Object) {
+      try {
+        React.unmountComponentAtNode(b);
+      } catch (e) {
+        if (e instanceof Object) {
+          "undefined" !== typeof console && console.warn([y("Warning: "), y("Error unmounting:")].join("")), "undefined" !== typeof console && console.log(e);
+        } else {
+          throw e;
+        }
+      }
+    }
+    throw d;
+  }
+}
+function Nn(a, b) {
+  return Mn(a, b);
+}
+;var On;
+if ("undefined" === typeof Pn) {
+  var Pn = !1
+}
+if ("undefined" === typeof Qn) {
+  var Qn = P ? P(0) : se.call(null, 0)
+}
+function Rn(a, b) {
+  b.vc = null;
+  var c = On;
+  On = b;
+  try {
+    return a.j ? a.j() : a.call(null);
+  } finally {
+    On = c;
+  }
+}
+function Sn(a) {
+  var b = a.vc;
+  a.vc = null;
+  return b;
+}
+function Tn(a) {
+  var b = On;
+  if (null != b) {
+    var c = b.vc;
+    b.vc = Vc.h(null == c ? wg : c, a);
+  }
+}
+function Un(a, b, c, d) {
+  this.state = a;
+  this.meta = b;
+  this.Rb = c;
+  this.ma = d;
+  this.A = 2153938944;
+  this.G = 114690;
+}
+h = Un.prototype;
+h.L = function(a, b, c) {
+  Kb(b, "#\x3cAtom: ");
+  Kg(this.state, b, c);
+  return Kb(b, "\x3e");
+};
+h.P = function() {
+  return this.meta;
+};
+h.M = function() {
+  return ba(this);
+};
+h.D = function(a, b) {
+  return this === b;
+};
+h.Lc = function(a, b) {
+  if (null != this.Rb && !t(this.Rb.e ? this.Rb.e(b) : this.Rb.call(null, b))) {
+    throw Error([y("Assert failed: "), y("Validator rejected reference state"), y("\n"), y(we.l(G([Pd(new A(null, "validator", "validator", -325659154, null), new A(null, "new-value", "new-value", -1567397401, null))], 0)))].join(""));
+  }
+  var c = this.state;
+  this.state = b;
+  null != this.ma && Ob(this, c, b);
+  return b;
+};
+h.Mc = function(a, b) {
+  var c;
+  c = this.state;
+  c = b.e ? b.e(c) : b.call(null, c);
+  return bc(this, c);
+};
+h.Nc = function(a, b, c) {
+  a = this.state;
+  b = b.h ? b.h(a, c) : b.call(null, a, c);
+  return bc(this, b);
+};
+h.Oc = function(a, b, c, d) {
+  a = this.state;
+  b = b.o ? b.o(a, c, d) : b.call(null, a, c, d);
+  return bc(this, b);
+};
+h.Pc = function(a, b, c, d, e) {
+  return bc(this, le(b, this.state, c, d, e));
+};
+h.pc = function(a, b, c) {
+  return Bd(function(a) {
+    return function(e, f, g) {
+      g.F ? g.F(f, a, b, c) : g.call(null, f, a, b, c);
+      return null;
+    };
+  }(this), null, this.ma);
+};
+h.oc = function(a, b, c) {
+  return this.ma = ad.o(this.ma, b, c);
+};
+h.qc = function(a, b) {
+  return this.ma = cd.h(this.ma, b);
+};
+h.Wb = function() {
+  Tn(this);
+  return this.state;
+};
+var Vn = function Vn() {
+  switch(arguments.length) {
+    case 1:
+      return Vn.e(arguments[0]);
+    default:
+      var b = new Aa(Array.prototype.slice.call(arguments, 1), 0);
+      return Vn.l(arguments[0], b);
+  }
+};
+Vn.e = function(a) {
+  return new Un(a, null, null, null);
+};
+Vn.l = function(a, b) {
+  var c = rd(b) ? ie(te, b) : b, d = Zc(c, wa), c = Zc(c, ue);
+  return new Un(a, d, c, null);
+};
+Vn.H = function(a) {
+  var b = C(a);
+  a = D(a);
+  return Vn.l(b, a);
+};
+Vn.J = 1;
+var Wn = function Wn(b) {
+  if (b ? b.yd : b) {
+    return b.yd();
+  }
+  var c;
+  c = Wn[k(null == b ? null : b)];
+  if (!c && (c = Wn._, !c)) {
+    throw x("IDisposable.dispose!", b);
+  }
+  return c.call(null, b);
+}, Xn = function Xn(b) {
+  if (b ? b.zd : b) {
+    return b.zd();
+  }
+  var c;
+  c = Xn[k(null == b ? null : b)];
+  if (!c && (c = Xn._, !c)) {
+    throw x("IRunnable.run", b);
+  }
+  return c.call(null, b);
+}, Yn = function Yn(b, c) {
+  if (b ? b.$c : b) {
+    return b.$c(0, c);
+  }
+  var d;
+  d = Yn[k(null == b ? null : b)];
+  if (!d && (d = Yn._, !d)) {
+    throw x("IComputedImpl.-update-watching", b);
+  }
+  return d.call(null, b, c);
+}, Zn = function Zn(b, c, d, e) {
+  if (b ? b.wd : b) {
+    return b.wd(0, 0, d, e);
+  }
+  var f;
+  f = Zn[k(null == b ? null : b)];
+  if (!f && (f = Zn._, !f)) {
+    throw x("IComputedImpl.-handle-change", b);
+  }
+  return f.call(null, b, c, d, e);
+}, $n = function $n(b) {
+  if (b ? b.xd : b) {
+    return b.xd();
+  }
+  var c;
+  c = $n[k(null == b ? null : b)];
+  if (!c && (c = $n._, !c)) {
+    throw x("IComputedImpl.-peek-at", b);
+  }
+  return c.call(null, b);
+};
+function ao(a, b, c, d, e, f, g, l, p) {
+  this.sa = a;
+  this.state = b;
+  this.rb = c;
+  this.Tb = d;
+  this.Fb = e;
+  this.ma = f;
+  this.Gc = g;
+  this.Cc = l;
+  this.Bc = p;
+  this.A = 2153807872;
+  this.G = 114690;
+}
+h = ao.prototype;
+h.wd = function(a, b, c, d) {
+  var e = this;
+  return t(function() {
+    var a = e.Tb;
+    return t(a) ? Fa(e.rb) && c !== d : a;
+  }()) ? (e.rb = !0, function() {
+    var a = e.Gc;
+    return t(a) ? a : Xn;
+  }().call(null, this)) : null;
+};
+h.$c = function(a, b) {
+  for (var c = n(b), d = null, e = 0, f = 0;;) {
+    if (f < e) {
+      var g = d.N(null, f);
+      ud(this.Fb, g) || Pb(g, this, Zn);
+      f += 1;
+    } else {
+      if (c = n(c)) {
+        d = c, nd(d) ? (c = Zb(d), f = $b(d), d = c, e = I(c), c = f) : (c = C(d), ud(this.Fb, c) || Pb(c, this, Zn), c = D(d), d = null, e = 0), f = 0;
+      } else {
+        break;
+      }
+    }
+  }
+  c = n(this.Fb);
+  d = null;
+  for (f = e = 0;;) {
+    if (f < e) {
+      g = d.N(null, f), ud(b, g) || Qb(g, this), f += 1;
+    } else {
+      if (c = n(c)) {
+        d = c, nd(d) ? (c = Zb(d), f = $b(d), d = c, e = I(c), c = f) : (c = C(d), ud(b, c) || Qb(c, this), c = D(d), d = null, e = 0), f = 0;
+      } else {
+        break;
+      }
+    }
+  }
+  return this.Fb = b;
+};
+h.xd = function() {
+  if (Fa(this.rb)) {
+    return this.state;
+  }
+  var a = On;
+  On = null;
+  try {
+    return rb(this);
+  } finally {
+    On = a;
+  }
+};
+h.L = function(a, b, c) {
+  Kb(b, [y("#\x3cReaction "), y(oc(this)), y(": ")].join(""));
+  Kg(this.state, b, c);
+  return Kb(b, "\x3e");
+};
+h.M = function() {
+  return ba(this);
+};
+h.D = function(a, b) {
+  return this === b;
+};
+h.yd = function() {
+  for (var a = n(this.Fb), b = null, c = 0, d = 0;;) {
+    if (d < c) {
+      var e = b.N(null, d);
+      Qb(e, this);
+      d += 1;
+    } else {
+      if (a = n(a)) {
+        b = a, nd(b) ? (a = Zb(b), d = $b(b), b = a, c = I(a), a = d) : (a = C(b), Qb(a, this), a = D(b), b = null, c = 0), d = 0;
+      } else {
+        break;
+      }
+    }
+  }
+  this.state = this.Fb = null;
+  this.rb = !0;
+  t(this.Tb) && (t(Pn) && xe.h(Qn, Ed), this.Tb = !1);
+  return t(this.Bc) ? this.Bc.j ? this.Bc.j() : this.Bc.call(null) : null;
+};
+h.Lc = function(a, b) {
+  var c = this.state;
+  this.state = b;
+  t(this.Cc) && (this.rb = !0, this.Cc.h ? this.Cc.h(c, b) : this.Cc.call(null, c, b));
+  Ob(this, c, b);
+  return b;
+};
+h.Mc = function(a, b) {
+  var c;
+  c = $n(this);
+  c = b.e ? b.e(c) : b.call(null, c);
+  return bc(this, c);
+};
+h.Nc = function(a, b, c) {
+  a = $n(this);
+  b = b.h ? b.h(a, c) : b.call(null, a, c);
+  return bc(this, b);
+};
+h.Oc = function(a, b, c, d) {
+  a = $n(this);
+  b = b.o ? b.o(a, c, d) : b.call(null, a, c, d);
+  return bc(this, b);
+};
+h.Pc = function(a, b, c, d, e) {
+  return bc(this, le(b, $n(this), c, d, e));
+};
+h.zd = function() {
+  var a = this.state, b = Rn(this.sa, this), c = Sn(this);
+  !E.h(c, this.Fb) && Yn(this, c);
+  t(this.Tb) || (t(Pn) && xe.h(Qn, Dc), this.Tb = !0);
+  this.rb = !1;
+  this.state = b;
+  Ob(this, a, this.state);
+  return b;
+};
+h.pc = function(a, b, c) {
+  return Bd(function(a) {
+    return function(e, f, g) {
+      g.F ? g.F(f, a, b, c) : g.call(null, f, a, b, c);
+      return null;
+    };
+  }(this), null, this.ma);
+};
+h.oc = function(a, b, c) {
+  return this.ma = ad.o(this.ma, b, c);
+};
+h.qc = function(a, b) {
+  this.ma = cd.h(this.ma, b);
+  return id(this.ma) && Fa(this.Gc) ? Wn(this) : null;
+};
+h.Wb = function() {
+  var a = this.Gc;
+  if (t(t(a) ? a : null != On)) {
+    return Tn(this), t(this.rb) ? Xn(this) : this.state;
+  }
+  t(this.rb) && (a = this.state, this.state = this.sa.j ? this.sa.j() : this.sa.call(null), a !== this.state && Ob(this, a, this.state));
+  return this.state;
+};
+function bo(a, b) {
+  var c = rd(b) ? ie(te, b) : b, d = Zc(c, qi), e = Zc(c, ih), f = Zc(c, Fi), c = Zc(c, wh), d = E.h(d, !0) ? Xn : d, g = null != c, e = new ao(a, null, !g, g, null, null, d, e, f);
+  null != c && (t(Pn) && xe.h(Qn, Dc), e.$c(0, c));
+  return e;
+}
+;if ("undefined" === typeof co) {
+  var co = 0
+}
+function eo(a) {
+  return setTimeout(a, 16);
+}
+var fo = Fa(En) ? eo : function() {
+  var a = window, b = a.requestAnimationFrame;
+  if (t(b)) {
+    return b;
+  }
+  b = a.webkitRequestAnimationFrame;
+  if (t(b)) {
+    return b;
+  }
+  b = a.mozRequestAnimationFrame;
+  if (t(b)) {
+    return b;
+  }
+  a = a.msRequestAnimationFrame;
+  return t(a) ? a : eo;
+}();
+function go(a, b) {
+  return a.cljsMountOrder - b.cljsMountOrder;
+}
+function ho() {
+  var a = io;
+  if (t(a.ad)) {
+    return null;
+  }
+  a.ad = !0;
+  a = function(a) {
+    return function() {
+      var c = a.Zc, d = a.Fc;
+      a.Zc = [];
+      a.Fc = [];
+      a.ad = !1;
+      a: {
+        c.sort(go);
+        for (var e = c.length, f = 0;;) {
+          if (f < e) {
+            var g = c[f];
+            t(g.cljsIsDirty) && g.forceUpdate();
+            f += 1;
+          } else {
+            break a;
+          }
+        }
+      }
+      a: {
+        for (c = d.length, e = 0;;) {
+          if (e < c) {
+            d[e].call(null), e += 1;
+          } else {
+            break a;
+          }
+        }
+      }
+      return null;
+    };
+  }(a);
+  return fo.e ? fo.e(a) : fo.call(null, a);
+}
+var io = new function() {
+  this.Zc = [];
+  this.ad = !1;
+  this.Fc = [];
+};
+function jo(a) {
+  io.Fc.push(a);
+  ho();
+}
+function ko(a) {
+  a = null == a ? null : a.props;
+  return null == a ? null : a.argv;
+}
+function lo(a, b) {
+  if (!t(ko(a))) {
+    throw Error([y("Assert failed: "), y(we.l(G([Pd(new A(null, "is-reagent-component", "is-reagent-component", -1856228005, null), new A(null, "c", "c", -122660552, null))], 0)))].join(""));
+  }
+  a.cljsIsDirty = !1;
+  var c = a.cljsRatom;
+  if (null == c) {
+    var d = Rn(b, a), e = Sn(a);
+    null != e && (a.cljsRatom = bo(b, G([qi, function() {
+      return function() {
+        a.cljsIsDirty = !0;
+        io.Zc.push(a);
+        return ho();
+      };
+    }(d, e, c), wh, e], 0)));
+    return d;
+  }
+  return Xn(c);
+}
+;var mo, no, oo = function oo(b) {
+  var c = mo;
+  mo = b;
+  try {
+    var d = b.cljsRender;
+    if (!td(d)) {
+      throw Error([y("Assert failed: "), y(we.l(G([Pd(new A(null, "ifn?", "ifn?", -2106461064, null), new A(null, "f", "f", 43394975, null))], 0)))].join(""));
+    }
+    var e = b.props, f = null == b.reagentRender ? d.e ? d.e(b) : d.call(null, b) : function() {
+      var b = e.argv;
+      switch(I(b)) {
+        case 1:
+          return d.j ? d.j() : d.call(null);
+        case 2:
+          return b = Yc(b, 1), d.e ? d.e(b) : d.call(null, b);
+        case 3:
+          var c = Yc(b, 1), b = Yc(b, 2);
+          return d.h ? d.h(c, b) : d.call(null, c, b);
+        case 4:
+          var c = Yc(b, 1), f = Yc(b, 2), b = Yc(b, 3);
+          return d.o ? d.o(c, f, b) : d.call(null, c, f, b);
+        case 5:
+          var c = Yc(b, 1), f = Yc(b, 2), q = Yc(b, 3), b = Yc(b, 4);
+          return d.F ? d.F(c, f, q, b) : d.call(null, c, f, q, b);
+        default:
+          return ie(d, Xe(b, 1, I(b)));
+      }
+    }();
+    return md(f) ? po(f) : td(f) ? (b.cljsRender = f, oo(b)) : f;
+  } finally {
+    mo = c;
+  }
+}, ro = new m(null, 1, [ei, function() {
+  return Fa(no) ? lo(this, function(a) {
+    return function() {
+      return oo(a);
+    };
+  }(this)) : oo(this);
+}], null);
+function so(a, b) {
+  var c = a instanceof N ? a.Ba : null;
+  switch(c) {
+    case "getDefaultProps":
+      throw Error([y("Assert failed: "), y("getDefaultProps not supported yet"), y("\n"), y(we.l(G([!1], 0)))].join(""));;
+    case "getInitialState":
+      return function() {
+        return function() {
+          var a;
+          a = this.cljsState;
+          a = null != a ? a : this.cljsState = Vn.e(null);
+          var c = b.e ? b.e(this) : b.call(null, this);
+          return ve.h ? ve.h(a, c) : ve.call(null, a, c);
+        };
+      }(c);
+    case "componentWillReceiveProps":
+      return function() {
+        return function(a) {
+          a = a.argv;
+          return b.h ? b.h(this, a) : b.call(null, this, a);
+        };
+      }(c);
+    case "shouldComponentUpdate":
+      return function() {
+        return function(a) {
+          var c = Jn;
+          if (t(c)) {
+            return c;
+          }
+          c = this.props.argv;
+          a = a.argv;
+          return null == b ? null == c || null == a || !E.h(c, a) : b.o ? b.o(this, c, a) : b.call(null, this, c, a);
+        };
+      }(c);
+    case "componentWillUpdate":
+      return function() {
+        return function(a) {
+          a = a.argv;
+          return b.h ? b.h(this, a) : b.call(null, this, a);
+        };
+      }(c);
+    case "componentDidUpdate":
+      return function() {
+        return function(a) {
+          a = a.argv;
+          return b.h ? b.h(this, a) : b.call(null, this, a);
+        };
+      }(c);
+    case "componentWillMount":
+      return function() {
+        return function() {
+          this.cljsMountOrder = co += 1;
+          return null == b ? null : b.e ? b.e(this) : b.call(null, this);
+        };
+      }(c);
+    case "componentWillUnmount":
+      return function() {
+        return function() {
+          var a = this.cljsRatom;
+          null == a || Wn(a);
+          this.cljsIsDirty = !1;
+          return null == b ? null : b.e ? b.e(this) : b.call(null, this);
+        };
+      }(c);
+    default:
+      return null;
+  }
+}
+function to(a) {
+  return td(a) ? function() {
+    function b(b) {
+      var c = null;
+      if (0 < arguments.length) {
+        for (var c = 0, f = Array(arguments.length - 0);c < f.length;) {
+          f[c] = arguments[c + 0], ++c;
+        }
+        c = new Aa(f, 0);
+      }
+      return je(a, this, c);
+    }
+    function c(b) {
+      return je(a, this, b);
+    }
+    b.J = 0;
+    b.H = function(a) {
+      a = n(a);
+      return c(a);
+    };
+    b.l = c;
+    return b;
+  }() : a;
+}
+var uo = new ug(null, new m(null, 4, [zh, null, ci, null, ei, null, ri, null], null), null);
+function vo(a, b, c) {
+  if (t(uo.e ? uo.e(a) : uo.call(null, a))) {
+    return ed(b) && (b.__reactDontBind = !0), b;
+  }
+  var d = so(a, b);
+  if (t(t(d) ? b : d) && !td(b)) {
+    throw Error([y("Assert failed: "), y([y("Expected function in "), y(c), y(a), y(" but got "), y(b)].join("")), y("\n"), y(we.l(G([Pd(new A(null, "ifn?", "ifn?", -2106461064, null), new A(null, "f", "f", 43394975, null))], 0)))].join(""));
+  }
+  return t(d) ? d : to(b);
+}
+var wo = new m(null, 3, [Xh, null, aj, null, Sh, null], null), xo = function(a) {
+  return function(b) {
+    return function(c) {
+      var d = Zc(F.e ? F.e(b) : F.call(null, b), c);
+      if (null != d) {
+        return d;
+      }
+      d = a.e ? a.e(c) : a.call(null, c);
+      xe.F(b, ad, c, d);
+      return d;
+    };
+  }(function() {
+    var a = uf;
+    return P ? P(a) : se.call(null, a);
+  }());
+}(In);
+function yo(a) {
+  return Bd(function(a, c, d) {
+    return ad.o(a, Sd.e(xo.e ? xo.e(c) : xo.call(null, c)), d);
+  }, uf, a);
+}
+function zo(a) {
+  return tg.l(G([wo, a], 0));
+}
+function Ao(a, b, c) {
+  a = ad.l(a, zh, b, G([ei, ei.e(ro)], 0));
+  return ad.o(a, ri, function() {
+    return function() {
+      return c;
+    };
+  }(a));
+}
+function Bo(a) {
+  var b = function() {
+    var b = ed(a);
+    return b ? (b = a.displayName, t(b) ? b : a.name) : b;
+  }();
+  if (t(b)) {
+    return b;
+  }
+  b = function() {
+    var b = a ? a.G & 4096 || a.ld ? !0 : !1 : !1;
+    return b ? Td(a) : b;
+  }();
+  if (t(b)) {
+    return b;
+  }
+  b = hd(a);
+  return ld(b) ? Bh.e(b) : null;
+}
+function Co(a) {
+  var b = function() {
+    var b = Ji.e(a);
+    return null == b ? a : cd.h(ad.o(a, ci, b), Ji);
+  }(), c = function() {
+    var a = ci.e(b);
+    return t(a) ? a : ei.e(b);
+  }();
+  if (!td(c)) {
+    throw Error([y("Assert failed: "), y([y("Render must be a function, not "), y(we.l(G([c], 0)))].join("")), y("\n"), y(we.l(G([Pd(new A(null, "ifn?", "ifn?", -2106461064, null), new A(null, "render-fun", "render-fun", -1209513086, null))], 0)))].join(""));
+  }
+  var d = null, e = "" + y(function() {
+    var a = xh.e(b);
+    return t(a) ? a : Bo(c);
+  }()), f;
+  if (id(e)) {
+    f = y;
+    var g;
+    null == Qg && (Qg = P ? P(0) : se.call(null, 0));
+    g = rc([y("reagent"), y(xe.h(Qg, Dc))].join(""));
+    f = "" + f(g);
+  } else {
+    f = e;
+  }
+  g = Ao(ad.o(b, xh, f), c, f);
+  return Bd(function(a, b, c, d, e) {
+    return function(a, b, c) {
+      return ad.o(a, b, vo(b, c, e));
+    };
+  }(b, c, d, e, f, g), uf, g);
+}
+function Do(a) {
+  return Bd(function(a, c, d) {
+    a[Td(c)] = d;
+    return a;
+  }, {}, a);
+}
+function Eo(a) {
+  if (!ld(a)) {
+    throw Error([y("Assert failed: "), y(we.l(G([Pd(new A(null, "map?", "map?", -1780568534, null), new A(null, "body", "body", -408674142, null))], 0)))].join(""));
+  }
+  var b = Do(Co(zo(yo(a))));
+  a = React.createClass(b);
+  b = function(a, b) {
+    return function() {
+      function a(b) {
+        var d = null;
+        if (0 < arguments.length) {
+          for (var d = 0, e = Array(arguments.length - 0);d < e.length;) {
+            e[d] = arguments[d + 0], ++d;
+          }
+          d = new Aa(e, 0);
+        }
+        return c.call(this, d);
+      }
+      function c(a) {
+        a = je(Ve, b, a);
+        return po(a);
+      }
+      a.J = 0;
+      a.H = function(a) {
+        a = n(a);
+        return c(a);
+      };
+      a.l = c;
+      return a;
+    }();
+  }(b, a);
+  b.cljsReactClass = a;
+  a.cljsReactClass = a;
+  return b;
+}
+function Fo() {
+  var a;
+  a = mo;
+  a = null == a ? null : a.cljsName();
+  return id(a) ? "" : [y(" (in "), y(a), y(")")].join("");
+}
+;var Go = /([^\s\.#]+)(?:#([^\s\.#]+))?(?:\.([^\s#]+))?/;
+function Ho(a) {
+  return a instanceof N || a instanceof A;
+}
+function Io(a) {
+  var b = Ho(a);
+  return t(b) ? b : "string" === typeof a;
+}
+var Jo = {"class":"className", "for":"htmlFor", charset:"charSet"};
+function Ko(a, b) {
+  return t(a.hasOwnProperty(b)) ? a[b] : null;
+}
+var Lo = function Lo(b) {
+  return "string" === typeof b || "number" === typeof b || ed(b) ? b : t(Ho(b)) ? Td(b) : ld(b) ? Bd(function(b, d, e) {
+    if (t(Ho(d))) {
+      var f = Ko(Jo, Td(d));
+      d = null == f ? Jo[Td(d)] = In(d) : f;
+    }
+    b[d] = Lo(e);
+    return b;
+  }, {}, b) : jd(b) ? Ug(b) : td(b) ? function() {
+    function c(b) {
+      var c = null;
+      if (0 < arguments.length) {
+        for (var c = 0, g = Array(arguments.length - 0);c < g.length;) {
+          g[c] = arguments[c + 0], ++c;
+        }
+        c = new Aa(g, 0);
+      }
+      return d.call(this, c);
+    }
+    function d(c) {
+      return ie(b, c);
+    }
+    c.J = 0;
+    c.H = function(b) {
+      b = n(b);
+      return d(b);
+    };
+    c.l = d;
+    return c;
+  }() : Ug(b);
+};
+function Mo(a) {
+  var b = a.cljsInputValue;
+  if (null == b) {
+    return null;
+  }
+  a.cljsInputDirty = !1;
+  a = a.getDOMNode();
+  return E.h(b, a.value) ? null : a.value = b;
+}
+function No(a, b, c) {
+  b = b.e ? b.e(c) : b.call(null, c);
+  t(a.cljsInputDirty) || (a.cljsInputDirty = !0, jo(function() {
+    return function() {
+      return Mo(a);
+    };
+  }(b)));
+  return b;
+}
+function Oo(a) {
+  var b = mo;
+  if (t(function() {
+    var b = a.hasOwnProperty("onChange");
+    return t(b) ? a.hasOwnProperty("value") : b;
+  }())) {
+    var c = a.value, d = null == c ? "" : c, e = a.onChange;
+    b.cljsInputValue = d;
+    delete a.value;
+    a.defaultValue = d;
+    a.onChange = function(a, c, d, e) {
+      return function(a) {
+        return No(b, e, a);
+      };
+    }(a, c, d, e);
+  } else {
+    b.cljsInputValue = null;
+  }
+}
+var Po = null, Ro = new m(null, 4, [Ci, "ReagentInput", Ih, Mo, ui, function(a) {
+  return a.cljsInputValue = null;
+}, gi, function(a, b, c, d) {
+  Oo(c);
+  return Qo.F ? Qo.F(a, b, c, d) : Qo.call(null, a, b, c, d);
+}], null);
+function So(a, b, c, d) {
+  null == Po && (Po = Eo(Ro));
+  return Po.F ? Po.F(a, b, c, d) : Po.call(null, a, b, c, d);
+}
+function To(a) {
+  return ld(a) ? Zc(a, rh) : null;
+}
+function Uo(a) {
+  var b;
+  b = hd(a);
+  b = null == b ? null : To(b);
+  return null == b ? To(L(a, 1)) : b;
+}
+var Vo = {};
+function po(a) {
+  if ("string" !== typeof a) {
+    if (md(a)) {
+      if (!(0 < I(a))) {
+        throw Error([y("Assert failed: "), y([y("Hiccup form should not be empty: "), y(we.l(G([a], 0))), y(Fo())].join("")), y("\n"), y(we.l(G([Pd(new A(null, "pos?", "pos?", -244377722, null), Pd(new A(null, "count", "count", -514511684, null), new A(null, "v", "v", 1661996586, null)))], 0)))].join(""));
+      }
+      var b = Yc(a, 0), c;
+      c = Io(b);
+      c = t(c) ? c : td(b) || !1;
+      if (!t(c)) {
+        throw Error([y("Assert failed: "), y([y("Invalid Hiccup form: "), y(we.l(G([a], 0))), y(Fo())].join("")), y("\n"), y(we.l(G([Pd(new A(null, "valid-tag?", "valid-tag?", 1243064160, null), new A(null, "tag", "tag", 350170304, null))], 0)))].join(""));
+      }
+      var d;
+      if (t(Io(b))) {
+        c = Ko(Vo, Td(b));
+        if (null == c) {
+          c = Td(b);
+          d = D(Cg(Go, Td(b)));
+          var e = L(d, 0), f = L(d, 1);
+          d = L(d, 2);
+          d = t(d) ? pm(d, /\./, " ") : null;
+          if (!t(e)) {
+            throw Error([y("Assert failed: "), y([y("Invalid tag: '"), y(b), y("'"), y(Fo())].join("")), y("\n"), y(we.l(G([new A(null, "tag", "tag", 350170304, null)], 0)))].join(""));
+          }
+          c = Vo[c] = {name:e, id:f, className:d};
+        }
+        d = c;
+      } else {
+        d = null;
+      }
+      if (t(d)) {
+        c = d.name;
+        f = L(a, 1);
+        e = null == f || ld(f);
+        var g = e ? f : null, f = d.id;
+        d = d.className;
+        var l = null == f && null == d;
+        l && id(g) ? f = null : (g = Lo(g), l || (g = null == g ? {} : g, null != f && null == g.id && (g.id = f), null != d && (f = g.className, g.className = null != f ? [y(d), y(" "), y(f)].join("") : d)), f = g);
+        e = e ? 2 : 1;
+        t("input" === c || "textarea" === c) ? (c = Rc(new T(null, 5, 5, U, [So, a, c, f, e], null), hd(a)), c = po.e ? po.e(c) : po.call(null, c)) : (d = hd(a), d = null == d ? null : To(d), null != d && (f = null == f ? {} : f, f.key = d), c = Qo.F ? Qo.F(a, c, f, e) : Qo.call(null, a, c, f, e));
+      } else {
+        c = null;
+      }
+      if (null == c) {
+        c = b.cljsReactClass;
+        if (null == c) {
+          if (!td(b)) {
+            throw Error([y("Assert failed: "), y([y("Expected a function, not "), y(we.l(G([b], 0)))].join("")), y("\n"), y(we.l(G([Pd(new A(null, "ifn?", "ifn?", -2106461064, null), new A(null, "f", "f", 43394975, null))], 0)))].join(""));
+          }
+          ed(b) && null != b.type && "undefined" !== typeof console && console.warn([y("Warning: "), y("Using native React classes directly in Hiccup forms "), y("is not supported. Use create-element or "), y("adapt-react-class instead: "), y(b.type), y(Fo())].join(""));
+          c = hd(b);
+          c = ad.o(c, gi, b);
+          c = Eo(c).cljsReactClass;
+          b.cljsReactClass = c;
+        }
+        b = c;
+        c = {argv:a};
+        a = null == a ? null : Uo(a);
+        null == a || (c.key = a);
+        a = React.createElement(b, c);
+      } else {
+        a = c;
+      }
+    } else {
+      a = rd(a) ? Wo.e ? Wo.e(a) : Wo.call(null, a) : a;
+    }
+  }
+  return a;
+}
+function Xo(a, b) {
+  for (var c = Ca(a), d = c.length, e = 0;;) {
+    if (e < d) {
+      var f = c[e];
+      md(f) && null == Uo(f) && (b["no-key"] = !0);
+      c[e] = po(f);
+      e += 1;
+    } else {
+      break;
+    }
+  }
+  return c;
+}
+function Wo(a) {
+  var b = {}, c = null == On ? Xo(a, b) : Rn(function(b) {
+    return function() {
+      return Xo(a, b);
+    };
+  }(b), b);
+  t(Sn(b)) && "undefined" !== typeof console && console.warn([y("Warning: "), y("Reactive deref not supported in lazy seq, "), y("it should be wrapped in doall"), y(Fo()), y(". Value:\n"), y(we.l(G([a], 0)))].join(""));
+  t(b["no-key"]) && "undefined" !== typeof console && console.warn([y("Warning: "), y("Every element in a seq should have a unique "), y(":key"), y(Fo()), y(". Value: "), y(we.l(G([a], 0)))].join(""));
+  return c;
+}
+function Qo(a, b, c, d) {
+  var e = I(a) - d;
+  switch(e) {
+    case 0:
+      return React.createElement(b, c);
+    case 1:
+      return React.createElement(b, c, po(Yc(a, d)));
+    default:
+      return React.createElement.apply(null, Bd(function() {
+        return function(a, b, c) {
+          b >= d && a.push(po(c));
+          return a;
+        };
+      }(e), [b, c], a));
+  }
+}
+;function Yo(a) {
+  Mn(function() {
+    var b = ed(a) ? a.j ? a.j() : a.call(null) : a;
+    return po(b);
+  }, document.body);
+}
+function Zo() {
+  for (var a = n(sf(F.e ? F.e(Kn) : F.call(null, Kn))), b = null, c = 0, d = 0;;) {
+    if (d < c) {
+      var e = b.N(null, d);
+      ie(Nn, e);
+      d += 1;
+    } else {
+      if (a = n(a)) {
+        b = a, nd(b) ? (a = Zb(b), d = $b(b), b = a, c = I(a), a = d) : (a = C(b), ie(Nn, a), a = D(b), b = null, c = 0), d = 0;
+      } else {
+        break;
+      }
+    }
+  }
+  return "Updated";
+}
+var $o = ["reagent", "core", "force_update_all"], ap = aa;
+$o[0] in ap || !ap.execScript || ap.execScript("var " + $o[0]);
+for (var bp;$o.length && (bp = $o.shift());) {
+  var cp;
+  if (cp = !$o.length) {
+    cp = void 0 !== Zo;
+  }
+  cp ? ap[bp] = Zo : ap = ap[bp] ? ap[bp] : ap[bp] = {};
+}
+;function dp(a) {
+  return pm(Td(a), /[A-Z]/, function(a) {
+    return[y("-"), y(a.toLowerCase())].join("");
+  });
+}
+Vm(new A(null, "css-name", "css-name", -2011163427, null), function() {
+  return E.h(dp(kh), "-foo-bar");
+});
+function ep(a) {
+  var b = L(a, 0);
+  a = L(a, 1);
+  return[y(dp(b)), y(":"), y("number" === typeof a ? [y(a), y("px")].join("") : Td(a))].join("");
+}
+function fp(a) {
+  var b = L(a, 0);
+  a = L(a, 1);
+  return[y(Td(b)), y("{"), y(rm(";", S.h(ep, n(a)))), y("}")].join("");
+}
+function gp(a) {
+  qm(S.h(y, n(a)));
+  return qm(S.h(fp, n(a)));
+}
+function hp(a) {
+  return gp($g(a));
+}
+Vm(new A(null, "clj-\x3ecss", "clj-\x3ecss", -359189480, null), function() {
+  return E.h(gp(new m(null, 2, [Ti, new m(null, 2, [pi, Uh, Oi, 14], null), Qi, new m(null, 1, [Gh, li], null)], null)), "h1{font-weight:normal;font-size:14px}.div{background:blue}");
+});
+var ip, jp = new m(null, 5, ["@font-face", new m(null, 3, [bi, "Ubuntu", pi, "400", Oh, "url(/font/ubuntu-latin1.ttf)format(truetype)"], null), Zh, new m(null, 1, [oj, "5%"], null), ej, new m(null, 4, [oj, 5, oi, 5, th, 5, Vi, "1px solid black"], null), Wi, new m(null, 3, [oj, 0, oi, 0, bi, "Ubuntu, sans-serif"], null), ai, new m(null, 2, [oj, 0, oi, 0], null)], null);
+ip = P ? P(jp) : se.call(null, jp);
+Rm("style", function() {
+  var a = Z(1);
+  W(function(a) {
+    return function() {
+      var c = function() {
+        return function(a) {
+          return function() {
+            function b(c) {
+              for (;;) {
+                var d;
+                a: {
+                  try {
+                    for (;;) {
+                      var f = a(c);
+                      if (!O(f, V)) {
+                        d = f;
+                        break a;
+                      }
+                    }
+                  } catch (g) {
+                    if (g instanceof Object) {
+                      c[5] = g, ak(c), d = V;
+                    } else {
+                      throw g;
+                    }
+                  }
+                }
+                if (!O(d, V)) {
+                  return d;
+                }
+              }
+            }
+            function c() {
+              var a = [null, null, null, null, null, null, null];
+              a[0] = d;
+              a[1] = 1;
+              return a;
+            }
+            var d = null, d = function(a) {
+              switch(arguments.length) {
+                case 0:
+                  return c.call(this);
+                case 1:
+                  return b.call(this, a);
+              }
+              throw Error("Invalid arity: " + arguments.length);
+            };
+            d.j = c;
+            d.e = b;
+            return d;
+          }();
+        }(function() {
+          return function(a) {
+            if (1 === a[1]) {
+              var b = [hi, yh], c = bd([Zi], ["text/css"]), d = F.e ? F.e(ip) : F.call(null, ip), d = gp(d), b = bd(b, [c, d]), b = Ug(b);
+              return Zj(a, b);
+            }
+            return null;
+          };
+        }(a), a);
+      }(), d = function() {
+        var d = c.j ? c.j() : c.call(null);
+        d[6] = a;
+        return d;
+      }();
+      return X(d);
+    };
+  }(a));
+  return a;
+});
+function kp(a) {
+  return{"http-headers":{"Content-Type":"text/html;charset\x3dUTF-8"}, content:[y('\x3c!DOCTYPE html\x3e\x3chtml manifest\x3d"/solsort.appcache"\x3e\x3chead\x3e'), y("\x3ctitle\x3e"), y(function() {
+    var b = Vh.e(a);
+    return t(b) ? b : "solsort.com";
+  }()), y("\x3c/title\x3e"), y('\x3cmeta http-equiv\x3d"Content-Type" content\x3d"text/html;charset\x3dUTF-8"\x3e'), y('\x3cmeta http-equiv\x3d"X-UA-Compatible" content\x3d"IE\x3dedge,chrome\x3d1"\x3e'), y('\x3cmeta name\x3d"viewport" content\x3d"'), y("width\x3ddevice-width, initial-scale\x3d1.0"), y(t(jh.e(a)) ? ", minimum-scale\x3d1.0, maximum-scale\x3d1.0, user-scalable\x3d0" : ""), y('"\x3e'), y('\x3cmeta name\x3d"format-detection" content\x3d"telephone\x3dno"\x3e'), y("\x3clink href\x3d/style.css rel\x3dstylesheet\x3e"), 
+  y("\x3cstyle id\x3dstyle\x3e"), y(t(Hh.e(a)) ? hp(Ug(Hh.e(a))) : null), y("\x3c/style\x3e"), y("\x3c/head\x3e\x3cbody\x3e"), y(function() {
+    var b = Ui.e(a), c;
+    if (t(b)) {
+      c = b;
+    } else {
+      a: {
+        var b = lj.e(a), d = no;
+        no = !0;
+        try {
+          c = React.renderToStaticMarkup(po(b));
+          break a;
+        } finally {
+          no = d;
+        }
+        c = void 0;
+      }
+    }
+    return c;
+  }()), y('\x3cscript src\x3d"/solsort.js"\x3e\x3c/script\x3e'), y("\x3c/body\x3e\x3c/html\x3e")].join("")};
+}
+;if (t(fn)) {
+  var lp = bh(on), mp = function mp() {
+    var b = 0 < arguments.length ? new Aa(Array.prototype.slice.call(arguments, 0), 0) : null;
+    return mp.l(b);
+  };
+  mp.l = function(a) {
+    a: {
+      for (;;) {
+        var b = D(a);
+        if (null != b) {
+          a = b;
+        } else {
+          a = C(a);
+          break a;
+        }
+      }
+    }
+    switch(a) {
+      case "png":
+        return{"http-headers":{"Content-Type":"image/png"}, content:lp.e ? lp.e("misc/_default.png") : lp.call(null, "misc/_default.png")};
+      case "gif":
+        return{"http-headers":{"Content-Type":"image/gif"}, content:lp.e ? lp.e("misc/_default.gif") : lp.call(null, "misc/_default.gif")};
+      default:
+        return{error:"not-implemented"};
+    }
+  };
+  mp.J = 0;
+  mp.H = function(a) {
+    return mp.l(n(a));
+  };
+  Rm("default-route", mp);
+  var np = function(a, b) {
+    var c = Z(1);
+    W(function(c) {
+      return function() {
+        var e = function() {
+          return function(a) {
+            return function() {
+              function b(c) {
+                for (;;) {
+                  var d;
+                  a: {
+                    try {
+                      for (;;) {
+                        var e = a(c);
+                        if (!O(e, V)) {
+                          d = e;
+                          break a;
+                        }
+                      }
+                    } catch (f) {
+                      if (f instanceof Object) {
+                        c[5] = f, ak(c), d = V;
+                      } else {
+                        throw f;
+                      }
+                    }
+                  }
+                  if (!O(d, V)) {
+                    return d;
+                  }
+                }
+              }
+              function c() {
+                var a = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+                a[0] = d;
+                a[1] = 1;
+                return a;
+              }
+              var d = null, d = function(a) {
+                switch(arguments.length) {
+                  case 0:
+                    return c.call(this);
+                  case 1:
+                    return b.call(this, a);
+                }
+                throw Error("Invalid arity: " + arguments.length);
+              };
+              d.j = c;
+              d.e = b;
+              return d;
+            }();
+          }(function() {
+            return function(c) {
+              var d = c[1];
+              if (7 === d) {
+                var d = c[7], e = c[2], f = L(e, 0), e = L(e, 1), d = d.callback, f = ke(Qm, Hm, f, e);
+                c[8] = d;
+                return Y(c, 8, f);
+              }
+              if (20 === d) {
+                return d = b.send(c[2]), c[2] = d, c[1] = 17, V;
+              }
+              if (1 === d) {
+                var d = c[9], f = Date.now(), d = a.query, r = a.body, u = a.path.slice(1).split(/[\/.]/), e = L(u, 0), u = Id(u, 1), v = 0 < Object.keys(r).length;
+                c[7] = d;
+                c[10] = e;
+                c[11] = u;
+                c[12] = f;
+                c[9] = r;
+                c[1] = t(v) ? 2 : 3;
+                return V;
+              }
+              return 4 === d ? (e = c[10], d = c[2], f = Km(e), c[13] = d, c[1] = t(f) ? 5 : 6, V) : 15 === d ? (f = c[14], d = c[15], d = b.set(d), f = b.send(f.content), c[16] = d, c[2] = f, c[1] = 17, V) : 13 === d ? (d = c[17], c[2] = d, c[1] = 14, V) : 6 === d ? (e = c[10], d = c[13], f = U, d = ["default-route", Ae(new T(null, 1, 5, U, [e], null), d)], d = new T(null, 2, 5, f, d, null), c[2] = d, c[1] = 7, V) : 17 === d ? (f = c[12], d = c[2], e = new A(null, "web", "web", 985830374, null), 
+              u = a.url, f = [y(Date.now() - f), y("ms")].join(""), f = Sm.l(G([e, u, f, a.headers["x-solsort-remote-addr"], a.body], 0)), c[18] = d, Zj(c, f)) : 3 === d ? (u = c[11], c[2] = u, c[1] = 4, V) : 12 === d ? (f = c[14], d = f.content, c[2] = d, c[1] = 14, V) : 2 === d ? (u = c[11], d = c[9], d = Pc(d, u), c[2] = d, c[1] = 4, V) : 19 === d ? (f = c[14], d = JSON.stringify(f), c[2] = d, c[1] = 20, V) : 11 === d ? (d = c[2], c[1] = t(d) ? 15 : 16, V) : 9 === d ? (d = c[15], d = d["Content-Type"], 
+              c[17] = d, c[1] = t(d) ? 12 : 13, V) : 5 === d ? (e = c[10], d = c[13], d = new T(null, 2, 5, U, [e, d], null), c[2] = d, c[1] = 7, V) : 14 === d ? (d = c[2], c[2] = d, c[1] = 11, V) : 16 === d ? (d = c[8], f = b.set("Content-Type", "application/javascript"), c[19] = f, c[1] = t(d) ? 18 : 19, V) : 10 === d ? (d = c[15], c[2] = d, c[1] = 11, V) : 18 === d ? (d = c[8], f = c[14], f = JSON.stringify(f), d = [y(d), y("("), y(f), y(")")].join(""), c[2] = d, c[1] = 20, V) : 8 === d ? (d = 
+              c[2], d = E.h("html", Kh.e(d)) ? kp(d) : Ug(d), f = d["http-headers"], c[14] = d, c[15] = f, c[1] = t(f) ? 9 : 10, V) : null;
+            };
+          }(c), c);
+        }(), f = function() {
+          var a = e.j ? e.j() : e.call(null);
+          a[6] = c;
+          return a;
+        }();
+        return X(f);
+      };
+    }(c));
+    return c;
+  }, op = function() {
+    var a = require("express"), a = a.j ? a.j() : a.call(null), b = require("body-parser"), c = function() {
+      var a = process.env.HOST;
+      return t(a) ? a : "localhost";
+    }(), d = function() {
+      var a = process.env.PORT;
+      return t(a) ? a : 9999;
+    }(), e = require("http").createServer(a);
+    a.use(b.json.call(null));
+    a.use(b.urlencoded.call(null, {extended:!1}));
+    a.all("*", np);
+    e.listen(9999);
+    yn(e);
+    return Sm.l(G([new A(null, "webserver", "webserver", -1886708491, null), new A(null, "starting", "starting", -211609939, null), c, d], 0));
+  };
+  kn.e ? kn.e(op) : kn.call(null, op);
+}
+;Rm("server-time", function() {
+  return(new Date).toISOString();
+});
+function pp() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -10756,16 +12281,16 @@ function rn(a) {
             }
             if (1 === b) {
               var b = F.e ? F.e(Tm) : F.call(null, Tm), b = n(b), b = C(b), c = L(b, 0), d = L(b, 1), p = F.e ? F.e(Tm) : F.call(null, Tm), p = n(p), p = tc(p);
-              a[7] = c;
-              a[8] = d;
-              a[9] = b;
-              a[10] = p;
+              a[7] = d;
+              a[8] = c;
+              a[9] = p;
+              a[10] = b;
               a[2] = null;
               a[1] = 2;
               return V;
             }
-            return 4 === b ? (b = a[11], Y(a, 7, b)) : 13 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 6 === b ? (b = Fa(a[2]), a[1] = b ? 8 : 9, V) : 3 === b ? (b = a[2], c = Sm.l(G([new A(null, "test", "test", -2076896892, null), "tests done"], 0)), a[12] = b, a[13] = c, Zj(a, !0)) : 12 === b ? (a[2] = null, a[1] = 13, V) : 2 === b ? (c = a[14], c = a[9], b = L(c, 0), d = L(c, 1), c = Sm.l(G([new A(null, "test", "test", -2076896892, null), b], 0)), d = d.j ? d.j() : d.call(null), p = cn(d), a[11] = 
-            d, a[14] = b, a[15] = c, a[1] = t(p) ? 4 : 5, V) : 11 === b ? (b = a[10], c = C(b), b = tc(b), a[9] = c, a[10] = b, a[2] = null, a[1] = 2, V) : 9 === b ? (a[2] = null, a[1] = 10, V) : 5 === b ? (b = a[11], a[2] = b, a[1] = 6, V) : 10 === b ? (b = a[10], c = a[2], b = C(b), a[16] = c, a[1] = t(b) ? 11 : 12, V) : 8 === b ? (c = a[14], b = Sm.l(G([new A(null, "test", "test", -2076896892, null), c, new A(null, "failed", "failed", 243105765, null)], 0)), c = Td(c), d = console.log("TEST FAIL", 
+            return 4 === b ? (b = a[11], Y(a, 7, b)) : 13 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 6 === b ? (b = Fa(a[2]), a[1] = b ? 8 : 9, V) : 3 === b ? (b = a[2], c = Sm.l(G([new A(null, "test", "test", -2076896892, null), "tests done"], 0)), a[12] = b, a[13] = c, Zj(a, !0)) : 12 === b ? (a[2] = null, a[1] = 13, V) : 2 === b ? (c = a[14], c = a[10], b = L(c, 0), d = L(c, 1), c = Sm.l(G([new A(null, "test", "test", -2076896892, null), b], 0)), d = d.j ? d.j() : d.call(null), p = cn(d), a[15] = 
+            c, a[14] = b, a[11] = d, a[1] = t(p) ? 4 : 5, V) : 11 === b ? (b = a[9], c = C(b), b = tc(b), a[9] = b, a[10] = c, a[2] = null, a[1] = 2, V) : 9 === b ? (a[2] = null, a[1] = 10, V) : 5 === b ? (b = a[11], a[2] = b, a[1] = 6, V) : 10 === b ? (b = a[9], c = a[2], b = C(b), a[16] = c, a[1] = t(b) ? 11 : 12, V) : 8 === b ? (c = a[14], b = Sm.l(G([new A(null, "test", "test", -2076896892, null), c, new A(null, "failed", "failed", 243105765, null)], 0)), c = Td(c), d = console.log("TEST FAIL", 
             c), c = rn.e ? rn.e(1) : rn.call(null, 1), a[17] = d, a[18] = b, a[2] = c, a[1] = 10, V) : null;
           };
         }(a), a);
@@ -10834,7 +12359,7 @@ Rm("test-server", function() {
           return function(a) {
             var b = a[1];
             if (1 === b) {
-              return b = sn(), Y(a, 2, b);
+              return b = pp(), Y(a, 2, b);
             }
             if (2 === b) {
               var b = a[2], c = hk(3E4);
@@ -10843,9 +12368,9 @@ Rm("test-server", function() {
             }
             if (3 === b) {
               var b = a[2], c = Sm.l(G([new A(null, "test", "test", -2076896892, null), new A(null, "timeout", "timeout", 1321906209, null)], 0)), d = rn(1);
-              a[8] = d;
+              a[8] = b;
               a[9] = c;
-              a[10] = b;
+              a[10] = d;
               return Zj(a, !0);
             }
             return null;
@@ -10919,7 +12444,7 @@ Rm("test-client", function() {
           }(function() {
             return function(a) {
               var b = a[1];
-              return 1 === b ? (b = sn(), Y(a, 2, b)) : 2 === b ? (b = a[2], a[1] = t(b) ? 3 : 4, V) : 3 === b ? (b = location.href = "/test-ok", a[2] = b, a[1] = 5, V) : 4 === b ? (a[2] = null, a[1] = 5, V) : 5 === b ? (b = a[2], Zj(a, b)) : null;
+              return 1 === b ? (b = pp(), Y(a, 2, b)) : 2 === b ? (b = a[2], a[1] = t(b) ? 3 : 4, V) : 3 === b ? (b = location.href = "/test-ok", a[2] = b, a[1] = 5, V) : 4 === b ? (a[2] = null, a[1] = 5, V) : 5 === b ? (b = a[2], Zj(a, b)) : null;
             };
           }(a), a);
         }(), d = function() {
@@ -11003,1123 +12528,8 @@ Rm("solsort", function() {
   }(a));
   return a;
 });
-Rm("server-time", function() {
-  return(new Date).toISOString();
-});
-var tn = "undefined" !== typeof window && null != window.document, un = new ug(null, new m(null, 2, ["aria", null, "data", null], null), null);
-function vn(a) {
-  return 2 > I(a) ? a.toUpperCase() : [y(a.substring(0, 1).toUpperCase()), y(a.substring(1))].join("");
-}
-function wn(a) {
-  if ("string" === typeof a) {
-    return a;
-  }
-  a = Td(a);
-  var b = sm(a, /-/), c = L(b, 0), b = Id(b, 1);
-  return t(un.e ? un.e(c) : un.call(null, c)) ? a : je(y, c, S.h(vn, b));
-}
-var xn = !1;
-if ("undefined" === typeof yn) {
-  var yn, zn = uf;
-  yn = P ? P(zn) : se.call(null, zn);
-}
-function An(a, b) {
-  try {
-    var c = xn;
-    xn = !0;
-    try {
-      return React.render(a.j ? a.j() : a.call(null), b, function() {
-        return function() {
-          var c = xn;
-          xn = !1;
-          try {
-            return xe.F(yn, ad, b, new T(null, 2, 5, U, [a, b], null)), null;
-          } finally {
-            xn = c;
-          }
-        };
-      }(c));
-    } finally {
-      xn = c;
-    }
-  } catch (d) {
-    if (d instanceof Object) {
-      try {
-        React.unmountComponentAtNode(b);
-      } catch (e) {
-        if (e instanceof Object) {
-          "undefined" !== typeof console && console.warn([y("Warning: "), y("Error unmounting:")].join("")), "undefined" !== typeof console && console.log(e);
-        } else {
-          throw e;
-        }
-      }
-    }
-    throw d;
-  }
-}
-function Bn(a, b) {
-  return An(a, b);
-}
-;var Cn;
-if ("undefined" === typeof Dn) {
-  var Dn = !1
-}
-if ("undefined" === typeof En) {
-  var En = P ? P(0) : se.call(null, 0)
-}
-function Fn(a, b) {
-  b.vc = null;
-  var c = Cn;
-  Cn = b;
-  try {
-    return a.j ? a.j() : a.call(null);
-  } finally {
-    Cn = c;
-  }
-}
-function Hn(a) {
-  var b = a.vc;
-  a.vc = null;
-  return b;
-}
-function In(a) {
-  var b = Cn;
-  if (null != b) {
-    var c = b.vc;
-    b.vc = Vc.h(null == c ? wg : c, a);
-  }
-}
-function Jn(a, b, c, d) {
-  this.state = a;
-  this.meta = b;
-  this.Rb = c;
-  this.ma = d;
-  this.A = 2153938944;
-  this.G = 114690;
-}
-h = Jn.prototype;
-h.L = function(a, b, c) {
-  Kb(b, "#\x3cAtom: ");
-  Kg(this.state, b, c);
-  return Kb(b, "\x3e");
-};
-h.P = function() {
-  return this.meta;
-};
-h.M = function() {
-  return ba(this);
-};
-h.D = function(a, b) {
-  return this === b;
-};
-h.Lc = function(a, b) {
-  if (null != this.Rb && !t(this.Rb.e ? this.Rb.e(b) : this.Rb.call(null, b))) {
-    throw Error([y("Assert failed: "), y("Validator rejected reference state"), y("\n"), y(we.l(G([Pd(new A(null, "validator", "validator", -325659154, null), new A(null, "new-value", "new-value", -1567397401, null))], 0)))].join(""));
-  }
-  var c = this.state;
-  this.state = b;
-  null != this.ma && Ob(this, c, b);
-  return b;
-};
-h.Mc = function(a, b) {
-  var c;
-  c = this.state;
-  c = b.e ? b.e(c) : b.call(null, c);
-  return bc(this, c);
-};
-h.Nc = function(a, b, c) {
-  a = this.state;
-  b = b.h ? b.h(a, c) : b.call(null, a, c);
-  return bc(this, b);
-};
-h.Oc = function(a, b, c, d) {
-  a = this.state;
-  b = b.o ? b.o(a, c, d) : b.call(null, a, c, d);
-  return bc(this, b);
-};
-h.Pc = function(a, b, c, d, e) {
-  return bc(this, le(b, this.state, c, d, e));
-};
-h.pc = function(a, b, c) {
-  return Bd(function(a) {
-    return function(e, f, g) {
-      g.F ? g.F(f, a, b, c) : g.call(null, f, a, b, c);
-      return null;
-    };
-  }(this), null, this.ma);
-};
-h.oc = function(a, b, c) {
-  return this.ma = ad.o(this.ma, b, c);
-};
-h.qc = function(a, b) {
-  return this.ma = cd.h(this.ma, b);
-};
-h.Wb = function() {
-  In(this);
-  return this.state;
-};
-var Kn = function Kn() {
-  switch(arguments.length) {
-    case 1:
-      return Kn.e(arguments[0]);
-    default:
-      var b = new Aa(Array.prototype.slice.call(arguments, 1), 0);
-      return Kn.l(arguments[0], b);
-  }
-};
-Kn.e = function(a) {
-  return new Jn(a, null, null, null);
-};
-Kn.l = function(a, b) {
-  var c = rd(b) ? ie(te, b) : b, d = Zc(c, wa), c = Zc(c, ue);
-  return new Jn(a, d, c, null);
-};
-Kn.H = function(a) {
-  var b = C(a);
-  a = D(a);
-  return Kn.l(b, a);
-};
-Kn.J = 1;
-var Ln = function Ln(b) {
-  if (b ? b.yd : b) {
-    return b.yd();
-  }
-  var c;
-  c = Ln[k(null == b ? null : b)];
-  if (!c && (c = Ln._, !c)) {
-    throw x("IDisposable.dispose!", b);
-  }
-  return c.call(null, b);
-}, Mn = function Mn(b) {
-  if (b ? b.zd : b) {
-    return b.zd();
-  }
-  var c;
-  c = Mn[k(null == b ? null : b)];
-  if (!c && (c = Mn._, !c)) {
-    throw x("IRunnable.run", b);
-  }
-  return c.call(null, b);
-}, Nn = function Nn(b, c) {
-  if (b ? b.$c : b) {
-    return b.$c(0, c);
-  }
-  var d;
-  d = Nn[k(null == b ? null : b)];
-  if (!d && (d = Nn._, !d)) {
-    throw x("IComputedImpl.-update-watching", b);
-  }
-  return d.call(null, b, c);
-}, On = function On(b, c, d, e) {
-  if (b ? b.wd : b) {
-    return b.wd(0, 0, d, e);
-  }
-  var f;
-  f = On[k(null == b ? null : b)];
-  if (!f && (f = On._, !f)) {
-    throw x("IComputedImpl.-handle-change", b);
-  }
-  return f.call(null, b, c, d, e);
-}, Pn = function Pn(b) {
-  if (b ? b.xd : b) {
-    return b.xd();
-  }
-  var c;
-  c = Pn[k(null == b ? null : b)];
-  if (!c && (c = Pn._, !c)) {
-    throw x("IComputedImpl.-peek-at", b);
-  }
-  return c.call(null, b);
-};
-function Qn(a, b, c, d, e, f, g, l, p) {
-  this.sa = a;
-  this.state = b;
-  this.rb = c;
-  this.Tb = d;
-  this.Fb = e;
-  this.ma = f;
-  this.Gc = g;
-  this.Cc = l;
-  this.Bc = p;
-  this.A = 2153807872;
-  this.G = 114690;
-}
-h = Qn.prototype;
-h.wd = function(a, b, c, d) {
-  var e = this;
-  return t(function() {
-    var a = e.Tb;
-    return t(a) ? Fa(e.rb) && c !== d : a;
-  }()) ? (e.rb = !0, function() {
-    var a = e.Gc;
-    return t(a) ? a : Mn;
-  }().call(null, this)) : null;
-};
-h.$c = function(a, b) {
-  for (var c = n(b), d = null, e = 0, f = 0;;) {
-    if (f < e) {
-      var g = d.N(null, f);
-      ud(this.Fb, g) || Pb(g, this, On);
-      f += 1;
-    } else {
-      if (c = n(c)) {
-        d = c, nd(d) ? (c = Zb(d), f = $b(d), d = c, e = I(c), c = f) : (c = C(d), ud(this.Fb, c) || Pb(c, this, On), c = D(d), d = null, e = 0), f = 0;
-      } else {
-        break;
-      }
-    }
-  }
-  c = n(this.Fb);
-  d = null;
-  for (f = e = 0;;) {
-    if (f < e) {
-      g = d.N(null, f), ud(b, g) || Qb(g, this), f += 1;
-    } else {
-      if (c = n(c)) {
-        d = c, nd(d) ? (c = Zb(d), f = $b(d), d = c, e = I(c), c = f) : (c = C(d), ud(b, c) || Qb(c, this), c = D(d), d = null, e = 0), f = 0;
-      } else {
-        break;
-      }
-    }
-  }
-  return this.Fb = b;
-};
-h.xd = function() {
-  if (Fa(this.rb)) {
-    return this.state;
-  }
-  var a = Cn;
-  Cn = null;
-  try {
-    return rb(this);
-  } finally {
-    Cn = a;
-  }
-};
-h.L = function(a, b, c) {
-  Kb(b, [y("#\x3cReaction "), y(oc(this)), y(": ")].join(""));
-  Kg(this.state, b, c);
-  return Kb(b, "\x3e");
-};
-h.M = function() {
-  return ba(this);
-};
-h.D = function(a, b) {
-  return this === b;
-};
-h.yd = function() {
-  for (var a = n(this.Fb), b = null, c = 0, d = 0;;) {
-    if (d < c) {
-      var e = b.N(null, d);
-      Qb(e, this);
-      d += 1;
-    } else {
-      if (a = n(a)) {
-        b = a, nd(b) ? (a = Zb(b), d = $b(b), b = a, c = I(a), a = d) : (a = C(b), Qb(a, this), a = D(b), b = null, c = 0), d = 0;
-      } else {
-        break;
-      }
-    }
-  }
-  this.state = this.Fb = null;
-  this.rb = !0;
-  t(this.Tb) && (t(Dn) && xe.h(En, Ed), this.Tb = !1);
-  return t(this.Bc) ? this.Bc.j ? this.Bc.j() : this.Bc.call(null) : null;
-};
-h.Lc = function(a, b) {
-  var c = this.state;
-  this.state = b;
-  t(this.Cc) && (this.rb = !0, this.Cc.h ? this.Cc.h(c, b) : this.Cc.call(null, c, b));
-  Ob(this, c, b);
-  return b;
-};
-h.Mc = function(a, b) {
-  var c;
-  c = Pn(this);
-  c = b.e ? b.e(c) : b.call(null, c);
-  return bc(this, c);
-};
-h.Nc = function(a, b, c) {
-  a = Pn(this);
-  b = b.h ? b.h(a, c) : b.call(null, a, c);
-  return bc(this, b);
-};
-h.Oc = function(a, b, c, d) {
-  a = Pn(this);
-  b = b.o ? b.o(a, c, d) : b.call(null, a, c, d);
-  return bc(this, b);
-};
-h.Pc = function(a, b, c, d, e) {
-  return bc(this, le(b, Pn(this), c, d, e));
-};
-h.zd = function() {
-  var a = this.state, b = Fn(this.sa, this), c = Hn(this);
-  !E.h(c, this.Fb) && Nn(this, c);
-  t(this.Tb) || (t(Dn) && xe.h(En, Dc), this.Tb = !0);
-  this.rb = !1;
-  this.state = b;
-  Ob(this, a, this.state);
-  return b;
-};
-h.pc = function(a, b, c) {
-  return Bd(function(a) {
-    return function(e, f, g) {
-      g.F ? g.F(f, a, b, c) : g.call(null, f, a, b, c);
-      return null;
-    };
-  }(this), null, this.ma);
-};
-h.oc = function(a, b, c) {
-  return this.ma = ad.o(this.ma, b, c);
-};
-h.qc = function(a, b) {
-  this.ma = cd.h(this.ma, b);
-  return id(this.ma) && Fa(this.Gc) ? Ln(this) : null;
-};
-h.Wb = function() {
-  var a = this.Gc;
-  if (t(t(a) ? a : null != Cn)) {
-    return In(this), t(this.rb) ? Mn(this) : this.state;
-  }
-  t(this.rb) && (a = this.state, this.state = this.sa.j ? this.sa.j() : this.sa.call(null), a !== this.state && Ob(this, a, this.state));
-  return this.state;
-};
-function Rn(a, b) {
-  var c = rd(b) ? ie(te, b) : b, d = Zc(c, qi), e = Zc(c, ih), f = Zc(c, Fi), c = Zc(c, wh), d = E.h(d, !0) ? Mn : d, g = null != c, e = new Qn(a, null, !g, g, null, null, d, e, f);
-  null != c && (t(Dn) && xe.h(En, Dc), e.$c(0, c));
-  return e;
-}
-;if ("undefined" === typeof Sn) {
-  var Sn = 0
-}
-function Tn(a) {
-  return setTimeout(a, 16);
-}
-var Un = Fa(tn) ? Tn : function() {
-  var a = window, b = a.requestAnimationFrame;
-  if (t(b)) {
-    return b;
-  }
-  b = a.webkitRequestAnimationFrame;
-  if (t(b)) {
-    return b;
-  }
-  b = a.mozRequestAnimationFrame;
-  if (t(b)) {
-    return b;
-  }
-  a = a.msRequestAnimationFrame;
-  return t(a) ? a : Tn;
-}();
-function Vn(a, b) {
-  return a.cljsMountOrder - b.cljsMountOrder;
-}
-function Wn() {
-  var a = Xn;
-  if (t(a.ad)) {
-    return null;
-  }
-  a.ad = !0;
-  a = function(a) {
-    return function() {
-      var c = a.Zc, d = a.Fc;
-      a.Zc = [];
-      a.Fc = [];
-      a.ad = !1;
-      a: {
-        c.sort(Vn);
-        for (var e = c.length, f = 0;;) {
-          if (f < e) {
-            var g = c[f];
-            t(g.cljsIsDirty) && g.forceUpdate();
-            f += 1;
-          } else {
-            break a;
-          }
-        }
-      }
-      a: {
-        for (c = d.length, e = 0;;) {
-          if (e < c) {
-            d[e].call(null), e += 1;
-          } else {
-            break a;
-          }
-        }
-      }
-      return null;
-    };
-  }(a);
-  return Un.e ? Un.e(a) : Un.call(null, a);
-}
-var Xn = new function() {
-  this.Zc = [];
-  this.ad = !1;
-  this.Fc = [];
-};
-function Yn(a) {
-  Xn.Fc.push(a);
-  Wn();
-}
-function Zn(a) {
-  a = null == a ? null : a.props;
-  return null == a ? null : a.argv;
-}
-function $n(a, b) {
-  if (!t(Zn(a))) {
-    throw Error([y("Assert failed: "), y(we.l(G([Pd(new A(null, "is-reagent-component", "is-reagent-component", -1856228005, null), new A(null, "c", "c", -122660552, null))], 0)))].join(""));
-  }
-  a.cljsIsDirty = !1;
-  var c = a.cljsRatom;
-  if (null == c) {
-    var d = Fn(b, a), e = Hn(a);
-    null != e && (a.cljsRatom = Rn(b, G([qi, function() {
-      return function() {
-        a.cljsIsDirty = !0;
-        Xn.Zc.push(a);
-        return Wn();
-      };
-    }(d, e, c), wh, e], 0)));
-    return d;
-  }
-  return Mn(c);
-}
-;var ao, bo, co = function co(b) {
-  var c = ao;
-  ao = b;
-  try {
-    var d = b.cljsRender;
-    if (!td(d)) {
-      throw Error([y("Assert failed: "), y(we.l(G([Pd(new A(null, "ifn?", "ifn?", -2106461064, null), new A(null, "f", "f", 43394975, null))], 0)))].join(""));
-    }
-    var e = b.props, f = null == b.reagentRender ? d.e ? d.e(b) : d.call(null, b) : function() {
-      var b = e.argv;
-      switch(I(b)) {
-        case 1:
-          return d.j ? d.j() : d.call(null);
-        case 2:
-          return b = Yc(b, 1), d.e ? d.e(b) : d.call(null, b);
-        case 3:
-          var c = Yc(b, 1), b = Yc(b, 2);
-          return d.h ? d.h(c, b) : d.call(null, c, b);
-        case 4:
-          var c = Yc(b, 1), f = Yc(b, 2), b = Yc(b, 3);
-          return d.o ? d.o(c, f, b) : d.call(null, c, f, b);
-        case 5:
-          var c = Yc(b, 1), f = Yc(b, 2), q = Yc(b, 3), b = Yc(b, 4);
-          return d.F ? d.F(c, f, q, b) : d.call(null, c, f, q, b);
-        default:
-          return ie(d, Xe(b, 1, I(b)));
-      }
-    }();
-    return md(f) ? eo(f) : td(f) ? (b.cljsRender = f, co(b)) : f;
-  } finally {
-    ao = c;
-  }
-}, fo = new m(null, 1, [ei, function() {
-  return Fa(bo) ? $n(this, function(a) {
-    return function() {
-      return co(a);
-    };
-  }(this)) : co(this);
-}], null);
-function go(a, b) {
-  var c = a instanceof N ? a.Ba : null;
-  switch(c) {
-    case "getDefaultProps":
-      throw Error([y("Assert failed: "), y("getDefaultProps not supported yet"), y("\n"), y(we.l(G([!1], 0)))].join(""));;
-    case "getInitialState":
-      return function() {
-        return function() {
-          var a;
-          a = this.cljsState;
-          a = null != a ? a : this.cljsState = Kn.e(null);
-          var c = b.e ? b.e(this) : b.call(null, this);
-          return ve.h ? ve.h(a, c) : ve.call(null, a, c);
-        };
-      }(c);
-    case "componentWillReceiveProps":
-      return function() {
-        return function(a) {
-          a = a.argv;
-          return b.h ? b.h(this, a) : b.call(null, this, a);
-        };
-      }(c);
-    case "shouldComponentUpdate":
-      return function() {
-        return function(a) {
-          var c = xn;
-          if (t(c)) {
-            return c;
-          }
-          c = this.props.argv;
-          a = a.argv;
-          return null == b ? null == c || null == a || !E.h(c, a) : b.o ? b.o(this, c, a) : b.call(null, this, c, a);
-        };
-      }(c);
-    case "componentWillUpdate":
-      return function() {
-        return function(a) {
-          a = a.argv;
-          return b.h ? b.h(this, a) : b.call(null, this, a);
-        };
-      }(c);
-    case "componentDidUpdate":
-      return function() {
-        return function(a) {
-          a = a.argv;
-          return b.h ? b.h(this, a) : b.call(null, this, a);
-        };
-      }(c);
-    case "componentWillMount":
-      return function() {
-        return function() {
-          this.cljsMountOrder = Sn += 1;
-          return null == b ? null : b.e ? b.e(this) : b.call(null, this);
-        };
-      }(c);
-    case "componentWillUnmount":
-      return function() {
-        return function() {
-          var a = this.cljsRatom;
-          null == a || Ln(a);
-          this.cljsIsDirty = !1;
-          return null == b ? null : b.e ? b.e(this) : b.call(null, this);
-        };
-      }(c);
-    default:
-      return null;
-  }
-}
-function ho(a) {
-  return td(a) ? function() {
-    function b(b) {
-      var c = null;
-      if (0 < arguments.length) {
-        for (var c = 0, f = Array(arguments.length - 0);c < f.length;) {
-          f[c] = arguments[c + 0], ++c;
-        }
-        c = new Aa(f, 0);
-      }
-      return je(a, this, c);
-    }
-    function c(b) {
-      return je(a, this, b);
-    }
-    b.J = 0;
-    b.H = function(a) {
-      a = n(a);
-      return c(a);
-    };
-    b.l = c;
-    return b;
-  }() : a;
-}
-var io = new ug(null, new m(null, 4, [zh, null, ci, null, ei, null, ri, null], null), null);
-function jo(a, b, c) {
-  if (t(io.e ? io.e(a) : io.call(null, a))) {
-    return ed(b) && (b.__reactDontBind = !0), b;
-  }
-  var d = go(a, b);
-  if (t(t(d) ? b : d) && !td(b)) {
-    throw Error([y("Assert failed: "), y([y("Expected function in "), y(c), y(a), y(" but got "), y(b)].join("")), y("\n"), y(we.l(G([Pd(new A(null, "ifn?", "ifn?", -2106461064, null), new A(null, "f", "f", 43394975, null))], 0)))].join(""));
-  }
-  return t(d) ? d : ho(b);
-}
-var ko = new m(null, 3, [Xh, null, aj, null, Sh, null], null), lo = function(a) {
-  return function(b) {
-    return function(c) {
-      var d = Zc(F.e ? F.e(b) : F.call(null, b), c);
-      if (null != d) {
-        return d;
-      }
-      d = a.e ? a.e(c) : a.call(null, c);
-      xe.F(b, ad, c, d);
-      return d;
-    };
-  }(function() {
-    var a = uf;
-    return P ? P(a) : se.call(null, a);
-  }());
-}(wn);
-function mo(a) {
-  return Bd(function(a, c, d) {
-    return ad.o(a, Sd.e(lo.e ? lo.e(c) : lo.call(null, c)), d);
-  }, uf, a);
-}
-function no(a) {
-  return tg.l(G([ko, a], 0));
-}
-function oo(a, b, c) {
-  a = ad.l(a, zh, b, G([ei, ei.e(fo)], 0));
-  return ad.o(a, ri, function() {
-    return function() {
-      return c;
-    };
-  }(a));
-}
-function po(a) {
-  var b = function() {
-    var b = ed(a);
-    return b ? (b = a.displayName, t(b) ? b : a.name) : b;
-  }();
-  if (t(b)) {
-    return b;
-  }
-  b = function() {
-    var b = a ? a.G & 4096 || a.ld ? !0 : !1 : !1;
-    return b ? Td(a) : b;
-  }();
-  if (t(b)) {
-    return b;
-  }
-  b = hd(a);
-  return ld(b) ? Bh.e(b) : null;
-}
-function ro(a) {
-  var b = function() {
-    var b = Ji.e(a);
-    return null == b ? a : cd.h(ad.o(a, ci, b), Ji);
-  }(), c = function() {
-    var a = ci.e(b);
-    return t(a) ? a : ei.e(b);
-  }();
-  if (!td(c)) {
-    throw Error([y("Assert failed: "), y([y("Render must be a function, not "), y(we.l(G([c], 0)))].join("")), y("\n"), y(we.l(G([Pd(new A(null, "ifn?", "ifn?", -2106461064, null), new A(null, "render-fun", "render-fun", -1209513086, null))], 0)))].join(""));
-  }
-  var d = null, e = "" + y(function() {
-    var a = xh.e(b);
-    return t(a) ? a : po(c);
-  }()), f;
-  if (id(e)) {
-    f = y;
-    var g;
-    null == Qg && (Qg = P ? P(0) : se.call(null, 0));
-    g = rc([y("reagent"), y(xe.h(Qg, Dc))].join(""));
-    f = "" + f(g);
-  } else {
-    f = e;
-  }
-  g = oo(ad.o(b, xh, f), c, f);
-  return Bd(function(a, b, c, d, e) {
-    return function(a, b, c) {
-      return ad.o(a, b, jo(b, c, e));
-    };
-  }(b, c, d, e, f, g), uf, g);
-}
-function so(a) {
-  return Bd(function(a, c, d) {
-    a[Td(c)] = d;
-    return a;
-  }, {}, a);
-}
-function to(a) {
-  if (!ld(a)) {
-    throw Error([y("Assert failed: "), y(we.l(G([Pd(new A(null, "map?", "map?", -1780568534, null), new A(null, "body", "body", -408674142, null))], 0)))].join(""));
-  }
-  var b = so(ro(no(mo(a))));
-  a = React.createClass(b);
-  b = function(a, b) {
-    return function() {
-      function a(b) {
-        var d = null;
-        if (0 < arguments.length) {
-          for (var d = 0, e = Array(arguments.length - 0);d < e.length;) {
-            e[d] = arguments[d + 0], ++d;
-          }
-          d = new Aa(e, 0);
-        }
-        return c.call(this, d);
-      }
-      function c(a) {
-        a = je(Ve, b, a);
-        return eo(a);
-      }
-      a.J = 0;
-      a.H = function(a) {
-        a = n(a);
-        return c(a);
-      };
-      a.l = c;
-      return a;
-    }();
-  }(b, a);
-  b.cljsReactClass = a;
-  a.cljsReactClass = a;
-  return b;
-}
-function uo() {
-  var a;
-  a = ao;
-  a = null == a ? null : a.cljsName();
-  return id(a) ? "" : [y(" (in "), y(a), y(")")].join("");
-}
-;var vo = /([^\s\.#]+)(?:#([^\s\.#]+))?(?:\.([^\s#]+))?/;
-function wo(a) {
-  return a instanceof N || a instanceof A;
-}
-function xo(a) {
-  var b = wo(a);
-  return t(b) ? b : "string" === typeof a;
-}
-var yo = {"class":"className", "for":"htmlFor", charset:"charSet"};
-function zo(a, b) {
-  return t(a.hasOwnProperty(b)) ? a[b] : null;
-}
-var Ao = function Ao(b) {
-  return "string" === typeof b || "number" === typeof b || ed(b) ? b : t(wo(b)) ? Td(b) : ld(b) ? Bd(function(b, d, e) {
-    if (t(wo(d))) {
-      var f = zo(yo, Td(d));
-      d = null == f ? yo[Td(d)] = wn(d) : f;
-    }
-    b[d] = Ao(e);
-    return b;
-  }, {}, b) : jd(b) ? Ug(b) : td(b) ? function() {
-    function c(b) {
-      var c = null;
-      if (0 < arguments.length) {
-        for (var c = 0, g = Array(arguments.length - 0);c < g.length;) {
-          g[c] = arguments[c + 0], ++c;
-        }
-        c = new Aa(g, 0);
-      }
-      return d.call(this, c);
-    }
-    function d(c) {
-      return ie(b, c);
-    }
-    c.J = 0;
-    c.H = function(b) {
-      b = n(b);
-      return d(b);
-    };
-    c.l = d;
-    return c;
-  }() : Ug(b);
-};
-function Bo(a) {
-  var b = a.cljsInputValue;
-  if (null == b) {
-    return null;
-  }
-  a.cljsInputDirty = !1;
-  a = a.getDOMNode();
-  return E.h(b, a.value) ? null : a.value = b;
-}
-function Co(a, b, c) {
-  b = b.e ? b.e(c) : b.call(null, c);
-  t(a.cljsInputDirty) || (a.cljsInputDirty = !0, Yn(function() {
-    return function() {
-      return Bo(a);
-    };
-  }(b)));
-  return b;
-}
-function Do(a) {
-  var b = ao;
-  if (t(function() {
-    var b = a.hasOwnProperty("onChange");
-    return t(b) ? a.hasOwnProperty("value") : b;
-  }())) {
-    var c = a.value, d = null == c ? "" : c, e = a.onChange;
-    b.cljsInputValue = d;
-    delete a.value;
-    a.defaultValue = d;
-    a.onChange = function(a, c, d, e) {
-      return function(a) {
-        return Co(b, e, a);
-      };
-    }(a, c, d, e);
-  } else {
-    b.cljsInputValue = null;
-  }
-}
-var Eo = null, Go = new m(null, 4, [Ci, "ReagentInput", Ih, Bo, ui, function(a) {
-  return a.cljsInputValue = null;
-}, gi, function(a, b, c, d) {
-  Do(c);
-  return Fo.F ? Fo.F(a, b, c, d) : Fo.call(null, a, b, c, d);
-}], null);
-function Ho(a, b, c, d) {
-  null == Eo && (Eo = to(Go));
-  return Eo.F ? Eo.F(a, b, c, d) : Eo.call(null, a, b, c, d);
-}
-function Io(a) {
-  return ld(a) ? Zc(a, rh) : null;
-}
-function Jo(a) {
-  var b;
-  b = hd(a);
-  b = null == b ? null : Io(b);
-  return null == b ? Io(L(a, 1)) : b;
-}
-var Ko = {};
-function eo(a) {
-  if ("string" !== typeof a) {
-    if (md(a)) {
-      if (!(0 < I(a))) {
-        throw Error([y("Assert failed: "), y([y("Hiccup form should not be empty: "), y(we.l(G([a], 0))), y(uo())].join("")), y("\n"), y(we.l(G([Pd(new A(null, "pos?", "pos?", -244377722, null), Pd(new A(null, "count", "count", -514511684, null), new A(null, "v", "v", 1661996586, null)))], 0)))].join(""));
-      }
-      var b = Yc(a, 0), c;
-      c = xo(b);
-      c = t(c) ? c : td(b) || !1;
-      if (!t(c)) {
-        throw Error([y("Assert failed: "), y([y("Invalid Hiccup form: "), y(we.l(G([a], 0))), y(uo())].join("")), y("\n"), y(we.l(G([Pd(new A(null, "valid-tag?", "valid-tag?", 1243064160, null), new A(null, "tag", "tag", 350170304, null))], 0)))].join(""));
-      }
-      var d;
-      if (t(xo(b))) {
-        c = zo(Ko, Td(b));
-        if (null == c) {
-          c = Td(b);
-          d = D(Cg(vo, Td(b)));
-          var e = L(d, 0), f = L(d, 1);
-          d = L(d, 2);
-          d = t(d) ? pm(d, /\./, " ") : null;
-          if (!t(e)) {
-            throw Error([y("Assert failed: "), y([y("Invalid tag: '"), y(b), y("'"), y(uo())].join("")), y("\n"), y(we.l(G([new A(null, "tag", "tag", 350170304, null)], 0)))].join(""));
-          }
-          c = Ko[c] = {name:e, id:f, className:d};
-        }
-        d = c;
-      } else {
-        d = null;
-      }
-      if (t(d)) {
-        c = d.name;
-        f = L(a, 1);
-        e = null == f || ld(f);
-        var g = e ? f : null, f = d.id;
-        d = d.className;
-        var l = null == f && null == d;
-        l && id(g) ? f = null : (g = Ao(g), l || (g = null == g ? {} : g, null != f && null == g.id && (g.id = f), null != d && (f = g.className, g.className = null != f ? [y(d), y(" "), y(f)].join("") : d)), f = g);
-        e = e ? 2 : 1;
-        t("input" === c || "textarea" === c) ? (c = Rc(new T(null, 5, 5, U, [Ho, a, c, f, e], null), hd(a)), c = eo.e ? eo.e(c) : eo.call(null, c)) : (d = hd(a), d = null == d ? null : Io(d), null != d && (f = null == f ? {} : f, f.key = d), c = Fo.F ? Fo.F(a, c, f, e) : Fo.call(null, a, c, f, e));
-      } else {
-        c = null;
-      }
-      if (null == c) {
-        c = b.cljsReactClass;
-        if (null == c) {
-          if (!td(b)) {
-            throw Error([y("Assert failed: "), y([y("Expected a function, not "), y(we.l(G([b], 0)))].join("")), y("\n"), y(we.l(G([Pd(new A(null, "ifn?", "ifn?", -2106461064, null), new A(null, "f", "f", 43394975, null))], 0)))].join(""));
-          }
-          ed(b) && null != b.type && "undefined" !== typeof console && console.warn([y("Warning: "), y("Using native React classes directly in Hiccup forms "), y("is not supported. Use create-element or "), y("adapt-react-class instead: "), y(b.type), y(uo())].join(""));
-          c = hd(b);
-          c = ad.o(c, gi, b);
-          c = to(c).cljsReactClass;
-          b.cljsReactClass = c;
-        }
-        b = c;
-        c = {argv:a};
-        a = null == a ? null : Jo(a);
-        null == a || (c.key = a);
-        a = React.createElement(b, c);
-      } else {
-        a = c;
-      }
-    } else {
-      a = rd(a) ? Lo.e ? Lo.e(a) : Lo.call(null, a) : a;
-    }
-  }
-  return a;
-}
-function Mo(a, b) {
-  for (var c = Ca(a), d = c.length, e = 0;;) {
-    if (e < d) {
-      var f = c[e];
-      md(f) && null == Jo(f) && (b["no-key"] = !0);
-      c[e] = eo(f);
-      e += 1;
-    } else {
-      break;
-    }
-  }
-  return c;
-}
-function Lo(a) {
-  var b = {}, c = null == Cn ? Mo(a, b) : Fn(function(b) {
-    return function() {
-      return Mo(a, b);
-    };
-  }(b), b);
-  t(Hn(b)) && "undefined" !== typeof console && console.warn([y("Warning: "), y("Reactive deref not supported in lazy seq, "), y("it should be wrapped in doall"), y(uo()), y(". Value:\n"), y(we.l(G([a], 0)))].join(""));
-  t(b["no-key"]) && "undefined" !== typeof console && console.warn([y("Warning: "), y("Every element in a seq should have a unique "), y(":key"), y(uo()), y(". Value: "), y(we.l(G([a], 0)))].join(""));
-  return c;
-}
-function Fo(a, b, c, d) {
-  var e = I(a) - d;
-  switch(e) {
-    case 0:
-      return React.createElement(b, c);
-    case 1:
-      return React.createElement(b, c, eo(Yc(a, d)));
-    default:
-      return React.createElement.apply(null, Bd(function() {
-        return function(a, b, c) {
-          b >= d && a.push(eo(c));
-          return a;
-        };
-      }(e), [b, c], a));
-  }
-}
-;function No(a) {
-  An(function() {
-    var b = ed(a) ? a.j ? a.j() : a.call(null) : a;
-    return eo(b);
-  }, document.body);
-}
-function Oo() {
-  for (var a = n(sf(F.e ? F.e(yn) : F.call(null, yn))), b = null, c = 0, d = 0;;) {
-    if (d < c) {
-      var e = b.N(null, d);
-      ie(Bn, e);
-      d += 1;
-    } else {
-      if (a = n(a)) {
-        b = a, nd(b) ? (a = Zb(b), d = $b(b), b = a, c = I(a), a = d) : (a = C(b), ie(Bn, a), a = D(b), b = null, c = 0), d = 0;
-      } else {
-        break;
-      }
-    }
-  }
-  return "Updated";
-}
-var Po = ["reagent", "core", "force_update_all"], Qo = aa;
-Po[0] in Qo || !Qo.execScript || Qo.execScript("var " + Po[0]);
-for (var Ro;Po.length && (Ro = Po.shift());) {
-  var So;
-  if (So = !Po.length) {
-    So = void 0 !== Oo;
-  }
-  So ? Qo[Ro] = Oo : Qo = Qo[Ro] ? Qo[Ro] : Qo[Ro] = {};
-}
-;function To(a) {
-  return pm(Td(a), /[A-Z]/, function(a) {
-    return[y("-"), y(a.toLowerCase())].join("");
-  });
-}
-Vm(new A(null, "css-name", "css-name", -2011163427, null), function() {
-  return E.h(To(kh), "-foo-bar");
-});
-function Uo(a) {
-  var b = L(a, 0);
-  a = L(a, 1);
-  return[y(To(b)), y(":"), y("number" === typeof a ? [y(a), y("px")].join("") : Td(a))].join("");
-}
-function Vo(a) {
-  var b = L(a, 0);
-  a = L(a, 1);
-  return[y(Td(b)), y("{"), y(rm(";", S.h(Uo, n(a)))), y("}")].join("");
-}
-function Wo(a) {
-  qm(S.h(y, n(a)));
-  return qm(S.h(Vo, n(a)));
-}
-function Xo(a) {
-  return Wo($g(a));
-}
-Vm(new A(null, "clj-\x3ecss", "clj-\x3ecss", -359189480, null), function() {
-  return E.h(Wo(new m(null, 2, [Ti, new m(null, 2, [pi, Uh, Oi, 14], null), Qi, new m(null, 1, [Gh, li], null)], null)), "h1{font-weight:normal;font-size:14px}.div{background:blue}");
-});
-var Yo, Zo = new m(null, 5, ["@font-face", new m(null, 3, [bi, "Ubuntu", pi, "400", Oh, "url(/font/ubuntu-latin1.ttf)format(truetype)"], null), Zh, new m(null, 1, [oj, "5%"], null), ej, new m(null, 4, [oj, 5, oi, 5, th, 5, Vi, "1px solid black"], null), Wi, new m(null, 3, [oj, 0, oi, 0, bi, "Ubuntu, sans-serif"], null), ai, new m(null, 2, [oj, 0, oi, 0], null)], null);
-Yo = P ? P(Zo) : se.call(null, Zo);
-Rm("style", function() {
-  var a = Z(1);
-  W(function(a) {
-    return function() {
-      var c = function() {
-        return function(a) {
-          return function() {
-            function b(c) {
-              for (;;) {
-                var d;
-                a: {
-                  try {
-                    for (;;) {
-                      var f = a(c);
-                      if (!O(f, V)) {
-                        d = f;
-                        break a;
-                      }
-                    }
-                  } catch (g) {
-                    if (g instanceof Object) {
-                      c[5] = g, ak(c), d = V;
-                    } else {
-                      throw g;
-                    }
-                  }
-                }
-                if (!O(d, V)) {
-                  return d;
-                }
-              }
-            }
-            function c() {
-              var a = [null, null, null, null, null, null, null];
-              a[0] = d;
-              a[1] = 1;
-              return a;
-            }
-            var d = null, d = function(a) {
-              switch(arguments.length) {
-                case 0:
-                  return c.call(this);
-                case 1:
-                  return b.call(this, a);
-              }
-              throw Error("Invalid arity: " + arguments.length);
-            };
-            d.j = c;
-            d.e = b;
-            return d;
-          }();
-        }(function() {
-          return function(a) {
-            if (1 === a[1]) {
-              var b = [hi, yh], c = bd([Zi], ["text/css"]), d = F.e ? F.e(Yo) : F.call(null, Yo), d = Wo(d), b = bd(b, [c, d]), b = Ug(b);
-              return Zj(a, b);
-            }
-            return null;
-          };
-        }(a), a);
-      }(), d = function() {
-        var d = c.j ? c.j() : c.call(null);
-        d[6] = a;
-        return d;
-      }();
-      return X(d);
-    };
-  }(a));
-  return a;
-});
-function $o(a) {
-  return{"http-headers":{"Content-Type":"text/html;charset\x3dUTF-8"}, content:[y('\x3c!DOCTYPE html\x3e\x3chtml manifest\x3d"/solsort.appcache"\x3e\x3chead\x3e'), y("\x3ctitle\x3e"), y(function() {
-    var b = Vh.e(a);
-    return t(b) ? b : "solsort.com";
-  }()), y("\x3c/title\x3e"), y('\x3cmeta http-equiv\x3d"Content-Type" content\x3d"text/html;charset\x3dUTF-8"\x3e'), y('\x3cmeta http-equiv\x3d"X-UA-Compatible" content\x3d"IE\x3dedge,chrome\x3d1"\x3e'), y('\x3cmeta name\x3d"viewport" content\x3d"'), y("width\x3ddevice-width, initial-scale\x3d1.0"), y(t(jh.e(a)) ? ", minimum-scale\x3d1.0, maximum-scale\x3d1.0, user-scalable\x3d0" : ""), y('"\x3e'), y('\x3cmeta name\x3d"format-detection" content\x3d"telephone\x3dno"\x3e'), y("\x3clink href\x3d/style.css rel\x3dstylesheet\x3e"), 
-  y("\x3cstyle id\x3dstyle\x3e"), y(t(Hh.e(a)) ? Xo(Ug(Hh.e(a))) : null), y("\x3c/style\x3e"), y("\x3c/head\x3e\x3cbody\x3e"), y(function() {
-    var b = Ui.e(a), c;
-    if (t(b)) {
-      c = b;
-    } else {
-      a: {
-        var b = lj.e(a), d = bo;
-        bo = !0;
-        try {
-          c = React.renderToStaticMarkup(eo(b));
-          break a;
-        } finally {
-          bo = d;
-        }
-        c = void 0;
-      }
-    }
-    return c;
-  }()), y('\x3cscript src\x3d"/solsort.js"\x3e\x3c/script\x3e'), y("\x3c/body\x3e\x3c/html\x3e")].join("")};
-}
-;za();
-function ap() {
+za();
+function qp() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -12177,8 +12587,8 @@ function ap() {
               return b = a, b[2] = a[2], b[1] = 4, V;
             }
             if (20 === b) {
-              var b = a[7], c = a[8], b = je(Qm, Hm, b), c = cn(b);
-              a[8] = b;
+              var b = a[7], b = a[8], b = je(Qm, Hm, b), c = cn(b);
+              a[7] = b;
               a[1] = t(c) ? 23 : 24;
               return V;
             }
@@ -12189,7 +12599,7 @@ function ap() {
               return b = a[10], b = "undefined" !== typeof global, a[10] = b, a[1] = t(b) ? 2 : 3, V;
             }
             if (24 === b) {
-              return c = a[8], a[2] = c, a[1] = 25, V;
+              return b = a[7], a[2] = b, a[1] = 25, V;
             }
             if (4 === b) {
               return b = a[11], b = a[2], a[11] = b, a[1] = t(b) ? 8 : 9, V;
@@ -12198,15 +12608,15 @@ function ap() {
               return a[2] = window, a[1] = 16, V;
             }
             if (21 === b) {
-              var b = a[7], c = new A(null, "routes", "routes", 2098431689, null), d = new A(null, "no-such-route", "no-such-route", -1603366700, null), p = rf(F.e ? F.e(Am) : F.call(null, Am)), b = Sm.l(G([c, d, b, p], 0));
+              var b = a[8], c = new A(null, "routes", "routes", 2098431689, null), d = new A(null, "no-such-route", "no-such-route", -1603366700, null), p = rf(F.e ? F.e(Am) : F.call(null, Am)), b = Sm.l(G([c, d, b, p], 0));
               a[2] = b;
               a[1] = 22;
               return V;
             }
             return 31 === b ? (a[2] = null, a[1] = 32, V) : 32 === b ? (b = a[9], a[12] = a[2], a[2] = b, a[1] = 22, V) : 13 === b ? (b = a[2], a[2] = b, a[1] = 10, V) : 22 === b ? (b = a[2], Zj(a, b)) : 29 === b ? (b = a[2], a[1] = t(b) ? 30 : 31, V) : 6 === b ? (a[2] = global.process, a[1] = 7, V) : 28 === b ? (a[2] = en, a[1] = 29, V) : 25 === b ? (b = a[2], a[9] = b, a[1] = t(en) ? 27 : 28, V) : 17 === b ? (b = window.location.hash.slice(1).split(/[\/.]/), a[2] = b, a[1] = 19, V) : 3 === b ? 
-            (b = a[10], a[2] = b, a[1] = 4, V) : 12 === b ? (b = a[13], a[2] = b, a[1] = 13, V) : 2 === b ? (a[1] = t(global.process) ? 5 : 6, V) : 23 === b ? (c = a[8], Y(a, 26, c)) : 19 === b ? (b = a[2], a[2] = b, a[1] = 16, V) : 11 === b ? (a[1] = t(window) ? 14 : 15, V) : 9 === b ? (b = "undefined" !== typeof window, a[13] = b, a[1] = t(b) ? 11 : 12, V) : 5 === b ? (b = global.process.argv.slice(2), a[2] = b, a[1] = 7, V) : 14 === b ? (a[1] = t(window.location) ? 17 : 18, V) : 26 === b ? (b = 
-            a[2], a[2] = b, a[1] = 25, V) : 16 === b ? (b = a[2], a[2] = b, a[1] = 13, V) : 30 === b ? (b = a[9], Sm.l(G([new A(null, "render-html", "render-html", -1069888904, null)], 0)), t(Hh.e(b)) && (c = document.getElementById("style"), t(c) || (c = document.createElement("style"), c.id = "style", document.head.appendChild(c)), d = Xo(Ug(Hh.e(b))), c.innerHTML = d), t(Ui.e(b)) ? document.body.innerHTML = Ui.e(b) : (c = lj.e(b), No(c)), t(Vh.e(b)) && (document.getElementsByTagName("title")[0].innerHTML = 
-            Vh.e(b)), a[2] = !0, a[1] = 32, V) : 10 === b ? (b = a[2], c = Sm.l(G([new A(null, "routes", "routes", 2098431689, null), new A(null, "starting", "starting", -211609939, null), b], 0)), d = Zc(b, 0), d = Km(d), a[7] = b, a[14] = c, a[1] = t(d) ? 20 : 21, V) : 18 === b ? (a[2] = window.location, a[1] = 19, V) : 8 === b ? (b = a[11], a[2] = b, a[1] = 10, V) : null;
+            (b = a[10], a[2] = b, a[1] = 4, V) : 12 === b ? (b = a[13], a[2] = b, a[1] = 13, V) : 2 === b ? (a[1] = t(global.process) ? 5 : 6, V) : 23 === b ? (b = a[7], Y(a, 26, b)) : 19 === b ? (b = a[2], a[2] = b, a[1] = 16, V) : 11 === b ? (a[1] = t(window) ? 14 : 15, V) : 9 === b ? (b = "undefined" !== typeof window, a[13] = b, a[1] = t(b) ? 11 : 12, V) : 5 === b ? (b = global.process.argv.slice(2), a[2] = b, a[1] = 7, V) : 14 === b ? (a[1] = t(window.location) ? 17 : 18, V) : 26 === b ? (b = 
+            a[2], a[2] = b, a[1] = 25, V) : 16 === b ? (b = a[2], a[2] = b, a[1] = 13, V) : 30 === b ? (b = a[9], Sm.l(G([new A(null, "render-html", "render-html", -1069888904, null)], 0)), t(Hh.e(b)) && (c = document.getElementById("style"), t(c) || (c = document.createElement("style"), c.id = "style", document.head.appendChild(c)), d = hp(Ug(Hh.e(b))), c.innerHTML = d), t(Ui.e(b)) ? document.body.innerHTML = Ui.e(b) : (c = lj.e(b), Yo(c)), t(Vh.e(b)) && (document.getElementsByTagName("title")[0].innerHTML = 
+            Vh.e(b)), a[2] = !0, a[1] = 32, V) : 10 === b ? (b = a[2], c = Sm.l(G([new A(null, "routes", "routes", 2098431689, null), new A(null, "starting", "starting", -211609939, null), b], 0)), d = Zc(b, 0), d = Km(d), a[14] = c, a[8] = b, a[1] = t(d) ? 20 : 21, V) : 18 === b ? (a[2] = window.location, a[1] = 19, V) : 8 === b ? (b = a[11], a[2] = b, a[1] = 10, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -12219,415 +12629,9 @@ function ap() {
   }(a));
   return a;
 }
-kn.e ? kn.e(ap) : kn.call(null, ap);
-t(en) && (window.onhashchange = ap);
-var bp, cp = uf;
-bp = P ? P(cp) : se.call(null, cp);
-function dp(a) {
-  Sm.l(G([new A(null, "broadcast", "broadcast", -884158897, null), a, null], 0));
-  for (var b = n(rf(F.e ? F.e(bp) : F.call(null, bp))), c = null, d = 0, e = 0;;) {
-    if (e < d) {
-      var f = c.N(null, e);
-      ym(f, a, null);
-      e += 1;
-    } else {
-      if (b = n(b)) {
-        c = b, nd(c) ? (b = Zb(c), d = $b(c), c = b, f = I(b), b = d, d = f) : (f = C(c), ym(f, a, null), b = D(c), c = null, d = 0), e = 0;
-      } else {
-        return null;
-      }
-    }
-  }
-}
-function ep(a) {
-  return(F.e ? F.e(bp) : F.call(null, bp)).call(null, a.pid).send(JSON.stringify(a));
-}
-if (t(fn)) {
-  require("ws");
-  var fp = function(a) {
-    return function(b) {
-      b = JSON.parse(b);
-      b.src = [y("ws:"), y(a)].join("");
-      Fm(b);
-      return Sm.l(G([new A(null, "ws", "ws", 1727372970, null), a, new A(null, "msg", "msg", 254428083, null), b], 0));
-    };
-  }, gp = function(a) {
-    return function() {
-      Sm.l(G([new A(null, "ws", "ws", 1727372970, null), a, new A(null, "close", "close", -819286187, null)], 0));
-      xe.o(Im, cd, a);
-      return xe.o(bp, cd, a);
-    };
-  }, hp = function(a) {
-    Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "start", "start", 1285322546, null)], 0));
-    var b = require("ws");
-    a = new b.Server({server:a});
-    a.on("connection", function(a, b) {
-      return function(e) {
-        Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "incoming-connection", "incoming-connection", 468545616, null), e], 0));
-        e.send(JSON.stringify({pid:Hm}));
-        return e.on("message", function() {
-          return function(a) {
-            a = JSON.parse(a);
-            var b = a.pid;
-            return t(b) ? (e.removeAllListeners("message"), e.on("message", fp(b)), e.on("close", gp(b)), xe.F(Im, ad, b, ep), xe.F(bp, ad, b, e), Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "added-client", "added-client", -1763956854, null), b, F.e ? F.e(bp) : F.call(null, bp)], 0))) : Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "error-unexpected-first-message", "error-unexpected-first-message", 1748325049, null), a], 0));
-          };
-        }(a, b));
-      };
-    }(b, a));
-  };
-}
-if (t(en)) {
-  var ip = Z(1);
-  W(function(a) {
-    return function() {
-      var b = function() {
-        return function(a) {
-          return function() {
-            function b(c) {
-              for (;;) {
-                var e;
-                a: {
-                  try {
-                    for (;;) {
-                      var f = a(c);
-                      if (!O(f, V)) {
-                        e = f;
-                        break a;
-                      }
-                    }
-                  } catch (g) {
-                    if (g instanceof Object) {
-                      c[5] = g, ak(c), e = V;
-                    } else {
-                      throw g;
-                    }
-                  }
-                }
-                if (!O(e, V)) {
-                  return e;
-                }
-              }
-            }
-            function c() {
-              var a = [null, null, null, null, null, null, null, null, null];
-              a[0] = g;
-              a[1] = 1;
-              return a;
-            }
-            var g = null, g = function(a) {
-              switch(arguments.length) {
-                case 0:
-                  return c.call(this);
-                case 1:
-                  return b.call(this, a);
-              }
-              throw Error("Invalid arity: " + arguments.length);
-            };
-            g.j = c;
-            g.e = b;
-            return g;
-          }();
-        }(function() {
-          return function(a) {
-            var b = a[1];
-            if (1 === b) {
-              return a[2] = null, a[1] = 2, V;
-            }
-            if (2 === b) {
-              return b = hk(55E3), Y(a, 4, b);
-            }
-            if (3 === b) {
-              return b = a[2], Zj(a, b);
-            }
-            if (4 === b) {
-              var b = a[2], c = dp("keep-alive");
-              a[7] = b;
-              a[8] = c;
-              a[2] = null;
-              a[1] = 2;
-              return V;
-            }
-            return null;
-          };
-        }(a), a);
-      }(), c = function() {
-        var c = b.j ? b.j() : b.call(null);
-        c[6] = a;
-        return c;
-      }();
-      return X(c);
-    };
-  }(ip));
-  var jp = E.h(-1, location.origin.indexOf("solsort")) ? E.h("http", location.origin.slice(0, 4)) ? [y(location.origin.replace(/https?/, "ws")), y("/ws/")].join("") : "ws://ws.solsort.com/ws/" : "ws://ws.solsort.com/ws/", lp = function kp() {
-    Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "connect", "connect", -1421607536, null)], 0));
-    var b = new WebSocket(jp);
-    b.onopen = function(b) {
-      return function() {
-        return b.send(JSON.stringify({pid:Hm}));
-      };
-    }(b);
-    b.onerror = function() {
-      return function(b) {
-        Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "error", "error", 661562495, null)], 0));
-        return console.log(b);
-      };
-    }(b);
-    b.onclose = function(b) {
-      return function(d) {
-        Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "close", "close", -819286187, null), d], 0));
-        d = Z(1);
-        W(function(b, c) {
-          return function() {
-            var d = function() {
-              return function(b) {
-                return function() {
-                  function c(d) {
-                    for (;;) {
-                      var e;
-                      a: {
-                        try {
-                          for (;;) {
-                            var f = b(d);
-                            if (!O(f, V)) {
-                              e = f;
-                              break a;
-                            }
-                          }
-                        } catch (g) {
-                          if (g instanceof Object) {
-                            d[5] = g, ak(d), e = V;
-                          } else {
-                            throw g;
-                          }
-                        }
-                      }
-                      if (!O(e, V)) {
-                        return e;
-                      }
-                    }
-                  }
-                  function d() {
-                    var b = [null, null, null, null, null, null, null, null];
-                    b[0] = e;
-                    b[1] = 1;
-                    return b;
-                  }
-                  var e = null, e = function(b) {
-                    switch(arguments.length) {
-                      case 0:
-                        return d.call(this);
-                      case 1:
-                        return c.call(this, b);
-                    }
-                    throw Error("Invalid arity: " + arguments.length);
-                  };
-                  e.j = d;
-                  e.e = c;
-                  return e;
-                }();
-              }(function() {
-                return function(b) {
-                  var c = b[1];
-                  if (1 === c) {
-                    return c = hk(1E3), Y(b, 2, c);
-                  }
-                  if (2 === c) {
-                    var c = b[2], d = kp();
-                    b[7] = c;
-                    return Zj(b, d);
-                  }
-                  return null;
-                };
-              }(b, c), b, c);
-            }(), l = function() {
-              var c = d.j ? d.j() : d.call(null);
-              c[6] = b;
-              return c;
-            }();
-            return X(l);
-          };
-        }(d, b));
-        return d;
-      };
-    }(b);
-    return b.onmessage = function(b) {
-      return function(d) {
-        Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "message", "message", 1234475525, null)], 0));
-        d = JSON.parse(d.data);
-        var e = d.pid;
-        return t(e) ? (b.onmessage = function(b, c) {
-          return function(b) {
-            b = JSON.parse(b.data);
-            b.src = [y("ws:"), y(c)].join("");
-            Fm(b);
-            return Sm.l(G([new A(null, "ws", "ws", 1727372970, null), c, new A(null, "msg", "msg", 254428083, null), b], 0));
-          };
-        }(d, e, b), b.onclose = function(b, c) {
-          return function(b) {
-            Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "close", "close", -819286187, null), b, c], 0));
-            xe.o(bp, cd, c);
-            xe.o(Im, cd, c);
-            return kn.e ? kn.e(kp) : kn.call(null, kp);
-          };
-        }(d, e, b), xe.F(bp, ad, e, b), xe.F(Im, ad, e, ep), Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "added-client", "added-client", -1763956854, null), e, F.e ? F.e(bp) : F.call(null, bp)], 0))) : Sm.l(G([new A(null, "ws", "ws", 1727372970, null), new A(null, "error-unexpected-first-message", "error-unexpected-first-message", 1748325049, null), d], 0));
-      };
-    }(b);
-  };
-  kn.e ? kn.e(lp) : kn.call(null, lp);
-}
-function mp(a) {
-  var b = G([lh, !0], 0), c = rd(b) ? ie(te, b) : b, d = Zc(c, fi), e = Zc(c, Ii), f = Zc(c, lh);
-  if (t(t(f) ? en : f)) {
-    return mn([y(a), y("?callback\x3d")].join(""));
-  }
-  var g = Z(null), l = new jn;
-  l.open(t(d) ? "POST" : "GET", a, !0);
-  t(e) && (l.withCredentials = !0);
-  l.onreadystatechange = function(a, b) {
-    return function() {
-      var c = b.DONE;
-      return E.h(b.readyState, t(c) ? c : 4) ? (c = b.responseText, t(c) ? nk(a, c) : tj(a)) : null;
-    };
-  }(g, l, b, c, d, e, f);
-  l.send();
-  return g;
-}
-;if (t(fn)) {
-  var np = bh(on), op = function op() {
-    var b = 0 < arguments.length ? new Aa(Array.prototype.slice.call(arguments, 0), 0) : null;
-    return op.l(b);
-  };
-  op.l = function(a) {
-    a: {
-      for (;;) {
-        var b = D(a);
-        if (null != b) {
-          a = b;
-        } else {
-          a = C(a);
-          break a;
-        }
-      }
-    }
-    switch(a) {
-      case "png":
-        return{"http-headers":{"Content-Type":"image/png"}, content:np.e ? np.e("misc/_default.png") : np.call(null, "misc/_default.png")};
-      case "gif":
-        return{"http-headers":{"Content-Type":"image/gif"}, content:np.e ? np.e("misc/_default.gif") : np.call(null, "misc/_default.gif")};
-      default:
-        return{error:"not-implemented"};
-    }
-  };
-  op.J = 0;
-  op.H = function(a) {
-    return op.l(n(a));
-  };
-  Rm("default-route", op);
-  var pp = function(a, b) {
-    var c = Z(1);
-    W(function(c) {
-      return function() {
-        var e = function() {
-          return function(a) {
-            return function() {
-              function b(c) {
-                for (;;) {
-                  var d;
-                  a: {
-                    try {
-                      for (;;) {
-                        var e = a(c);
-                        if (!O(e, V)) {
-                          d = e;
-                          break a;
-                        }
-                      }
-                    } catch (f) {
-                      if (f instanceof Object) {
-                        c[5] = f, ak(c), d = V;
-                      } else {
-                        throw f;
-                      }
-                    }
-                  }
-                  if (!O(d, V)) {
-                    return d;
-                  }
-                }
-              }
-              function c() {
-                var a = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
-                a[0] = d;
-                a[1] = 1;
-                return a;
-              }
-              var d = null, d = function(a) {
-                switch(arguments.length) {
-                  case 0:
-                    return c.call(this);
-                  case 1:
-                    return b.call(this, a);
-                }
-                throw Error("Invalid arity: " + arguments.length);
-              };
-              d.j = c;
-              d.e = b;
-              return d;
-            }();
-          }(function() {
-            return function(c) {
-              var d = c[1];
-              if (7 === d) {
-                var d = c[7], e = c[2], f = L(e, 0), e = L(e, 1), d = d.callback, f = ke(Qm, Hm, f, e);
-                c[8] = d;
-                return Y(c, 8, f);
-              }
-              if (20 === d) {
-                return d = b.send(c[2]), c[2] = d, c[1] = 17, V;
-              }
-              if (1 === d) {
-                var d = c[9], f = Date.now(), d = a.query, r = a.body, u = a.path.slice(1).split(/[\/.]/), e = L(u, 0), u = Id(u, 1), v = 0 < Object.keys(r).length;
-                c[10] = u;
-                c[7] = d;
-                c[11] = f;
-                c[9] = r;
-                c[12] = e;
-                c[1] = t(v) ? 2 : 3;
-                return V;
-              }
-              return 4 === d ? (e = c[12], d = c[2], f = Km(e), c[13] = d, c[1] = t(f) ? 5 : 6, V) : 15 === d ? (d = c[14], f = c[15], d = b.set(d), f = b.send(f.content), c[16] = d, c[2] = f, c[1] = 17, V) : 13 === d ? (d = c[17], c[2] = d, c[1] = 14, V) : 6 === d ? (d = c[13], e = c[12], f = U, d = ["default-route", Ae(new T(null, 1, 5, U, [e], null), d)], d = new T(null, 2, 5, f, d, null), c[2] = d, c[1] = 7, V) : 17 === d ? (f = c[11], d = c[2], e = new A(null, "web", "web", 985830374, null), 
-              u = a.url, f = [y(Date.now() - f), y("ms")].join(""), f = Sm.l(G([e, u, f, a.headers["x-solsort-remote-addr"], a.body], 0)), c[18] = d, Zj(c, f)) : 3 === d ? (u = c[10], c[2] = u, c[1] = 4, V) : 12 === d ? (f = c[15], d = f.content, c[2] = d, c[1] = 14, V) : 2 === d ? (u = c[10], d = c[9], d = Pc(d, u), c[2] = d, c[1] = 4, V) : 19 === d ? (f = c[15], d = JSON.stringify(f), c[2] = d, c[1] = 20, V) : 11 === d ? (d = c[2], c[1] = t(d) ? 15 : 16, V) : 9 === d ? (d = c[14], d = d["Content-Type"], 
-              c[17] = d, c[1] = t(d) ? 12 : 13, V) : 5 === d ? (d = c[13], e = c[12], d = new T(null, 2, 5, U, [e, d], null), c[2] = d, c[1] = 7, V) : 14 === d ? (d = c[2], c[2] = d, c[1] = 11, V) : 16 === d ? (d = c[8], f = b.set("Content-Type", "application/javascript"), c[19] = f, c[1] = t(d) ? 18 : 19, V) : 10 === d ? (d = c[14], c[2] = d, c[1] = 11, V) : 18 === d ? (d = c[8], f = c[15], f = JSON.stringify(f), d = [y(d), y("("), y(f), y(")")].join(""), c[2] = d, c[1] = 20, V) : 8 === d ? (d = 
-              c[2], d = E.h("html", Kh.e(d)) ? $o(d) : Ug(d), f = d["http-headers"], c[14] = f, c[15] = d, c[1] = t(f) ? 9 : 10, V) : null;
-            };
-          }(c), c);
-        }(), f = function() {
-          var a = e.j ? e.j() : e.call(null);
-          a[6] = c;
-          return a;
-        }();
-        return X(f);
-      };
-    }(c));
-    return c;
-  }, qp = function() {
-    var a = require("express"), a = a.j ? a.j() : a.call(null), b = require("body-parser"), c = function() {
-      var a = process.env.HOST;
-      return t(a) ? a : "localhost";
-    }(), d = function() {
-      var a = process.env.PORT;
-      return t(a) ? a : 9999;
-    }(), e = require("http").createServer(a);
-    a.use(b.json.call(null));
-    a.use(b.urlencoded.call(null, {extended:!1}));
-    a.all("*", pp);
-    e.listen(9999);
-    hp(e);
-    return Sm.l(G([new A(null, "webserver", "webserver", -1886708491, null), new A(null, "starting", "starting", -211609939, null), c, d], 0));
-  };
-  kn.e ? kn.e(qp) : kn.call(null, qp);
-}
-;var rp = [y("git pull \x26\x26"), y("cd ../webroot \x26\x26"), y("git checkout . \x26\x26"), y("git pull \x26\x26"), y("cp solsort.js ../solsort/solsort.js")].join("");
+kn.e ? kn.e(qp) : kn.call(null, qp);
+t(en) && (window.onhashchange = qp);
+var rp = [y("git pull \x26\x26"), y("cd ../webroot \x26\x26"), y("git checkout . \x26\x26"), y("git pull \x26\x26"), y("cp solsort.js ../solsort/solsort.js")].join("");
 Rm("update-server-from-webroot", function() {
   var a = Z(1);
   W(function(a) {
@@ -12850,9 +12854,9 @@ function tp() {
             }
             if (13 === b) {
               var b = a[2], c = Pg.l(G(["uccorg status:"], 0)), d = Pg.l(G([new Date], 0)), p = qn("ssh uccorganism@93.165.158.107 'curl -s localhost:8080/status'");
-              a[9] = c;
-              a[10] = b;
-              a[11] = d;
+              a[9] = b;
+              a[10] = d;
+              a[11] = c;
               return Y(a, 14, p);
             }
             return 6 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 3 === b ? (b = a[2], Zj(a, b)) : 12 === b ? (b = Pg.l(G([a[2]], 0)), c = hk(6E4), a[12] = b, Y(a, 13, c)) : 2 === b ? (a[1] = 4, V) : 11 === b ? (b = a[2], a[2] = b, a[1] = 10, V) : 9 === b ? (b = Pg.l(G([new A(null, "uccorg", "uccorg", 1054848916, null), "uccorg restart service"], 0)), c = Pg.l(G([new Date], 0)), d = qn("ssh uccorganism@93.165.158.107 'killall VBoxHeadless; launchctl load Library/LaunchAgents/apiserver.plist; launchctl start apiserver'"), 
@@ -12872,7 +12876,7 @@ function tp() {
 Rm("uccorg-monitor", tp);
 function up() {
   return t(fn) ? nn.watch(__filename, bh(function() {
-    dp("reload");
+    un("reload");
     Sm.l(G([new A(null, "system", "system", 1611149803, null), new A(null, "source-change", "source-change", 2075892023, null), new A(null, "restarting", "restarting", -1893758197, null)], 0));
     return rn(0);
   })) : null;
@@ -12933,12 +12937,12 @@ Rm("dev-server", function() {
             var b = a[1];
             if (1 === b) {
               var b = Sm.l(G([new A(null, "dev-server", "dev-server", -1383637135, null), new A(null, "start", "start", 1285322546, null)], 0)), c = up(), d = tp(), p = hk(1E3);
-              a[7] = c;
-              a[8] = d;
-              a[9] = b;
+              a[7] = d;
+              a[8] = b;
+              a[9] = c;
               return Y(a, 2, p);
             }
-            return 2 === b ? (b = a[2], c = sn(), a[10] = b, a[11] = c, Zj(a, !0)) : null;
+            return 2 === b ? (b = a[2], c = pp(), a[10] = b, a[11] = c, Zj(a, !0)) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -13034,10 +13038,10 @@ Rm("rasmuserik", function() {
   2, [bj, "/", Yh, new m(null, 2, [Oi, "130%", Bi, 10], null)], null), "solsort.com"], null), "\u00a0ApS", new T(null, 1, 5, U, [Hi], null), new T(null, 1, 5, U, [Hi], null), "Tingskrivervej\u00a021\u00a03tv \u00a0 2400\u00a0K\u00f8benhavn\u00a0NV \u00a0 \u00a0", new T(null, 1, 5, U, [Hi], null), "+45\u00a060703081 \u00a0 hej@solsort.com"], null)], null)], null), new T(null, 3, 5, U, [ai, new T(null, 7, 5, U, [ai, new m(null, 1, [Yh, new m(null, 4, [Di, dh, Fh, 320, ti, vh, yi, kj], null)], null), 
   new T(null, 2, 5, U, [Ti, "Professional"], null), new T(null, 2, 5, U, [Gi, "Current"], null), new T(null, 5, 5, U, [mh, new m(null, 1, [Yh, new m(null, 1, [Yi, 130], null)], null), new T(null, 4, 5, U, [Ch, "Write ", new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "//github.com/rasmuserik"], null), "open source code"], null), ", focus on HTML5 Apps in ClojureScript"], null), new T(null, 2, 5, U, [Ch, "Design and create solutions in collaboration with non-technical stakeholders"], null), new T(null, 
   4, 5, U, [Ch, "Run ", new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "//solsort.com"], null), "my own company"], null), ", with all the aspects of that"], null)], null), new T(null, 2, 5, U, [Gi, "Experience"], null), new T(null, 3, 5, U, [ai, new m(null, 1, [Yh, new m(null, 1, [Bi, 60], null)], null), "Work as developer and project manager \u2022 Conference talks \u2022 Taught/created university level courses \u2022 Master degree in Computer Science"], null)], null), new T(null, 7, 5, U, [ai, new m(null, 
-  1, [Yh, new m(null, 4, [Di, dh, Fh, 320, ti, vh, yi, kj], null)], null), new T(null, 2, 5, U, [Ti, "Personal"], null), new T(null, 2, 5, U, [Gi, "Current"], null), new T(null, 5, 5, U, [mh, new m(null, 1, [Yh, new m(null, 1, [Yi, 130], null)], null), new T(null, 2, 5, U, [Ch, "Fatherhood - I am the father of a wonderful 2\u00bd year old boy"], null), new T(null, 8, 5, U, [Ch, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "http://www.swingshoes.dk/kalender-swingarrangementer/"], null), "Lindy Hop"], 
-  null), ", ", new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "http://ci-cph.dk"], null), "Contact Impro"], null), ", ", new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "http://kglteater.dk/det-sker/forestillinger/sason-2014-2015/gratis/gamle-scene/milonga"], null), "Argentinsk\u00a0Tango"], null), ", ", "Yoga"], null), new T(null, 6, 5, U, [Ch, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "http://junto.dk"], null), "Junto"], null), ", ", new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "http://tinkuy.dk"], 
-  null), "Tinkuy"], null), ", ", "Rollespil(D\x26D3.5), Bicycle, Vegetarian"], null)], null), new T(null, 2, 5, U, [Gi, "Experience"], null), new T(null, 3, 5, U, [ai, new m(null, 1, [Yh, new m(null, 1, [Bi, 60], null)], null), "Toastmasters \u2022 photography \u2022 kbhff \u2022 mythology/religion/mysticism/energy \u2022 events \u2022 nature \u2022 massage \u2022 couchsurfing \u2022 music/jam \u2022 mensa \u2022 h\u00f8jskole"], null)], null)], null), new T(null, 5, 5, U, [ai, new m(null, 1, [Yh, 
-  new m(null, 1, [Oi, 12], null)], null), "I very rarely use  social media (linkedin/facebook/twitter/...) so catch me in real life instead :)", new T(null, 1, 5, U, [Hi], null), "Updated Spring 2015"], null)], null)], null);
+  1, [Yh, new m(null, 4, [Di, dh, Fh, 320, ti, vh, yi, kj], null)], null), new T(null, 2, 5, U, [Ti, "Personal"], null), new T(null, 2, 5, U, [Gi, "Current"], null), new T(null, 5, 5, U, [mh, new m(null, 1, [Yh, new m(null, 1, [Yi, 130], null)], null), new T(null, 2, 5, U, [Ch, "Fatherhood - I am the father of a wonderful 2\u00bd year old boy"], null), new T(null, 10, 5, U, [Ch, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "http://www.swingshoes.dk/kalender-swingarrangementer/"], null), "Lindy Hop"], 
+  null), ", ", new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "http://ci-cph.dk"], null), "Contact Impro"], null), ", ", "Argentinsk\u00a0Tango", ", ", "Salsa", ", ", "Yoga"], null), new T(null, 6, 5, U, [Ch, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "http://junto.dk"], null), "Junto"], null), ", ", new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "http://tinkuy.dk"], null), "Tinkuy"], null), ", ", "Rollespil(D\x26D3.5), Bicycle, Vegetarian"], null)], null), new T(null, 2, 5, U, [Gi, "Experience"], 
+  null), new T(null, 3, 5, U, [ai, new m(null, 1, [Yh, new m(null, 1, [Bi, 60], null)], null), "Toastmasters \u2022 photography \u2022 kbhff \u2022 mythology/religion/mysticism/energy \u2022 events \u2022 nature \u2022 massage \u2022 couchsurfing \u2022 music/jam \u2022 mensa \u2022 h\u00f8jskole"], null)], null)], null), new T(null, 5, 5, U, [ai, new m(null, 1, [Yh, new m(null, 1, [Oi, 12], null)], null), "I very rarely use  social media (linkedin/facebook/twitter/...) so catch me in real life instead :)", 
+  new T(null, 1, 5, U, [Hi], null), "Updated Spring 2015"], null)], null)], null);
 });
 var vp = function vp(b) {
   if (b ? b.sd : b) {
@@ -13713,9 +13717,9 @@ function Vp(a, b) {
                     };
                   }(r, B, K, q, r, u, v, B, H, J, K, M, Q, fa, ka, c, a);
                 }();
-                b[8] = q;
-                b[9] = Q;
-                b[10] = ka;
+                b[8] = ka;
+                b[9] = q;
+                b[10] = Q;
                 b[11] = d;
                 return Y(b, 6, r);
               }
@@ -13787,8 +13791,8 @@ function Vp(a, b) {
               var c = b[1];
               if (7 === c) {
                 var d = Rp(new xp(b[2], [], -1), !1, null), c = xe.F(sq, ad, a, wf), d = Vc.h(d, a), d = "" + y(d), d = localStorage.setItem("keyval-db", d), e = yq();
-                b[7] = d;
-                b[8] = c;
+                b[7] = c;
+                b[8] = d;
                 return Y(b, 8, e);
               }
               return 1 === c ? (c = F.e ? F.e(sq) : F.call(null, sq), c = c.e ? c.e(a) : c.call(null, a), c = Fa(c), b[1] = c ? 2 : 3, V) : 4 === c ? (c = b[2], Zj(b, c)) : 13 === c ? (c = b[2], b[2] = c, b[1] = 10, V) : 6 === c ? (b[2] = "#{}", b[1] = 7, V) : 3 === c ? (b[2] = null, b[1] = 9, V) : 12 === c ? (b[2] = null, b[1] = 13, V) : 2 === c ? (c = b[9], c = localStorage.getItem("keyval-db"), b[9] = c, b[1] = t(c) ? 5 : 6, V) : 11 === c ? (c = hk(100), Y(b, 14, c)) : 9 === c ? (c = F.e ? F.e(uq) : 
@@ -13915,7 +13919,7 @@ function Vp(a, b) {
                       return nk(a, !0);
                     };
                   }(r, v, B, q, r, u, v, B, H, J, K, M, Q, d, b);
-                }(), ka = v.oncomplete = fa, fb = function() {
+                }(), ka = v.oncomplete = fa, eb = function() {
                   return function(a) {
                     return function() {
                       xq();
@@ -13923,21 +13927,21 @@ function Vp(a, b) {
                       return tj(a);
                     };
                   }(r, v, B, q, r, u, v, B, H, J, K, M, Q, fa, ka, d, b);
-                }(), R = v.onerror = fb, e = v.onabort = function() {
+                }(), R = v.onerror = eb, e = v.onabort = function() {
                   return function(a) {
                     return function() {
                       xq();
                       Pg.l(G(["commit abort"], 0));
                       return tj(a);
                     };
-                  }(r, v, B, q, r, u, v, B, H, J, K, M, Q, fa, ka, fb, R, d, b);
+                  }(r, v, B, q, r, u, v, B, H, J, K, M, Q, fa, ka, eb, R, d, b);
                 }(), Yg = xe.F(sq, ad, a, wf);
-                c[7] = Q;
-                c[8] = ka;
+                c[7] = R;
+                c[8] = Q;
                 c[9] = e;
-                c[10] = R;
-                c[11] = Yg;
-                c[12] = q;
+                c[10] = ka;
+                c[11] = q;
+                c[12] = Yg;
                 return Y(c, 6, r);
               }
               return 6 === d ? (e = c[2], c[2] = e, c[1] = 4, V) : null;
@@ -14075,9 +14079,9 @@ function Vp(a, b) {
                     };
                   }(v, B, J, K, u, v, B, H, J, K, M, Q, fa, e, c);
                 }();
-                d[9] = fa;
-                d[10] = u;
-                d[11] = f;
+                d[9] = f;
+                d[10] = fa;
+                d[11] = u;
                 return Y(d, 5, v);
               }
               return 5 === e ? (f = d[2], r = xq(), d[12] = r, Zj(d, f)) : null;
@@ -14226,7 +14230,7 @@ function Vp(a, b) {
                 d[7] = e;
                 return Y(d, 6, f);
               }
-              return 5 === e ? (e = d[2], d[2] = e, d[1] = 4, V) : 6 === e ? (e = d[2], f = F.e ? F.e(sq) : F.call(null, sq), f = f.e ? f.e(a) : f.call(null, a), f = ad.o(f, b, c), f = xe.F(sq, ad, a, f), d[8] = f, d[9] = e, Zj(d, c)) : null;
+              return 5 === e ? (e = d[2], d[2] = e, d[1] = 4, V) : 6 === e ? (e = d[2], f = F.e ? F.e(sq) : F.call(null, sq), f = f.e ? f.e(a) : f.call(null, a), f = ad.o(f, b, c), f = xe.F(sq, ad, a, f), d[8] = e, d[9] = f, Zj(d, c)) : null;
             };
           }(d), d);
         }(), g = function() {
@@ -14871,29 +14875,22 @@ function Qq(a, b) {
           return function(c) {
             var d = c[1];
             if (1 === d) {
-              var e;
-              c[7] = 0;
-              c[2] = null;
-              c[1] = 2;
-              return V;
+              return c[7] = 0, c[2] = null, c[1] = 2, V;
             }
             if (2 === d) {
-              return e = c[7], d = F.e ? F.e(Pq) : F.call(null, Pq), d = e < (d < b ? d : b), c[1] = t(d) ? 4 : 5, V;
+              var d = c[7], e = F.e ? F.e(Pq) : F.call(null, Pq), d = d < (e < b ? e : b);
+              c[1] = t(d) ? 4 : 5;
+              return V;
             }
             if (3 === d) {
               return d = c[2], Zj(c, d);
             }
             if (4 === d) {
-              e = c[7];
-              var d = document.getElementById("info"), f = F.e ? F.e(Pq) : F.call(null, Pq);
-              e = (f < b ? f : b) - e;
-              e = [y(a), y(" "), y(e), y("s")].join("");
-              d = d.innerHTML = e;
-              e = hk(1E3);
+              var d = c[7], e = document.getElementById("info"), f = F.e ? F.e(Pq) : F.call(null, Pq), d = (f < b ? f : b) - d, d = [y(a), y(" "), y(d), y("s")].join(""), d = e.innerHTML = d, e = hk(1E3);
               c[8] = d;
               return Y(c, 7, e);
             }
-            return 5 === d ? (c[2] = null, c[1] = 6, V) : 6 === d ? (d = c[2], c[2] = d, c[1] = 3, V) : 7 === d ? (e = c[7], c[9] = c[2], c[7] = e + 1, c[2] = null, c[1] = 2, V) : null;
+            return 5 === d ? (c[2] = null, c[1] = 6, V) : 6 === d ? (d = c[2], c[2] = d, c[1] = 3, V) : 7 === d ? (d = c[7], e = c[2], c[7] = d + 1, c[9] = e, c[2] = null, c[1] = 2, V) : null;
           };
         }(c), c);
       }(), f = function() {
@@ -14984,14 +14981,14 @@ var Rq = se.j ? se.j() : se.call(null), Sq = function(a) {
               return b[7] = b[2], b[2] = null, b[1] = 6, V;
             }
             if (6 === c) {
-              var p = b[8], q = b[9], r = b[10], u = b[11], d = URL.createObjectURL(q), v = new MediaRecorder(q), B = Nq(v), p = u.src = d, H = u.style.height = [y(window.innerHeight - 10), y("px")].join(""), J = u.volume = 0, K = u.play(), M = v.start(), Q = Qq("recording", Number.POSITIVE_INFINITY);
-              b[12] = p;
-              b[8] = d;
-              b[13] = J;
-              b[10] = v;
-              b[14] = M;
-              b[15] = H;
-              b[16] = B;
+              var p = b[8], q = b[9], r = b[10], u = b[11], d = URL.createObjectURL(r), v = new MediaRecorder(r), B = Nq(v), q = u.src = d, H = u.style.height = [y(window.innerHeight - 10), y("px")].join(""), J = u.volume = 0, K = u.play(), M = v.start(), Q = Qq("recording", Number.POSITIVE_INFINITY);
+              b[8] = v;
+              b[9] = d;
+              b[12] = B;
+              b[13] = M;
+              b[14] = H;
+              b[15] = J;
+              b[16] = q;
               b[17] = K;
               return Y(b, 8, Q);
             }
@@ -14999,7 +14996,7 @@ var Rq = se.j ? se.j() : se.call(null), Sq = function(a) {
               return b[2] = null, b[1] = 5, V;
             }
             if (12 === c) {
-              var q = b[9], r = b[10], u = b[11], fa = b[18], ka = b[19], B = b[16], fb = b[2], R = function() {
+              var p = b[8], fa = b[18], r = b[10], B = b[12], ka = b[19], u = b[11], eb = b[2], R = function() {
                 var a = ka;
                 return ve.h ? ve.h(Rq, a) : ve.call(null, Rq, a);
               }(), Yg = u.src = ka, Ta = u.volume = 1, Xa = u.play(), ab = document.getElementById("save"), d = ab.onclick = function() {
@@ -15007,18 +15004,18 @@ var Rq = se.j ? se.j() : se.call(null), Sq = function(a) {
                   return function() {
                     return Oq(c);
                   };
-                }(q, u, ka, r, B, fa, q, r, u, fa, ka, B, fb, R, Yg, Ta, Xa, ab, c, a);
+                }(r, u, ka, p, B, fa, p, fa, r, B, ka, u, eb, R, Yg, Ta, Xa, ab, c, a);
               }(), v = F.e ? F.e(Pq) : F.call(null, Pq), v = Qq("playback", v);
-              b[20] = d;
-              b[21] = fb;
+              b[20] = R;
+              b[21] = Yg;
               b[22] = Xa;
-              b[23] = R;
-              b[24] = Ta;
-              b[25] = Yg;
+              b[23] = Ta;
+              b[24] = d;
+              b[25] = eb;
               return Y(b, 13, v);
             }
-            return 2 === c ? (q = b[9], d = b[2], u = document.getElementById("video"), b[9] = d, b[11] = u, b[1] = t(d) ? 3 : 4, V) : 11 === c ? (b[2] = null, b[1] = 12, V) : 9 === c ? (fa = b[18], d = b[2], ka = URL.createObjectURL(d), v = F.e ? F.e(Rq) : F.call(null, Rq), b[18] = d, b[19] = ka, b[1] = t(v) ? 10 : 11, V) : 5 === c ? (b[26] = b[2], b[2] = null, b[1] = 6, V) : 10 === c ? (d = F.e ? F.e(Rq) : F.call(null, Rq), d = URL.revokeObjectURL(d), b[2] = d, b[1] = 12, V) : 8 === c ? (p = b[8], 
-            r = b[10], B = b[16], d = b[2], v = r.stop(), p = URL.revokeObjectURL(p), b[27] = p, b[28] = v, b[29] = d, Y(b, 9, B)) : null;
+            return 2 === c ? (r = b[10], d = b[2], u = document.getElementById("video"), b[10] = d, b[11] = u, b[1] = t(d) ? 3 : 4, V) : 11 === c ? (b[2] = null, b[1] = 12, V) : 9 === c ? (fa = b[18], d = b[2], ka = URL.createObjectURL(d), v = F.e ? F.e(Rq) : F.call(null, Rq), b[18] = d, b[19] = ka, b[1] = t(v) ? 10 : 11, V) : 5 === c ? (b[26] = b[2], b[2] = null, b[1] = 6, V) : 10 === c ? (d = F.e ? F.e(Rq) : F.call(null, Rq), d = URL.revokeObjectURL(d), b[2] = d, b[1] = 12, V) : 8 === c ? (p = 
+            b[8], q = b[9], B = b[12], d = b[2], v = p.stop(), q = URL.revokeObjectURL(q), b[27] = v, b[28] = q, b[29] = d, Y(b, 9, B)) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -15196,7 +15193,7 @@ function Vq(a) {
                     L(a, 3);
                     return new m(null, 2, [di, c, ii, b], null);
                   };
-                }(r, u, q, B, q, r, u, v, B, d, b);
+                }(r, v, q, B, q, r, u, v, B, d, b);
               }(), e = S.h(function() {
                 return function() {
                   return function(a) {
@@ -15204,9 +15201,9 @@ function Vq(a) {
                     a = L(a, 1);
                     return new T(null, 4, 5, U, [a / Math.sqrt(10 + b) * 1E3 | 0, c, a, b], null);
                   };
-                }(r, u, q, B, q, r, u, v, B, H, d, b);
+                }(r, v, q, B, q, r, u, v, B, H, d, b);
               }(), q), e = yd(e), e = Od(e), e = S.h(H, ye(100, e)), e = Ug(e), J = Dq(Ph, a, e);
-              c[11] = e;
+              c[10] = e;
               return Y(c, 19, J);
             }
             if (13 === d) {
@@ -15235,13 +15232,13 @@ function Vq(a) {
               return r = c[9], e = c[2], c[9] = e, c[1] = t(e) ? 3 : 4, V;
             }
             if (19 === d) {
-              return v = c[11], c[15] = c[2], c[2] = v, c[1] = 5, V;
+              return u = c[10], c[15] = c[2], c[2] = u, c[1] = 5, V;
             }
             if (11 === d) {
               return e = c[16], c[2] = e, c[1] = 13, V;
             }
             if (9 === d) {
-              return u = c[10], e = c[2].slice(0, 1E3), J = Bq(mj, e), c[10] = e, Y(c, 10, J);
+              return v = c[11], e = c[2].slice(0, 1E3), J = Bq(mj, e), c[11] = e, Y(c, 10, J);
             }
             if (5 === d) {
               return e = c[2], Zj(c, e);
@@ -15922,8 +15919,8 @@ function er() {
                   };
                 }(p, q, r, u, v, B, c, a);
               }()), d = qe(r, u, B, G([an, d], 0)), d = jk(1, d), H = pn("tmp/lids.csv"), H = pk(H, d);
-              b[9] = H;
               b[8] = d;
+              b[9] = H;
               return Y(b, 6, d);
             }
             return 12 === c ? (p = b[8], b[10] = b[2], Y(b, 13, p)) : 2 === c ? (d = Fa(b[2]), b[1] = d ? 3 : 4, V) : 11 === c ? (d = b[2], b[2] = d, b[1] = 8, V) : 9 === c ? (d = b[7], d = Vq(d), Y(b, 12, d)) : 5 === c ? (d = b[2], Zj(b, d)) : 14 === c ? (d = b[2], b[2] = d, b[1] = 11, V) : 10 === c ? (d = Aq(Ph), Y(b, 14, d)) : 8 === c ? (d = b[2], b[2] = d, b[1] = 5, V) : null;
@@ -16229,7 +16226,7 @@ function hr(a, b) {
           return function(c) {
             var d = c[1];
             if (1 === d) {
-              return d = [y("https://dev.vejlebib.dk/ting-visual-relation/get-ting-object/"), y(b), y(":"), y(a)].join(""), d = mp(d), Y(c, 2, d);
+              return d = [y("https://dev.vejlebib.dk/ting-visual-relation/get-ting-object/"), y(b), y(":"), y(a)].join(""), d = Dn(d), Y(c, 2, d);
             }
             if (2 === d) {
               return d = c[7], d = Wm(c[2]), c[7] = d, c[1] = t(d) ? 3 : 4, V;
@@ -16435,7 +16432,7 @@ h.S = function(a, b) {
   return new lr(this.x, b, this.Ra, this.B);
 };
 h.X = function(a, b) {
-  return md(b) ? eb(this, z.h(b, 0), z.h(b, 1)) : Ka(Ua, this, b);
+  return md(b) ? fb(this, z.h(b, 0), z.h(b, 1)) : Ka(Ua, this, b);
 };
 Rm("example", function(a) {
   return new m(null, 2, [Kh, "html", lj, new T(null, 8, 5, U, [ai, "Does it work? ", jr("world"), (new kr("foo")).ic(null), (new lr("foo", null, null, null)).ic(null), new T(null, 2, 5, U, [ai, [y("this is: "), y(a)].join("")], null), new T(null, 2, 5, U, [ai, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "#hello/foo"], null), "foo"], null)], null), new T(null, 2, 5, U, [ai, new T(null, 3, 5, U, [hj, new m(null, 1, [bj, "#hello/bar"], null), "bar"], null)], null)], null)], null);
