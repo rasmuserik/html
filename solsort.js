@@ -16372,6 +16372,7 @@ cn("index", function() {
   Ae(new S(null, 2, 5, U, [li, wf], null), xe.h(vr, F.e ? F.e(sr) : F.call(null, sr)))], null)], null)], null);
 });
 ur("Rasmus Erik Voel Jensen", new S(null, 3, 5, U, ["developer", "company owner", "computer scientist"], null), "/rasmuserik.html");
+ur("Barefoot Tango", new S(null, 1, 5, U, ["2015"], null), "/notes/barefoot-tango");
 ur("Repeat record", new S(null, 5, 5, U, ["2015", "utility", "webapp", "firefox-only", "video"], null), "/#repeat-record/10");
 ur("Anbefalings-webservice", new S(null, 5, 5, U, ["2015", "beta", "visualisering af relationer", "webservice", "ClojureScript"], null), "/visualisering-af-relationer/compare.html#relvis/cir870970-basis:05625351");
 ur("Visualisering af relationer", new S(null, 5, 5, U, ["2014", "done", "visualisering af relationer", "visualisation", "JavaScript"], null), "https://vejlebib.dk/search/ting/musik#relvis/str870971-tsart:71029824,870971-tsart:71829375,870970-basis:49295642,870970-basis:07872992,870971-tsart:34418616,870970-basis:23454963,870970-basis:00117250,870971-tsart:73914493,870971-tsart:70501198,870971-tsart:70357151,870971-tsart:73443911,870970-basis:05385210,870970-basis:25722027,870970-basis:20269545,870970-basis:28902700,870970-basis:28799918,870971-tsart:33801262,870971-tsart:73950031,870970-basis:23292637,870970-basis:20826592,870970-basis:04971914,870970-basis:28799950,870970-basis:28799942,870970-basis:28205899,870970-basis:26386896,870970-basis:23702630,870970-basis:51445481,870970-basis:26747953,870971-tsart:87018148,870971-tsart:35714006i");
