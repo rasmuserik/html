@@ -17225,13 +17225,13 @@ function Zr(a) {
             var c = b[1];
             if (1 === c) {
               var c = bd, d = a;
-              b[7] = d;
-              b[8] = c;
+              b[7] = c;
+              b[8] = d;
               b[2] = null;
               b[1] = 2;
               return V;
             }
-            return 2 === c ? (d = b[7], c = A(d), b[1] = r(c) ? 4 : 5, V) : 3 === c ? (c = b[2], Bk(b, c)) : 4 === c ? (d = b[7], c = A(d), X(b, 7, c)) : 5 === c ? (c = b[8], b[2] = c, b[1] = 6, V) : 6 === c ? (c = b[2], b[2] = c, b[1] = 3, V) : 7 === c ? (d = b[7], c = b[8], c = ad.h(c, b[2]), d = xc(d), b[7] = d, b[8] = c, b[2] = null, b[1] = 2, V) : null;
+            return 2 === c ? (d = b[8], c = A(d), b[1] = r(c) ? 4 : 5, V) : 3 === c ? (c = b[2], Bk(b, c)) : 4 === c ? (d = b[8], c = A(d), X(b, 7, c)) : 5 === c ? (c = b[7], b[2] = c, b[1] = 6, V) : 6 === c ? (c = b[2], b[2] = c, b[1] = 3, V) : 7 === c ? (c = b[7], d = b[8], c = ad.h(c, b[2]), d = xc(d), b[7] = c, b[8] = d, b[2] = null, b[1] = 2, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17312,10 +17312,10 @@ function $r(a) {
             }
             if (3 === c) {
               var d = b[8], e = c = U, p = [Cj], q = [[u("/bibdata/lid/"), u(a)].join("")], p = hd(p, q), q = d.e ? d.e("title") : d.call(null, "title");
-              b[9] = p;
+              b[9] = c;
+              b[10] = p;
               b[7] = q;
-              b[10] = e;
-              b[11] = c;
+              b[11] = e;
               b[1] = r(q) ? 6 : 7;
               return V;
             }
@@ -17323,12 +17323,12 @@ function $r(a) {
               return c = oh(b[2]), b[8] = c, b[1] = r(c) ? 3 : 4, V;
             }
             if (11 === c) {
-              var p = b[9], w = b[12], q = b[13], e = b[10], c = b[11], d = Ee(Ge.h(Fe(" \x26 "), b[2])), d = Je(w, d), d = ad.h(d, ")"), c = new S(null, 2, 5, c, [Vh, new S(null, 4, 5, e, [Ij, p, q, d], null)], null);
+              var c = b[9], q = b[12], p = b[10], w = b[13], e = b[11], d = Ee(Ge.h(Fe(" \x26 "), b[2])), d = Je(w, d), d = ad.h(d, ")"), c = new S(null, 2, 5, c, [Vh, new S(null, 4, 5, e, [Ij, p, q, d], null)], null);
               b[2] = c;
               b[1] = 5;
               return V;
             }
-            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], Bk(b, c)) : 10 === c ? (c = bd, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], q = A(b[2]), w = new S(null, 2, 5, U, [Oj, " ("], null), c = d.e ? d.e("creator") : d.call(null, "creator"), b[12] = w, b[13] = q, b[14] = c, b[1] = r(c) ? 9 : 10, V) : null;
+            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], Bk(b, c)) : 10 === c ? (c = bd, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], q = A(b[2]), w = new S(null, 2, 5, U, [Oj, " ("], null), c = d.e ? d.e("creator") : d.call(null, "creator"), b[12] = q, b[13] = w, b[14] = c, b[1] = r(c) ? 9 : 10, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17470,7 +17470,7 @@ function bs(a) {
                     var b = K(a, 0);
                     a = K(a, 1);
                     Z.k(H([new y(null, "bibdata", "bibdata", 1320898999, null), b, a], 0));
-                    return new S(null, 3, 5, U, [Ij, new l(null, 2, [Cj, [u(a), u(A(k))].join(""), Lh, "mainEntityOfPage"], null), b], null);
+                    return new S(null, 3, 5, U, [Ij, new l(null, 2, [Cj, [u(a), u(A(k))].join(""), Lh, "sameAs"], null), b], null);
                   };
                 }(qa, Ka, ib, g, a, b, c, d, e);
               }(), as), k = Ee(Ge.h(Fe(" "), k)), k = Je(ib, k);
@@ -17602,14 +17602,14 @@ function ds(a) {
                   };
                 }(qa, Oa, p, J, L, T, ga, Q, xe, ja, qa, Ka, ib, Sa, Oa, yb, Gb, Kb, Bb, Wb, Wa, tc, Lc, Lb, sd, Wd, ye, bf, eg, Xc, ro, so, Xi, Yi, to, zo, $g, uo, vo, wo, xo, Zi, d, b);
               }(), Oa), e = R.h(bs, e), e = Zr(e);
-              c[11] = Zi;
-              c[12] = Wa;
-              c[13] = Xi;
-              c[14] = Yi;
-              c[15] = yb;
+              c[11] = Xi;
+              c[12] = Zi;
+              c[13] = Wa;
+              c[14] = yb;
+              c[15] = Yi;
               return X(c, 7, e);
             }
-            return 7 === d ? (Zi = c[11], Wa = c[12], Xi = c[13], Yi = c[14], yb = c[15], e = Je(Zi, Ie(Id, c[2])), e = hd(yb, ["html", Wa, Xi, new S(null, 2, 5, Yi, [wi, e], null)]), Bk(c, e)) : null;
+            return 7 === d ? (Xi = c[11], Zi = c[12], Wa = c[13], yb = c[14], Yi = c[15], e = Je(Zi, Ie(Id, c[2])), e = hd(yb, ["html", Wa, Xi, new S(null, 2, 5, Yi, [wi, e], null)]), Bk(c, e)) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17790,8 +17790,8 @@ var es = function(a) {
             if (1 === c) {
               var m = Z.k(H([new y(null, "bibdata", "bibdata", 1320898999, null), new y(null, "processing-data", "processing-data", -1352982332, null)], 0)), p = Pn("misc/lids"), p = ("" + u(p)).split("\n"), q = n(p), p = A(q), q = xc(q), w = p, d = q;
               b[9] = m;
-              b[7] = d;
               b[10] = w;
+              b[7] = d;
               b[2] = null;
               b[1] = 2;
               return V;
@@ -17803,7 +17803,7 @@ var es = function(a) {
               return m = b[2], b[2] = m, b[1] = 3, V;
             }
             if (13 === c) {
-              return d = b[7], m = A(d), p = xc(d), w = m, b[7] = p, b[10] = w, b[2] = null, b[1] = 2, V;
+              return d = b[7], m = A(d), p = xc(d), w = m, b[10] = w, b[7] = p, b[2] = null, b[1] = 2, V;
             }
             if (6 === c) {
               return b[2] = null, b[1] = 7, V;
@@ -17823,12 +17823,12 @@ var es = function(a) {
               return X(b, 12, p);
             }
             if (9 === c) {
-              var v = b[13], t = b[11], d = b[7], w = b[10], m = function() {
+              var v = b[13], t = b[11], w = b[10], d = b[7], m = function() {
                 return function(a, b) {
                   return function(a) {
                     return Gr(mi, a, b);
                   };
-                }(d, w, v, t, v, t, d, w, c, a);
+                }(d, w, v, t, v, t, w, d, c, a);
               }(), p = t.e ? t.e("isbn") : t.call(null, "isbn"), m = R.h(m, p), m = Pg(m);
               b[2] = m;
               b[1] = 11;
@@ -17844,13 +17844,13 @@ var es = function(a) {
               return b[2] = null, b[1] = 11, V;
             }
             if (8 === c) {
-              var v = b[13], t = b[11], d = b[7], w = b[10], z = b[2], B = wn(z), E = oh(B), G = function() {
+              var v = b[13], t = b[11], w = b[10], d = b[7], z = b[2], B = wn(z), E = oh(B), G = function() {
                 return function() {
                   return function(a, b) {
                     var c = K(b, 0), d = K(b, 1);
                     return r(a.e ? a.e(c) : a.call(null, c)) ? gd.o(a, c, ad.h(a.e ? a.e(c) : a.call(null, c), d)) : gd.o(a, c, new S(null, 1, 5, U, [d], null));
                   };
-                }(d, w, v, E, v, t, d, w, z, B, E, c, a);
+                }(d, w, v, E, v, t, w, d, z, B, E, c, a);
               }(), L = Hf, m = function() {
                 return function(a, b, c, d, e, f, g, k, m, p, q, t, w, v, z) {
                   return function Wa(B) {
@@ -17886,7 +17886,7 @@ var es = function(a) {
                       };
                     }(a, b, c, d, e, f, g, k, m, p, q, t, w, v, z), null, null);
                   };
-                }(d, w, v, E, v, t, d, w, z, B, E, G, L, c, a);
+                }(d, w, v, E, v, t, w, d, z, B, E, G, L, c, a);
               }(), m = m.e ? m.e(E) : m.call(null, E), m = Qa(G, L, m), p = Z.k(H([new y(null, "bib-data", "bib-data", 229158643, null), new y(null, "update", "update", -1608859373, null), m], 0)), q = m.e ? m.e("isbn") : m.call(null, "isbn");
               b[11] = m;
               b[14] = p;
@@ -18280,7 +18280,7 @@ ls("Danske Byer", new S(null, 3, 5, U, ["2011", "alpha", "edu"], null), "http://
 ls("CuteEngine", new S(null, 4, 5, U, ["2011", "unfinished", "game", "unfinished"], null), "http://solsort.com/cute-engine");
 var ns = qh(Pn);
 sn("icons", function() {
-  return{"http-headers":{"Content-Type":"text/plain"}, content:ns.e ? ns.e("../webroot/icons/white.png") : ns.call(null, "../webroot/icons/white.png")};
+  return{"http-headers":{"Content-Type":"text/plain"}, content:ns.e ? ns.e("misc/white.png") : ns.call(null, "misc/white.png")};
 });
 function ps() {
   var a = Y(null), b = navigator.mediaDevices.getUserMedia({audio:!0, video:!0});
