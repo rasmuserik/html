@@ -17218,13 +17218,13 @@ function Sr(a) {
             var c = b[1];
             if (1 === c) {
               var c = bd, d = a;
-              b[7] = c;
-              b[8] = d;
+              b[7] = d;
+              b[8] = c;
               b[2] = null;
               b[1] = 2;
               return V;
             }
-            return 2 === c ? (d = b[8], c = A(d), b[1] = r(c) ? 4 : 5, V) : 3 === c ? (c = b[2], xk(b, c)) : 4 === c ? (d = b[8], c = A(d), X(b, 7, c)) : 5 === c ? (c = b[7], b[2] = c, b[1] = 6, V) : 6 === c ? (c = b[2], b[2] = c, b[1] = 3, V) : 7 === c ? (c = b[7], d = b[8], c = ad.h(c, b[2]), d = yc(d), b[7] = c, b[8] = d, b[2] = null, b[1] = 2, V) : null;
+            return 2 === c ? (d = b[7], c = A(d), b[1] = r(c) ? 4 : 5, V) : 3 === c ? (c = b[2], xk(b, c)) : 4 === c ? (d = b[7], c = A(d), X(b, 7, c)) : 5 === c ? (c = b[8], b[2] = c, b[1] = 6, V) : 6 === c ? (c = b[2], b[2] = c, b[1] = 3, V) : 7 === c ? (d = b[7], c = b[8], c = ad.h(c, b[2]), d = yc(d), b[7] = d, b[8] = c, b[2] = null, b[1] = 2, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17313,15 +17313,15 @@ function Tr(a) {
               return V;
             }
             if (2 === c) {
-              return c = nh(b[2]), e = Z.k(H([new z(null, "related-link", "related-link", 1418446581, null), c], 0)), b[12] = e, b[8] = c, b[1] = r(c) ? 3 : 4, V;
+              return c = nh(b[2]), e = Z.k(H([new z(null, "related-link", "related-link", 1418446581, null), c], 0)), b[8] = c, b[12] = e, b[1] = r(c) ? 3 : 4, V;
             }
             if (11 === c) {
-              var e = b[9], c = b[10], p = b[11], w = b[13], q = b[14], d = De(Fe.h(Ee(" \x26 "), b[2])), d = Ie(w, d), d = ad.h(d, ")"), c = new S(null, 2, 5, c, [Th, new S(null, 4, 5, e, [Ej, p, q, d], null)], null);
+              var e = b[9], c = b[10], q = b[13], w = b[14], p = b[11], d = De(Fe.h(Ee(" \x26 "), b[2])), d = Ie(w, d), d = ad.h(d, ")"), c = new S(null, 2, 5, c, [Th, new S(null, 4, 5, e, [Ej, p, q, d], null)], null);
               b[2] = c;
               b[1] = 5;
               return V;
             }
-            return 9 === c ? (c = b[15], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], xk(b, c)) : 10 === c ? (c = bd, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], q = A(b[2]), w = new S(null, 2, 5, U, [Kj, " ("], null), c = d.e ? d.e("creator") : d.call(null, "creator"), b[15] = c, b[13] = w, b[14] = q, b[1] = r(c) ? 9 : 10, V) : null;
+            return 9 === c ? (c = b[15], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], xk(b, c)) : 10 === c ? (c = bd, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], q = A(b[2]), w = new S(null, 2, 5, U, [Kj, " ("], null), c = d.e ? d.e("creator") : d.call(null, "creator"), b[13] = q, b[14] = w, b[15] = c, b[1] = r(c) ? 9 : 10, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17427,7 +17427,7 @@ function Ur(a) {
             }
             return 4 === b ? (b = new S(null, 2, 5, U, [ej, "af "], null), f = De(Fe.h(Ee(" \x26 "), d)), b = Ie(b, f), a[2] = b, a[1] = 2, V) : 6 === b ? (b = U, f = A(d), b = new S(null, 3, 5, b, [ui, "type: ", f], null), a[2] = b, a[1] = 2, V) : 3 === b ? (b = U, f = A(d), b = new S(null, 2, 5, b, [pj, f], null), a[2] = b, a[1] = 2, V) : 12 === b ? (b = U, f = "" + u(d), b = new S(null, 3, 5, b, [ui, c, f], null), a[2] = b, a[1] = 2, V) : 2 === b ? (b = a[2], xk(a, b)) : 11 === b ? (f = a[7], 
             b = a[8], f = Ie(f, a[2]), b = new S(null, 3, 5, b, [Ah, "Related:", f], null), a[2] = b, a[1] = 2, V) : 9 === b ? (b = U, f = [yj], g = A(d), g = [[u("http://bibliotek.dk/linkme.php?rec.id\x3d870970-basis:"), u(g)].join("")], f = hd(f, g), b = new S(null, 3, 5, b, [Ej, f, "bibliotek.dk"], null), a[2] = b, a[1] = 2, V) : 5 === b ? (b = U, f = Pm(" \x26 ", d), b = new S(null, 3, 5, b, [ui, "DK5: ", f], null), a[2] = b, a[1] = 2, V) : 10 === b ? (b = U, f = new S(null, 1, 5, U, [Ch], null), 
-            g = yc(d), g = R.h(Tr, Ce(10, g)), g = Sr(g), a[7] = f, a[8] = b, X(a, 11, g)) : 8 === b ? (b = U, f = A(d), b = new S(null, 3, 5, b, [ui, "ISBN: ", f], null), a[2] = b, a[1] = 2, V) : null;
+            g = yc(d), g = R.h(Tr, Ce(100, g)), g = Sr(g), a[7] = f, a[8] = b, X(a, 11, g)) : 8 === b ? (b = U, f = A(d), b = new S(null, 3, 5, b, [ui, "ISBN: ", f], null), a[2] = b, a[1] = 2, V) : null;
           };
         }(a, b, c, d, e), a, b, c, d, e);
       }(), w = function() {
@@ -17529,15 +17529,15 @@ function Vr(a) {
                   };
                 }(wa, Ra, L, p, J, T, ga, Q, xe, va, wa, Oa, sb, hb, Ra, Ab, Hb, Bb, Cb, Wb, bb, sc, ec, Lb, sd, Wd, ye, bf, eg, Xc, po, qo, ro, so, Ti, Vi, Yg, to, Ui, d, b);
               }(), Ra), e = R.h(Ur, e), e = Sr(e);
-              c[11] = ec;
-              c[12] = Ti;
-              c[13] = Ui;
+              c[11] = Vi;
+              c[12] = Hb;
+              c[13] = ec;
               c[14] = Bb;
-              c[15] = Hb;
-              c[16] = Vi;
+              c[15] = Ui;
+              c[16] = Ti;
               return X(c, 7, e);
             }
-            return 7 === d ? (ec = c[11], Ti = c[12], Ui = c[13], Bb = c[14], Vi = c[16], e = Ie(Ui, He(Id, c[2])), e = hd(Bb, ["html", ec, Ti, new S(null, 2, 5, Vi, [ui, e], null)]), xk(c, e)) : null;
+            return 7 === d ? (Vi = c[11], ec = c[13], Bb = c[14], Ui = c[15], Ti = c[16], e = Ie(Ui, He(Id, c[2])), e = hd(Bb, ["html", ec, Ti, new S(null, 2, 5, Vi, [ui, e], null)]), xk(c, e)) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17753,19 +17753,19 @@ var Wr = function(a) {
               return X(b, 12, p);
             }
             if (9 === c) {
-              var w = b[10], t = b[11], v = b[13], d = b[7], m = function() {
+              var v = b[13], w = b[10], d = b[7], t = b[11], m = function() {
                 return function(a, b) {
                   return function(a) {
                     return zr(ki, a, b);
                   };
-                }(d, w, v, t, w, t, v, d, c, a);
+                }(d, w, v, t, v, w, d, t, c, a);
               }(), p = t.e ? t.e("isbn") : t.call(null, "isbn"), m = R.h(m, p), m = Og(m);
               b[2] = m;
               b[1] = 11;
               return V;
             }
             if (5 === c) {
-              return w = b[10], v = b[13], m = [u("https://dev.vejlebib.dk/ting-visual-relation/get-ting-object/870970-basis:"), u(w)].join(""), p = ao(m), b[13] = m, X(b, 8, p);
+              return v = b[13], w = b[10], m = [u("https://dev.vejlebib.dk/ting-visual-relation/get-ting-object/870970-basis:"), u(w)].join(""), p = ao(m), b[13] = m, X(b, 8, p);
             }
             if (14 === c) {
               return b[2] = null, b[1] = 15, V;
@@ -17774,13 +17774,13 @@ var Wr = function(a) {
               return b[2] = null, b[1] = 11, V;
             }
             if (8 === c) {
-              var w = b[10], t = b[11], v = b[13], d = b[7], y = b[2], B = sn(y), F = nh(B), E = function() {
+              var v = b[13], w = b[10], d = b[7], t = b[11], y = b[2], B = sn(y), F = nh(B), E = function() {
                 return function() {
                   return function(a, b) {
                     var c = K(b, 0), d = K(b, 1);
                     return r(a.e ? a.e(c) : a.call(null, c)) ? gd.o(a, c, ad.h(a.e ? a.e(c) : a.call(null, c), d)) : gd.o(a, c, new S(null, 1, 5, U, [d], null));
                   };
-                }(d, w, v, F, w, t, v, d, y, B, F, c, a);
+                }(d, w, v, F, v, w, d, t, y, B, F, c, a);
               }(), J = Gf, m = function() {
                 return function(a, b, c, d, e, f, g, k, m, p, q, t, w, v, y) {
                   return function bb(B) {
@@ -17816,7 +17816,7 @@ var Wr = function(a) {
                       };
                     }(a, b, c, d, e, f, g, k, m, p, q, t, w, v, y), null, null);
                   };
-                }(d, w, v, F, w, t, v, d, y, B, F, E, J, c, a);
+                }(d, w, v, F, v, w, d, t, y, B, F, E, J, c, a);
               }(), m = m.e ? m.e(F) : m.call(null, F), m = Pa(E, J, m), p = Z.k(H([new z(null, "bib-data", "bib-data", 229158643, null), new z(null, "update", "update", -1608859373, null), m], 0)), q = m.e ? m.e("isbn") : m.call(null, "isbn");
               b[14] = p;
               b[11] = m;
