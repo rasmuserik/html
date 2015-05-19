@@ -17263,13 +17263,13 @@ function Zr(a) {
               return c[2] = null, c[1] = 12, V;
             }
             if (9 === d) {
-              var v = c[9], q = c[8], t = c[11], w = c[2], z = oh(w), D = function() {
+              var v = c[9], t = c[11], q = c[8], w = c[2], z = oh(w), D = function() {
                 return function() {
                   return function(a, b) {
                     var c = K(b, 0), d = K(b, 1);
                     return r(a.e ? a.e(c) : a.call(null, c)) ? gd.o(a, c, ad.h(a.e ? a.e(c) : a.call(null, c), d)) : gd.o(a, c, new S(null, 1, 5, U, [d], null));
                   };
-                }(t, q, z, v, q, t, w, z, d, b);
+                }(t, q, z, v, t, q, w, z, d, b);
               }(), F = Hf, e = function() {
                 return function(a, b, c, d, e, f, g, k, n, q, p, t) {
                   return function zb(v) {
@@ -17305,19 +17305,19 @@ function Zr(a) {
                       };
                     }(a, b, c, d, e, f, g, k, n, q, p, t), null, null);
                   };
-                }(t, q, z, v, q, t, w, z, D, F, d, b);
+                }(t, q, z, v, t, q, w, z, D, F, d, b);
               }(), e = e.e ? e.e(z) : e.call(null, z), e = Qa(D, F, e), p = Z.k(H([new y(null, "bib-data", "bib-data", 229158643, null), new y(null, "update", "update", -1608859373, null), e], 0)), E = e.e ? e.e("isbn") : e.call(null, "isbn");
               c[9] = e;
               c[13] = p;
               c[1] = r(E) ? 10 : 11;
               return V;
             }
-            return 5 === d ? (e = c[2], Bk(c, e)) : 10 === d ? (v = c[9], q = c[8], t = c[11], e = function() {
+            return 5 === d ? (e = c[2], Bk(c, e)) : 10 === d ? (v = c[9], t = c[11], q = c[8], e = function() {
               return function() {
                 return function(b) {
                   return Gr(mi, b, a);
                 };
-              }(t, q, v, v, q, t, d, b);
+              }(t, q, v, v, t, q, d, b);
             }(), p = v.e ? v.e("isbn") : v.call(null, "isbn"), e = R.h(e, p), e = Pg(e), c[2] = e, c[1] = 12, V) : 8 === d ? (e = bd, c[2] = e, c[1] = 9, V) : null;
           };
         }(b), b);
@@ -17387,13 +17387,13 @@ function $r(a) {
             var c = b[1];
             if (1 === c) {
               var c = bd, d = a;
-              b[7] = c;
-              b[8] = d;
+              b[7] = d;
+              b[8] = c;
               b[2] = null;
               b[1] = 2;
               return V;
             }
-            return 2 === c ? (d = b[8], c = A(d), b[1] = r(c) ? 4 : 5, V) : 3 === c ? (c = b[2], Bk(b, c)) : 4 === c ? (d = b[8], c = A(d), X(b, 7, c)) : 5 === c ? (c = b[7], b[2] = c, b[1] = 6, V) : 6 === c ? (c = b[2], b[2] = c, b[1] = 3, V) : 7 === c ? (c = b[7], d = b[8], c = ad.h(c, b[2]), d = xc(d), b[7] = c, b[8] = d, b[2] = null, b[1] = 2, V) : null;
+            return 2 === c ? (d = b[7], c = A(d), b[1] = r(c) ? 4 : 5, V) : 3 === c ? (c = b[2], Bk(b, c)) : 4 === c ? (d = b[7], c = A(d), X(b, 7, c)) : 5 === c ? (c = b[8], b[2] = c, b[1] = 6, V) : 6 === c ? (c = b[2], b[2] = c, b[1] = 3, V) : 7 === c ? (d = b[7], c = b[8], c = ad.h(c, b[2]), d = xc(d), b[7] = d, b[8] = c, b[2] = null, b[1] = 2, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17474,10 +17474,10 @@ function as(a) {
             }
             if (3 === c) {
               var d = b[8], e = c = U, q = [Cj], p = [[u("/bibdata/lid/"), u(a)].join("")], q = hd(q, p), p = d.e ? d.e("title") : d.call(null, "title");
-              b[9] = e;
+              b[9] = c;
+              b[10] = q;
               b[7] = p;
-              b[10] = c;
-              b[11] = q;
+              b[11] = e;
               b[1] = r(p) ? 6 : 7;
               return V;
             }
@@ -17485,12 +17485,12 @@ function as(a) {
               return c = b[2], b[8] = c, b[1] = r(c) ? 3 : 4, V;
             }
             if (11 === c) {
-              var e = b[9], v = b[12], c = b[10], q = b[11], p = b[13], d = Ee(Ge.h(Fe(" \x26 "), b[2])), d = Je(v, d), d = ad.h(d, ")"), c = new S(null, 2, 5, c, [Vh, new S(null, 4, 5, e, [Ij, q, p, d], null)], null);
+              var c = b[9], q = b[10], e = b[11], v = b[12], p = b[13], d = Ee(Ge.h(Fe(" \x26 "), b[2])), d = Je(v, d), d = ad.h(d, ")"), c = new S(null, 2, 5, c, [Vh, new S(null, 4, 5, e, [Ij, q, p, d], null)], null);
               b[2] = c;
               b[1] = 5;
               return V;
             }
-            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], Bk(b, c)) : 10 === c ? (c = bd, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], p = A(b[2]), v = new S(null, 2, 5, U, [Oj, " ("], null), c = d.e ? d.e("creator") : d.call(null, "creator"), b[12] = v, b[14] = c, b[13] = p, b[1] = r(c) ? 9 : 10, V) : null;
+            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], Bk(b, c)) : 10 === c ? (c = bd, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], p = A(b[2]), v = new S(null, 2, 5, U, [Oj, " ("], null), c = d.e ? d.e("creator") : d.call(null, "creator"), b[12] = v, b[13] = p, b[14] = c, b[1] = r(c) ? 9 : 10, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17623,7 +17623,7 @@ function cs(a) {
               return k = f[2], Bk(f, k);
             }
             if (11 === g) {
-              return k = f[7], n = f[8], n = Je(n, f[2]), k = new S(null, 3, 5, k, [Bh, "Related: ", n], null), f[2] = k, f[1] = 2, V;
+              return n = f[7], k = f[8], n = Je(n, f[2]), k = new S(null, 3, 5, k, [Bh, "Related: ", n], null), f[2] = k, f[1] = 2, V;
             }
             if (9 === g) {
               var qa = U, Ka = [Bh, "Bibliotek-links: "], hb = new S(null, 2, 5, qa, Ka, null), k = R.h(function() {
@@ -17646,7 +17646,7 @@ function cs(a) {
               f[1] = 2;
               return V;
             }
-            return 10 === g ? (k = U, n = new S(null, 1, 5, U, [Dh], null), ja = xc(d), ja = R.h(as, De(100, ja)), ja = $r(ja), f[7] = k, f[8] = n, X(f, 11, ja)) : 8 === g ? (n = k = U, ja = hd([Lh], ["isbn"]), Sa = A(d), k = new S(null, 3, 5, k, [wi, "ISBN: ", new S(null, 3, 5, n, [Oj, ja, Sa], null)], null), f[2] = k, f[1] = 2, V) : null;
+            return 10 === g ? (k = U, n = new S(null, 1, 5, U, [Dh], null), ja = xc(d), ja = R.h(as, De(10, ja)), ja = $r(ja), f[7] = n, f[8] = k, X(f, 11, ja)) : 8 === g ? (n = k = U, ja = hd([Lh], ["isbn"]), Sa = A(d), k = new S(null, 3, 5, k, [wi, "ISBN: ", new S(null, 3, 5, n, [Oj, ja, Sa], null)], null), f[2] = k, f[1] = 2, V) : null;
           };
         }(a, b, c, d, e), a, b, c, d, e);
       }(), v = function() {
@@ -17750,28 +17750,28 @@ function es(a) {
                   };
                 }(E, q, p, v, t, w, z, D, F, E, J, d, b);
               }(), e = Mr(a);
-              c[9] = J;
-              c[10] = L;
+              c[9] = L;
               c[8] = E;
+              c[10] = J;
               return X(c, 6, e);
             }
             if (6 === d) {
-              var J = c[9], L = c[10], q = c[8], T = c[2], ga = oh(T), Q = R.h(L, ga), we = ["related", Q], ja = new S(null, 2, 5, J, we, null), qa = ad.h(q, ja), Ka = U, hb = "title creator date classification isbn lid related".split(" "), Sa = new S(null, 7, 5, Ka, hb, null), Oa = Ie(qa, Sa), yb = [di, qi, ai, Mj], zb = qa.e ? qa.e("title") : qa.call(null, "title"), Kb = A(zb), Cb = qa.e ? qa.e("creator") : qa.call(null, "creator"), Wb = m(Cb), ib = [u(Kb), u(" "), u(Wb), u(" bibdata - solsort.com")].join(""), 
+              var L = c[9], q = c[8], J = c[10], T = c[2], ga = oh(T), Q = R.h(L, ga), we = ["related", Q], ja = new S(null, 2, 5, J, we, null), qa = ad.h(q, ja), Ka = U, hb = "title creator date classification isbn lid related".split(" "), Sa = new S(null, 7, 5, Ka, hb, null), Oa = Ie(qa, Sa), yb = [di, qi, ai, Mj], zb = qa.e ? qa.e("title") : qa.call(null, "title"), Kb = A(zb), Cb = qa.e ? qa.e("creator") : qa.call(null, "creator"), Wb = m(Cb), ib = [u(Kb), u(" "), u(Wb), u(" bibdata - solsort.com")].join(""), 
               tc = ["body", ".spaceabove", "ul"], Lc = ["margin"], Lb = ["5%"], rd = hd(Lc, Lb), Vd = ["margin-top"], xe = ["1ex"], bf = hd(Vd, xe), eg = ["margin-top"], Xc = ["0"], so = hd(eg, Xc), to = [rd, bf, so], Wi = hd(tc, to), Xi = U, uo = U, Ao = [tj, dj], $g = qa.e ? qa.e("type") : qa.call(null, "type"), vo = ds($g), wo = ["itemscope", vo], xo = hd(Ao, wo), yo = [wi, xo], Yi = new S(null, 2, 5, uo, yo, null), e = R.h(function() {
                 return function(a) {
                   return function(b) {
                     return $a($a($a(yc, a), a.e ? a.e(b) : a.call(null, b)), b);
                   };
-                }(qa, Oa, J, L, q, T, ga, Q, we, ja, qa, Ka, hb, Sa, Oa, yb, zb, Kb, Cb, Wb, ib, tc, Lc, Lb, rd, Vd, xe, bf, eg, Xc, so, to, Wi, Xi, uo, Ao, $g, vo, wo, xo, yo, Yi, d, b);
+                }(qa, Oa, L, q, J, T, ga, Q, we, ja, qa, Ka, hb, Sa, Oa, yb, zb, Kb, Cb, Wb, ib, tc, Lc, Lb, rd, Vd, xe, bf, eg, Xc, so, to, Wi, Xi, uo, Ao, $g, vo, wo, xo, yo, Yi, d, b);
               }(), Oa), e = R.h(cs, e), e = $r(e);
-              c[11] = Wi;
-              c[12] = yb;
-              c[13] = ib;
-              c[14] = Xi;
-              c[15] = Yi;
+              c[11] = ib;
+              c[12] = Xi;
+              c[13] = Wi;
+              c[14] = Yi;
+              c[15] = yb;
               return X(c, 7, e);
             }
-            return 7 === d ? (Wi = c[11], yb = c[12], ib = c[13], Xi = c[14], Yi = c[15], e = Je(Yi, Ie(Id, c[2])), e = hd(yb, ["html", ib, Wi, new S(null, 2, 5, Xi, [wi, e], null)]), Bk(c, e)) : null;
+            return 7 === d ? (ib = c[11], Xi = c[12], Wi = c[13], Yi = c[14], yb = c[15], e = Je(Yi, Ie(Id, c[2])), e = hd(yb, ["html", ib, Wi, new S(null, 2, 5, Xi, [wi, e], null)]), Bk(c, e)) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17945,14 +17945,14 @@ var gs = function(a) {
             var b = a[1];
             if (1 === b) {
               var b = Z.k(H([new y(null, "bibdata", "bibdata", 1320898999, null), new y(null, "processing-data", "processing-data", -1352982332, null)], 0)), c = Pn("misc/lids"), c = ("" + u(c)).split("\n"), d = m(c), c = A(d), d = xc(d);
-              a[7] = d;
-              a[8] = c;
+              a[7] = c;
+              a[8] = d;
               a[9] = b;
               a[2] = null;
               a[1] = 2;
               return V;
             }
-            return 2 === b ? (b = a[8], b = Zr(b), X(a, 4, b)) : 3 === b ? (b = a[2], Bk(a, b)) : 4 === b ? (b = a[7], c = a[2], b = xc(b), a[10] = c, a[1] = b ? 5 : 6, V) : 5 === b ? (b = a[7], c = A(b), b = xc(b), a[7] = b, a[8] = c, a[2] = null, a[1] = 2, V) : 6 === b ? (a[2] = null, a[1] = 7, V) : 7 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : null;
+            return 2 === b ? (b = a[7], b = Zr(b), X(a, 4, b)) : 3 === b ? (b = a[2], Bk(a, b)) : 4 === b ? (b = a[8], c = a[2], b = xc(b), a[10] = c, a[1] = b ? 5 : 6, V) : 5 === b ? (b = a[8], c = A(b), b = xc(b), a[7] = c, a[8] = b, a[2] = null, a[1] = 2, V) : 6 === b ? (a[2] = null, a[1] = 7, V) : 7 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : null;
           };
         }(a), a);
       }(), d = function() {
