@@ -7516,8 +7516,8 @@ function nk(a, b) {
     return this.Nd;
   }, ok.prototype.Ub = function() {
     return this.B;
-  }, ok.rc = !0, ok.qc = "cljs.core.async.impl.channels/t21607", ok.Oc = function(b, d) {
-    return Pb(d, "cljs.core.async.impl.channels/t21607");
+  }, ok.rc = !0, ok.qc = "cljs.core.async.impl.channels/t21537", ok.Oc = function(b, d) {
+    return Pb(d, "cljs.core.async.impl.channels/t21537");
   });
   return new ok(pk, b, Ff);
 };
@@ -7757,8 +7757,8 @@ function wk(a, b) {
     return!0;
   }, xk.prototype.pd = function() {
     return this.ra;
-  }, xk.rc = !0, xk.qc = "cljs.core.async.impl.ioc-helpers/t25448", xk.Oc = function(b, d) {
-    return Pb(d, "cljs.core.async.impl.ioc-helpers/t25448");
+  }, xk.rc = !0, xk.qc = "cljs.core.async.impl.ioc-helpers/t25378", xk.Oc = function(b, d) {
+    return Pb(d, "cljs.core.async.impl.ioc-helpers/t25378");
   });
   return new xk(yk, b, Ff);
 };
@@ -8019,8 +8019,8 @@ function Jk(a) {
     return!0;
   }, Rj.prototype.pd = function() {
     return this.ra;
-  }, Rj.rc = !0, Rj.qc = "cljs.core.async/t22741", Rj.Oc = function(b, d) {
-    return Pb(d, "cljs.core.async/t22741");
+  }, Rj.rc = !0, Rj.qc = "cljs.core.async/t22671", Rj.Oc = function(b, d) {
+    return Pb(d, "cljs.core.async/t22671");
   });
   return new Rj(Kk, b, Ff);
 };
@@ -10423,193 +10423,28 @@ Z.I = 0;
 Z.H = function(a) {
   return Z.k(m(a));
 };
-var tn, un = bd;
-tn = O ? O(un) : ye.call(null, un);
-function vn(a, b) {
-  Ce.o(tn, ad, new S(null, 2, 5, U, [a, b], null));
-}
-;function wn(a) {
-  try {
-    return JSON.parse(a);
-  } catch (b) {
-    return null;
-  }
-}
-vn(new y(null, "parse-json-or-nil-1", "parse-json-or-nil-1", 1925926711, null), function() {
-  return null == wn("this is not json");
-});
-vn(new y(null, "parse-json-or-nil-2", "parse-json-or-nil-2", -61929959, null), function() {
-  return zc.h(nh({hello:"world"}), nh(wn('{"hello":"world"}')));
-});
-function xn() {
-  for (var a = {foo:1, bar:1}, b = {bar:2}, c = Object.keys(b);;) {
-    if (0 < c.length) {
-      var d = c.pop();
-      a[d] = b[d];
-    } else {
-      break;
-    }
-  }
-  return a;
-}
-vn(new y(null, "jsextend", "jsextend", -1232532975, null), function() {
-  return zc.h(new l(null, 2, ["foo", 1, "bar", 2], null), nh(xn()));
-});
-function yn(a) {
-  var b = O ? O(null) : ye.call(null, null), c = function() {
-    var a = yc;
-    return O ? O(a) : ye.call(null, a);
-  }();
-  return function(b, c) {
-    return function() {
-      function f(f, g) {
-        if (zc.h(A(g), C.e ? C.e(b) : C.call(null, b))) {
-          return Ce.o(c, ad, xc(g));
-        }
-        if (0 < I(C.e ? C.e(c) : C.call(null, c))) {
-          var k = new S(null, 2, 5, U, [C.e ? C.e(b) : C.call(null, b), C.e ? C.e(c) : C.call(null, c)], null);
-          a.h ? a.h(f, k) : a.call(null, f, k);
-        }
-        k = A(g);
-        P.h ? P.h(b, k) : P.call(null, b, k);
-        k = $a(yc, xc(g));
-        return P.h ? P.h(c, k) : P.call(null, c, k);
-      }
-      function g(f) {
-        if (0 < I(C.e ? C.e(c) : C.call(null, c))) {
-          var g = new S(null, 2, 5, U, [C.e ? C.e(b) : C.call(null, b), C.e ? C.e(c) : C.call(null, c)], null);
-          a.h ? a.h(f, g) : a.call(null, f, g);
-          g = yc;
-          P.h ? P.h(c, g) : P.call(null, c, g);
-        }
-        return a.e ? a.e(f) : a.call(null, f);
-      }
-      var k = null, k = function(a, b) {
-        switch(arguments.length) {
-          case 1:
-            return g.call(this, a);
-          case 2:
-            return f.call(this, a, b);
-        }
-        throw Error("Invalid arity: " + arguments.length);
-      };
-      k.e = g;
-      k.h = f;
-      return k;
-    }();
-  }(b, c);
-}
-function zn(a) {
-  return function(b) {
-    var c = O ? O(0) : ye.call(null, 0), d = O ? O(0) : ye.call(null, 0);
-    return function(c, d) {
-      return function() {
-        function g(g, k) {
-          Ce.h(d, Hc);
-          if (6E4 < Date.now() - (C.e ? C.e(c) : C.call(null, c))) {
-            var n = Date.now();
-            P.h ? P.h(c, n) : P.call(null, c, n);
-            me(Z, ie.h(a, $a(yc, C.e ? C.e(d) : C.call(null, d))));
-          }
-          return b.h ? b.h(g, k) : b.call(null, g, k);
-        }
-        function k(c) {
-          me(Z, ie.h(a, $a(yc, new y(null, "done", "done", 750687339, null))));
-          return b.e ? b.e(c) : b.call(null, c);
-        }
-        var n = null, n = function(a, b) {
-          switch(arguments.length) {
-            case 1:
-              return k.call(this, a);
-            case 2:
-              return g.call(this, a, b);
-          }
-          throw Error("Invalid arity: " + arguments.length);
-        };
-        n.e = k;
-        n.h = g;
-        return n;
-      }();
-    }(c, d);
-  };
-}
-function An() {
-  var a = bd;
-  return function(b) {
-    return function(a) {
-      return function() {
-        function d(b, d) {
-          return Ce.o(a, ad, d);
-        }
-        function e(d) {
-          if (r(C.e ? C.e(a) : C.call(null, a))) {
-            var e = C.e ? C.e(a) : C.call(null, a);
-            b.h ? b.h(d, e) : b.call(null, d, e);
-            P.h ? P.h(a, null) : P.call(null, a, null);
-          }
-          return b.e ? b.e(d) : b.call(null, d);
-        }
-        var f = null, f = function(a, b) {
-          switch(arguments.length) {
-            case 1:
-              return e.call(this, a);
-            case 2:
-              return d.call(this, 0, b);
-          }
-          throw Error("Invalid arity: " + arguments.length);
-        };
-        f.e = e;
-        f.h = d;
-        return f;
-      }();
-    }(O ? O(a) : ye.call(null, a));
-  };
-}
-var Bn = te(yn, R.e(function(a) {
-  var b = K(a, 0), c = K(a, 1);
-  return new S(null, 2, 5, U, [b, R.h(function() {
-    return function(a) {
-      return K(a, 0);
-    };
-  }(a, b, c), c)], null);
-}));
-function Cn(a) {
-  var b = K(a, 0);
-  a = K(a, 1);
-  return new S(null, 2, 5, U, [ka(a), ka(b)], null);
-}
-function Dn(a) {
-  return a instanceof tk;
-}
-vn(new y(null, "chan?-1", "chan?-1", 205681890, null), function() {
-  return Dn(Y(null));
-});
-vn(new y(null, "chan?-2", "chan?-2", -1846197007, null), function() {
-  return Ha(Dn(!0));
-});
-O || ye.call(null, 0);
 Ba();
-var En = "undefined" !== typeof window ? window : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : function() {
+var tn = "undefined" !== typeof window ? window : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : function() {
   return this$;
-}.call(null), Fn = "undefined" !== typeof window && "undefined" !== typeof window.document, Gn;
-var Hn = "undefined" !== typeof global;
-if (Hn) {
-  var In = global.hasOwnProperty("process");
-  Gn = r(In) ? global.process.hasOwnProperty("title") : In;
+}.call(null), un = "undefined" !== typeof window && "undefined" !== typeof window.document, vn;
+var wn = "undefined" !== typeof global;
+if (wn) {
+  var xn = global.hasOwnProperty("process");
+  vn = r(xn) ? global.process.hasOwnProperty("title") : xn;
 } else {
-  Gn = Hn;
+  vn = wn;
 }
-var Jn = r(Gn) ? require("xmlhttprequest").XMLHttpRequest : XMLHttpRequest, Kn = "undefined" !== typeof setImmediate ? setImmediate : function(a) {
+var yn = r(vn) ? require("xmlhttprequest").XMLHttpRequest : XMLHttpRequest, zn = "undefined" !== typeof setImmediate ? setImmediate : function(a) {
   return setTimeout(a, 0);
 };
-r(Gn) && require("webworker-threads");
-if (r(Fn)) {
-  var Ln = O ? O(0) : ye.call(null, 0), Mn = function(a) {
-    var b = Y(null), c = [u("id"), u(Ce.h(Ln, Hc))].join("");
-    En[c] = function(a, b) {
+r(vn) && require("webworker-threads");
+if (r(un)) {
+  var An = O ? O(0) : ye.call(null, 0), Bn = function(a) {
+    var b = Y(null), c = [u("id"), u(Ce.h(An, Hc))].join("");
+    tn[c] = function(a, b) {
       return function(c) {
         r(c) ? Pk(a, JSON.stringify(c)) : Uj(a);
-        (c = b in En) && delete En[b];
+        (c = b in tn) && delete tn[b];
         return c;
       };
     }(b, c);
@@ -10619,17 +10454,17 @@ if (r(Fn)) {
     return b;
   }
 }
-r(r(Gn) ? Ha(Fn) : Gn) && (En.React = require("react"));
-var Nn = r(Gn) ? require("fs") : null;
-function On(a) {
-  return Ha(Nn.existsSync(a)) ? Nn.mkdirSync(a) : null;
+r(r(vn) ? Ha(un) : vn) && (tn.React = require("react"));
+var Cn = r(vn) ? require("fs") : null;
+function Dn(a) {
+  return Ha(Cn.existsSync(a)) ? Cn.mkdirSync(a) : null;
 }
-function Pn(a) {
+function En(a) {
   return require("fs").readFileSync(a);
 }
-function Qn(a) {
+function Fn(a) {
   var b = Y(1), c = O ? O("") : ye.call(null, "");
-  a = Nn.createReadStream(a);
+  a = Cn.createReadStream(a);
   a.on("data", function(a, b, c) {
     return function(g) {
       c.pause();
@@ -10738,7 +10573,7 @@ function Qn(a) {
   }(b, c, a));
   return b;
 }
-function Rn(a) {
+function Gn(a) {
   var b = Y(null);
   require("child_process").exec(a, function(a) {
     return function(b, e) {
@@ -10747,7 +10582,7 @@ function Rn(a) {
   }(b));
   return b;
 }
-function Sn(a) {
+function Hn(a) {
   var b = Y(1);
   W(function(b) {
     return function() {
@@ -10808,7 +10643,7 @@ function Sn(a) {
               var c = b[2], d = Z.k(H([new y(null, "system", "system", 1611149803, null), new y(null, "exit", "exit", 1992381165, null), a], 0));
               b[7] = d;
               b[8] = c;
-              b[1] = r(Gn) ? 3 : 4;
+              b[1] = r(vn) ? 3 : 4;
               return V;
             }
             return 3 === c ? (c = process.exit(a), b[2] = c, b[1] = 5, V) : 4 === c ? (b[2] = null, b[1] = 5, V) : 5 === c ? (c = b[2], Bk(b, c)) : null;
@@ -10824,7 +10659,175 @@ function Sn(a) {
   }(b));
   return b;
 }
-;function Tn() {
+;sn("server-time", function() {
+  return(new Date).toISOString();
+});
+var In, Jn = bd;
+In = O ? O(Jn) : ye.call(null, Jn);
+function Kn(a, b) {
+  Ce.o(In, ad, new S(null, 2, 5, U, [a, b], null));
+}
+;function Ln(a) {
+  try {
+    return JSON.parse(a);
+  } catch (b) {
+    return null;
+  }
+}
+Kn(new y(null, "parse-json-or-nil-1", "parse-json-or-nil-1", 1925926711, null), function() {
+  return null == Ln("this is not json");
+});
+Kn(new y(null, "parse-json-or-nil-2", "parse-json-or-nil-2", -61929959, null), function() {
+  return zc.h(nh({hello:"world"}), nh(Ln('{"hello":"world"}')));
+});
+function Mn() {
+  for (var a = {foo:1, bar:1}, b = {bar:2}, c = Object.keys(b);;) {
+    if (0 < c.length) {
+      var d = c.pop();
+      a[d] = b[d];
+    } else {
+      break;
+    }
+  }
+  return a;
+}
+Kn(new y(null, "jsextend", "jsextend", -1232532975, null), function() {
+  return zc.h(new l(null, 2, ["foo", 1, "bar", 2], null), nh(Mn()));
+});
+function Nn(a) {
+  var b = O ? O(null) : ye.call(null, null), c = function() {
+    var a = yc;
+    return O ? O(a) : ye.call(null, a);
+  }();
+  return function(b, c) {
+    return function() {
+      function f(f, g) {
+        if (zc.h(A(g), C.e ? C.e(b) : C.call(null, b))) {
+          return Ce.o(c, ad, xc(g));
+        }
+        if (0 < I(C.e ? C.e(c) : C.call(null, c))) {
+          var k = new S(null, 2, 5, U, [C.e ? C.e(b) : C.call(null, b), C.e ? C.e(c) : C.call(null, c)], null);
+          a.h ? a.h(f, k) : a.call(null, f, k);
+        }
+        k = A(g);
+        P.h ? P.h(b, k) : P.call(null, b, k);
+        k = $a(yc, xc(g));
+        return P.h ? P.h(c, k) : P.call(null, c, k);
+      }
+      function g(f) {
+        if (0 < I(C.e ? C.e(c) : C.call(null, c))) {
+          var g = new S(null, 2, 5, U, [C.e ? C.e(b) : C.call(null, b), C.e ? C.e(c) : C.call(null, c)], null);
+          a.h ? a.h(f, g) : a.call(null, f, g);
+          g = yc;
+          P.h ? P.h(c, g) : P.call(null, c, g);
+        }
+        return a.e ? a.e(f) : a.call(null, f);
+      }
+      var k = null, k = function(a, b) {
+        switch(arguments.length) {
+          case 1:
+            return g.call(this, a);
+          case 2:
+            return f.call(this, a, b);
+        }
+        throw Error("Invalid arity: " + arguments.length);
+      };
+      k.e = g;
+      k.h = f;
+      return k;
+    }();
+  }(b, c);
+}
+function On(a) {
+  return function(b) {
+    var c = O ? O(0) : ye.call(null, 0), d = O ? O(0) : ye.call(null, 0);
+    return function(c, d) {
+      return function() {
+        function g(g, k) {
+          Ce.h(d, Hc);
+          if (6E4 < Date.now() - (C.e ? C.e(c) : C.call(null, c))) {
+            var n = Date.now();
+            P.h ? P.h(c, n) : P.call(null, c, n);
+            me(Z, ie.h(a, $a(yc, C.e ? C.e(d) : C.call(null, d))));
+          }
+          return b.h ? b.h(g, k) : b.call(null, g, k);
+        }
+        function k(c) {
+          me(Z, ie.h(a, $a(yc, new y(null, "done", "done", 750687339, null))));
+          return b.e ? b.e(c) : b.call(null, c);
+        }
+        var n = null, n = function(a, b) {
+          switch(arguments.length) {
+            case 1:
+              return k.call(this, a);
+            case 2:
+              return g.call(this, a, b);
+          }
+          throw Error("Invalid arity: " + arguments.length);
+        };
+        n.e = k;
+        n.h = g;
+        return n;
+      }();
+    }(c, d);
+  };
+}
+function Pn() {
+  var a = bd;
+  return function(b) {
+    return function(a) {
+      return function() {
+        function d(b, d) {
+          return Ce.o(a, ad, d);
+        }
+        function e(d) {
+          if (r(C.e ? C.e(a) : C.call(null, a))) {
+            var e = C.e ? C.e(a) : C.call(null, a);
+            b.h ? b.h(d, e) : b.call(null, d, e);
+            P.h ? P.h(a, null) : P.call(null, a, null);
+          }
+          return b.e ? b.e(d) : b.call(null, d);
+        }
+        var f = null, f = function(a, b) {
+          switch(arguments.length) {
+            case 1:
+              return e.call(this, a);
+            case 2:
+              return d.call(this, 0, b);
+          }
+          throw Error("Invalid arity: " + arguments.length);
+        };
+        f.e = e;
+        f.h = d;
+        return f;
+      }();
+    }(O ? O(a) : ye.call(null, a));
+  };
+}
+var Qn = te(Nn, R.e(function(a) {
+  var b = K(a, 0), c = K(a, 1);
+  return new S(null, 2, 5, U, [b, R.h(function() {
+    return function(a) {
+      return K(a, 0);
+    };
+  }(a, b, c), c)], null);
+}));
+function Rn(a) {
+  var b = K(a, 0);
+  a = K(a, 1);
+  return new S(null, 2, 5, U, [ka(a), ka(b)], null);
+}
+function Sn(a) {
+  return a instanceof tk;
+}
+Kn(new y(null, "chan?-1", "chan?-1", 205681890, null), function() {
+  return Sn(Y(null));
+});
+Kn(new y(null, "chan?-2", "chan?-2", -1846197007, null), function() {
+  return Ha(Sn(!0));
+});
+O || ye.call(null, 0);
+function Tn() {
   var a = Y(1);
   W(function(a) {
     return function() {
@@ -10882,7 +10885,7 @@ function Sn(a) {
               return b = a, b[2] = a[2], b[1] = 6, V;
             }
             if (1 === b) {
-              var b = C.e ? C.e(tn) : C.call(null, tn), b = m(b), b = A(b), c = K(b, 0), d = K(b, 1), n = C.e ? C.e(tn) : C.call(null, tn), n = m(n), n = xc(n);
+              var b = C.e ? C.e(In) : C.call(null, In), b = m(b), b = A(b), c = K(b, 0), d = K(b, 1), n = C.e ? C.e(In) : C.call(null, In), n = m(n), n = xc(n);
               a[7] = b;
               a[8] = n;
               a[9] = d;
@@ -10891,9 +10894,9 @@ function Sn(a) {
               a[1] = 2;
               return V;
             }
-            return 4 === b ? (b = a[11], X(a, 7, b)) : 13 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 6 === b ? (b = Ha(a[2]), a[1] = b ? 8 : 9, V) : 3 === b ? (b = a[2], c = Z.k(H([new y(null, "test", "test", -2076896892, null), "tests done"], 0)), a[12] = c, a[13] = b, Bk(a, !0)) : 12 === b ? (a[2] = null, a[1] = 13, V) : 2 === b ? (c = a[7], d = a[14], b = K(c, 0), d = K(c, 1), c = Z.k(H([new y(null, "test", "test", -2076896892, null), b], 0)), d = d.j ? d.j() : d.call(null), n = Dn(d), a[11] = 
+            return 4 === b ? (b = a[11], X(a, 7, b)) : 13 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 6 === b ? (b = Ha(a[2]), a[1] = b ? 8 : 9, V) : 3 === b ? (b = a[2], c = Z.k(H([new y(null, "test", "test", -2076896892, null), "tests done"], 0)), a[12] = c, a[13] = b, Bk(a, !0)) : 12 === b ? (a[2] = null, a[1] = 13, V) : 2 === b ? (c = a[7], d = a[14], b = K(c, 0), d = K(c, 1), c = Z.k(H([new y(null, "test", "test", -2076896892, null), b], 0)), d = d.j ? d.j() : d.call(null), n = Sn(d), a[11] = 
             d, a[14] = b, a[15] = c, a[1] = r(n) ? 4 : 5, V) : 11 === b ? (b = a[8], c = A(b), b = xc(b), a[7] = c, a[8] = b, a[2] = null, a[1] = 2, V) : 9 === b ? (a[2] = null, a[1] = 10, V) : 5 === b ? (b = a[11], a[2] = b, a[1] = 6, V) : 10 === b ? (b = a[8], c = a[2], b = A(b), a[16] = c, a[1] = r(b) ? 11 : 12, V) : 8 === b ? (d = a[14], b = Z.k(H([new y(null, "test", "test", -2076896892, null), d, new y(null, "failed", "failed", 243105765, null)], 0)), c = Xd(d), d = console.log("TEST FAIL", 
-            c), c = Sn.e ? Sn.e(1) : Sn.call(null, 1), a[17] = d, a[18] = b, a[2] = c, a[1] = 10, V) : null;
+            c), c = Hn.e ? Hn.e(1) : Hn.call(null, 1), a[17] = d, a[18] = b, a[2] = c, a[1] = 10, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -10969,7 +10972,7 @@ sn("test-server", function() {
               return X(a, 3, c);
             }
             if (3 === b) {
-              var b = a[2], c = Z.k(H([new y(null, "test", "test", -2076896892, null), new y(null, "timeout", "timeout", 1321906209, null)], 0)), d = Sn(1);
+              var b = a[2], c = Z.k(H([new y(null, "test", "test", -2076896892, null), new y(null, "timeout", "timeout", 1321906209, null)], 0)), d = Hn(1);
               a[8] = c;
               a[9] = b;
               a[10] = d;
@@ -10989,10 +10992,10 @@ sn("test-server", function() {
   return a;
 });
 sn("test-ok", function() {
-  return Sn(0);
+  return Hn(0);
 });
 sn("test-client", function() {
-  if (r(Fn)) {
+  if (r(un)) {
     var a = Y(1);
     W(function(a) {
       return function() {
@@ -11130,9 +11133,6 @@ sn("solsort", function() {
   }(a));
   return a;
 });
-sn("server-time", function() {
-  return(new Date).toISOString();
-});
 var Un, Vn = Ff;
 Un = O ? O(Vn) : ye.call(null, Vn);
 function Wn(a) {
@@ -11154,7 +11154,7 @@ function Wn(a) {
 function Xn(a) {
   return(C.e ? C.e(Un) : C.call(null, Un)).call(null, a.pid).send(JSON.stringify(a));
 }
-if (r(Gn)) {
+if (r(vn)) {
   require("ws");
   var Yn = function(a) {
     return function(b) {
@@ -11188,7 +11188,7 @@ if (r(Gn)) {
     }(b, a));
   };
 }
-if (r(Fn)) {
+if (r(un)) {
   var ao = Y(1);
   W(function(a) {
     return function() {
@@ -11379,13 +11379,13 @@ if (r(Fn)) {
             Z.k(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "close", "close", -819286187, null), b, c], 0));
             Ce.o(Un, id, c);
             Ce.o(jn, id, c);
-            return Kn.e ? Kn.e(co) : Kn.call(null, co);
+            return zn.e ? zn.e(co) : zn.call(null, co);
           };
         }(d, e, b), Ce.F(Un, gd, e, b), Ce.F(jn, gd, e, Xn), Z.k(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "added-client", "added-client", -1763956854, null), e, C.e ? C.e(Un) : C.call(null, Un)], 0))) : Z.k(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "error-unexpected-first-message", "error-unexpected-first-message", 1748325049, null), d], 0));
       };
     }(b);
   };
-  Kn.e ? Kn.e(eo) : Kn.call(null, eo);
+  zn.e ? zn.e(eo) : zn.call(null, eo);
 }
 function fo() {
   var a = 1 < arguments.length ? new Ca(Array.prototype.slice.call(arguments, 1), 0) : null;
@@ -11393,10 +11393,10 @@ function fo() {
 }
 function go(a, b) {
   var c = xd(b) ? me(ze, b) : b, d = ed(c, Ci), e = ed(c, jj), f = ed(c, Ch);
-  if (r(r(f) ? Fn : f)) {
-    return Mn([u(a), u("?callback\x3d")].join(""));
+  if (r(r(f) ? un : f)) {
+    return Bn([u(a), u("?callback\x3d")].join(""));
   }
-  var g = Y(null), k = new Jn;
+  var g = Y(null), k = new yn;
   k.open(r(d) ? "POST" : "GET", a, !0);
   r(e) && (k.withCredentials = !0);
   k.onreadystatechange = function(a, b) {
@@ -11408,12 +11408,12 @@ function go(a, b) {
   k.send();
   return g;
 }
-;r(Gn) && Nn.watch(__filename, qh(function() {
+;r(vn) && Cn.watch(__filename, qh(function() {
   Wn("reload");
   Z.k(H([new y(null, "system", "system", 1611149803, null), new y(null, "source-change", "source-change", 2075892023, null), new y(null, "restarting", "restarting", -1893758197, null)], 0));
-  return Sn(0);
+  return Hn(0);
 }));
-r(Fn) && ("undefined" !== typeof applicationCache && (applicationCache.onupdateready = function() {
+r(un) && ("undefined" !== typeof applicationCache && (applicationCache.onupdateready = function() {
   return location.reload();
 }), kn("reload", function() {
   var a = Y(1);
@@ -12482,7 +12482,7 @@ for (var Op;Mp.length && (Op = Mp.shift());) {
     return[u("-"), u(a.toLowerCase())].join("");
   });
 }
-vn(new y(null, "css-name", "css-name", -2011163427, null), function() {
+Kn(new y(null, "css-name", "css-name", -2011163427, null), function() {
   return zc.h(Qp(Ah), "-foo-bar");
 });
 function Rp(a) {
@@ -12502,7 +12502,7 @@ function Tp(a) {
 function Up(a) {
   return Tp(oh(a));
 }
-vn(new y(null, "clj-\x3ecss", "clj-\x3ecss", -359189480, null), function() {
+Kn(new y(null, "clj-\x3ecss", "clj-\x3ecss", -359189480, null), function() {
   return zc.h(Tp(new l(null, 2, [sj, new l(null, 2, [Ni, pi, nj, 14], null), pj, new l(null, 1, [$h, Ji], null)], null)), "h1{font-weight:normal;font-size:14px}.div{background:blue}");
 });
 var Vp, Wp = new l(null, 5, ["@font-face", new l(null, 3, [yi, "Ubuntu", Ni, "400", hi, "url(/font/ubuntu-latin1.ttf)format(truetype)"], null), ui, new l(null, 1, [Pj, "5%"], null), Fj, new l(null, 4, [Pj, 5, Mi, 5, Kh, 5, vj, "1px solid black"], null), wj, new l(null, 3, [Pj, 0, Mi, 0, yi, "Ubuntu, sans-serif"], null), wi, new l(null, 2, [Pj, 0, Mi, 0], null)], null);
@@ -12664,7 +12664,7 @@ function Yp() {
               return b = a, b[2] = a[2], b[1] = 4, V;
             }
             if (20 === b) {
-              var b = a[7], b = a[8], b = ne(rn, hn, b), c = Dn(b);
+              var b = a[7], b = a[8], b = ne(rn, hn, b), c = Sn(b);
               a[7] = b;
               a[1] = r(c) ? 23 : 24;
               return V;
@@ -12690,7 +12690,7 @@ function Yp() {
               a[1] = 22;
               return V;
             }
-            return 31 === b ? (a[2] = null, a[1] = 32, V) : 32 === b ? (b = a[9], a[12] = a[2], a[2] = b, a[1] = 22, V) : 13 === b ? (b = a[2], a[2] = b, a[1] = 10, V) : 22 === b ? (b = a[2], Bk(a, b)) : 29 === b ? (b = a[2], a[1] = r(b) ? 30 : 31, V) : 6 === b ? (a[2] = global.process, a[1] = 7, V) : 28 === b ? (a[2] = Fn, a[1] = 29, V) : 25 === b ? (b = a[2], a[9] = b, a[1] = r(Fn) ? 27 : 28, V) : 17 === b ? (b = window.location.hash.slice(1).split(/[\/.]/), a[2] = b, a[1] = 19, V) : 3 === b ? 
+            return 31 === b ? (a[2] = null, a[1] = 32, V) : 32 === b ? (b = a[9], a[12] = a[2], a[2] = b, a[1] = 22, V) : 13 === b ? (b = a[2], a[2] = b, a[1] = 10, V) : 22 === b ? (b = a[2], Bk(a, b)) : 29 === b ? (b = a[2], a[1] = r(b) ? 30 : 31, V) : 6 === b ? (a[2] = global.process, a[1] = 7, V) : 28 === b ? (a[2] = un, a[1] = 29, V) : 25 === b ? (b = a[2], a[9] = b, a[1] = r(un) ? 27 : 28, V) : 17 === b ? (b = window.location.hash.slice(1).split(/[\/.]/), a[2] = b, a[1] = 19, V) : 3 === b ? 
             (b = a[10], a[2] = b, a[1] = 4, V) : 12 === b ? (b = a[13], a[2] = b, a[1] = 13, V) : 2 === b ? (a[1] = r(global.process) ? 5 : 6, V) : 23 === b ? (b = a[7], X(a, 26, b)) : 19 === b ? (b = a[2], a[2] = b, a[1] = 16, V) : 11 === b ? (a[1] = r(window) ? 14 : 15, V) : 9 === b ? (b = "undefined" !== typeof window, a[13] = b, a[1] = r(b) ? 11 : 12, V) : 5 === b ? (b = global.process.argv.slice(2), a[2] = b, a[1] = 7, V) : 14 === b ? (a[1] = r(window.location) ? 17 : 18, V) : 26 === b ? (b = 
             a[2], a[2] = b, a[1] = 25, V) : 16 === b ? (b = a[2], a[2] = b, a[1] = 13, V) : 30 === b ? (b = a[9], Z.k(H([new y(null, "render-html", "render-html", -1069888904, null)], 0)), r(ai.e(b)) && (c = document.getElementById("style"), r(c) || (c = document.createElement("style"), c.id = "style", document.head.appendChild(c)), d = Up(kh(ai.e(b))), c.innerHTML = d), r(uj.e(b)) ? document.body.innerHTML = uj.e(b) : (c = Mj.e(b), Kp(c)), r(qi.e(b)) && (document.getElementsByTagName("title")[0].innerHTML = 
             qi.e(b)), a[2] = !0, a[1] = 32, V) : 10 === b ? (b = a[2], c = Z.k(H([new y(null, "routes", "routes", 2098431689, null), new y(null, "starting", "starting", -211609939, null), b], 0)), d = ed(b, 0), d = ln(d), a[8] = b, a[14] = c, a[1] = r(d) ? 20 : 21, V) : 18 === b ? (a[2] = window.location, a[1] = 19, V) : 8 === b ? (b = a[11], a[2] = b, a[1] = 10, V) : null;
@@ -12706,10 +12706,10 @@ function Yp() {
   }(a));
   return a;
 }
-Kn.e ? Kn.e(Yp) : Kn.call(null, Yp);
-r(Fn) && (window.onhashchange = Yp);
-if (r(Gn)) {
-  var Zp = qh(Pn), $p = function $p() {
+zn.e ? zn.e(Yp) : zn.call(null, Yp);
+r(un) && (window.onhashchange = Yp);
+if (r(vn)) {
+  var Zp = qh(En), $p = function $p() {
     var b = 0 < arguments.length ? new Ca(Array.prototype.slice.call(arguments, 0), 0) : null;
     return $p.k(b);
   };
@@ -12841,7 +12841,7 @@ if (r(Gn)) {
     $n(e);
     return Z.k(H([new y(null, "webserver", "webserver", -1886708491, null), new y(null, "starting", "starting", -211609939, null), c, d], 0));
   };
-  Kn.e ? Kn.e(bq) : Kn.call(null, bq);
+  zn.e ? zn.e(bq) : zn.call(null, bq);
 }
 ;var cq = function cq(b) {
   if (b ? b.qd : b) {
@@ -13281,7 +13281,7 @@ function Cq(a, b) {
   var c = Kq(a, b), d = ed(C.e ? C.e(Yq) : C.call(null, Yq), "" + u(c)), e = C.e ? C.e($q) : C.call(null, $q);
   return r(d) ? (c = yq(a, !0, null), d.e ? d.e(c) : d.call(null, c)) : r(e) ? (d = yq(a, !0, null), e.h ? e.h(c, d) : e.call(null, c, d)) : hq(H(["Could not find tag parser for ", "" + u(c), " in ", Be.k(H([Cf(C.e ? C.e(Yq) : C.call(null, Yq))], 0))], 0));
 }
-;if (r(Fn)) {
+;if (r(un)) {
   var ar, br = Ff;
   ar = O ? O(br) : ye.call(null, br);
   var cr = O ? O(null) : ye.call(null, null), dr = O ? O(!1) : ye.call(null, !1), er = function() {
@@ -14026,7 +14026,7 @@ function Cq(a, b) {
     if (r(b)) {
       return b;
     }
-    On("./dbs");
+    Dn("./dbs");
     b = gd.o(C.e ? C.e(mr) : C.call(null, mr), a, require("levelup").call(null, [u("./dbs/"), u(("" + u(a)).replace(/[^a-zA-Z0-9]/, "_")), u(".leveldb")].join(""), {valueEncoding:"json"}));
     b = P.h ? P.h(mr, b) : P.call(null, mr, b);
     return ed(b, a);
@@ -14247,7 +14247,7 @@ function pr(a, b) {
   }(c));
   return c;
 }
-vn(new y(null, "store", "store", -1142205747, null), function() {
+Kn(new y(null, "store", "store", -1142205747, null), function() {
   var a = Y(1);
   W(function(a) {
     return function() {
@@ -14314,7 +14314,7 @@ vn(new y(null, "store", "store", -1142205747, null), function() {
   }(a));
   return a;
 });
-vn(new y(null, "fetch", "fetch", 558537283, null), function() {
+Kn(new y(null, "fetch", "fetch", 558537283, null), function() {
   var a = Y(1);
   W(function(a) {
     return function() {
@@ -14383,7 +14383,7 @@ vn(new y(null, "fetch", "fetch", 558537283, null), function() {
 });
 var qr, rr = Ff;
 qr = O ? O(rr) : ye.call(null, rr);
-if (r(Gn)) {
+if (r(vn)) {
   var sr = function(a) {
     var b = Y(1);
     W(function(b) {
@@ -14438,7 +14438,7 @@ if (r(Gn)) {
           }(function() {
             return function(b) {
               if (1 === b[1]) {
-                var c = On("./dbs"), d = require("levelup"), e = ("" + u(a)).replace(/[^a-zA-Z0-9]/, "_"), e = [u("./dbs/kvdb-"), u(e), u(".leveldb")].join(""), q = {valueEncoding:"json"}, d = d.h ? d.h(e, q) : d.call(null, e, q), d = Ce.F(qr, gd, a, d);
+                var c = Dn("./dbs"), d = require("levelup"), e = ("" + u(a)).replace(/[^a-zA-Z0-9]/, "_"), e = [u("./dbs/kvdb-"), u(e), u(".leveldb")].join(""), q = {valueEncoding:"json"}, d = d.h ? d.h(e, q) : d.call(null, e, q), d = Ce.F(qr, gd, a, d);
                 b[7] = c;
                 return Bk(b, d);
               }
@@ -14837,7 +14837,7 @@ if (r(Gn)) {
     return c;
   }
 }
-if (r(Fn)) {
+if (r(un)) {
   var ur = O ? O(null) : ye.call(null, null), sr = function(a) {
     r(C.e ? C.e(ur) : C.call(null, ur)) && (C.e ? C.e(ur) : C.call(null, ur)).close();
     var b = Y(null);
@@ -16320,7 +16320,7 @@ function Nr() {
         }(function() {
           return function(a) {
             var b = a[1];
-            return 1 === b ? (b = require("fs").existsSync("tmp"), a[1] = Ha(b) ? 2 : 3, V) : 2 === b ? (b = Rn("mkdir tmp"), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
+            return 1 === b ? (b = require("fs").existsSync("tmp"), a[1] = Ha(b) ? 2 : 3, V) : 2 === b ? (b = Gn("mkdir tmp"), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -16393,7 +16393,7 @@ function Or() {
               a[1] = c ? 2 : 3;
               return V;
             }
-            return 2 === b ? (b = Rn("cat tmp/coloans.csv | sort -k+2 \x3e tmp/coloans-by-lid.csv"), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
+            return 2 === b ? (b = Gn("cat tmp/coloans.csv | sort -k+2 \x3e tmp/coloans-by-lid.csv"), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -16466,7 +16466,7 @@ function Pr() {
               a[1] = c ? 2 : 3;
               return V;
             }
-            return 2 === b ? (b = [u("xzcat "), u("../visual_relation_server"), u("/coloans/* | sed -e 's/,/,\t/' | sort -n \x3e tmp/coloans.csv")].join(""), b = Rn(b), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
+            return 2 === b ? (b = [u("xzcat "), u("../visual_relation_server"), u("/coloans/* | sed -e 's/,/,\t/' | sort -n \x3e tmp/coloans.csv")].join(""), b = Gn(b), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -16539,7 +16539,7 @@ function Qr() {
               a[1] = c ? 2 : 3;
               return V;
             }
-            return 2 === b ? (b = Rn("cat tmp/coloans-by-lid.csv | sed -e 's/.*,[\t ]*/0, /' | uniq \x3e tmp/lids.csv"), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
+            return 2 === b ? (b = Gn("cat tmp/coloans-by-lid.csv | sed -e 's/.*,[\t ]*/0, /' | uniq \x3e tmp/lids.csv"), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -16612,7 +16612,7 @@ function Rr() {
               a[1] = c ? 2 : 3;
               return V;
             }
-            return 2 === b ? (b = [u("xzcat "), u("../visual_relation_server"), u("/stats.jsonl.xz \x3e tmp/stats.jsonl")].join(""), b = Rn(b), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
+            return 2 === b ? (b = [u("xzcat "), u("../visual_relation_server"), u("/stats.jsonl.xz \x3e tmp/stats.jsonl")].join(""), b = Gn(b), X(a, 5, b)) : 3 === b ? (a[2] = null, a[1] = 4, V) : 4 === b ? (b = a[2], Bk(a, b)) : 5 === b ? (b = a[2], a[2] = b, a[1] = 4, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -16628,17 +16628,17 @@ function Rr() {
 function Sr() {
   var a = ue(R.e(function(a) {
     return Um(a, /,/);
-  }), R.e(Cn), zn(H([new y(null, "bib", "bib", -491285877, null), "finding lid-count"], 0)), H([Bn, R.e(function(a) {
+  }), R.e(Rn), On(H([new y(null, "bib", "bib", -491285877, null), "finding lid-count"], 0)), H([Qn, R.e(function(a) {
     var c = K(a, 0);
     a = K(a, 1);
     return new S(null, 2, 5, U, [c, I(a)], null);
-  }), An()], 0)), a = Lk(1, a);
-  Qk(Qn("tmp/coloans-by-lid.csv"), a);
+  }), Pn()], 0)), a = Lk(1, a);
+  Qk(Fn("tmp/coloans-by-lid.csv"), a);
   return a;
 }
 function Tr(a, b, c) {
   c = Lk(1, c);
-  a = Qn(a);
+  a = Fn(a);
   Rk(a, c);
   return pr(b, c);
 }
@@ -16721,7 +16721,7 @@ function Ur() {
                     return Um(a, /,/);
                   };
                 }(v, n, q, p, v, t, w, z, D, c, a);
-              }(), E = R.e(F), J = new y(null, "bib", "bib", -491285877, null), L = zn(H([J, "traversing 46186845 loans and finding patrons loans"], 0)), d = R.e(function() {
+              }(), E = R.e(F), J = new y(null, "bib", "bib", -491285877, null), L = On(H([J, "traversing 46186845 loans and finding patrons loans"], 0)), d = R.e(function() {
                 return function(a) {
                   return function(b) {
                     var c = K(b, 0);
@@ -16729,7 +16729,7 @@ function Ur() {
                     return new S(null, 2, 5, U, [c, [ka(b), a[ka(b)]]], null);
                   };
                 }(v, n, q, p, v, t, w, z, D, F, E, J, L, c, a);
-              }()), d = ue(E, L, d, H([Bn], 0)), d = Tr("tmp/coloans.csv", Nj, d);
+              }()), d = ue(E, L, d, H([Qn], 0)), d = Tr("tmp/coloans.csv", Nj, d);
               b[8] = D;
               return X(b, 7, d);
             }
@@ -16817,7 +16817,7 @@ function Vr() {
                     return Um(a, /,/);
                   };
                 }(c, a);
-              }()), n = R.e(Cn), q = zn(H([new y(null, "bib", "bib", -491285877, null), "traversing 46186845 loans and finding lids loans"], 0)), d = ue(d, n, q, H([Bn], 0)), d = Tr("tmp/coloans-by-lid.csv", Hj, d);
+              }()), n = R.e(Rn), q = On(H([new y(null, "bib", "bib", -491285877, null), "traversing 46186845 loans and finding lids loans"], 0)), d = ue(d, n, q, H([Qn], 0)), d = Tr("tmp/coloans-by-lid.csv", Hj, d);
               return X(b, 6, d);
             }
             return 5 === c ? (d = b[2], Bk(b, d)) : 6 === c ? (d = b[2], b[2] = d, b[1] = 5, V) : null;
@@ -16908,7 +16908,7 @@ function Wr() {
                     return Um(a, /,/);
                   };
                 }(n, c, a);
-              }(), p = R.e(q), v = R.e(Cn), t = new y(null, "bib", "bib", -491285877, null), w = zn(H([t, "finding and caching related for 686521 lids"], 0)), d = R.e(function() {
+              }(), p = R.e(q), v = R.e(Rn), t = new y(null, "bib", "bib", -491285877, null), w = On(H([t, "finding and caching related for 686521 lids"], 0)), d = R.e(function() {
                 return function() {
                   return function(a) {
                     var b = K(a, 0);
@@ -16916,7 +16916,7 @@ function Wr() {
                     return b;
                   };
                 }(n, q, p, v, t, w, c, a);
-              }()), d = ue(p, v, w, H([Bn, d], 0)), d = Lk(1, d), z = Qn("tmp/lids.csv"), z = Rk(z, d);
+              }()), d = ue(p, v, w, H([Qn, d], 0)), d = Lk(1, d), z = Fn("tmp/lids.csv"), z = Rk(z, d);
               b[8] = d;
               b[9] = z;
               return X(b, 6, d);
@@ -17001,7 +17001,7 @@ function Xr() {
               return b = a[2], a[7] = b, a[2] = null, a[1] = 7, V;
             }
             if (3 === b) {
-              var b = a[8], b = R.e(wn), c = zn(H([new y(null, "bib", "bib", -491285877, null), "loading info for 693894 lids"], 0)), b = Lk(1, te(b, c)), c = Qn("tmp/stats.jsonl"), c = Rk(c, b);
+              var b = a[8], b = R.e(Ln), c = On(H([new y(null, "bib", "bib", -491285877, null), "loading info for 693894 lids"], 0)), b = Lk(1, te(b, c)), c = Fn("tmp/stats.jsonl"), c = Rk(c, b);
               a[9] = c;
               a[8] = b;
               return X(a, 6, b);
@@ -17020,7 +17020,7 @@ function Xr() {
   return a;
 }
 function Yr() {
-  if (Ha(Gn)) {
+  if (Ha(vn)) {
     throw "error: not on node";
   }
   var a = Y(1);
@@ -17245,7 +17245,7 @@ function Zr(a) {
               return V;
             }
             if (6 === d) {
-              return e = c[7], e = wn(c[2]), c[7] = e, c[1] = r(e) ? 7 : 8, V;
+              return e = c[7], e = Ln(c[2]), c[7] = e, c[1] = r(e) ? 7 : 8, V;
             }
             if (3 === d) {
               var t = c[11];
@@ -17263,13 +17263,13 @@ function Zr(a) {
               return c[2] = null, c[1] = 12, V;
             }
             if (9 === d) {
-              var v = c[9], t = c[11], q = c[8], w = c[2], z = oh(w), D = function() {
+              var t = c[11], v = c[9], q = c[8], w = c[2], z = oh(w), D = function() {
                 return function() {
                   return function(a, b) {
                     var c = K(b, 0), d = K(b, 1);
                     return r(a.e ? a.e(c) : a.call(null, c)) ? gd.o(a, c, ad.h(a.e ? a.e(c) : a.call(null, c), d)) : gd.o(a, c, new S(null, 1, 5, U, [d], null));
                   };
-                }(t, q, z, v, t, q, w, z, d, b);
+                }(t, q, z, t, v, q, w, z, d, b);
               }(), F = Hf, e = function() {
                 return function(a, b, c, d, e, f, g, k, n, q, p, t) {
                   return function zb(v) {
@@ -17305,19 +17305,19 @@ function Zr(a) {
                       };
                     }(a, b, c, d, e, f, g, k, n, q, p, t), null, null);
                   };
-                }(t, q, z, v, t, q, w, z, D, F, d, b);
+                }(t, q, z, t, v, q, w, z, D, F, d, b);
               }(), e = e.e ? e.e(z) : e.call(null, z), e = Qa(D, F, e), p = Z.k(H([new y(null, "bib-data", "bib-data", 229158643, null), new y(null, "update", "update", -1608859373, null), e], 0)), E = e.e ? e.e("isbn") : e.call(null, "isbn");
-              c[9] = e;
               c[13] = p;
+              c[9] = e;
               c[1] = r(E) ? 10 : 11;
               return V;
             }
-            return 5 === d ? (e = c[2], Bk(c, e)) : 10 === d ? (v = c[9], t = c[11], q = c[8], e = function() {
+            return 5 === d ? (e = c[2], Bk(c, e)) : 10 === d ? (t = c[11], v = c[9], q = c[8], e = function() {
               return function() {
                 return function(b) {
                   return Gr(mi, b, a);
                 };
-              }(t, q, v, v, t, q, d, b);
+              }(t, q, v, t, v, q, d, b);
             }(), p = v.e ? v.e("isbn") : v.call(null, "isbn"), e = R.h(e, p), e = Pg(e), c[2] = e, c[1] = 12, V) : 8 === d ? (e = bd, c[2] = e, c[1] = 9, V) : null;
           };
         }(b), b);
@@ -17387,13 +17387,13 @@ function $r(a) {
             var c = b[1];
             if (1 === c) {
               var c = bd, d = a;
-              b[7] = d;
-              b[8] = c;
+              b[7] = c;
+              b[8] = d;
               b[2] = null;
               b[1] = 2;
               return V;
             }
-            return 2 === c ? (d = b[7], c = A(d), b[1] = r(c) ? 4 : 5, V) : 3 === c ? (c = b[2], Bk(b, c)) : 4 === c ? (d = b[7], c = A(d), X(b, 7, c)) : 5 === c ? (c = b[8], b[2] = c, b[1] = 6, V) : 6 === c ? (c = b[2], b[2] = c, b[1] = 3, V) : 7 === c ? (d = b[7], c = b[8], c = ad.h(c, b[2]), d = xc(d), b[7] = d, b[8] = c, b[2] = null, b[1] = 2, V) : null;
+            return 2 === c ? (d = b[8], c = A(d), b[1] = r(c) ? 4 : 5, V) : 3 === c ? (c = b[2], Bk(b, c)) : 4 === c ? (d = b[8], c = A(d), X(b, 7, c)) : 5 === c ? (c = b[7], b[2] = c, b[1] = 6, V) : 6 === c ? (c = b[2], b[2] = c, b[1] = 3, V) : 7 === c ? (c = b[7], d = b[8], c = ad.h(c, b[2]), d = xc(d), b[7] = c, b[8] = d, b[2] = null, b[1] = 2, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17474,9 +17474,9 @@ function as(a) {
             }
             if (3 === c) {
               var d = b[8], e = c = U, q = [Cj], p = [[u("/bibdata/lid/"), u(a)].join("")], q = hd(q, p), p = d.e ? d.e("title") : d.call(null, "title");
+              b[7] = p;
               b[9] = c;
               b[10] = q;
-              b[7] = p;
               b[11] = e;
               b[1] = r(p) ? 6 : 7;
               return V;
@@ -17485,12 +17485,12 @@ function as(a) {
               return c = b[2], b[8] = c, b[1] = r(c) ? 3 : 4, V;
             }
             if (11 === c) {
-              var c = b[9], q = b[10], e = b[11], v = b[12], p = b[13], d = Ee(Ge.h(Fe(" \x26 "), b[2])), d = Je(v, d), d = ad.h(d, ")"), c = new S(null, 2, 5, c, [Vh, new S(null, 4, 5, e, [Ij, q, p, d], null)], null);
+              var v = b[12], c = b[9], q = b[10], p = b[13], e = b[11], d = Ee(Ge.h(Fe(" \x26 "), b[2])), d = Je(v, d), d = ad.h(d, ")"), c = new S(null, 2, 5, c, [Vh, new S(null, 4, 5, e, [Ij, q, p, d], null)], null);
               b[2] = c;
               b[1] = 5;
               return V;
             }
-            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], Bk(b, c)) : 10 === c ? (c = bd, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], p = A(b[2]), v = new S(null, 2, 5, U, [Oj, " ("], null), c = d.e ? d.e("creator") : d.call(null, "creator"), b[12] = v, b[13] = p, b[14] = c, b[1] = r(c) ? 9 : 10, V) : null;
+            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], Bk(b, c)) : 10 === c ? (c = bd, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], p = A(b[2]), v = new S(null, 2, 5, U, [Oj, " ("], null), c = d.e ? d.e("creator") : d.call(null, "creator"), b[12] = v, b[14] = c, b[13] = p, b[1] = r(c) ? 9 : 10, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17623,7 +17623,7 @@ function cs(a) {
               return k = f[2], Bk(f, k);
             }
             if (11 === g) {
-              return n = f[7], k = f[8], n = Je(n, f[2]), k = new S(null, 3, 5, k, [Bh, "Related: ", n], null), f[2] = k, f[1] = 2, V;
+              return k = f[7], n = f[8], n = Je(n, f[2]), k = new S(null, 3, 5, k, [Bh, "Related: ", n], null), f[2] = k, f[1] = 2, V;
             }
             if (9 === g) {
               var qa = U, Ka = [Bh, "Bibliotek-links: "], hb = new S(null, 2, 5, qa, Ka, null), k = R.h(function() {
@@ -17646,7 +17646,7 @@ function cs(a) {
               f[1] = 2;
               return V;
             }
-            return 10 === g ? (k = U, n = new S(null, 1, 5, U, [Dh], null), ja = xc(d), ja = R.h(as, De(10, ja)), ja = $r(ja), f[7] = n, f[8] = k, X(f, 11, ja)) : 8 === g ? (n = k = U, ja = hd([Lh], ["isbn"]), Sa = A(d), k = new S(null, 3, 5, k, [wi, "ISBN: ", new S(null, 3, 5, n, [Oj, ja, Sa], null)], null), f[2] = k, f[1] = 2, V) : null;
+            return 10 === g ? (k = U, n = new S(null, 1, 5, U, [Dh], null), ja = xc(d), ja = R.h(as, De(30, ja)), ja = $r(ja), f[7] = k, f[8] = n, X(f, 11, ja)) : 8 === g ? (n = k = U, ja = hd([Lh], ["isbn"]), Sa = A(d), k = new S(null, 3, 5, k, [wi, "ISBN: ", new S(null, 3, 5, n, [Oj, ja, Sa], null)], null), f[2] = k, f[1] = 2, V) : null;
           };
         }(a, b, c, d, e), a, b, c, d, e);
       }(), v = function() {
@@ -17751,27 +17751,27 @@ function es(a) {
                 }(E, q, p, v, t, w, z, D, F, E, J, d, b);
               }(), e = Mr(a);
               c[9] = L;
-              c[8] = E;
               c[10] = J;
+              c[8] = E;
               return X(c, 6, e);
             }
             if (6 === d) {
-              var L = c[9], q = c[8], J = c[10], T = c[2], ga = oh(T), Q = R.h(L, ga), we = ["related", Q], ja = new S(null, 2, 5, J, we, null), qa = ad.h(q, ja), Ka = U, hb = "title creator date classification isbn lid related".split(" "), Sa = new S(null, 7, 5, Ka, hb, null), Oa = Ie(qa, Sa), yb = [di, qi, ai, Mj], zb = qa.e ? qa.e("title") : qa.call(null, "title"), Kb = A(zb), Cb = qa.e ? qa.e("creator") : qa.call(null, "creator"), Wb = m(Cb), ib = [u(Kb), u(" "), u(Wb), u(" bibdata - solsort.com")].join(""), 
+              var L = c[9], J = c[10], q = c[8], T = c[2], ga = oh(T), Q = R.h(L, ga), we = ["related", Q], ja = new S(null, 2, 5, J, we, null), qa = ad.h(q, ja), Ka = U, hb = "title creator date classification isbn lid related".split(" "), Sa = new S(null, 7, 5, Ka, hb, null), Oa = Ie(qa, Sa), yb = [di, qi, ai, Mj], zb = qa.e ? qa.e("title") : qa.call(null, "title"), Kb = A(zb), Cb = qa.e ? qa.e("creator") : qa.call(null, "creator"), Wb = m(Cb), ib = [u(Kb), u(" "), u(Wb), u(" bibdata - solsort.com")].join(""), 
               tc = ["body", ".spaceabove", "ul"], Lc = ["margin"], Lb = ["5%"], rd = hd(Lc, Lb), Vd = ["margin-top"], xe = ["1ex"], bf = hd(Vd, xe), eg = ["margin-top"], Xc = ["0"], so = hd(eg, Xc), to = [rd, bf, so], Wi = hd(tc, to), Xi = U, uo = U, Ao = [tj, dj], $g = qa.e ? qa.e("type") : qa.call(null, "type"), vo = ds($g), wo = ["itemscope", vo], xo = hd(Ao, wo), yo = [wi, xo], Yi = new S(null, 2, 5, uo, yo, null), e = R.h(function() {
                 return function(a) {
                   return function(b) {
                     return $a($a($a(yc, a), a.e ? a.e(b) : a.call(null, b)), b);
                   };
-                }(qa, Oa, L, q, J, T, ga, Q, we, ja, qa, Ka, hb, Sa, Oa, yb, zb, Kb, Cb, Wb, ib, tc, Lc, Lb, rd, Vd, xe, bf, eg, Xc, so, to, Wi, Xi, uo, Ao, $g, vo, wo, xo, yo, Yi, d, b);
+                }(qa, Oa, L, J, q, T, ga, Q, we, ja, qa, Ka, hb, Sa, Oa, yb, zb, Kb, Cb, Wb, ib, tc, Lc, Lb, rd, Vd, xe, bf, eg, Xc, so, to, Wi, Xi, uo, Ao, $g, vo, wo, xo, yo, Yi, d, b);
               }(), Oa), e = R.h(cs, e), e = $r(e);
-              c[11] = ib;
-              c[12] = Xi;
-              c[13] = Wi;
-              c[14] = Yi;
-              c[15] = yb;
+              c[11] = yb;
+              c[12] = Yi;
+              c[13] = ib;
+              c[14] = Xi;
+              c[15] = Wi;
               return X(c, 7, e);
             }
-            return 7 === d ? (ib = c[11], Xi = c[12], Wi = c[13], Yi = c[14], yb = c[15], e = Je(Yi, Ie(Id, c[2])), e = hd(yb, ["html", ib, Wi, new S(null, 2, 5, Xi, [wi, e], null)]), Bk(c, e)) : null;
+            return 7 === d ? (yb = c[11], Yi = c[12], ib = c[13], Xi = c[14], Wi = c[15], e = Je(Yi, Ie(Id, c[2])), e = hd(yb, ["html", ib, Wi, new S(null, 2, 5, Xi, [wi, e], null)]), Bk(c, e)) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17944,15 +17944,15 @@ var gs = function(a) {
           return function(a) {
             var b = a[1];
             if (1 === b) {
-              var b = Z.k(H([new y(null, "bibdata", "bibdata", 1320898999, null), new y(null, "processing-data", "processing-data", -1352982332, null)], 0)), c = Pn("misc/lids"), c = ("" + u(c)).split("\n"), d = m(c), c = A(d), d = xc(d);
-              a[7] = c;
+              var b = Z.k(H([new y(null, "bibdata", "bibdata", 1320898999, null), new y(null, "processing-data", "processing-data", -1352982332, null)], 0)), c = En("misc/lids"), c = ("" + u(c)).split("\n"), d = m(c), c = A(d), d = xc(d);
+              a[7] = b;
               a[8] = d;
-              a[9] = b;
+              a[9] = c;
               a[2] = null;
               a[1] = 2;
               return V;
             }
-            return 2 === b ? (b = a[7], b = Zr(b), X(a, 4, b)) : 3 === b ? (b = a[2], Bk(a, b)) : 4 === b ? (b = a[8], c = a[2], b = xc(b), a[10] = c, a[1] = b ? 5 : 6, V) : 5 === b ? (b = a[8], c = A(b), b = xc(b), a[7] = c, a[8] = b, a[2] = null, a[1] = 2, V) : 6 === b ? (a[2] = null, a[1] = 7, V) : 7 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : null;
+            return 2 === b ? (b = a[9], b = Zr(b), X(a, 4, b)) : 3 === b ? (b = a[2], Bk(a, b)) : 4 === b ? (b = a[8], c = a[2], b = xc(b), a[10] = c, a[1] = b ? 5 : 6, V) : 5 === b ? (b = a[8], c = A(b), b = xc(b), a[8] = b, a[9] = c, a[2] = null, a[1] = 2, V) : 6 === b ? (a[2] = null, a[1] = 7, V) : 7 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -18022,7 +18022,7 @@ sn("update-server-from-webroot", function() {
           return function(a) {
             var b = a[1];
             if (1 === b) {
-              var b = new y(null, "update-server", "update-server", -82539246, null), c = Rn(hs);
+              var b = new y(null, "update-server", "update-server", -82539246, null), c = Gn(hs);
               a[7] = b;
               return X(a, 2, c);
             }
@@ -18103,7 +18103,7 @@ function is() {
               return b = a[2], Bk(a, b);
             }
             if (4 === b) {
-              var b = Z.k(H([new y(null, "uccorg", "uccorg", 1054848916, null), "(re-)starting dev proxy"], 0)), c = Rn("ssh uccorganism@93.165.158.107 -L 0.0.0.0:8080:localhost:8080 -N \x26 SSH_PID\x3d$!; sleep 300; kill $SSH_PID");
+              var b = Z.k(H([new y(null, "uccorg", "uccorg", 1054848916, null), "(re-)starting dev proxy"], 0)), c = Gn("ssh uccorganism@93.165.158.107 -L 0.0.0.0:8080:localhost:8080 -N \x26 SSH_PID\x3d$!; sleep 300; kill $SSH_PID");
               a[7] = b;
               return X(a, 7, c);
             }
@@ -18176,7 +18176,7 @@ function js() {
           return function(a) {
             var b = a[1];
             if (7 === b) {
-              var b = wn(a[2]), c = Z.k(H([new y(null, "uccorg", "uccorg", 1054848916, null), new y(null, "ok", "ok", -1686650533, null)], 0));
+              var b = Ln(a[2]), c = Z.k(H([new y(null, "uccorg", "uccorg", 1054848916, null), new y(null, "ok", "ok", -1686650533, null)], 0));
               a[7] = c;
               a[1] = r(b) ? 8 : 9;
               return V;
@@ -18185,16 +18185,16 @@ function js() {
               return b = is(), a[8] = b, a[2] = null, a[1] = 2, V;
             }
             if (4 === b) {
-              return b = Rn("ssh uccorganism@93.165.158.107 'curl -s localhost:8080/status'"), X(a, 7, b);
+              return b = Gn("ssh uccorganism@93.165.158.107 'curl -s localhost:8080/status'"), X(a, 7, b);
             }
             if (13 === b) {
-              var b = a[2], c = fh.k(H(["uccorg status:"], 0)), d = fh.k(H([new Date], 0)), n = Rn("ssh uccorganism@93.165.158.107 'curl -s localhost:8080/status'");
+              var b = a[2], c = fh.k(H(["uccorg status:"], 0)), d = fh.k(H([new Date], 0)), n = Gn("ssh uccorganism@93.165.158.107 'curl -s localhost:8080/status'");
               a[9] = b;
               a[10] = d;
               a[11] = c;
               return X(a, 14, n);
             }
-            return 6 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 3 === b ? (b = a[2], Bk(a, b)) : 12 === b ? (b = fh.k(H([a[2]], 0)), c = Jk(6E4), a[12] = b, X(a, 13, c)) : 2 === b ? (a[1] = 4, V) : 11 === b ? (b = a[2], a[2] = b, a[1] = 10, V) : 9 === b ? (b = fh.k(H([new y(null, "uccorg", "uccorg", 1054848916, null), "uccorg restart service"], 0)), c = fh.k(H([new Date], 0)), d = Rn("ssh uccorganism@93.165.158.107 'killall VBoxHeadless; launchctl load Library/LaunchAgents/apiserver.plist; launchctl start apiserver'"), 
+            return 6 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 3 === b ? (b = a[2], Bk(a, b)) : 12 === b ? (b = fh.k(H([a[2]], 0)), c = Jk(6E4), a[12] = b, X(a, 13, c)) : 2 === b ? (a[1] = 4, V) : 11 === b ? (b = a[2], a[2] = b, a[1] = 10, V) : 9 === b ? (b = fh.k(H([new y(null, "uccorg", "uccorg", 1054848916, null), "uccorg restart service"], 0)), c = fh.k(H([new Date], 0)), d = Gn("ssh uccorganism@93.165.158.107 'killall VBoxHeadless; launchctl load Library/LaunchAgents/apiserver.plist; launchctl start apiserver'"), 
             a[13] = b, a[14] = c, X(a, 12, d)) : 5 === b ? (a[2] = null, a[1] = 6, V) : 14 === b ? (b = fh.k(H([a[2]], 0)), a[2] = b, a[1] = 10, V) : 10 === b ? (a[15] = a[2], a[2] = null, a[1] = 2, V) : 8 === b ? (b = Jk(6E4), X(a, 11, b)) : null;
           };
         }(a), a);
@@ -18337,7 +18337,7 @@ ms("Presentation evaluation notes", new S(null, 4, 5, U, ["2012", "done", "notes
 ms("NoteScore", new S(null, 5, 5, U, ["2011", "beta", "app", "music", "edu"], null), "https://play.google.com/store/apps/details?id\x3ddk.solsort.notescore");
 ms("Danske Byer", new S(null, 3, 5, U, ["2011", "alpha", "edu"], null), "http://solsort.com/danske-byer");
 ms("CuteEngine", new S(null, 4, 5, U, ["2011", "unfinished", "game", "unfinished"], null), "http://solsort.com/cute-engine");
-var ps = qh(Pn);
+var ps = qh(En);
 sn("icons", function() {
   return{"http-headers":{"Content-Type":"text/plain"}, content:ps.e ? ps.e("misc/white.png") : ps.call(null, "misc/white.png")};
 });
@@ -18876,7 +18876,7 @@ function As(a, b) {
               return d = [u("https://dev.vejlebib.dk/ting-visual-relation/get-ting-object/"), u(b), u(":"), u(a)].join(""), d = go(d, H([Ch, !0], 0)), X(c, 2, d);
             }
             if (2 === d) {
-              return d = c[7], d = wn(c[2]), c[7] = d, c[1] = r(d) ? 3 : 4, V;
+              return d = c[7], d = Ln(c[2]), c[7] = d, c[1] = r(d) ? 3 : 4, V;
             }
             if (3 === d) {
               return d = c[7], c[2] = d, c[1] = 5, V;
@@ -18988,11 +18988,11 @@ Bs.H = function(a) {
   return Bs.k(b, a);
 };
 sn("bib", Bs);
-if (r(Gn)) {
+if (r(vn)) {
   var Cs = function() {
     var a;
     try {
-      a = Nn.readFileSync("/home/rasmuserik/notes/daylog.md", "utf8");
+      a = Cn.readFileSync("/home/rasmuserik/notes/daylog.md", "utf8");
     } catch (b) {
       if (b instanceof Object) {
         a = null;
@@ -19005,7 +19005,7 @@ if (r(Gn)) {
       K(a, 0);
       var c = K(a, 1);
       Od(a, 2);
-      zc.h(c.slice(0, 12), "Public Notes") && Nn.writeFile("misc/autogenerated-notes.md", c.slice(12), "utf8");
+      zc.h(c.slice(0, 12), "Public Notes") && Cn.writeFile("misc/autogenerated-notes.md", c.slice(12), "utf8");
       a = H([new y(null, "notes", "notes", 600931004, null), "error processing daylog"], 0);
       a = ne(Z, new y(null, "warn", "warn", 1203820975, null), a);
     } else {
@@ -19013,14 +19013,14 @@ if (r(Gn)) {
     }
     return a;
   };
-  Kn.e ? Kn.e(Cs) : Kn.call(null, Cs);
+  zn.e ? zn.e(Cs) : zn.call(null, Cs);
 }
 function Ds(a) {
   return a.toLowerCase().trim().replace(RegExp("[^a-z0-9]", "g"), "");
 }
 var Es = qh(function() {
-  if (r(Gn)) {
-    var a = Nn.readFileSync("misc/autogenerated-notes.md", "utf8"), b = a.split(/^## /m), c = K(b, 0), d = Od(b, 1), e = require("showdown").converter, f = new e, a = R.h(function(a, b, c, d, e, f) {
+  if (r(vn)) {
+    var a = Cn.readFileSync("misc/autogenerated-notes.md", "utf8"), b = a.split(/^## /m), c = K(b, 0), d = Od(b, 1), e = require("showdown").converter, f = new e, a = R.h(function(a, b, c, d, e, f) {
       return function(a) {
         var b = a.split("\n")[0];
         return new S(null, 2, 5, U, [Ds(b), new l(null, 3, [qi, b, th, [u("## "), u(a)].join(""), Mj, f.makeHtml.call(null, [u("##"), u(a)].join(""))], null)], null);
@@ -19033,7 +19033,7 @@ var Es = qh(function() {
 function Fs() {
   return Z.k(H([new y(null, "notes", "notes", 600931004, null), Cf(Es.j ? Es.j() : Es.call(null))], 0));
 }
-Kn.e ? Kn.e(Fs) : Kn.call(null, Fs);
+zn.e ? zn.e(Fs) : zn.call(null, Fs);
 function Gs(a) {
   var b = Y(1);
   W(function(b) {
@@ -19130,16 +19130,16 @@ function Js() {
 var Ks = O ? O(null) : ye.call(null, null), Ls = O ? O(null) : ye.call(null, null);
 kn("log", function(a) {
   a = [u(("" + u((a.info.src % 1E6 + 1E6) % 1E6 + 3E6)).slice(1)), u(" "), u([u(Is()), u("-"), u(Js()), u("."), u(("" + u((Date.now() % 1E3 + 1E3) % 1E3 + 3E3)).slice(1))].join("")), u(" "), u(a.data)].join("");
-  if (r(Gn)) {
+  if (r(vn)) {
     var b = Is(), b = [u("logs/"), u(require("os").hostname()), u("-"), u(b), u(".log")].join("");
     if (!zc.h(C.e ? C.e(Ks) : C.call(null, Ks), b)) {
       if (r(C.e ? C.e(Ls) : C.call(null, Ls))) {
         var c = C.e ? C.e(Ks) : C.call(null, Ks);
-        (C.e ? C.e(Ls) : C.call(null, Ls)).on("close", Rn([u("xz -9 "), u(c)].join("")));
+        (C.e ? C.e(Ls) : C.call(null, Ls)).on("close", Gn([u("xz -9 "), u(c)].join("")));
         (C.e ? C.e(Ls) : C.call(null, Ls)).end();
       }
-      On("logs/");
-      c = Nn.createWriteStream(b, {flags:"a"});
+      Dn("logs/");
+      c = Cn.createWriteStream(b, {flags:"a"});
       P.h ? P.h(Ls, c) : P.call(null, Ls, c);
       P.h ? P.h(Ks, b) : P.call(null, Ks, b);
     }
@@ -19147,7 +19147,7 @@ kn("log", function(a) {
   }
   return console.log(a);
 });
-Z.k(H([new y(null, "system", "system", 1611149803, null), new y(null, "boot", "boot", -646575184, null), [u(r(Gn) ? "node" : null), u(r(Fn) ? "browser" : null)].join("")], 0));
+Z.k(H([new y(null, "system", "system", 1611149803, null), new y(null, "boot", "boot", -646575184, null), [u(r(vn) ? "node" : null), u(r(un) ? "browser" : null)].join("")], 0));
 function Ms(a, b) {
   Ce.F(a, gd, b, fd(C.e ? C.e(a) : C.call(null, a), b, 0) + 1);
   var c;
@@ -19291,14 +19291,14 @@ function Ws(a) {
   }(b));
 }
 sn("bib-process", function() {
-  var a = ue(zn(H(["writing stats.jsonl"], 0)), R.e(function(a) {
+  var a = ue(On(H(["writing stats.jsonl"], 0)), R.e(function(a) {
     return Um(a, /,/);
   }), R.e(function(a) {
     return R.h(Vm, a);
   }), H([R.e(function(a) {
     return ie.h($a(yc, dd(a, 5)), a);
-  }), yn, R.e(Vs)], 0)), b = Lk(1, a);
-  Qk(Qn("../final_adhl.sorted.csv"), b);
+  }), Nn, R.e(Vs)], 0)), b = Lk(1, a);
+  Qk(Fn("../final_adhl.sorted.csv"), b);
   Ws(b);
   fh.k(H(["done stats.jsonl"], 0));
   var c = Y(1);
