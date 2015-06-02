@@ -17804,6 +17804,7 @@ hn("index", function() {
   ii], null)], null), Ee(new R(null, 2, 5, S, [oi, zf], null), Q.j(Xq, F.h ? F.h(Uq) : F.call(null, Uq)))], null)], null)], null);
 });
 Wq("Rasmus Erik Voel Jensen", new R(null, 3, 5, S, ["developer", "company owner", "computer scientist"], null), "/rasmuserik.html");
+Wq("Blog", new R(null, 1, 5, S, ["2015"], null), "/blog/");
 Wq("BibData", new R(null, 1, 5, S, ["2015"], null), "/bibdata/");
 Wq("Barefoot Tango", new R(null, 1, 5, S, ["2015"], null), "/notes/barefoot-tango");
 Wq("Repeat record", new R(null, 5, 5, S, ["2015", "utility", "webapp", "firefox-only", "video"], null), "/#repeat-record/10");
