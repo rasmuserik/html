@@ -1,0 +1,21 @@
+/*
+ Theme Name:   Solsort Child
+ Theme URI:    https://solsort.com
+ Description:  Simple child theme for solsort.com
+ Author:       Rasmus Erik Voel Jensen
+ Author URI:   https://solsort.com
+ Template:     twentyfifteen
+ Version:      0.0.1
+ License:      MIT
+ License URI:  http://opensource.org/licenses/MIT
+ Tags:         style+misc
+ Text Domain:  solsort-child
+*/
+@font-face {
+  font-family:Ubuntu;
+  font-weight:400;
+  src:url(/font/ubuntu-latin1.ttf) format(truetype)
+}
+div {
+ font-family:Ubuntu,sans-serif
+}
