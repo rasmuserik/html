@@ -19,8 +19,10 @@ blog/wp-signup.php
 blog/wp-trackback.php
 blog/xmlrpc.php
 blog/wp-content/index.php
-blog/wp-content/plugins
 blog/wp-content/themes/index.php
 blog/wp-content/themes/twentyfifteen
 blog/wp-content/themes/twentyfourteen
 blog/wp-content/themes/twentythirteen
+blog/wp-content/plugins/akismet
+blog/wp-content/plugins/index.php
+blog/wp-content/plugins/hello.php
