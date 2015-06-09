@@ -11070,83 +11070,7 @@ if (r(r(En) ? Ga(Dn) : En)) {
   Cn.localStorage = ao;
   Cn.React = require("react");
 }
-;var co = [u("git pull \x26\x26"), u("cd ../webroot \x26\x26"), u("git checkout . \x26\x26"), u("git pull \x26\x26"), u("cp solsort.js ../solsort/solsort.js")].join("");
-mn("update-server-from-webroot", function() {
-  var a = Z(1);
-  W(function(a) {
-    return function() {
-      var c = function() {
-        return function(a) {
-          return function() {
-            function b(c) {
-              for (;;) {
-                var d;
-                a: {
-                  try {
-                    for (;;) {
-                      var f = a(c);
-                      if (!N(f, V)) {
-                        d = f;
-                        break a;
-                      }
-                    }
-                  } catch (g) {
-                    if (g instanceof Object) {
-                      c[5] = g, tk(c), d = V;
-                    } else {
-                      throw g;
-                    }
-                  }
-                }
-                if (!N(d, V)) {
-                  return d;
-                }
-              }
-            }
-            function c() {
-              var a = [null, null, null, null, null, null, null, null];
-              a[0] = d;
-              a[1] = 1;
-              return a;
-            }
-            var d = null, d = function(a) {
-              switch(arguments.length) {
-                case 0:
-                  return c.call(this);
-                case 1:
-                  return b.call(this, a);
-              }
-              throw Error("Invalid arity: " + arguments.length);
-            };
-            d.l = c;
-            d.h = b;
-            return d;
-          }();
-        }(function() {
-          return function(a) {
-            var b = a[1];
-            if (1 === b) {
-              var b = new y(null, "update-server", "update-server", -82539246, null), c = Xn(co);
-              a[7] = b;
-              return Y(a, 2, c);
-            }
-            return 2 === b ? (b = a[7], b = nn.v(H([b, a[2]], 0)), sk(a, b)) : null;
-          };
-        }(a), a);
-      }(), d = function() {
-        var e = c.l ? c.l() : c.call(null);
-        e[6] = a;
-        return e;
-      }();
-      return X(d);
-    };
-  }(a));
-  return a;
-});
-mn("server-time", function() {
-  return (new Date).toISOString();
-});
-function eo() {
+;function co() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -11283,7 +11207,7 @@ mn("test-server", function() {
           return function(a) {
             var b = a[1];
             if (1 === b) {
-              return b = eo(), Y(a, 2, b);
+              return b = co(), Y(a, 2, b);
             }
             if (2 === b) {
               var b = a[2], c = Ak(3E4);
@@ -11301,9 +11225,9 @@ mn("test-server", function() {
           };
         }(a), a);
       }(), d = function() {
-        var d = c.l ? c.l() : c.call(null);
-        d[6] = a;
-        return d;
+        var e = c.l ? c.l() : c.call(null);
+        e[6] = a;
+        return e;
       }();
       return X(d);
     };
@@ -11368,7 +11292,7 @@ mn("test-client", function() {
           }(function() {
             return function(a) {
               var b = a[1];
-              return 1 === b ? (b = eo(), Y(a, 2, b)) : 2 === b ? (b = a[2], a[1] = r(b) ? 3 : 4, V) : 3 === b ? (b = location.href = "/test-ok", a[2] = b, a[1] = 5, V) : 4 === b ? (a[2] = null, a[1] = 5, V) : 5 === b ? (b = a[2], sk(a, b)) : null;
+              return 1 === b ? (b = co(), Y(a, 2, b)) : 2 === b ? (b = a[2], a[1] = r(b) ? 3 : 4, V) : 3 === b ? (b = location.href = "/test-ok", a[2] = b, a[1] = 5, V) : 4 === b ? (a[2] = null, a[1] = 5, V) : 5 === b ? (b = a[2], sk(a, b)) : null;
             };
           }(a), a);
         }(), d = function() {
@@ -11452,10 +11376,13 @@ mn("solsort", function() {
   }(a));
   return a;
 });
-var fo, go = Af;
-fo = O ? O(go) : ue.call(null, go);
-function ho(a) {
-  for (var b = q(xf(F.h ? F.h(fo) : F.call(null, fo))), c = null, d = 0, e = 0;;) {
+mn("server-time", function() {
+  return (new Date).toISOString();
+});
+var eo, fo = Af;
+eo = O ? O(fo) : ue.call(null, fo);
+function go(a) {
+  for (var b = q(xf(F.h ? F.h(eo) : F.call(null, eo))), c = null, d = 0, e = 0;;) {
     if (e < d) {
       var f = c.R(null, e);
       Qm(f, a, null);
@@ -11469,22 +11396,22 @@ function ho(a) {
     }
   }
 }
-function io(a) {
-  return (F.h ? F.h(fo) : F.call(null, fo)).call(null, a.pid).send(JSON.stringify(a));
+function ho(a) {
+  return (F.h ? F.h(eo) : F.call(null, eo)).call(null, a.pid).send(JSON.stringify(a));
 }
-function jo(a, b) {
-  ye.I(an, cd, a, io);
-  ye.I(fo, cd, a, b);
-  nn.v(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "added-connection", "added-connection", -1511745713, null), a, F.h ? F.h(fo) : F.call(null, fo)], 0));
+function io(a, b) {
+  ye.I(an, cd, a, ho);
+  ye.I(eo, cd, a, b);
+  nn.v(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "added-connection", "added-connection", -1511745713, null), a, F.h ? F.h(eo) : F.call(null, eo)], 0));
 }
-function ko(a) {
+function jo(a) {
   return function() {
     nn.v(H([new y(null, "ws", "ws", 1727372970, null), a, new y(null, "close", "close", -819286187, null)], 0));
     ye.w(an, ed, a);
-    return ye.w(fo, ed, a);
+    return ye.w(eo, ed, a);
   };
 }
-function lo(a) {
+function ko(a) {
   return function(b) {
     b = JSON.parse(b);
     b.src = [u("ws:"), u(a)].join("");
@@ -11494,7 +11421,7 @@ function lo(a) {
 }
 if (r(En)) {
   require("ws");
-  var mo = function(a) {
+  var lo = function(a) {
     nn.v(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "start", "start", 1285322546, null)], 0));
     var b = require("ws");
     a = new b.Server({server:a});
@@ -11506,12 +11433,12 @@ if (r(En)) {
           return function(c) {
             c = JSON.parse(c);
             var d = c.pid;
-            r(d) && (ye.w(en, Wc, d), e.removeAllListeners("message"), e.on("message", lo(d)), e.on("close", function(a, b) {
+            r(d) && (ye.w(en, Wc, d), e.removeAllListeners("message"), e.on("message", ko(d)), e.on("close", function(a, b) {
               return function() {
                 ye.w(en, jd, b);
-                return ko(b);
+                return jo(b);
               };
-            }(c, d, a, b)), jo(d, e));
+            }(c, d, a, b)), io(d, e));
             return r(d) ? null : nn.v(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "error-unexpected-first-message", "error-unexpected-first-message", 1748325049, null), c], 0));
           };
         }(a, b));
@@ -11520,7 +11447,7 @@ if (r(En)) {
   };
 }
 if (r(Dn)) {
-  var no = Z(1);
+  var mo = Z(1);
   W(function(a) {
     return function() {
       var b = function() {
@@ -11583,7 +11510,7 @@ if (r(Dn)) {
               return b = a[2], sk(a, b);
             }
             if (4 === b) {
-              var b = a[2], c = ho("keep-alive");
+              var b = a[2], c = go("keep-alive");
               a[7] = b;
               a[8] = c;
               a[2] = null;
@@ -11600,10 +11527,10 @@ if (r(Dn)) {
       }();
       return X(c);
     };
-  }(no));
-  var oo = vc.j(-1, location.origin.indexOf("solsort")) ? vc.j("http", location.origin.slice(0, 4)) ? [u(location.origin.replace(/https?/, "ws")), u("/ws/")].join("") : "ws://ws.solsort.com/ws/" : "ws://ws.solsort.com/ws/", qo = function po() {
+  }(mo));
+  var no = vc.j(-1, location.origin.indexOf("solsort")) ? vc.j("http", location.origin.slice(0, 4)) ? [u(location.origin.replace(/https?/, "ws")), u("/ws/")].join("") : "ws://ws.solsort.com/ws/" : "ws://ws.solsort.com/ws/", po = function oo() {
     nn.v(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "connect", "connect", -1421607536, null)], 0));
-    var b = new WebSocket(oo);
+    var b = new WebSocket(no);
     b.onopen = function(b) {
       return function() {
         return b.send(JSON.stringify({pid:$m}));
@@ -11675,7 +11602,7 @@ if (r(Dn)) {
                     return c = Ak(1E3), Y(b, 2, c);
                   }
                   if (2 === c) {
-                    var c = b[2], d = po();
+                    var c = b[2], d = oo();
                     b[7] = c;
                     return sk(b, d);
                   }
@@ -11697,7 +11624,7 @@ if (r(Dn)) {
       return function(d) {
         nn.v(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "message", "message", 1234475525, null)], 0));
         d = JSON.parse(d.data);
-        var e = d.pid, f = lo(e);
+        var e = d.pid, f = ko(e);
         return r(e) ? (b.onmessage = function(b, c, d) {
           return function(b) {
             b = b.data;
@@ -11706,19 +11633,19 @@ if (r(Dn)) {
         }(d, e, f, b), b.onclose = function() {
           return function() {
             Q.j ? Q.j(dn, null) : Q.call(null, dn, null);
-            return $n.h ? $n.h(po) : $n.call(null, po);
+            return $n.h ? $n.h(oo) : $n.call(null, oo);
           };
-        }(d, e, f, b), jo(e, b), Q.j ? Q.j(dn, e) : Q.call(null, dn, e)) : nn.v(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "error-unexpected-first-message", "error-unexpected-first-message", 1748325049, null), d], 0));
+        }(d, e, f, b), io(e, b), Q.j ? Q.j(dn, e) : Q.call(null, dn, e)) : nn.v(H([new y(null, "ws", "ws", 1727372970, null), new y(null, "error-unexpected-first-message", "error-unexpected-first-message", 1748325049, null), d], 0));
       };
     }(b);
   };
-  $n.h ? $n.h(qo) : $n.call(null, qo);
+  $n.h ? $n.h(po) : $n.call(null, po);
 }
-function ro() {
+function qo() {
   var a = 1 < arguments.length ? new Ba(Array.prototype.slice.call(arguments, 1), 0) : null;
-  return so(arguments[0], a);
+  return ro(arguments[0], a);
 }
-function so(a, b) {
+function ro(a, b) {
   var c = ud(b) ? ie(ve, b) : b, d = ad(c, vi), e = ad(c, Yi), f = ad(c, yh);
   if (r(r(f) ? Dn : f)) {
     var g = [u(a), u("?callback\x3d")].join(""), k = Z(null), m = Xm.l ? Xm.l() : Xm.call(null);
@@ -11743,7 +11670,7 @@ function so(a, b) {
   return k;
 }
 ;r(En) && Pn.watch(__filename, mh(function() {
-  ho("reload");
+  go("reload");
   nn.v(H([new y(null, "system", "system", 1611149803, null), new y(null, "source-change", "source-change", 2075892023, null), new y(null, "restarting", "restarting", -1893758197, null)], 0));
   return Yn(0);
 }));
@@ -11824,36 +11751,36 @@ r(Dn) && ("undefined" !== typeof applicationCache && (applicationCache.onupdater
   }(a));
   return a;
 }));
-function to(a) {
+function so(a) {
   return Im(Td(a), function(a) {
     return [u("-"), u(a.toLowerCase())].join("");
   });
 }
 qn(new y(null, "css-name", "css-name", -2011163427, null), function() {
-  return vc.j(to(wh), "-foo-bar");
+  return vc.j(so(wh), "-foo-bar");
 });
+function to(a) {
+  var b = J(a, 0);
+  a = J(a, 1);
+  return [u(so(b)), u(":"), u("number" === typeof a ? [u(a), u("px")].join("") : Td(a))].join("");
+}
 function uo(a) {
   var b = J(a, 0);
   a = J(a, 1);
-  return [u(to(b)), u(":"), u("number" === typeof a ? [u(a), u("px")].join("") : Td(a))].join("");
+  return [u(Td(b)), u("{"), u(Km(";", R.j(to, q(a)))), u("}")].join("");
 }
 function vo(a) {
-  var b = J(a, 0);
-  a = J(a, 1);
-  return [u(Td(b)), u("{"), u(Km(";", R.j(uo, q(a)))), u("}")].join("");
+  Jm(R.j(u, q(a)));
+  return Jm(R.j(uo, q(a)));
 }
 function wo(a) {
-  Jm(R.j(u, q(a)));
-  return Jm(R.j(vo, q(a)));
-}
-function xo(a) {
-  return wo(kh(a));
+  return vo(kh(a));
 }
 qn(new y(null, "clj-\x3ecss", "clj-\x3ecss", -359189480, null), function() {
-  return vc.j(wo(new l(null, 2, [hj, new l(null, 2, [Fi, hi, aj, 14], null), ej, new l(null, 1, [Uh, Bi], null)], null)), "h1{font-weight:normal;font-size:14px}.div{background:blue}");
+  return vc.j(vo(new l(null, 2, [hj, new l(null, 2, [Fi, hi, aj, 14], null), ej, new l(null, 1, [Uh, Bi], null)], null)), "h1{font-weight:normal;font-size:14px}.div{background:blue}");
 });
-var yo, zo = new l(null, 5, ["@font-face", new l(null, 3, [ti, "Ubuntu", Fi, "400", ai, "url(/font/ubuntu-latin1.ttf)format(truetype)"], null), ni, new l(null, 1, [Ej, "5%"], null), tj, new l(null, 4, [Ej, 5, Ei, 5, Gh, 5, kj, "1px solid black"], null), lj, new l(null, 3, [Ej, 0, Ei, 0, ti, "Ubuntu, sans-serif"], null), pi, new l(null, 2, [Ej, 0, Ei, 0], null)], null);
-yo = O ? O(zo) : ue.call(null, zo);
+var xo, yo = new l(null, 5, ["@font-face", new l(null, 3, [ti, "Ubuntu", Fi, "400", ai, "url(/font/ubuntu-latin1.ttf)format(truetype)"], null), ni, new l(null, 1, [Ej, "5%"], null), tj, new l(null, 4, [Ej, 5, Ei, 5, Gh, 5, kj, "1px solid black"], null), lj, new l(null, 3, [Ej, 0, Ei, 0, ti, "Ubuntu, sans-serif"], null), pi, new l(null, 2, [Ej, 0, Ei, 0], null)], null);
+xo = O ? O(yo) : ue.call(null, yo);
 mn("style", function() {
   var a = Z(1);
   W(function(a) {
@@ -11908,7 +11835,7 @@ mn("style", function() {
         }(function() {
           return function(a) {
             if (1 === a[1]) {
-              var b = [wi, Lh], c = dd([oj], ["text/css"]), d = F.h ? F.h(yo) : F.call(null, yo), d = wo(d), b = dd(b, [c, d]), b = gh(b);
+              var b = [wi, Lh], c = dd([oj], ["text/css"]), d = F.h ? F.h(xo) : F.call(null, xo), d = vo(d), b = dd(b, [c, d]), b = gh(b);
               return sk(a, b);
             }
             return null;
@@ -11924,24 +11851,24 @@ mn("style", function() {
   }(a));
   return a;
 });
-var Ao, Bo = Af;
-Ao = O ? O(Bo) : ue.call(null, Bo);
-var Co = Af;
-O || ue.call(null, Co);
-var Do = O ? O(null) : ue.call(null, null), Eo, Fo = Af;
-Eo = O ? O(Fo) : ue.call(null, Fo);
-function Go(a) {
+var zo, Ao = Af;
+zo = O ? O(Ao) : ue.call(null, Ao);
+var Bo = Af;
+O || ue.call(null, Bo);
+var Co = O ? O(null) : ue.call(null, null), Do, Eo = Af;
+Do = O ? O(Eo) : ue.call(null, Eo);
+function Fo(a) {
   a = a.target;
-  ye.I(Eo, cd, a.name, a.value);
-  a = F.h ? F.h(Do) : F.call(null, Do);
-  return Ho.h ? Ho.h(a) : Ho.call(null, a);
+  ye.I(Do, cd, a.name, a.value);
+  a = F.h ? F.h(Co) : F.call(null, Co);
+  return Go.h ? Go.h(a) : Go.call(null, a);
 }
+function Ho(a, b) {
+  var c = J(b, 0), d = J(b, 1), e = Jd(b, 2), f = Oh.h(d), f = (F.h ? F.h(Do) : F.call(null, Do)).call(null, f), d = r(f) ? cd.w(d, "value", f) : d;
+  return Fe(new S(null, 2, 5, U, [c, cd.w(d, "onChange", Fo)], null), e);
+}
+r(Dn) && (ye.I(zo, cd, "input", Ho), ye.I(zo, cd, "textarea", Ho), ye.I(zo, cd, "select", Ho));
 function Io(a, b) {
-  var c = J(b, 0), d = J(b, 1), e = Jd(b, 2), f = Oh.h(d), f = (F.h ? F.h(Eo) : F.call(null, Eo)).call(null, f), d = r(f) ? cd.w(d, "value", f) : d;
-  return Fe(new S(null, 2, 5, U, [c, cd.w(d, "onChange", Go)], null), e);
-}
-r(Dn) && (ye.I(Ao, cd, "input", Io), ye.I(Ao, cd, "textarea", Io), ye.I(Ao, cd, "select", Io));
-function Jo(a, b) {
   var c = Pg(/^[^.#]*/, a), d = Pg(/[#]([^.#]*)/, a);
   J(d, 0);
   d = J(d, 1);
@@ -11952,14 +11879,14 @@ function Jo(a, b) {
   return new S(null, 2, 5, U, [c, d], null);
 }
 qn(new y(null, "parse-class-none", "parse-class-none", -1311490385, null), function() {
-  return vc.j(Jo("foo", Af), new S(null, 2, 5, U, ["foo", Af], null));
+  return vc.j(Io("foo", Af), new S(null, 2, 5, U, ["foo", Af], null));
 });
 qn(new y(null, "parse-class", "parse-class", -1795224311, null), function() {
-  return vc.j(Jo("foo.bar#baz.Quux", new l(null, 1, ["className", "hi lo"], null)), new S(null, 2, 5, U, ["foo", new l(null, 2, ["className", "hi lo bar Quux", "id", "baz"], null)], null));
+  return vc.j(Io("foo.bar#baz.Quux", new l(null, 1, ["className", "hi lo"], null)), new S(null, 2, 5, U, ["foo", new l(null, 2, ["className", "hi lo bar Quux", "id", "baz"], null)], null));
 });
-var Ko = function Ko(b) {
+var Jo = function Jo(b) {
   if (md(b)) {
-    var c = nd(Vc(b)), d = c ? Ae(2, b) : Ae(1, b), e = R.j(Ko, d), f = c ? Vc(b) : Af, g = Td(A(b)), k = Jo(g, f), m = J(k, 0), p = J(k, 1), n = (F.h ? F.h(Ao) : F.call(null, Ao)).call(null, m), v = function() {
+    var c = nd(Vc(b)), d = c ? Ae(2, b) : Ae(1, b), e = R.j(Jo, d), f = c ? Vc(b) : Af, g = Td(A(b)), k = Io(g, f), m = J(k, 0), p = J(k, 1), n = (F.h ? F.h(zo) : F.call(null, zo)).call(null, m), v = function() {
       return r(n) ? n : function() {
         return function(b, c) {
           return c;
@@ -11974,39 +11901,39 @@ var Ko = function Ko(b) {
 };
 qn(new y(null, "clj-\x3ereact-1", "clj-\x3ereact-1", -1427279050, null), function() {
   return vc.j(function() {
-    var a = Ko(new S(null, 2, 5, U, [Jh, new S(null, 2, 5, U, [si, "hello"], null)], null));
+    var a = Jo(new S(null, 2, 5, U, [Jh, new S(null, 2, 5, U, [si, "hello"], null)], null));
     return React.renderToStaticMarkup(a);
   }(), '\x3cdiv class\x3d"foo"\x3e\x3cspan id\x3d"foo"\x3ehello\x3c/span\x3e\x3c/div\x3e');
 });
-function Lo(a) {
+function Ko(a) {
   return {"http-headers":{"Content-Type":"text/html;charset\x3dUTF-8"}, content:[u("\x3c!DOCTYPE html\x3e\x3chtml"), u(r(sh.h(a)) ? ' manifest\x3d"/solsort.appcache"' : ""), u("\x3e\x3chead\x3e"), u("\x3ctitle\x3e"), u(function() {
     var b = ii.h(a);
     return r(b) ? b : "solsort.com";
   }()), u("\x3c/title\x3e"), u('\x3cmeta http-equiv\x3d"Content-Type" content\x3d"text/html;charset\x3dUTF-8"\x3e'), u('\x3cmeta http-equiv\x3d"X-UA-Compatible" content\x3d"IE\x3dedge,chrome\x3d1"\x3e'), u('\x3cmeta name\x3d"viewport" content\x3d"'), u("width\x3ddevice-width, initial-scale\x3d1.0"), u(r(vh.h(a)) ? ", minimum-scale\x3d1.0, maximum-scale\x3d1.0, user-scalable\x3d0" : ""), u('"\x3e'), u('\x3cmeta name\x3d"format-detection" content\x3d"telephone\x3dno"\x3e'), u("\x3clink href\x3d/style.css rel\x3dstylesheet\x3e"), 
-  u("\x3cstyle id\x3dstyle\x3e"), u(r(Vh.h(a)) ? xo(gh(Vh.h(a))) : null), u("\x3c/style\x3e"), u("\x3c/head\x3e\x3cbody\x3e"), u(function() {
+  u("\x3cstyle id\x3dstyle\x3e"), u(r(Vh.h(a)) ? wo(gh(Vh.h(a))) : null), u("\x3c/style\x3e"), u("\x3c/head\x3e\x3cbody\x3e"), u(function() {
     var b = jj.h(a);
     if (r(b)) {
       return b;
     }
-    b = Ko(Bj.h(a));
+    b = Jo(Bj.h(a));
     return React.renderToStaticMarkup(b);
   }()), u('\x3cscript src\x3d"/solsort.js"\x3e\x3c/script\x3e'), u("\x3c/body\x3e\x3c/html\x3e")].join("")};
 }
-function Ho(a) {
-  Q.j ? Q.j(Do, a) : Q.call(null, Do, a);
+function Go(a) {
+  Q.j ? Q.j(Co, a) : Q.call(null, Co, a);
   if (r(Vh.h(a))) {
     var b;
     b = document.getElementById("style");
     r(b) || (b = document.createElement("style"), b.id = "style", document.head.appendChild(b));
-    var c = xo(gh(Vh.h(a)));
+    var c = wo(gh(Vh.h(a)));
     b.innerHTML = c;
   }
-  r(jj.h(a)) ? document.body.innerHTML = jj.h(a) : (b = Ko(Bj.h(a)), React.render(b, document.body));
+  r(jj.h(a)) ? document.body.innerHTML = jj.h(a) : (b = Jo(Bj.h(a)), React.render(b, document.body));
   r(ii.h(a)) && (document.getElementsByTagName("title")[0].innerHTML = ii.h(a));
   return !0;
 }
 ;Aa();
-function Mo() {
+function Lo() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -12092,7 +12019,7 @@ function Mo() {
             }
             return 31 === b ? (a[2] = null, a[1] = 32, V) : 32 === b ? (b = a[9], a[12] = a[2], a[2] = b, a[1] = 22, V) : 13 === b ? (b = a[2], a[2] = b, a[1] = 10, V) : 22 === b ? (b = a[2], sk(a, b)) : 29 === b ? (b = a[2], a[1] = r(b) ? 30 : 31, V) : 6 === b ? (a[2] = global.process, a[1] = 7, V) : 28 === b ? (a[2] = Dn, a[1] = 29, V) : 25 === b ? (b = a[2], a[9] = b, a[1] = r(Dn) ? 27 : 28, V) : 17 === b ? (b = window.location.hash.slice(1).split(/[\/.]/), a[2] = b, a[1] = 19, V) : 3 === b ? 
             (b = a[10], a[2] = b, a[1] = 4, V) : 12 === b ? (b = a[13], a[2] = b, a[1] = 13, V) : 2 === b ? (a[1] = r(global.process) ? 5 : 6, V) : 23 === b ? (b = a[7], Y(a, 26, b)) : 19 === b ? (b = a[2], a[2] = b, a[1] = 16, V) : 11 === b ? (a[1] = r(window) ? 14 : 15, V) : 9 === b ? (b = "undefined" !== typeof window, a[13] = b, a[1] = r(b) ? 11 : 12, V) : 5 === b ? (b = global.process.argv.slice(2), a[2] = b, a[1] = 7, V) : 14 === b ? (a[1] = r(window.location) ? 17 : 18, V) : 26 === b ? (b = 
-            a[2], a[2] = b, a[1] = 25, V) : 16 === b ? (b = a[2], a[2] = b, a[1] = 13, V) : 30 === b ? (b = a[9], b = Ho(b), a[2] = b, a[1] = 32, V) : 10 === b ? (b = a[2], c = nn.v(H([new y(null, "routes", "routes", 2098431689, null), new y(null, "starting", "starting", -211609939, null), b], 0)), d = ad(b, 0), d = cn(d), a[14] = c, a[8] = b, a[1] = r(d) ? 20 : 21, V) : 18 === b ? (a[2] = window.location, a[1] = 19, V) : 8 === b ? (b = a[11], a[2] = b, a[1] = 10, V) : null;
+            a[2], a[2] = b, a[1] = 25, V) : 16 === b ? (b = a[2], a[2] = b, a[1] = 13, V) : 30 === b ? (b = a[9], b = Go(b), a[2] = b, a[1] = 32, V) : 10 === b ? (b = a[2], c = nn.v(H([new y(null, "routes", "routes", 2098431689, null), new y(null, "starting", "starting", -211609939, null), b], 0)), d = ad(b, 0), d = cn(d), a[14] = c, a[8] = b, a[1] = r(d) ? 20 : 21, V) : 18 === b ? (a[2] = window.location, a[1] = 19, V) : 8 === b ? (b = a[11], a[2] = b, a[1] = 10, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -12105,14 +12032,14 @@ function Mo() {
   }(a));
   return a;
 }
-$n.h ? $n.h(Mo) : $n.call(null, Mo);
-r(Dn) && (window.onhashchange = Mo);
+$n.h ? $n.h(Lo) : $n.call(null, Lo);
+r(Dn) && (window.onhashchange = Lo);
 if (r(En)) {
-  var No = mh(Rn), Oo = function Oo() {
+  var Mo = mh(Rn), No = function No() {
     var b = 0 < arguments.length ? new Ba(Array.prototype.slice.call(arguments, 0), 0) : null;
-    return Oo.v(b);
+    return No.v(b);
   };
-  Oo.v = function(a) {
+  No.v = function(a) {
     a: {
       for (;;) {
         var b = B(a);
@@ -12126,19 +12053,19 @@ if (r(En)) {
     }
     switch(a) {
       case "png":
-        return {"http-headers":{"Content-Type":"image/png"}, content:No.h ? No.h("misc/_default.png") : No.call(null, "misc/_default.png")};
+        return {"http-headers":{"Content-Type":"image/png"}, content:Mo.h ? Mo.h("misc/_default.png") : Mo.call(null, "misc/_default.png")};
       case "gif":
-        return {"http-headers":{"Content-Type":"image/gif"}, content:No.h ? No.h("misc/_default.gif") : No.call(null, "misc/_default.gif")};
+        return {"http-headers":{"Content-Type":"image/gif"}, content:Mo.h ? Mo.h("misc/_default.gif") : Mo.call(null, "misc/_default.gif")};
       default:
         return {error:"not-implemented"};
     }
   };
-  Oo.K = 0;
-  Oo.J = function(a) {
-    return Oo.v(q(a));
+  No.K = 0;
+  No.J = function(a) {
+    return No.v(q(a));
   };
-  mn("default-route", Oo);
-  var Po = function(a, b) {
+  mn("default-route", No);
+  var Oo = function(a, b) {
     var c = Z(1);
     W(function(c) {
       return function() {
@@ -12213,7 +12140,7 @@ if (r(En)) {
               return 4 === d ? (e = c[11], d = c[2], f = cn(e), c[13] = d, c[1] = r(f) ? 5 : 6, V) : 15 === d ? (d = c[14], f = c[15], d = b.set(d), f = b.send(f.content), c[16] = d, c[2] = f, c[1] = 17, V) : 13 === d ? (d = c[17], c[2] = d, c[1] = 14, V) : 6 === d ? (d = c[13], e = c[11], f = U, d = ["default-route", Fe(new S(null, 1, 5, U, [e], null), d)], d = new S(null, 2, 5, f, d, null), c[2] = d, c[1] = 7, V) : 17 === d ? (f = c[10], d = c[2], e = new y(null, "web", "web", 985830374, null), 
               v = a.url, f = [u(Date.now() - f), u("ms")].join(""), f = nn.v(H([e, v, f, a.headers["x-solsort-remote-addr"], a.body], 0)), c[18] = d, sk(c, f)) : 3 === d ? (v = c[12], c[2] = v, c[1] = 4, V) : 12 === d ? (f = c[15], d = f.content, c[2] = d, c[1] = 14, V) : 2 === d ? (d = c[9], v = c[12], d = G(d, v), c[2] = d, c[1] = 4, V) : 19 === d ? (f = c[15], d = JSON.stringify(f), c[2] = d, c[1] = 20, V) : 11 === d ? (d = c[2], c[1] = r(d) ? 15 : 16, V) : 9 === d ? (d = c[14], d = d["Content-Type"], 
               c[17] = d, c[1] = r(d) ? 12 : 13, V) : 5 === d ? (d = c[13], e = c[11], d = new S(null, 2, 5, U, [e, d], null), c[2] = d, c[1] = 7, V) : 14 === d ? (d = c[2], c[2] = d, c[1] = 11, V) : 16 === d ? (d = c[8], f = b.set("Content-Type", "application/javascript"), c[19] = f, c[1] = r(d) ? 18 : 19, V) : 10 === d ? (d = c[14], c[2] = d, c[1] = 11, V) : 18 === d ? (d = c[8], f = c[15], f = JSON.stringify(f), d = [u(d), u("("), u(f), u(")")].join(""), c[2] = d, c[1] = 20, V) : 8 === d ? (d = 
-              c[2], d = null == d ? {"http-headers":{"Content-Type":"text/plain"}, content:"nil"} : vc.j("html", Xh.h(d)) ? Lo(d) : gh(d), f = d["http-headers"], c[14] = f, c[15] = d, c[1] = r(f) ? 9 : 10, V) : null;
+              c[2], d = null == d ? {"http-headers":{"Content-Type":"text/plain"}, content:"nil"} : vc.j("html", Xh.h(d)) ? Ko(d) : gh(d), f = d["http-headers"], c[14] = f, c[15] = d, c[1] = r(f) ? 9 : 10, V) : null;
             };
           }(c), c);
         }(), f = function() {
@@ -12225,7 +12152,7 @@ if (r(En)) {
       };
     }(c));
     return c;
-  }, Qo = function() {
+  }, Po = function() {
     var a = require("express"), a = a.l ? a.l() : a.call(null), b = require("body-parser"), c = function() {
       var a = process.env.HOST;
       return r(a) ? a : "localhost";
@@ -12235,93 +12162,93 @@ if (r(En)) {
     }(), e = require("http").createServer(a);
     a.use(b.json.call(null));
     a.use(b.urlencoded.call(null, {extended:!1}));
-    a.all("*", Po);
+    a.all("*", Oo);
     e.listen(9999);
-    mo(e);
+    lo(e);
     return nn.v(H([new y(null, "webserver", "webserver", -1886708491, null), new y(null, "starting", "starting", -211609939, null), c, d], 0));
   };
-  $n.h ? $n.h(Qo) : $n.call(null, Qo);
+  $n.h ? $n.h(Po) : $n.call(null, Po);
 }
 ;mn("hello", function() {
   nn.v(H([new y(null, "hello", "hello", 1395506130, null), new y(null, "here", "here", 138945558, null)], 0));
   return new l(null, 2, [Xh, "html", Bj, new S(null, 5, 5, U, [bj, new S(null, 2, 5, U, [dj, new l(null, 1, [Oh, "hello"], null)], null), new S(null, 2, 5, U, [mi, new l(null, 1, [Oh, "here"], null)], null), new S(null, 5, 5, U, [yj, new l(null, 1, [Oh, "hoo"], null), new S(null, 3, 5, U, [qi, new l(null, 1, [Qh, "a"], null), "a"], null), new S(null, 3, 5, U, [qi, new l(null, 1, [Qh, "n"], null), "n"], null), new S(null, 3, 5, U, [qi, new l(null, 1, [Qh, "b"], null), "b"], null)], null), new S(null, 
   2, 5, U, [dj, new l(null, 1, [Oh, "blah"], null)], null)], null)], null);
 });
-var Ro = function Ro(b) {
+var Qo = function Qo(b) {
   if (b ? b.Xc : b) {
     return b.Xc();
   }
   var c;
-  c = Ro[ba(null == b ? null : b)];
-  if (!c && (c = Ro._, !c)) {
+  c = Qo[ba(null == b ? null : b)];
+  if (!c && (c = Qo._, !c)) {
     throw Ka("PushbackReader.read-char", b);
   }
   return c.call(null, b);
-}, So = function So(b, c) {
+}, Ro = function Ro(b, c) {
   if (b ? b.Yc : b) {
     return b.Yc(0, c);
   }
   var d;
-  d = So[ba(null == b ? null : b)];
-  if (!d && (d = So._, !d)) {
+  d = Ro[ba(null == b ? null : b)];
+  if (!d && (d = Ro._, !d)) {
     throw Ka("PushbackReader.unread", b);
   }
   return d.call(null, b, c);
 };
-function To(a, b, c) {
+function So(a, b, c) {
   this.s = a;
   this.buffer = b;
   this.W = c;
 }
-To.prototype.Xc = function() {
+So.prototype.Xc = function() {
   return 0 === this.buffer.length ? (this.W += 1, this.s[this.W]) : this.buffer.pop();
 };
-To.prototype.Yc = function(a, b) {
+So.prototype.Yc = function(a, b) {
   return this.buffer.push(b);
 };
-function Uo(a) {
+function To(a) {
   var b = !/[^\t\n\r ]/.test(a);
   return r(b) ? b : "," === a;
 }
-function Vo(a, b) {
+function Uo(a, b) {
   var c;
-  !(c = !/[^0-9]/.test(b)) && (c = "+" === b || "-" === b) && (c = Ro(a), So(a, c), c = !/[^0-9]/.test(c));
+  !(c = !/[^0-9]/.test(b)) && (c = "+" === b || "-" === b) && (c = Qo(a), Ro(a, c), c = !/[^0-9]/.test(c));
   return c;
 }
-function Wo(a) {
+function Vo(a) {
   throw Error(ie(u, a));
 }
-function Xo(a, b) {
-  for (var c = new ma(b), d = Ro(a);;) {
+function Wo(a, b) {
+  for (var c = new ma(b), d = Qo(a);;) {
     var e;
-    if (!(e = null == d || Uo(d))) {
+    if (!(e = null == d || To(d))) {
       e = d;
       var f = "#" !== e;
-      e = f ? (f = "'" !== e) ? (f = ":" !== e) ? Yo.h ? Yo.h(e) : Yo.call(null, e) : f : f : f;
+      e = f ? (f = "'" !== e) ? (f = ":" !== e) ? Xo.h ? Xo.h(e) : Xo.call(null, e) : f : f : f;
     }
     if (e) {
-      return So(a, d), c.toString();
+      return Ro(a, d), c.toString();
     }
     c.append(d);
-    d = Ro(a);
+    d = Qo(a);
   }
 }
-function Zo(a) {
+function Yo(a) {
   for (;;) {
-    var b = Ro(a);
+    var b = Qo(a);
     if ("\n" === b || "\r" === b || null == b) {
       return a;
     }
   }
 }
-var $o = Rg("^([-+]?)(?:(0)|([1-9][0-9]*)|0[xX]([0-9A-Fa-f]+)|0([0-7]+)|([1-9][0-9]?)[rR]([0-9A-Za-z]+))(N)?$"), ap = Rg("^([-+]?[0-9]+)/([0-9]+)$"), bp = Rg("^([-+]?[0-9]+(\\.[0-9]*)?([eE][-+]?[0-9]+)?)(M)?$"), cp = Rg("^[:]?([^0-9/].*/)?([^0-9/][^/]*)$");
-function dp(a, b) {
+var Zo = Rg("^([-+]?)(?:(0)|([1-9][0-9]*)|0[xX]([0-9A-Fa-f]+)|0([0-7]+)|([1-9][0-9]?)[rR]([0-9A-Za-z]+))(N)?$"), $o = Rg("^([-+]?[0-9]+)/([0-9]+)$"), ap = Rg("^([-+]?[0-9]+(\\.[0-9]*)?([eE][-+]?[0-9]+)?)(M)?$"), bp = Rg("^[:]?([^0-9/].*/)?([^0-9/][^/]*)$");
+function cp(a, b) {
   var c = a.exec(b);
   return null != c && c[0] === b ? 1 === c.length ? c[0] : c : null;
 }
-function ep(a) {
-  if (r(dp($o, a))) {
-    a = dp($o, a);
+function dp(a) {
+  if (r(cp(Zo, a))) {
+    a = cp(Zo, a);
     var b = a[2];
     if (null != (vc.j(b, "") ? null : b)) {
       a = 0;
@@ -12330,44 +12257,44 @@ function ep(a) {
       null == c ? a = null : (b = parseInt(c, b[1]), a = "-" === a[1] ? -b : b);
     }
   } else {
-    r(dp(ap, a)) ? (a = dp(ap, a), a = parseInt(a[1], 10) / parseInt(a[2], 10)) : a = r(dp(bp, a)) ? parseFloat(a) : null;
+    r(cp($o, a)) ? (a = cp($o, a), a = parseInt(a[1], 10) / parseInt(a[2], 10)) : a = r(cp(ap, a)) ? parseFloat(a) : null;
   }
   return a;
 }
-var fp = Rg("^[0-9A-Fa-f]{2}$"), gp = Rg("^[0-9A-Fa-f]{4}$");
-function hp(a, b, c) {
-  return r(Og(a, c)) ? c : Wo(H(["Unexpected unicode escape \\", b, c], 0));
+var ep = Rg("^[0-9A-Fa-f]{2}$"), fp = Rg("^[0-9A-Fa-f]{4}$");
+function gp(a, b, c) {
+  return r(Og(a, c)) ? c : Vo(H(["Unexpected unicode escape \\", b, c], 0));
 }
-function ip(a) {
+function hp(a) {
   return String.fromCharCode(parseInt(a, 16));
 }
-function jp(a) {
-  var b = Ro(a), c = "t" === b ? "\t" : "r" === b ? "\r" : "n" === b ? "\n" : "\\" === b ? "\\" : '"' === b ? '"' : "b" === b ? "\b" : "f" === b ? "\f" : null;
-  r(c) ? b = c : "x" === b ? (a = (new ma(Ro(a), Ro(a))).toString(), b = ip(hp(fp, b, a))) : "u" === b ? (a = (new ma(Ro(a), Ro(a), Ro(a), Ro(a))).toString(), b = ip(hp(gp, b, a))) : b = /[^0-9]/.test(b) ? Wo(H(["Unexpected unicode escape \\", b], 0)) : String.fromCharCode(b);
+function ip(a) {
+  var b = Qo(a), c = "t" === b ? "\t" : "r" === b ? "\r" : "n" === b ? "\n" : "\\" === b ? "\\" : '"' === b ? '"' : "b" === b ? "\b" : "f" === b ? "\f" : null;
+  r(c) ? b = c : "x" === b ? (a = (new ma(Qo(a), Qo(a))).toString(), b = hp(gp(ep, b, a))) : "u" === b ? (a = (new ma(Qo(a), Qo(a), Qo(a), Qo(a))).toString(), b = hp(gp(fp, b, a))) : b = /[^0-9]/.test(b) ? Vo(H(["Unexpected unicode escape \\", b], 0)) : String.fromCharCode(b);
   return b;
 }
-function kp(a) {
-  for (var b = Ro(a);;) {
+function jp(a) {
+  for (var b = Qo(a);;) {
     var c;
     c = b;
-    c = Uo.h ? Uo.h(c) : Uo.call(null, c);
+    c = To.h ? To.h(c) : To.call(null, c);
     if (r(c)) {
-      b = Ro(a);
+      b = Qo(a);
     } else {
       return b;
     }
   }
 }
-function lp(a, b) {
+function kp(a, b) {
   for (var c = Sb(Xc);;) {
-    var d = kp(b);
-    r(d) || Wo(H(["EOF while reading"], 0));
+    var d = jp(b);
+    r(d) || Vo(H(["EOF while reading"], 0));
     if (a === d) {
       return Ub(c);
     }
     var e = function() {
       var a = d;
-      return Yo.h ? Yo.h(a) : Yo.call(null, a);
+      return Xo.h ? Xo.h(a) : Xo.call(null, a);
     }();
     if (r(e)) {
       var f = e, e = function() {
@@ -12375,90 +12302,90 @@ function lp(a, b) {
         return f.j ? f.j(b, a) : f.call(null, b, a);
       }()
     } else {
-      So(b, d), e = mp.I ? mp.I(b, !0, null, !0) : mp.call(null, b, !0, null);
+      Ro(b, d), e = lp.I ? lp.I(b, !0, null, !0) : lp.call(null, b, !0, null);
     }
     c = e === b ? c : ge.j(c, e);
   }
 }
-function np(a, b) {
-  return Wo(H(["Reader for ", b, " not implemented yet"], 0));
+function mp(a, b) {
+  return Vo(H(["Reader for ", b, " not implemented yet"], 0));
 }
-function op(a, b) {
-  var c = Ro(a), d = pp.h ? pp.h(c) : pp.call(null, c);
+function np(a, b) {
+  var c = Qo(a), d = op.h ? op.h(c) : op.call(null, c);
   if (r(d)) {
     return d.j ? d.j(a, b) : d.call(null, a, b);
   }
-  d = qp.j ? qp.j(a, c) : qp.call(null, a, c);
-  return r(d) ? d : Wo(H(["No dispatch macro for ", c], 0));
+  d = pp.j ? pp.j(a, c) : pp.call(null, a, c);
+  return r(d) ? d : Vo(H(["No dispatch macro for ", c], 0));
 }
-function rp(a, b) {
-  return Wo(H(["Unmatched delimiter ", b], 0));
+function qp(a, b) {
+  return Vo(H(["Unmatched delimiter ", b], 0));
+}
+function rp(a) {
+  return ie(Od, kp(")", a));
 }
 function sp(a) {
-  return ie(Od, lp(")", a));
+  return kp("]", a);
 }
 function tp(a) {
-  return lp("]", a);
-}
-function up(a) {
-  a = lp("}", a);
+  a = kp("}", a);
   var b = I(a);
   if ("number" !== typeof b || !Ga(isNaN(b)) || Infinity === b || parseFloat(b) !== parseInt(b, 10)) {
     throw Error([u("Argument must be an integer: "), u(b)].join(""));
   }
-  0 !== (b & 1) && Wo(H(["Map literal must contain an even number of forms"], 0));
+  0 !== (b & 1) && Vo(H(["Map literal must contain an even number of forms"], 0));
   return ie(ve, a);
 }
-function vp(a, b) {
-  for (var c = new ma(b), d = Ro(a);;) {
+function up(a, b) {
+  for (var c = new ma(b), d = Qo(a);;) {
     if (r(function() {
       var a = null == d;
-      if (a || (a = Uo(d))) {
+      if (a || (a = To(d))) {
         return a;
       }
       a = d;
-      return Yo.h ? Yo.h(a) : Yo.call(null, a);
+      return Xo.h ? Xo.h(a) : Xo.call(null, a);
     }())) {
-      So(a, d);
-      var e = c.toString(), c = ep(e);
-      return r(c) ? c : Wo(H(["Invalid number format [", e, "]"], 0));
+      Ro(a, d);
+      var e = c.toString(), c = dp(e);
+      return r(c) ? c : Vo(H(["Invalid number format [", e, "]"], 0));
     }
     c.append(d);
-    d = e = Ro(a);
+    d = e = Qo(a);
   }
 }
-function wp(a) {
-  for (var b = new ma, c = Ro(a);;) {
+function vp(a) {
+  for (var b = new ma, c = Qo(a);;) {
     if (null == c) {
-      return Wo(H(["EOF while reading"], 0));
+      return Vo(H(["EOF while reading"], 0));
     }
     if ("\\" === c) {
-      b.append(jp(a));
+      b.append(ip(a));
     } else {
       if ('"' === c) {
         return b.toString();
       }
       b.append(c);
     }
-    c = Ro(a);
+    c = Qo(a);
   }
 }
-function xp(a) {
-  for (var b = new ma, c = Ro(a);;) {
+function wp(a) {
+  for (var b = new ma, c = Qo(a);;) {
     if (null == c) {
-      return Wo(H(["EOF while reading"], 0));
+      return Vo(H(["EOF while reading"], 0));
     }
     if ("\\" === c) {
       b.append(c);
-      var d = Ro(a);
+      var d = Qo(a);
       if (null == d) {
-        return Wo(H(["EOF while reading"], 0));
+        return Vo(H(["EOF while reading"], 0));
       }
       var e = function() {
         var a = b;
         a.append(d);
         return a;
-      }(), f = Ro(a);
+      }(), f = Qo(a);
     } else {
       if ('"' === c) {
         return b.toString();
@@ -12468,75 +12395,75 @@ function xp(a) {
         a.append(c);
         return a;
       }();
-      f = Ro(a);
+      f = Qo(a);
     }
     b = e;
     c = f;
   }
 }
-function yp(a, b) {
-  var c = Xo(a, b), d = -1 != c.indexOf("/");
+function xp(a, b) {
+  var c = Wo(a, b), d = -1 != c.indexOf("/");
   r(r(d) ? 1 !== c.length : d) ? c = sc(c.substring(0, c.indexOf("/")), c.substring(c.indexOf("/") + 1, c.length)) : (d = c instanceof y ? c : sc(null, c), c = "nil" === c ? null : "true" === c ? !0 : "false" === c ? !1 : "/" === c ? new y(null, "/", "/", -1371932971, null) : d);
   return c;
 }
-function zp(a) {
-  a = Xo(a, Ro(a));
-  var b = dp(cp, a);
+function yp(a) {
+  a = Wo(a, Qo(a));
+  var b = cp(bp, a);
   a = b[0];
   var c = b[1], b = b[2];
-  return void 0 !== c && ":/" === c.substring(c.length - 2, c.length) || ":" === b[b.length - 1] || -1 !== a.indexOf("::", 1) ? Wo(H(["Invalid token: ", a], 0)) : null != c && 0 < c.length ? Sd.j(c.substring(0, c.indexOf("/")), b) : Sd.h(a);
+  return void 0 !== c && ":/" === c.substring(c.length - 2, c.length) || ":" === b[b.length - 1] || -1 !== a.indexOf("::", 1) ? Vo(H(["Invalid token: ", a], 0)) : null != c && 0 < c.length ? Sd.j(c.substring(0, c.indexOf("/")), b) : Sd.h(a);
 }
-function Ap(a) {
+function zp(a) {
   return function(b) {
-    return Ya(Ya(uc, mp.I ? mp.I(b, !0, null, !0) : mp.call(null, b, !0, null)), a);
+    return Ya(Ya(uc, lp.I ? lp.I(b, !0, null, !0) : lp.call(null, b, !0, null)), a);
   };
 }
-function Bp() {
+function Ap() {
   return function() {
-    return Wo(H(["Unreadable form"], 0));
+    return Vo(H(["Unreadable form"], 0));
   };
+}
+function Bp(a) {
+  var b;
+  b = lp.I ? lp.I(a, !0, null, !0) : lp.call(null, a, !0, null);
+  b = b instanceof y ? new l(null, 1, [cj, b], null) : "string" === typeof b ? new l(null, 1, [cj, b], null) : b instanceof M ? new Df([b, !0], !0, !1) : b;
+  nd(b) || Vo(H(["Metadata must be Symbol,Keyword,String or Map"], 0));
+  return ((a = lp.I ? lp.I(a, !0, null, !0) : lp.call(null, a, !0, null)) ? a.C & 262144 || a.wd || (a.C ? 0 : Ha(zb, a)) : Ha(zb, a)) ? Rc(a, Bg.v(H([id(a), b], 0))) : Vo(H(["Metadata can only be applied to IWithMetas"], 0));
 }
 function Cp(a) {
-  var b;
-  b = mp.I ? mp.I(a, !0, null, !0) : mp.call(null, a, !0, null);
-  b = b instanceof y ? new l(null, 1, [cj, b], null) : "string" === typeof b ? new l(null, 1, [cj, b], null) : b instanceof M ? new Df([b, !0], !0, !1) : b;
-  nd(b) || Wo(H(["Metadata must be Symbol,Keyword,String or Map"], 0));
-  return ((a = mp.I ? mp.I(a, !0, null, !0) : mp.call(null, a, !0, null)) ? a.C & 262144 || a.wd || (a.C ? 0 : Ha(zb, a)) : Ha(zb, a)) ? Rc(a, Bg.v(H([id(a), b], 0))) : Wo(H(["Metadata can only be applied to IWithMetas"], 0));
+  return Gg(kp("}", a));
 }
 function Dp(a) {
-  return Gg(lp("}", a));
+  return Rg(wp(a));
 }
 function Ep(a) {
-  return Rg(xp(a));
-}
-function Fp(a) {
-  mp.I ? mp.I(a, !0, null, !0) : mp.call(null, a, !0, null);
+  lp.I ? lp.I(a, !0, null, !0) : lp.call(null, a, !0, null);
   return a;
 }
-function Yo(a) {
-  return '"' === a ? wp : ":" === a ? zp : ";" === a ? Zo : "'" === a ? Ap(new y(null, "quote", "quote", 1377916282, null)) : "@" === a ? Ap(new y(null, "deref", "deref", 1494944732, null)) : "^" === a ? Cp : "`" === a ? np : "~" === a ? np : "(" === a ? sp : ")" === a ? rp : "[" === a ? tp : "]" === a ? rp : "{" === a ? up : "}" === a ? rp : "\\" === a ? Ro : "#" === a ? op : null;
+function Xo(a) {
+  return '"' === a ? vp : ":" === a ? yp : ";" === a ? Yo : "'" === a ? zp(new y(null, "quote", "quote", 1377916282, null)) : "@" === a ? zp(new y(null, "deref", "deref", 1494944732, null)) : "^" === a ? Bp : "`" === a ? mp : "~" === a ? mp : "(" === a ? rp : ")" === a ? qp : "[" === a ? sp : "]" === a ? qp : "{" === a ? tp : "}" === a ? qp : "\\" === a ? Qo : "#" === a ? np : null;
 }
-function pp(a) {
-  return "{" === a ? Dp : "\x3c" === a ? Bp() : '"' === a ? Ep : "!" === a ? Zo : "_" === a ? Fp : null;
+function op(a) {
+  return "{" === a ? Cp : "\x3c" === a ? Ap() : '"' === a ? Dp : "!" === a ? Yo : "_" === a ? Ep : null;
 }
-function mp(a, b, c) {
+function lp(a, b, c) {
   for (;;) {
-    var d = Ro(a);
+    var d = Qo(a);
     if (null == d) {
-      return r(b) ? Wo(H(["EOF while reading"], 0)) : c;
+      return r(b) ? Vo(H(["EOF while reading"], 0)) : c;
     }
-    if (!Uo(d)) {
+    if (!To(d)) {
       if (";" === d) {
         var e = function() {
           var b = a, c = d;
-          return Zo.j ? Zo.j(b, c) : Zo.call(null, b);
+          return Yo.j ? Yo.j(b, c) : Yo.call(null, b);
         }();
         a = e;
       } else {
-        var f = Yo(d), e = r(f) ? function() {
+        var f = Xo(d), e = r(f) ? function() {
           var b = a, c = d;
           return f.j ? f.j(b, c) : f.call(null, b, c);
-        }() : Vo(a, d) ? vp(a, d) : yp(a, d);
+        }() : Uo(a, d) ? up(a, d) : xp(a, d);
         if (e !== a) {
           return e;
         }
@@ -12544,45 +12471,45 @@ function mp(a, b, c) {
     }
   }
 }
-function Gp(a) {
-  return mp(new To(a, [], -1), !1, null);
+function Fp(a) {
+  return lp(new So(a, [], -1), !1, null);
 }
-var Hp = function(a, b) {
+var Gp = function(a, b) {
   return function(c, d) {
     return ad(r(d) ? b : a, c);
   };
-}(new S(null, 13, 5, U, [null, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], null), new S(null, 13, 5, U, [null, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], null)), Ip = /(\d\d\d\d)(?:-(\d\d)(?:-(\d\d)(?:[T](\d\d)(?::(\d\d)(?::(\d\d)(?:[.](\d+))?)?)?)?)?)?(?:[Z]|([-+])(\d\d):(\d\d))?/;
-function Jp(a) {
+}(new S(null, 13, 5, U, [null, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], null), new S(null, 13, 5, U, [null, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], null)), Hp = /(\d\d\d\d)(?:-(\d\d)(?:-(\d\d)(?:[T](\d\d)(?::(\d\d)(?::(\d\d)(?:[.](\d+))?)?)?)?)?)?(?:[Z]|([-+])(\d\d):(\d\d))?/;
+function Ip(a) {
   a = parseInt(a, 10);
   return Ga(isNaN(a)) ? a : null;
 }
-function Kp(a, b, c, d) {
-  a <= b && b <= c || Wo(H([[u(d), u(" Failed:  "), u(a), u("\x3c\x3d"), u(b), u("\x3c\x3d"), u(c)].join("")], 0));
+function Jp(a, b, c, d) {
+  a <= b && b <= c || Vo(H([[u(d), u(" Failed:  "), u(a), u("\x3c\x3d"), u(b), u("\x3c\x3d"), u(c)].join("")], 0));
   return b;
 }
-function Lp(a) {
-  var b = Og(Ip, a);
+function Kp(a) {
+  var b = Og(Hp, a);
   J(b, 0);
   var c = J(b, 1), d = J(b, 2), e = J(b, 3), f = J(b, 4), g = J(b, 5), k = J(b, 6), m = J(b, 7), p = J(b, 8), n = J(b, 9), v = J(b, 10);
   if (Ga(b)) {
-    return Wo(H([[u("Unrecognized date/time syntax: "), u(a)].join("")], 0));
+    return Vo(H([[u("Unrecognized date/time syntax: "), u(a)].join("")], 0));
   }
-  var t = Jp(c), w = function() {
-    var a = Jp(d);
+  var t = Ip(c), w = function() {
+    var a = Ip(d);
     return r(a) ? a : 1;
   }();
   a = function() {
-    var a = Jp(e);
+    var a = Ip(e);
     return r(a) ? a : 1;
   }();
   var b = function() {
-    var a = Jp(f);
+    var a = Ip(f);
     return r(a) ? a : 0;
   }(), c = function() {
-    var a = Jp(g);
+    var a = Ip(g);
     return r(a) ? a : 0;
   }(), z = function() {
-    var a = Jp(k);
+    var a = Ip(k);
     return r(a) ? a : 0;
   }(), C = function() {
     var a;
@@ -12604,41 +12531,41 @@ function Lp(a) {
         }
       }
     }
-    a = Jp(a);
+    a = Ip(a);
     return r(a) ? a : 0;
   }(), p = (vc.j(p, "-") ? -1 : 1) * (60 * function() {
-    var a = Jp(n);
+    var a = Ip(n);
     return r(a) ? a : 0;
   }() + function() {
-    var a = Jp(v);
+    var a = Ip(v);
     return r(a) ? a : 0;
   }());
-  return new S(null, 8, 5, U, [t, Kp(1, w, 12, "timestamp month field must be in range 1..12"), Kp(1, a, function() {
+  return new S(null, 8, 5, U, [t, Jp(1, w, 12, "timestamp month field must be in range 1..12"), Jp(1, a, function() {
     var a;
     a = 0 === (t % 4 + 4) % 4;
     r(a) && (a = Ga(0 === (t % 100 + 100) % 100), a = r(a) ? a : 0 === (t % 400 + 400) % 400);
-    return Hp.j ? Hp.j(w, a) : Hp.call(null, w, a);
-  }(), "timestamp day field must be in range 1..last day in month"), Kp(0, b, 23, "timestamp hour field must be in range 0..23"), Kp(0, c, 59, "timestamp minute field must be in range 0..59"), Kp(0, z, vc.j(c, 59) ? 60 : 59, "timestamp second field must be in range 0..60"), Kp(0, C, 999, "timestamp millisecond field must be in range 0..999"), p], null);
+    return Gp.j ? Gp.j(w, a) : Gp.call(null, w, a);
+  }(), "timestamp day field must be in range 1..last day in month"), Jp(0, b, 23, "timestamp hour field must be in range 0..23"), Jp(0, c, 59, "timestamp minute field must be in range 0..59"), Jp(0, z, vc.j(c, 59) ? 60 : 59, "timestamp second field must be in range 0..60"), Jp(0, C, 999, "timestamp millisecond field must be in range 0..999"), p], null);
 }
-var Mp, Np = new l(null, 4, ["inst", function(a) {
+var Lp, Mp = new l(null, 4, ["inst", function(a) {
   var b;
   if ("string" === typeof a) {
-    if (b = Lp(a), r(b)) {
+    if (b = Kp(a), r(b)) {
       a = J(b, 0);
       var c = J(b, 1), d = J(b, 2), e = J(b, 3), f = J(b, 4), g = J(b, 5), k = J(b, 6);
       b = J(b, 7);
       b = new Date(Date.UTC(a, c - 1, d, e, f, g, k) - 6E4 * b);
     } else {
-      b = Wo(H([[u("Unrecognized date/time syntax: "), u(a)].join("")], 0));
+      b = Vo(H([[u("Unrecognized date/time syntax: "), u(a)].join("")], 0));
     }
   } else {
-    b = Wo(H(["Instance literal expects a string for its timestamp."], 0));
+    b = Vo(H(["Instance literal expects a string for its timestamp."], 0));
   }
   return b;
 }, "uuid", function(a) {
-  return "string" === typeof a ? new nh(a) : Wo(H(["UUID literal expects a string as its representation."], 0));
+  return "string" === typeof a ? new nh(a) : Vo(H(["UUID literal expects a string as its representation."], 0));
 }, "queue", function(a) {
-  return od(a) ? Fe(mf, a) : Wo(H(["Queue literal expects a vector for its elements."], 0));
+  return od(a) ? Fe(mf, a) : Vo(H(["Queue literal expects a vector for its elements."], 0));
 }, "js", function(a) {
   if (od(a)) {
     var b = [];
@@ -12677,18 +12604,18 @@ var Mp, Np = new l(null, 4, ["inst", function(a) {
     }
     return b;
   }
-  return Wo(H([[u("JS literal expects a vector or map containing "), u("only string or unqualified keyword keys")].join("")], 0));
+  return Vo(H([[u("JS literal expects a vector or map containing "), u("only string or unqualified keyword keys")].join("")], 0));
 }], null);
-Mp = O ? O(Np) : ue.call(null, Np);
-var Op = O ? O(null) : ue.call(null, null);
-function qp(a, b) {
-  var c = yp(a, b), d = ad(F.h ? F.h(Mp) : F.call(null, Mp), "" + u(c)), e = F.h ? F.h(Op) : F.call(null, Op);
-  return r(d) ? (c = mp(a, !0, null), d.h ? d.h(c) : d.call(null, c)) : r(e) ? (d = mp(a, !0, null), e.j ? e.j(c, d) : e.call(null, c, d)) : Wo(H(["Could not find tag parser for ", "" + u(c), " in ", xe.v(H([xf(F.h ? F.h(Mp) : F.call(null, Mp))], 0))], 0));
+Lp = O ? O(Mp) : ue.call(null, Mp);
+var Np = O ? O(null) : ue.call(null, null);
+function pp(a, b) {
+  var c = xp(a, b), d = ad(F.h ? F.h(Lp) : F.call(null, Lp), "" + u(c)), e = F.h ? F.h(Np) : F.call(null, Np);
+  return r(d) ? (c = lp(a, !0, null), d.h ? d.h(c) : d.call(null, c)) : r(e) ? (d = lp(a, !0, null), e.j ? e.j(c, d) : e.call(null, c, d)) : Vo(H(["Could not find tag parser for ", "" + u(c), " in ", xe.v(H([xf(F.h ? F.h(Lp) : F.call(null, Lp))], 0))], 0));
 }
 ;if (r(Dn)) {
-  var Pp, Qp = Af;
-  Pp = O ? O(Qp) : ue.call(null, Qp);
-  var Rp = O ? O(null) : ue.call(null, null), Sp = O ? O(!1) : ue.call(null, !1), Tp = function() {
+  var Op, Pp = Af;
+  Op = O ? O(Pp) : ue.call(null, Pp);
+  var Qp = O ? O(null) : ue.call(null, null), Rp = O ? O(!1) : ue.call(null, !1), Sp = function() {
     var a = Z(1);
     W(function(a) {
       return function() {
@@ -12746,10 +12673,10 @@ function qp(a, b) {
                 return a[2] = null, a[1] = 2, V;
               }
               if (2 === b) {
-                return b = F.h ? F.h(Sp) : F.call(null, Sp), a[1] = r(b) ? 4 : 5, V;
+                return b = F.h ? F.h(Rp) : F.call(null, Rp), a[1] = r(b) ? 4 : 5, V;
               }
               if (3 === b) {
-                var b = a[2], c = Q.j ? Q.j(Sp, !0) : Q.call(null, Sp, !0);
+                var b = a[2], c = Q.j ? Q.j(Rp, !0) : Q.call(null, Rp, !0);
                 a[7] = b;
                 return sk(a, c);
               }
@@ -12765,9 +12692,9 @@ function qp(a, b) {
       };
     }(a));
     return a;
+  }, Tp = function() {
+    return Q.j ? Q.j(Rp, !1) : Q.call(null, Rp, !1);
   }, Up = function() {
-    return Q.j ? Q.j(Sp, !1) : Q.call(null, Sp, !1);
-  }, Vp = function() {
     var a = Z(1);
     W(function(a) {
       return function() {
@@ -12822,23 +12749,23 @@ function qp(a, b) {
             return function(b) {
               var c = b[1];
               if (1 === c) {
-                var d = F.h ? F.h(Rp) : F.call(null, Rp);
+                var d = F.h ? F.h(Qp) : F.call(null, Qp);
                 b[1] = r(d) ? 2 : 3;
                 return V;
               }
               if (2 === c) {
-                return d = (F.h ? F.h(Rp) : F.call(null, Rp)).close(), b[2] = d, b[1] = 4, V;
+                return d = (F.h ? F.h(Qp) : F.call(null, Qp)).close(), b[2] = d, b[1] = 4, V;
               }
               if (3 === c) {
                 return b[2] = null, b[1] = 4, V;
               }
               if (4 === c) {
-                var d = b[2], m = Tp();
+                var d = b[2], m = Sp();
                 b[7] = d;
                 return Y(b, 5, m);
               }
               if (5 === c) {
-                var p = b[2], n = Z(null), v = localStorage.getItem("keyval-db"), t = Gp(v), w = q(t), z = I(w), C = z + 1, D = indexedDB.open("keyval-db", C), E = function() {
+                var p = b[2], n = Z(null), v = localStorage.getItem("keyval-db"), t = Fp(v), w = q(t), z = I(w), C = z + 1, D = indexedDB.open("keyval-db", C), E = function() {
                   return function(a, b, c, d, e, f, g, k, m, p, n, v, t) {
                     return function(w) {
                       ch.v(H([new y(null, "upgrade-needed-start", "upgrade-needed-start", -1541030780, null)], 0));
@@ -12882,16 +12809,16 @@ function qp(a, b) {
                 }(), L = D.onupgradeneeded = E, K = function() {
                   return function() {
                     return function(a) {
-                      Up();
+                      Tp();
                       return console.log(new y(null, "error", "error", 661562495, null), a);
                     };
                   }(n, w, D, p, n, v, t, w, z, C, D, E, L, c, a);
                 }(), T = D.onerror = K, d = D.onsuccess = function() {
                   return function(a) {
                     return function(b) {
-                      Up();
+                      Tp();
                       b = b.target.result;
-                      Q.j ? Q.j(Rp, b) : Q.call(null, Rp, b);
+                      Q.j ? Q.j(Qp, b) : Q.call(null, Qp, b);
                       return Jj(a);
                     };
                   }(n, w, D, p, n, v, t, w, z, C, D, E, L, K, T, c, a);
@@ -12914,7 +12841,7 @@ function qp(a, b) {
       };
     }(a));
     return a;
-  }, Wp = function(a) {
+  }, Vp = function(a) {
     var b = Z(1);
     W(function(b) {
       return function() {
@@ -12969,13 +12896,13 @@ function qp(a, b) {
             return function(b) {
               var c = b[1];
               if (7 === c) {
-                var d = Gp(b[2]), c = ye.I(Pp, cd, a, Cf), d = Wc.j(d, a), d = "" + u(d), d = localStorage.setItem("keyval-db", d), e = Vp();
+                var d = Fp(b[2]), c = ye.I(Op, cd, a, Cf), d = Wc.j(d, a), d = "" + u(d), d = localStorage.setItem("keyval-db", d), e = Up();
                 b[7] = d;
                 b[8] = c;
                 return Y(b, 8, e);
               }
-              return 1 === c ? (c = F.h ? F.h(Pp) : F.call(null, Pp), c = c.h ? c.h(a) : c.call(null, a), c = Ga(c), b[1] = c ? 2 : 3, V) : 4 === c ? (c = b[2], sk(b, c)) : 13 === c ? (c = b[2], b[2] = c, b[1] = 10, V) : 6 === c ? (b[2] = "#{}", b[1] = 7, V) : 3 === c ? (b[2] = null, b[1] = 9, V) : 12 === c ? (b[2] = null, b[1] = 13, V) : 2 === c ? (c = b[9], c = localStorage.getItem("keyval-db"), b[9] = c, b[1] = r(c) ? 5 : 6, V) : 11 === c ? (c = Ak(100), Y(b, 14, c)) : 9 === c ? (c = F.h ? F.h(Rp) : 
-              F.call(null, Rp), c = Ga(c), b[1] = c ? 11 : 12, V) : 5 === c ? (c = b[9], b[2] = c, b[1] = 7, V) : 14 === c ? (b[10] = b[2], b[2] = null, b[1] = 9, V) : 10 === c || 8 === c ? (c = b[2], b[2] = c, b[1] = 4, V) : null;
+              return 1 === c ? (c = F.h ? F.h(Op) : F.call(null, Op), c = c.h ? c.h(a) : c.call(null, a), c = Ga(c), b[1] = c ? 2 : 3, V) : 4 === c ? (c = b[2], sk(b, c)) : 13 === c ? (c = b[2], b[2] = c, b[1] = 10, V) : 6 === c ? (b[2] = "#{}", b[1] = 7, V) : 3 === c ? (b[2] = null, b[1] = 9, V) : 12 === c ? (b[2] = null, b[1] = 13, V) : 2 === c ? (c = b[9], c = localStorage.getItem("keyval-db"), b[9] = c, b[1] = r(c) ? 5 : 6, V) : 11 === c ? (c = Ak(100), Y(b, 14, c)) : 9 === c ? (c = F.h ? F.h(Qp) : 
+              F.call(null, Qp), c = Ga(c), b[1] = c ? 11 : 12, V) : 5 === c ? (c = b[9], b[2] = c, b[1] = 7, V) : 14 === c ? (b[10] = b[2], b[2] = null, b[1] = 9, V) : 10 === c || 8 === c ? (c = b[2], b[2] = c, b[1] = 4, V) : null;
             };
           }(b), b);
         }(), e = function() {
@@ -12987,7 +12914,7 @@ function qp(a, b) {
       };
     }(b));
     return b;
-  }, Xp = function(a) {
+  }, Wp = function(a) {
     var b = Z(1);
     W(function(b) {
       return function() {
@@ -13042,12 +12969,12 @@ function qp(a, b) {
             return function(c) {
               var d = c[1];
               if (1 === d) {
-                var e = F.h ? F.h(Pp) : F.call(null, Pp), e = e.h ? e.h(a) : e.call(null, a), e = 0 < I(e);
+                var e = F.h ? F.h(Op) : F.call(null, Op), e = e.h ? e.h(a) : e.call(null, a), e = 0 < I(e);
                 c[1] = r(e) ? 2 : 3;
                 return V;
               }
               if (2 === d) {
-                return e = Tp(), Y(c, 5, e);
+                return e = Sp(), Y(c, 5, e);
               }
               if (3 === d) {
                 return c[2] = null, c[1] = 4, V;
@@ -13056,7 +12983,7 @@ function qp(a, b) {
                 return e = c[2], sk(c, e);
               }
               if (5 === d) {
-                var p = c[2], n = Z(1), v = F.h ? F.h(Rp) : F.call(null, Rp), t = v.transaction([a], "readwrite"), w = t.objectStore(a), z = function() {
+                var p = c[2], n = Z(1), v = F.h ? F.h(Qp) : F.call(null, Qp), t = v.transaction([a], "readwrite"), w = t.objectStore(a), z = function() {
                   return function(a, b, c, d, e, f, g, k, m, p) {
                     return function hb(n) {
                       return new Ud(null, function(a, b, c) {
@@ -13091,17 +13018,17 @@ function qp(a, b) {
                       }(a, b, c, d, e, f, g, k, m, p), null, null);
                     };
                   }(n, t, w, p, n, v, t, w, d, b);
-                }(), C = F.h ? F.h(Pp) : F.call(null, Pp), D = C.h ? C.h(a) : C.call(null, a), E = z.h ? z.h(D) : z.call(null, D), L = Ng(E), K = function() {
+                }(), C = F.h ? F.h(Op) : F.call(null, Op), D = C.h ? C.h(a) : C.call(null, a), E = z.h ? z.h(D) : z.call(null, D), L = Ng(E), K = function() {
                   return function(a) {
                     return function() {
-                      Up();
+                      Tp();
                       return Gk(a, !0);
                     };
                   }(n, t, w, p, n, v, t, w, z, C, D, E, L, d, b);
                 }(), T = t.oncomplete = K, fa = function() {
                   return function(a) {
                     return function() {
-                      Up();
+                      Tp();
                       ch.v(H(["commit error"], 0));
                       return Jj(a);
                     };
@@ -13109,12 +13036,12 @@ function qp(a, b) {
                 }(), P = t.onerror = fa, e = t.onabort = function() {
                   return function(a) {
                     return function() {
-                      Up();
+                      Tp();
                       ch.v(H(["commit abort"], 0));
                       return Jj(a);
                     };
                   }(n, t, w, p, n, v, t, w, z, C, D, E, L, K, T, fa, P, d, b);
-                }(), pe = ye.I(Pp, cd, a, Cf);
+                }(), pe = ye.I(Op, cd, a, Cf);
                 c[7] = P;
                 c[8] = p;
                 c[9] = L;
@@ -13135,7 +13062,7 @@ function qp(a, b) {
       };
     }(b));
     return b;
-  }, Yp = function(a, b) {
+  }, Xp = function(a, b) {
     var c = Z(1);
     W(function(c) {
       return function() {
@@ -13190,22 +13117,22 @@ function qp(a, b) {
             return function(d) {
               var e = d[1];
               if (1 === e) {
-                var f = Wp(a);
+                var f = Vp(a);
                 return Y(d, 2, f);
               }
               if (2 === e) {
-                var f = d[2], n = Xp(a);
+                var f = d[2], n = Wp(a);
                 d[7] = f;
                 return Y(d, 3, n);
               }
               if (3 === e) {
-                return f = d[2], n = Tp(), d[8] = f, Y(d, 4, n);
+                return f = d[2], n = Sp(), d[8] = f, Y(d, 4, n);
               }
               if (4 === e) {
                 var v = d[2], t = Z(null), w = function() {
                   var a = {};
                   return O ? O(a) : ue.call(null, a);
-                }(), z = F.h ? F.h(Rp) : F.call(null, Rp), C = z.transaction([a], "readonly"), D = C.objectStore(a), E = function() {
+                }(), z = F.h ? F.h(Qp) : F.call(null, Qp), C = z.transaction([a], "readonly"), D = C.objectStore(a), E = function() {
                   return function(a, b, c, d, e, f, g, k, m, p, n, v) {
                     return function Bb(t) {
                       return new Ud(null, function(a, b, c, d, e, f, g, k, m, p, n, v) {
@@ -13263,7 +13190,7 @@ function qp(a, b) {
                 d[11] = K;
                 return Y(d, 5, t);
               }
-              return 5 === e ? (f = d[2], n = Up(), d[12] = n, sk(d, f)) : null;
+              return 5 === e ? (f = d[2], n = Tp(), d[12] = n, sk(d, f)) : null;
             };
           }(c), c);
         }(), f = function() {
@@ -13275,7 +13202,7 @@ function qp(a, b) {
       };
     }(c));
     return c;
-  }, Zp = function(a, b) {
+  }, Yp = function(a, b) {
     var c = Z(1);
     W(function(c) {
       return function() {
@@ -13329,7 +13256,7 @@ function qp(a, b) {
           }(function() {
             return function(c) {
               var d = c[1];
-              return 1 === d ? (d = Yp(a, [b]), Y(c, 2, d)) : 2 === d ? (d = c[7], d = c[2], c[7] = d, c[1] = r(d) ? 3 : 4, V) : 3 === d ? (d = c[7], c[2] = d, c[1] = 5, V) : 4 === d ? (c[2] = {}, c[1] = 5, V) : 5 === d ? (d = c[2][b], sk(c, d)) : null;
+              return 1 === d ? (d = Xp(a, [b]), Y(c, 2, d)) : 2 === d ? (d = c[7], d = c[2], c[7] = d, c[1] = r(d) ? 3 : 4, V) : 3 === d ? (d = c[7], c[2] = d, c[1] = 5, V) : 4 === d ? (c[2] = {}, c[1] = 5, V) : 5 === d ? (d = c[2][b], sk(c, d)) : null;
             };
           }(c), c);
         }(), f = function() {
@@ -13341,7 +13268,7 @@ function qp(a, b) {
       };
     }(c));
     return c;
-  }, $p = function(a, b, c) {
+  }, Zp = function(a, b, c) {
     var d = Z(1);
     W(function(d) {
       return function() {
@@ -13396,20 +13323,20 @@ function qp(a, b) {
             return function(d) {
               var e = d[1];
               if (1 === e) {
-                return e = F.h ? F.h(Pp) : F.call(null, Pp), e = e.h ? e.h(a) : e.call(null, a), e = 1E3 < I(e), d[1] = r(e) ? 2 : 3, V;
+                return e = F.h ? F.h(Op) : F.call(null, Op), e = e.h ? e.h(a) : e.call(null, a), e = 1E3 < I(e), d[1] = r(e) ? 2 : 3, V;
               }
               if (2 === e) {
-                return e = Xp(a), Y(d, 5, e);
+                return e = Wp(a), Y(d, 5, e);
               }
               if (3 === e) {
                 return d[2] = null, d[1] = 4, V;
               }
               if (4 === e) {
-                var e = d[2], f = Wp(a);
+                var e = d[2], f = Vp(a);
                 d[7] = e;
                 return Y(d, 6, f);
               }
-              return 5 === e ? (e = d[2], d[2] = e, d[1] = 4, V) : 6 === e ? (e = d[2], f = F.h ? F.h(Pp) : F.call(null, Pp), f = f.h ? f.h(a) : f.call(null, a), f = cd.w(f, b, c), f = ye.I(Pp, cd, a, f), d[8] = f, d[9] = e, sk(d, c)) : null;
+              return 5 === e ? (e = d[2], d[2] = e, d[1] = 4, V) : 6 === e ? (e = d[2], f = F.h ? F.h(Op) : F.call(null, Op), f = f.h ? f.h(a) : f.call(null, a), f = cd.w(f, b, c), f = ye.I(Op, cd, a, f), d[8] = f, d[9] = e, sk(d, c)) : null;
             };
           }(d), d);
         }(), g = function() {
@@ -13423,18 +13350,18 @@ function qp(a, b) {
     return d;
   };
 } else {
-  var aq, bq = Af;
-  aq = O ? O(bq) : ue.call(null, bq);
-  var cq = function(a) {
-    var b = ad(F.h ? F.h(aq) : F.call(null, aq), a);
+  var $p, aq = Af;
+  $p = O ? O(aq) : ue.call(null, aq);
+  var bq = function(a) {
+    var b = ad(F.h ? F.h($p) : F.call(null, $p), a);
     if (r(b)) {
       return b;
     }
     Qn("./dbs");
-    b = cd.w(F.h ? F.h(aq) : F.call(null, aq), a, require("levelup").call(null, [u("./dbs/"), u(("" + u(a)).replace(/[^a-zA-Z0-9]/, "_")), u(".leveldb")].join(""), {valueEncoding:"json"}));
-    b = Q.j ? Q.j(aq, b) : Q.call(null, aq, b);
+    b = cd.w(F.h ? F.h($p) : F.call(null, $p), a, require("levelup").call(null, [u("./dbs/"), u(("" + u(a)).replace(/[^a-zA-Z0-9]/, "_")), u(".leveldb")].join(""), {valueEncoding:"json"}));
+    b = Q.j ? Q.j($p, b) : Q.call(null, $p, b);
     return ad(b, a);
-  }, Xp = function() {
+  }, Wp = function() {
     var a = Z(1);
     W(function(a) {
       return function() {
@@ -13499,15 +13426,15 @@ function qp(a, b) {
       };
     }(a));
     return a;
-  }, Zp = function(a, b) {
+  }, Yp = function(a, b) {
     var c = Z(1);
-    cq(a).get(b, function(a) {
+    bq(a).get(b, function(a) {
       return function(b, c) {
         return r(b) ? Jj(a) : Gk(a, c);
       };
     }(c));
     return c;
-  }, Yp = function(a, b) {
+  }, Xp = function(a, b) {
     var c = Z(1), d = {}, e = function() {
       var a = I(b);
       return O ? O(a) : ue.call(null, a);
@@ -13527,7 +13454,7 @@ function qp(a, b) {
                       for (var e = 0;;) {
                         if (e < E) {
                           var p = x.j(k, e);
-                          ae(L, Dk(Zp(a, p), function(a, b, c, d, e, f, g, k, p, n) {
+                          ae(L, Dk(Yp(a, p), function(a, b, c, d, e, f, g, k, p, n) {
                             return function(a) {
                               p[b] = a;
                               return 0 >= ye.j(n, Gd) ? Gk(k, p) : null;
@@ -13541,7 +13468,7 @@ function qp(a, b) {
                     }() ? $d(be(L), p($b(g))) : $d(be(L), null);
                   }
                   var K = A(g);
-                  return G(Dk(Zp(a, K), function(a, b, c, d, e, f) {
+                  return G(Dk(Yp(a, K), function(a, b, c, d, e, f) {
                     return function(b) {
                       e[a] = b;
                       return 0 >= ye.j(f, Gd) ? Gk(d, e) : null;
@@ -13556,9 +13483,9 @@ function qp(a, b) {
       }(c, d, e)(b);
     }());
     return c;
-  }, $p = function(a, b, c) {
+  }, Zp = function(a, b, c) {
     var d = Z(1);
-    cq(a).put(b, c, function(d) {
+    bq(a).put(b, c, function(d) {
       return function(f) {
         r(f) && ch.v(H([new y(null, "leveldb-store-error", "leveldb-store-error", 968132899, null), f, a, b, c], 0));
         return Jj(d);
@@ -13567,7 +13494,7 @@ function qp(a, b) {
     return d;
   };
 }
-function dq(a, b) {
+function cq(a, b) {
   var c = Z(1);
   W(function(c) {
     return function() {
@@ -13631,14 +13558,14 @@ function dq(a, b) {
               return d = c[2], sk(c, d);
             }
             if (6 === d) {
-              return d = Xp(a), Y(c, 10, d);
+              return d = Wp(a), Y(c, 10, d);
             }
             if (3 === d) {
               var e = c[7];
               c[1] = r(e) ? 5 : 6;
               return V;
             }
-            return 2 === d || 9 === d ? (e = c[2], c[7] = e, c[2] = null, c[1] = 3, V) : 5 === d ? (e = c[7], d = J(e, 0), e = J(e, 1), e = gh(e), d = $p(a, d, e), Y(c, 8, d)) : 10 === d ? (d = c[2], c[2] = d, c[1] = 7, V) : 8 === d ? (c[8] = c[2], Y(c, 9, b)) : null;
+            return 2 === d || 9 === d ? (e = c[2], c[7] = e, c[2] = null, c[1] = 3, V) : 5 === d ? (e = c[7], d = J(e, 0), e = J(e, 1), e = gh(e), d = Zp(a, d, e), Y(c, 8, d)) : 10 === d ? (d = c[2], c[2] = d, c[1] = 7, V) : 8 === d ? (c[8] = c[2], Y(c, 9, b)) : null;
           };
         }(c), c);
       }(), f = function() {
@@ -13705,7 +13632,7 @@ qn(new y(null, "store", "store", -1142205747, null), function() {
         }(function() {
           return function(a) {
             var b = a[1];
-            return 1 === b ? (b = $p(Rh, "hello", "world"), Y(a, 2, b)) : 2 === b ? (b = a[7], b = a[2], a[7] = b, a[1] = r(b) ? 3 : 4, V) : 3 === b ? (b = a[7], a[2] = b, a[1] = 5, V) : 4 === b ? (a[2] = !0, a[1] = 5, V) : 5 === b ? (b = a[2], sk(a, b)) : null;
+            return 1 === b ? (b = Zp(Rh, "hello", "world"), Y(a, 2, b)) : 2 === b ? (b = a[7], b = a[2], a[7] = b, a[1] = r(b) ? 3 : 4, V) : 3 === b ? (b = a[7], a[2] = b, a[1] = 5, V) : 4 === b ? (a[2] = !0, a[1] = 5, V) : 5 === b ? (b = a[2], sk(a, b)) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -13772,7 +13699,7 @@ qn(new y(null, "fetch", "fetch", 558537283, null), function() {
         }(function() {
           return function(a) {
             var b = a[1];
-            return 1 === b ? (b = Zp(Rh, "hello"), Y(a, 2, b)) : 2 === b ? (b = vc.j("world", a[2]), sk(a, b)) : null;
+            return 1 === b ? (b = Yp(Rh, "hello"), Y(a, 2, b)) : 2 === b ? (b = vc.j("world", a[2]), sk(a, b)) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -13785,10 +13712,10 @@ qn(new y(null, "fetch", "fetch", 558537283, null), function() {
   }(a));
   return a;
 });
-var eq, fq = Af;
-eq = O ? O(fq) : ue.call(null, fq);
+var dq, eq = Af;
+dq = O ? O(eq) : ue.call(null, eq);
 if (r(En)) {
-  var gq = function(a) {
+  var fq = function(a) {
     var b = Z(1);
     W(function(b) {
       return function() {
@@ -13842,7 +13769,7 @@ if (r(En)) {
           }(function() {
             return function(b) {
               if (1 === b[1]) {
-                var c = Qn("./dbs"), d = require("levelup"), e = ("" + u(a)).replace(/[^a-zA-Z0-9]/, "_"), e = [u("./dbs/kvdb-"), u(e), u(".leveldb")].join(""), p = {valueEncoding:"json"}, d = d.j ? d.j(e, p) : d.call(null, e, p), d = ye.I(eq, cd, a, d);
+                var c = Qn("./dbs"), d = require("levelup"), e = ("" + u(a)).replace(/[^a-zA-Z0-9]/, "_"), e = [u("./dbs/kvdb-"), u(e), u(".leveldb")].join(""), p = {valueEncoding:"json"}, d = d.j ? d.j(e, p) : d.call(null, e, p), d = ye.I(dq, cd, a, d);
                 b[7] = c;
                 return sk(b, d);
               }
@@ -13858,7 +13785,7 @@ if (r(En)) {
       };
     }(b));
     return b;
-  }, hq = function(a, b) {
+  }, gq = function(a, b) {
     var c = Z(null), d = function() {
       var a = I(b);
       return O ? O(a) : ue.call(null, a);
@@ -13880,7 +13807,7 @@ if (r(En)) {
                         if (c < z) {
                           var k = x.j(f, c);
                           ae(C, function() {
-                            var m = A(k), D = ad(F.h ? F.h(eq) : F.call(null, eq), m), fa = Vc(k);
+                            var m = A(k), D = ad(F.h ? F.h(dq) : F.call(null, dq), m), fa = Vc(k);
                             return D.batch(gh(function() {
                               return function(a, b, c, d, e, f, k, m, p, n, v, t) {
                                 return function hb(w) {
@@ -13932,7 +13859,7 @@ if (r(En)) {
                   }
                   var D = A(e);
                   return G(function() {
-                    var c = A(D), f = ad(F.h ? F.h(eq) : F.call(null, eq), c), k = Vc(D);
+                    var c = A(D), f = ad(F.h ? F.h(dq) : F.call(null, dq), c), k = Vc(D);
                     return f.batch(gh(function() {
                       return function(a, b, c, d, e, f, k, m) {
                         return function Na(p) {
@@ -13999,7 +13926,7 @@ if (r(En)) {
                         if (c < z) {
                           var k = x.j(f, c);
                           ae(C, function() {
-                            var m = A(k), D = ad(F.h ? F.h(eq) : F.call(null, eq), m), fa = Vc(k);
+                            var m = A(k), D = ad(F.h ? F.h(dq) : F.call(null, dq), m), fa = Vc(k);
                             return Ng(function() {
                               return function(a, b, c, d, e, f, k, m, p, n, v, t) {
                                 return function hb(w) {
@@ -14119,7 +14046,7 @@ if (r(En)) {
                   }
                   var D = A(e);
                   return G(function() {
-                    var c = A(D), f = ad(F.h ? F.h(eq) : F.call(null, eq), c), k = Vc(D);
+                    var c = A(D), f = ad(F.h ? F.h(dq) : F.call(null, dq), c), k = Vc(D);
                     return Ng(function() {
                       return function(a, b, c, d, e, f, k, m) {
                         return function Na(p) {
@@ -14242,15 +14169,15 @@ if (r(En)) {
   }
 }
 if (r(Dn)) {
-  var iq = O ? O(null) : ue.call(null, null), gq = function(a) {
-    r(F.h ? F.h(iq) : F.call(null, iq)) && (F.h ? F.h(iq) : F.call(null, iq)).close();
+  var hq = O ? O(null) : ue.call(null, null), fq = function(a) {
+    r(F.h ? F.h(hq) : F.call(null, hq)) && (F.h ? F.h(hq) : F.call(null, hq)).close();
     var b = Z(null);
-    a = Wc.j(Gg(Gp(function() {
+    a = Wc.j(Gg(Fp(function() {
       var a = localStorage.getItem("kvdbs");
       return r(a) ? a : "";
     }())), a);
     var c = indexedDB.open("kvdb", I(a) + 1);
-    Q.j ? Q.j(eq, a) : Q.call(null, eq, a);
+    Q.j ? Q.j(dq, a) : Q.call(null, dq, a);
     localStorage.setItem("kvdbs", "" + u(a));
     c.onupgradeneeded = function(a, b, c) {
       return function(g) {
@@ -14300,13 +14227,13 @@ if (r(Dn)) {
     c.onsuccess = function(a) {
       return function(b) {
         b = b.target.result;
-        Q.j ? Q.j(iq, b) : Q.call(null, iq, b);
+        Q.j ? Q.j(hq, b) : Q.call(null, hq, b);
         return Jj(a);
       };
     }(b, a, c);
     return b;
-  }, hq = function(a, b) {
-    var c = Z(null), d = vc.j(0, I(b)), e = Fe(Fe(Eg, xf(a)), xf(b)), f = (F.h ? F.h(iq) : F.call(null, iq)).transaction(gh(q(e)), d ? "readonly" : "readwrite");
+  }, gq = function(a, b) {
+    var c = Z(null), d = vc.j(0, I(b)), e = Fe(Fe(Eg, xf(a)), xf(b)), f = (F.h ? F.h(hq) : F.call(null, hq)).transaction(gh(q(e)), d ? "readonly" : "readwrite");
     Ng(function() {
       return function(a, b, c, d) {
         return function t(e) {
@@ -14792,16 +14719,16 @@ if (r(Dn)) {
     return g;
   }
 }
-var jq, kq = Af;
-jq = O ? O(kq) : ue.call(null, kq);
-var lq = O ? O(0) : ue.call(null, 0), mq, nq = Af;
-mq = O ? O(nq) : ue.call(null, nq);
-var oq, pq = Xc;
-oq = O ? O(pq) : ue.call(null, pq);
-var qq, rq = Af;
-qq = O ? O(rq) : ue.call(null, rq);
-var sq = Z(1);
-function tq(a, b) {
+var iq, jq = Af;
+iq = O ? O(jq) : ue.call(null, jq);
+var kq = O ? O(0) : ue.call(null, 0), lq, mq = Af;
+lq = O ? O(mq) : ue.call(null, mq);
+var nq, oq = Xc;
+nq = O ? O(oq) : ue.call(null, oq);
+var pq, qq = Af;
+pq = O ? O(qq) : ue.call(null, qq);
+var rq = Z(1);
+function sq(a, b) {
   var c = Z(1);
   W(function(c) {
     return function() {
@@ -14866,7 +14793,7 @@ function tq(a, b) {
               return V;
             }
             if (4 === d) {
-              return d = c[7], e = F.h ? F.h(eq) : F.call(null, eq), d = A(d), d = wd(e, d), c[1] = d ? 7 : 8, V;
+              return d = c[7], e = F.h ? F.h(dq) : F.call(null, dq), d = A(d), d = wd(e, d), c[1] = d ? 7 : 8, V;
             }
             if (13 === d) {
               return d = c[2], sk(c, d);
@@ -14880,7 +14807,7 @@ function tq(a, b) {
               c[1] = r(0 < e + f) ? 11 : 12;
               return V;
             }
-            return 12 === d ? (c[2] = null, c[1] = 13, V) : 2 === d ? (d = c[7], d = A(d), c[1] = r(d) ? 4 : 5, V) : 11 === d ? (d = hq(a, b), Y(c, 14, d)) : 9 === d ? (d = c[7], e = c[2], d = tc(d), c[7] = d, c[9] = e, c[2] = null, c[1] = 2, V) : 5 === d ? (c[2] = null, c[1] = 6, V) : 14 === d ? (d = c[2], c[2] = d, c[1] = 13, V) : 10 === d ? (d = c[2], c[2] = d, c[1] = 9, V) : 8 === d ? (d = c[7], d = A(d), d = gq(d), Y(c, 10, d)) : null;
+            return 12 === d ? (c[2] = null, c[1] = 13, V) : 2 === d ? (d = c[7], d = A(d), c[1] = r(d) ? 4 : 5, V) : 11 === d ? (d = gq(a, b), Y(c, 14, d)) : 9 === d ? (d = c[7], e = c[2], d = tc(d), c[7] = d, c[9] = e, c[2] = null, c[1] = 2, V) : 5 === d ? (c[2] = null, c[1] = 6, V) : 14 === d ? (d = c[2], c[2] = d, c[1] = 13, V) : 10 === d ? (d = c[2], c[2] = d, c[1] = 9, V) : 8 === d ? (d = c[7], d = A(d), d = fq(d), Y(c, 10, d)) : null;
           };
         }(c), c);
       }(), f = function() {
@@ -14954,7 +14881,7 @@ function tq(a, b) {
               return a[2] = null, a[1] = 2, V;
             }
             if (4 === b) {
-              var c = a[2], b = F.h ? F.h(oq) : F.call(null, oq), d = F.h ? F.h(mq) : F.call(null, mq), m = F.h ? F.h(jq) : F.call(null, jq), p = F.h ? F.h(jq) : F.call(null, jq), p = Q.j ? Q.j(qq, p) : Q.call(null, qq, p), n = Cf, n = Q.j ? Q.j(jq, n) : Q.call(null, jq, n), v = Q.j ? Q.j(lq, 0) : Q.call(null, lq, 0), t = Cf, t = Q.j ? Q.j(mq, t) : Q.call(null, mq, t), w = Xc, w = Q.j ? Q.j(oq, w) : Q.call(null, oq, w), d = tq(d, m);
+              var c = a[2], b = F.h ? F.h(nq) : F.call(null, nq), d = F.h ? F.h(lq) : F.call(null, lq), m = F.h ? F.h(iq) : F.call(null, iq), p = F.h ? F.h(iq) : F.call(null, iq), p = Q.j ? Q.j(pq, p) : Q.call(null, pq, p), n = Cf, n = Q.j ? Q.j(iq, n) : Q.call(null, iq, n), v = Q.j ? Q.j(kq, 0) : Q.call(null, kq, 0), t = Cf, t = Q.j ? Q.j(lq, t) : Q.call(null, lq, t), w = Xc, w = Q.j ? Q.j(nq, w) : Q.call(null, nq, w), d = sq(d, m);
               a[8] = p;
               a[9] = v;
               a[10] = n;
@@ -14964,7 +14891,7 @@ function tq(a, b) {
               a[14] = b;
               return Y(a, 5, d);
             }
-            return 6 === b ? (b = a[15], b = A(b), a[1] = r(b) ? 8 : 9, V) : 3 === b ? (b = a[2], sk(a, b)) : 2 === b ? Y(a, 4, sq) : 9 === b ? (a[2] = null, a[1] = 10, V) : 5 === b ? (b = a[14], c = a[2], a[15] = b, a[16] = c, a[2] = null, a[1] = 6, V) : 10 === b ? (b = a[2], a[2] = b, a[1] = 7, V) : 8 === b ? (b = a[15], c = A(b), c = Gk(c, !0), b = tc(b), a[15] = b, a[17] = c, a[2] = null, a[1] = 6, V) : null;
+            return 6 === b ? (b = a[15], b = A(b), a[1] = r(b) ? 8 : 9, V) : 3 === b ? (b = a[2], sk(a, b)) : 2 === b ? Y(a, 4, rq) : 9 === b ? (a[2] = null, a[1] = 10, V) : 5 === b ? (b = a[14], c = a[2], a[15] = b, a[16] = c, a[2] = null, a[1] = 6, V) : 10 === b ? (b = a[2], a[2] = b, a[1] = 7, V) : 8 === b ? (b = a[15], c = A(b), c = Gk(c, !0), b = tc(b), a[15] = b, a[17] = c, a[2] = null, a[1] = 6, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -14977,13 +14904,13 @@ function tq(a, b) {
   }(a));
   return a;
 })();
-function uq(a, b, c) {
+function tq(a, b, c) {
   a = "" + u(a);
   b = "" + u(b);
-  ye.I(jq, He, new S(null, 2, 5, U, [a, b], null), c);
-  vc.j(F.h ? F.h(lq) : F.call(null, lq), 0) && Gk(sq, !0);
-  ye.j(lq, Dc);
-  return 1E3 > (F.h ? F.h(lq) : F.call(null, lq)) ? (c = Z(1), W(function(a, b, c) {
+  ye.I(iq, He, new S(null, 2, 5, U, [a, b], null), c);
+  vc.j(F.h ? F.h(kq) : F.call(null, kq), 0) && Gk(rq, !0);
+  ye.j(kq, Dc);
+  return 1E3 > (F.h ? F.h(kq) : F.call(null, kq)) ? (c = Z(1), W(function(a, b, c) {
     return function() {
       var g = function() {
         return function(a) {
@@ -15044,9 +14971,9 @@ function uq(a, b, c) {
       }();
       return X(k);
     };
-  }(c, a, b)), c) : vq.l ? vq.l() : vq.call(null);
+  }(c, a, b)), c) : uq.l ? uq.l() : uq.call(null);
 }
-function wq(a, b) {
+function vq(a, b) {
   var c = "" + u(a), d = "" + u(b), e = Z(1);
   W(function(a, b, c) {
     return function() {
@@ -15100,8 +15027,8 @@ function wq(a, b) {
         }(function(a, b, c) {
           return function(a) {
             var d = a[1];
-            return 1 === d ? (d = a[7], d = F.h ? F.h(jq) : F.call(null, jq), d = Ge(d, new S(null, 2, 5, U, [b, c], null), null), a[7] = d, a[1] = r(d) ? 2 : 3, V) : 2 === d ? (d = a[7], a[2] = d, a[1] = 4, V) : 3 === d ? (d = a[8], d = F.h ? F.h(qq) : F.call(null, qq), d = Ge(d, new S(null, 2, 5, U, [b, c], null), null), a[8] = d, a[1] = r(d) ? 5 : 6, V) : 4 === d ? (d = a[2], sk(a, d)) : 5 === d ? (d = a[8], a[2] = d, a[1] = 7, V) : 6 === d ? (d = Z(1), ye.I(mq, He, new S(null, 2, 5, U, [b, c], 
-            null), Wc.j(Ge(F.h ? F.h(mq) : F.call(null, mq), new S(null, 2, 5, U, [b, c], null), uc), d)), Gk(sq, !0), Y(a, 8, d)) : 7 === d ? (d = a[2], a[2] = d, a[1] = 4, V) : 8 === d ? (d = a[2], a[2] = d, a[1] = 7, V) : null;
+            return 1 === d ? (d = a[7], d = F.h ? F.h(iq) : F.call(null, iq), d = Ge(d, new S(null, 2, 5, U, [b, c], null), null), a[7] = d, a[1] = r(d) ? 2 : 3, V) : 2 === d ? (d = a[7], a[2] = d, a[1] = 4, V) : 3 === d ? (d = a[8], d = F.h ? F.h(pq) : F.call(null, pq), d = Ge(d, new S(null, 2, 5, U, [b, c], null), null), a[8] = d, a[1] = r(d) ? 5 : 6, V) : 4 === d ? (d = a[2], sk(a, d)) : 5 === d ? (d = a[8], a[2] = d, a[1] = 7, V) : 6 === d ? (d = Z(1), ye.I(lq, He, new S(null, 2, 5, U, [b, c], 
+            null), Wc.j(Ge(F.h ? F.h(lq) : F.call(null, lq), new S(null, 2, 5, U, [b, c], null), uc), d)), Gk(rq, !0), Y(a, 8, d)) : 7 === d ? (d = a[2], a[2] = d, a[1] = 4, V) : 8 === d ? (d = a[2], a[2] = d, a[1] = 7, V) : null;
           };
         }(a, b, c), a, b, c);
       }(), e = function() {
@@ -15114,17 +15041,17 @@ function wq(a, b) {
   }(e, c, d));
   return e;
 }
-function vq() {
+function uq() {
   var a = Z(1);
-  ye.w(oq, Wc, a);
-  Gk(sq, !0);
+  ye.w(nq, Wc, a);
+  Gk(rq, !0);
   return a;
 }
-function xq() {
+function wq() {
   var a = 2 < arguments.length ? new Ba(Array.prototype.slice.call(arguments, 2), 0) : null;
-  return yq(arguments[0], arguments[1], a);
+  return xq(arguments[0], arguments[1], a);
 }
-function yq(a, b, c) {
+function xq(a, b, c) {
   var d = Z(1);
   W(function(d) {
     return function() {
@@ -15196,7 +15123,7 @@ function yq(a, b, c) {
   }(d));
   return d;
 }
-function zq() {
+function yq() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -15251,7 +15178,7 @@ function zq() {
           return function(b) {
             var c = b[1];
             if (1 === c) {
-              var d = xq("writes", function() {
+              var d = wq("writes", function() {
                 return function(a, b) {
                   return function() {
                     var c = Z(1);
@@ -15311,10 +15238,10 @@ function zq() {
                                 return a[7] = 1E4, a[2] = null, a[1] = 2, V;
                               }
                               if (2 === b) {
-                                var b = a[7], c = new y(null, "kvdb-bench", "kvdb-bench", -1097308377, null), d = "" + u(b), b = uq(c, d, b);
+                                var b = a[7], c = new y(null, "kvdb-bench", "kvdb-bench", -1097308377, null), d = "" + u(b), b = tq(c, d, b);
                                 return Y(a, 4, b);
                               }
-                              return 3 === b ? (b = a[2], c = vq(), a[8] = b, Y(a, 8, c)) : 4 === b ? (b = a[7], a[9] = a[2], a[1] = r(0 < b) ? 5 : 6, V) : 5 === b ? (b = a[7], a[7] = b - 1, a[2] = null, a[1] = 2, V) : 6 === b ? (a[2] = null, a[1] = 7, V) : 7 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 8 === b ? (b = a[2], sk(a, b)) : null;
+                              return 3 === b ? (b = a[2], c = uq(), a[8] = b, Y(a, 8, c)) : 4 === b ? (b = a[7], a[9] = a[2], a[1] = r(0 < b) ? 5 : 6, V) : 5 === b ? (b = a[7], a[7] = b - 1, a[2] = null, a[1] = 2, V) : 6 === b ? (a[2] = null, a[1] = 7, V) : 7 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 8 === b ? (b = a[2], sk(a, b)) : null;
                             };
                           }(a, b, c), a, b, c);
                         }(), e = function() {
@@ -15332,7 +15259,7 @@ function zq() {
               return Y(b, 2, d);
             }
             if (2 === c) {
-              var m = b[2], d = xq("reads", function() {
+              var m = b[2], d = wq("reads", function() {
                 return function(a, b, c) {
                   return function() {
                     var d = Z(1);
@@ -15398,7 +15325,7 @@ function zq() {
                                 a[1] = 2;
                                 return V;
                               }
-                              return 2 === b ? (d = a[9], a[1] = r(0 < d) ? 4 : 5, V) : 3 === b ? (c = a[8], b = a[10], b = nn.v(H([b, c, a[2]], 0)), sk(a, b)) : 4 === b ? (d = a[9], b = d - 1, c = new y(null, "kvdb-bench", "kvdb-bench", -1097308377, null), d = "" + u(d), c = wq(c, d), a[11] = b, Y(a, 7, c)) : 5 === b ? (a[2] = null, a[1] = 6, V) : 6 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 7 === b ? (c = a[7], b = a[11], c += a[2], a[7] = c, a[9] = b, a[2] = null, a[1] = 2, V) : null;
+                              return 2 === b ? (d = a[9], a[1] = r(0 < d) ? 4 : 5, V) : 3 === b ? (c = a[8], b = a[10], b = nn.v(H([b, c, a[2]], 0)), sk(a, b)) : 4 === b ? (d = a[9], b = d - 1, c = new y(null, "kvdb-bench", "kvdb-bench", -1097308377, null), d = "" + u(d), c = vq(c, d), a[11] = b, Y(a, 7, c)) : 5 === b ? (a[2] = null, a[1] = 6, V) : 6 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : 7 === b ? (c = a[7], b = a[11], c += a[2], a[7] = c, a[9] = b, a[2] = null, a[1] = 2, V) : null;
                             };
                           }(a, b, c, d), a, b, c, d);
                         }(), f = function() {
@@ -15484,17 +15411,17 @@ mn("kvdb", function() {
           return function(a) {
             var b = a[1];
             if (1 === b) {
-              var b = nn.v(H([new y(null, "kvdb", "kvdb", 1011811303, null), new y(null, "test-start", "test-start", 1433337342, null)], 0)), c = new y(null, "kvdb", "kvdb", 1011811303, null), d = new y(null, "ab0", "ab0", -1221896570, null), m = wq("a", new y(null, "b", "b", -1172211299, null));
+              var b = nn.v(H([new y(null, "kvdb", "kvdb", 1011811303, null), new y(null, "test-start", "test-start", 1433337342, null)], 0)), c = new y(null, "kvdb", "kvdb", 1011811303, null), d = new y(null, "ab0", "ab0", -1221896570, null), m = vq("a", new y(null, "b", "b", -1172211299, null));
               a[7] = c;
               a[8] = d;
               a[9] = b;
               return Y(a, 2, m);
             }
             if (2 === b) {
-              return c = a[7], d = a[8], b = nn.v(H([c, d, a[2]], 0)), c = new y(null, "kvdb", "kvdb", 1011811303, null), d = new y(null, "ab0", "ab0", -1221896570, null), m = wq("a", new y(null, "b", "b", -1172211299, null)), a[10] = b, a[11] = d, a[12] = c, Y(a, 3, m);
+              return c = a[7], d = a[8], b = nn.v(H([c, d, a[2]], 0)), c = new y(null, "kvdb", "kvdb", 1011811303, null), d = new y(null, "ab0", "ab0", -1221896570, null), m = vq("a", new y(null, "b", "b", -1172211299, null)), a[10] = b, a[11] = d, a[12] = c, Y(a, 3, m);
             }
             if (3 === b) {
-              var d = a[11], c = a[12], b = nn.v(H([c, d, a[2].constructor], 0)), c = wq("a", "b"), d = wq("a", "b"), m = uq("foo", Nh, uh), p = uq("foo", Ai, uh), n = uq("foo", ci, uh), v = uq(new y(null, "a", "a", -482876059, null), new y(null, "b", "b", -1172211299, null), "hello"), t = new y(null, "kvdb", "kvdb", 1011811303, null), w = new y(null, "ab1", "ab1", 1189262812, null), z = wq("a", new y(null, "b", "b", -1172211299, null));
+              var d = a[11], c = a[12], b = nn.v(H([c, d, a[2].constructor], 0)), c = vq("a", "b"), d = vq("a", "b"), m = tq("foo", Nh, uh), p = tq("foo", Ai, uh), n = tq("foo", ci, uh), v = tq(new y(null, "a", "a", -482876059, null), new y(null, "b", "b", -1172211299, null), "hello"), t = new y(null, "kvdb", "kvdb", 1011811303, null), w = new y(null, "ab1", "ab1", 1189262812, null), z = vq("a", new y(null, "b", "b", -1172211299, null));
               a[13] = n;
               a[14] = t;
               a[15] = c;
@@ -15506,7 +15433,7 @@ mn("kvdb", function() {
               a[21] = m;
               return Y(a, 4, z);
             }
-            return 4 === b ? (t = a[14], w = a[16], b = nn.v(H([t, w, a[2]], 0)), c = uq("foo", Ai, null), d = new y(null, "a", "a", -482876059, null), m = new y(null, "b", "b", -1172211299, null), p = new ArrayBuffer(20), d = uq(d, m, p), m = nn.v(H([new y(null, "kvdb-queries", "kvdb-queries", 1776121139, null), mq], 0)), p = nn.v(H([new y(null, "kvdb-cache", "kvdb-cache", 994158271, null), jq], 0)), n = zq(), a[22] = p, a[23] = d, a[24] = m, a[25] = b, a[26] = c, Y(a, 5, n)) : 5 === b ? (b = a[2], 
+            return 4 === b ? (t = a[14], w = a[16], b = nn.v(H([t, w, a[2]], 0)), c = tq("foo", Ai, null), d = new y(null, "a", "a", -482876059, null), m = new y(null, "b", "b", -1172211299, null), p = new ArrayBuffer(20), d = tq(d, m, p), m = nn.v(H([new y(null, "kvdb-queries", "kvdb-queries", 1776121139, null), lq], 0)), p = nn.v(H([new y(null, "kvdb-cache", "kvdb-cache", 994158271, null), iq], 0)), n = yq(), a[22] = p, a[23] = d, a[24] = m, a[25] = b, a[26] = c, Y(a, 5, n)) : 5 === b ? (b = a[2], 
             sk(a, b)) : null;
           };
         }(a), a);
@@ -15520,7 +15447,7 @@ mn("kvdb", function() {
   }(a));
   return a;
 });
-function Aq(a) {
+function zq(a) {
   var b = Z(1);
   W(function(b) {
     return function() {
@@ -15581,10 +15508,10 @@ function Aq(a) {
               return V;
             }
             if (1 === d) {
-              return e = Zp(bi, a), Y(c, 2, e);
+              return e = Yp(bi, a), Y(c, 2, e);
             }
             if (4 === d) {
-              return e = Zp(vj, a), Y(c, 6, e);
+              return e = Yp(vj, a), Y(c, 6, e);
             }
             if (15 === d) {
               var p = c[8], n = c[9], v = c[10], t = c[11], w = c[2], z = function() {
@@ -15604,7 +15531,7 @@ function Aq(a) {
                     return new S(null, 4, 5, U, [a / Math.sqrt(10 + b) * 1E3 | 0, c, a, b], null);
                   };
                 }(v, p, t, w, p, n, v, t, w, z, d, b);
-              }(), t), e = Ad(e), e = Nd(e), e = R.j(z, ze(100, e)), e = gh(e), C = $p(bi, a, e);
+              }(), t), e = Ad(e), e = Nd(e), e = R.j(z, ze(100, e)), e = gh(e), C = Zp(bi, a, e);
               c[9] = e;
               return Y(c, 19, C);
             }
@@ -15640,7 +15567,7 @@ function Aq(a) {
               return e = c[16], c[2] = e, c[1] = 13, V;
             }
             if (9 === d) {
-              return p = c[8], e = c[2].slice(0, 1E3), C = Yp(Cj, e), c[8] = e, Y(c, 10, C);
+              return p = c[8], e = c[2].slice(0, 1E3), C = Xp(Cj, e), c[8] = e, Y(c, 10, C);
             }
             if (5 === d) {
               return e = c[2], sk(c, e);
@@ -15670,7 +15597,7 @@ function Aq(a) {
   }(b));
   return b;
 }
-function Bq() {
+function Aq() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -15737,7 +15664,7 @@ function Bq() {
   }(a));
   return a;
 }
-function Cq() {
+function Bq() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -15810,7 +15737,7 @@ function Cq() {
   }(a));
   return a;
 }
-function Dq() {
+function Cq() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -15883,7 +15810,7 @@ function Dq() {
   }(a));
   return a;
 }
-function Eq() {
+function Dq() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -15956,7 +15883,7 @@ function Eq() {
   }(a));
   return a;
 }
-function Fq() {
+function Eq() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -16029,7 +15956,7 @@ function Fq() {
   }(a));
   return a;
 }
-function Gq() {
+function Fq() {
   var a = se.v(R.h(function(a) {
     return Lm(a, /,/);
   }), R.h(An), wn(H([new y(null, "bib", "bib", -491285877, null), "finding lid-count"], 0)), H([yn, R.h(function(a) {
@@ -16040,13 +15967,13 @@ function Gq() {
   Hk(Vn("tmp/coloans-by-lid.csv"), a);
   return a;
 }
-function Hq(a, b, c) {
+function Gq(a, b, c) {
   c = Ck(1, c);
   a = Vn(a);
   Ik(a, c);
-  return dq(b, c);
+  return cq(b, c);
 }
-function Iq() {
+function Hq() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -16101,7 +16028,7 @@ function Iq() {
           return function(b) {
             var c = b[1];
             if (1 === c) {
-              var d = Zp(Cj, "1000000");
+              var d = Yp(Cj, "1000000");
               return Y(b, 2, d);
             }
             if (2 === c) {
@@ -16111,7 +16038,7 @@ function Iq() {
               return d = nn.v(H([new y(null, "bib", "bib", -491285877, null), "ensured patron-database"], 0)), b[2] = d, b[1] = 5, V;
             }
             if (4 === c) {
-              var m = Cf, d = Gq();
+              var m = Cf, d = Fq();
               b[7] = m;
               return Y(b, 6, d);
             }
@@ -16133,7 +16060,7 @@ function Iq() {
                     return new S(null, 2, 5, U, [c, [ja(b), a[ja(b)]]], null);
                   };
                 }(v, m, p, n, v, t, w, z, C, D, E, L, K, c, a);
-              }()), d = se.v(E, K, d, H([yn], 0)), d = Hq("tmp/coloans.csv", Cj, d);
+              }()), d = se.v(E, K, d, H([yn], 0)), d = Gq("tmp/coloans.csv", Cj, d);
               b[8] = C;
               return Y(b, 7, d);
             }
@@ -16150,7 +16077,7 @@ function Iq() {
   }(a));
   return a;
 }
-function Jq() {
+function Iq() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -16205,7 +16132,7 @@ function Jq() {
           return function(b) {
             var c = b[1];
             if (1 === c) {
-              var d = Zp(vj, "93044142");
+              var d = Yp(vj, "93044142");
               return Y(b, 2, d);
             }
             if (2 === c) {
@@ -16221,10 +16148,111 @@ function Jq() {
                     return Lm(a, /,/);
                   };
                 }(c, a);
-              }()), m = R.h(An), p = wn(H([new y(null, "bib", "bib", -491285877, null), "traversing 46186845 loans and finding lids loans"], 0)), d = se.v(d, m, p, H([yn], 0)), d = Hq("tmp/coloans-by-lid.csv", vj, d);
+              }()), m = R.h(An), p = wn(H([new y(null, "bib", "bib", -491285877, null), "traversing 46186845 loans and finding lids loans"], 0)), d = se.v(d, m, p, H([yn], 0)), d = Gq("tmp/coloans-by-lid.csv", vj, d);
               return Y(b, 6, d);
             }
             return 5 === c ? (d = b[2], sk(b, d)) : 6 === c ? (d = b[2], b[2] = d, b[1] = 5, V) : null;
+          };
+        }(a), a);
+      }(), d = function() {
+        var d = c.l ? c.l() : c.call(null);
+        d[6] = a;
+        return d;
+      }();
+      return X(d);
+    };
+  }(a));
+  return a;
+}
+function Jq() {
+  var a = Z(1);
+  W(function(a) {
+    return function() {
+      var c = function() {
+        return function(a) {
+          return function() {
+            function b(c) {
+              for (;;) {
+                var d;
+                a: {
+                  try {
+                    for (;;) {
+                      var f = a(c);
+                      if (!N(f, V)) {
+                        d = f;
+                        break a;
+                      }
+                    }
+                  } catch (g) {
+                    if (g instanceof Object) {
+                      c[5] = g, tk(c), d = V;
+                    } else {
+                      throw g;
+                    }
+                  }
+                }
+                if (!N(d, V)) {
+                  return d;
+                }
+              }
+            }
+            function c() {
+              var a = [null, null, null, null, null, null, null, null, null, null, null];
+              a[0] = d;
+              a[1] = 1;
+              return a;
+            }
+            var d = null, d = function(a) {
+              switch(arguments.length) {
+                case 0:
+                  return c.call(this);
+                case 1:
+                  return b.call(this, a);
+              }
+              throw Error("Invalid arity: " + arguments.length);
+            };
+            d.l = c;
+            d.h = b;
+            return d;
+          }();
+        }(function(a) {
+          return function(b) {
+            var c = b[1];
+            if (7 === c) {
+              var d = b[7];
+              b[1] = r(d) ? 9 : 10;
+              return V;
+            }
+            if (1 === c) {
+              return d = Yp(bi, "93044142"), Y(b, 2, d);
+            }
+            if (4 === c) {
+              return b[2] = null, b[1] = 5, V;
+            }
+            if (13 === c || 6 === c) {
+              return d = b[2], b[7] = d, b[2] = null, b[1] = 7, V;
+            }
+            if (3 === c) {
+              var m = b[8], p = function() {
+                return function() {
+                  return function(a) {
+                    return Lm(a, /,/);
+                  };
+                }(m, c, a);
+              }(), n = R.h(p), v = R.h(An), t = new y(null, "bib", "bib", -491285877, null), w = wn(H([t, "finding and caching related for 686521 lids"], 0)), d = R.h(function() {
+                return function() {
+                  return function(a) {
+                    var b = J(a, 0);
+                    J(a, 1);
+                    return b;
+                  };
+                }(m, p, n, v, t, w, c, a);
+              }()), d = se.v(n, v, w, H([yn, d], 0)), d = Ck(1, d), z = Vn("tmp/lids.csv"), z = Ik(z, d);
+              b[8] = d;
+              b[9] = z;
+              return Y(b, 6, d);
+            }
+            return 12 === c ? (m = b[8], b[10] = b[2], Y(b, 13, m)) : 2 === c ? (d = Ga(b[2]), b[1] = d ? 3 : 4, V) : 11 === c ? (d = b[2], b[2] = d, b[1] = 8, V) : 9 === c ? (d = b[7], d = zq(d), Y(b, 12, d)) : 5 === c ? (d = b[2], sk(b, d)) : 14 === c ? (d = b[2], b[2] = d, b[1] = 11, V) : 10 === c ? (d = Wp(bi), Y(b, 14, d)) : 8 === c ? (d = b[2], b[2] = d, b[1] = 5, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -16288,107 +16316,6 @@ function Kq() {
             d.h = b;
             return d;
           }();
-        }(function(a) {
-          return function(b) {
-            var c = b[1];
-            if (7 === c) {
-              var d = b[7];
-              b[1] = r(d) ? 9 : 10;
-              return V;
-            }
-            if (1 === c) {
-              return d = Zp(bi, "93044142"), Y(b, 2, d);
-            }
-            if (4 === c) {
-              return b[2] = null, b[1] = 5, V;
-            }
-            if (13 === c || 6 === c) {
-              return d = b[2], b[7] = d, b[2] = null, b[1] = 7, V;
-            }
-            if (3 === c) {
-              var m = b[8], p = function() {
-                return function() {
-                  return function(a) {
-                    return Lm(a, /,/);
-                  };
-                }(m, c, a);
-              }(), n = R.h(p), v = R.h(An), t = new y(null, "bib", "bib", -491285877, null), w = wn(H([t, "finding and caching related for 686521 lids"], 0)), d = R.h(function() {
-                return function() {
-                  return function(a) {
-                    var b = J(a, 0);
-                    J(a, 1);
-                    return b;
-                  };
-                }(m, p, n, v, t, w, c, a);
-              }()), d = se.v(n, v, w, H([yn, d], 0)), d = Ck(1, d), z = Vn("tmp/lids.csv"), z = Ik(z, d);
-              b[8] = d;
-              b[9] = z;
-              return Y(b, 6, d);
-            }
-            return 12 === c ? (m = b[8], b[10] = b[2], Y(b, 13, m)) : 2 === c ? (d = Ga(b[2]), b[1] = d ? 3 : 4, V) : 11 === c ? (d = b[2], b[2] = d, b[1] = 8, V) : 9 === c ? (d = b[7], d = Aq(d), Y(b, 12, d)) : 5 === c ? (d = b[2], sk(b, d)) : 14 === c ? (d = b[2], b[2] = d, b[1] = 11, V) : 10 === c ? (d = Xp(bi), Y(b, 14, d)) : 8 === c ? (d = b[2], b[2] = d, b[1] = 5, V) : null;
-          };
-        }(a), a);
-      }(), d = function() {
-        var d = c.l ? c.l() : c.call(null);
-        d[6] = a;
-        return d;
-      }();
-      return X(d);
-    };
-  }(a));
-  return a;
-}
-function Lq() {
-  var a = Z(1);
-  W(function(a) {
-    return function() {
-      var c = function() {
-        return function(a) {
-          return function() {
-            function b(c) {
-              for (;;) {
-                var d;
-                a: {
-                  try {
-                    for (;;) {
-                      var f = a(c);
-                      if (!N(f, V)) {
-                        d = f;
-                        break a;
-                      }
-                    }
-                  } catch (g) {
-                    if (g instanceof Object) {
-                      c[5] = g, tk(c), d = V;
-                    } else {
-                      throw g;
-                    }
-                  }
-                }
-                if (!N(d, V)) {
-                  return d;
-                }
-              }
-            }
-            function c() {
-              var a = [null, null, null, null, null, null, null, null, null, null, null];
-              a[0] = d;
-              a[1] = 1;
-              return a;
-            }
-            var d = null, d = function(a) {
-              switch(arguments.length) {
-                case 0:
-                  return c.call(this);
-                case 1:
-                  return b.call(this, a);
-              }
-              throw Error("Invalid arity: " + arguments.length);
-            };
-            d.l = c;
-            d.h = b;
-            return d;
-          }();
         }(function() {
           return function(a) {
             var b = a[1];
@@ -16396,7 +16323,7 @@ function Lq() {
               return b = a[7], a[1] = r(b) ? 9 : 10, V;
             }
             if (1 === b) {
-              return b = Zp(Wh, "93044142"), Y(a, 2, b);
+              return b = Yp(Wh, "93044142"), Y(a, 2, b);
             }
             if (4 === b) {
               return a[2] = null, a[1] = 5, V;
@@ -16410,7 +16337,7 @@ function Lq() {
               a[8] = b;
               return Y(a, 6, b);
             }
-            return 12 === b ? (b = a[8], a[10] = a[2], Y(a, 13, b)) : 2 === b ? (b = Ga(a[2]), a[1] = b ? 3 : 4, V) : 11 === b ? (b = a[2], a[2] = b, a[1] = 8, V) : 9 === b ? (b = a[7], b = $p(Wh, b.lid, b), Y(a, 12, b)) : 5 === b ? (b = a[2], sk(a, b)) : 14 === b ? (b = a[2], a[2] = b, a[1] = 11, V) : 10 === b ? (b = Xp(Wh), Y(a, 14, b)) : 8 === b ? (b = a[2], a[2] = b, a[1] = 5, V) : null;
+            return 12 === b ? (b = a[8], a[10] = a[2], Y(a, 13, b)) : 2 === b ? (b = Ga(a[2]), a[1] = b ? 3 : 4, V) : 11 === b ? (b = a[2], a[2] = b, a[1] = 8, V) : 9 === b ? (b = a[7], b = Zp(Wh, b.lid, b), Y(a, 12, b)) : 5 === b ? (b = a[2], sk(a, b)) : 14 === b ? (b = a[2], a[2] = b, a[1] = 11, V) : 10 === b ? (b = Wp(Wh), Y(a, 14, b)) : 8 === b ? (b = a[2], a[2] = b, a[1] = 5, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -16423,7 +16350,7 @@ function Lq() {
   }(a));
   return a;
 }
-function Mq() {
+function Lq() {
   if (Ga(En)) {
     throw "error: not on node";
   }
@@ -16481,11 +16408,11 @@ function Mq() {
           return function(a) {
             var b = a[1];
             if (7 === b) {
-              var b = a[2], c = Iq();
+              var b = a[2], c = Hq();
               a[7] = b;
               return Y(a, 8, c);
             }
-            return 1 === b ? (b = Bq(), Y(a, 2, b)) : 4 === b ? (b = a[2], c = Dq(), a[8] = b, Y(a, 5, c)) : 6 === b ? (b = a[2], c = Eq(), a[9] = b, Y(a, 7, c)) : 3 === b ? (b = a[2], c = Lq(), a[10] = b, Y(a, 4, c)) : 2 === b ? (b = a[2], c = Fq(), a[11] = b, Y(a, 3, c)) : 9 === b ? (b = a[2], c = Kq(), a[12] = b, Y(a, 10, c)) : 5 === b ? (b = a[2], c = Cq(), a[13] = b, Y(a, 6, c)) : 10 === b ? (b = a[2], sk(a, b)) : 8 === b ? (b = a[2], c = Jq(), a[14] = b, Y(a, 9, c)) : null;
+            return 1 === b ? (b = Aq(), Y(a, 2, b)) : 4 === b ? (b = a[2], c = Cq(), a[8] = b, Y(a, 5, c)) : 6 === b ? (b = a[2], c = Dq(), a[9] = b, Y(a, 7, c)) : 3 === b ? (b = a[2], c = Kq(), a[10] = b, Y(a, 4, c)) : 2 === b ? (b = a[2], c = Eq(), a[11] = b, Y(a, 3, c)) : 9 === b ? (b = a[2], c = Jq(), a[12] = b, Y(a, 10, c)) : 5 === b ? (b = a[2], c = Bq(), a[13] = b, Y(a, 6, c)) : 10 === b ? (b = a[2], sk(a, b)) : 8 === b ? (b = a[2], c = Iq(), a[14] = b, Y(a, 9, c)) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -16553,7 +16480,7 @@ mn("prepare-bib-related", function() {
           return function(a) {
             var b = a[1];
             if (1 === b) {
-              return b = Mq(), Y(a, 2, b);
+              return b = Lq(), Y(a, 2, b);
             }
             if (2 === b) {
               var b = a[2], c = nn.v(H([new y(null, "bib", "bib", -491285877, null), "relation server data prepared"], 0));
@@ -16573,7 +16500,7 @@ mn("prepare-bib-related", function() {
   }(a));
   return a;
 });
-function Nq(a) {
+function Mq(a) {
   var b = Z(1);
   W(function(b) {
     return function() {
@@ -16634,10 +16561,10 @@ function Nq(a) {
               return V;
             }
             if (1 === d) {
-              return e = wq(ri, a), Y(c, 2, e);
+              return e = vq(ri, a), Y(c, 2, e);
             }
             if (4 === d) {
-              var p = c[8], e = [u("https://dev.vejlebib.dk/ting-visual-relation/get-ting-object/870970-basis:"), u(a)].join(""), n = ro(e);
+              var p = c[8], e = [u("https://dev.vejlebib.dk/ting-visual-relation/get-ting-object/870970-basis:"), u(a)].join(""), n = qo(e);
               c[8] = e;
               return Y(c, 6, n);
             }
@@ -16658,7 +16585,7 @@ function Nq(a) {
               return V;
             }
             if (12 === d) {
-              return v = c[9], e = c[2], n = gh(v), n = uq(ri, a, n), c[12] = e, Y(c, 13, n);
+              return v = c[9], e = c[2], n = gh(v), n = tq(ri, a, n), c[12] = e, Y(c, 13, n);
             }
             if (2 === d) {
               return t = c[11], e = kh(c[2]), c[11] = e, c[1] = r(e) ? 3 : 4, V;
@@ -16667,13 +16594,13 @@ function Nq(a) {
               return c[2] = null, c[1] = 12, V;
             }
             if (9 === d) {
-              var t = c[11], p = c[8], v = c[9], w = c[2], z = kh(w), C = function() {
+              var v = c[9], p = c[8], t = c[11], w = c[2], z = kh(w), C = function() {
                 return function() {
                   return function(a, b) {
                     var c = J(b, 0), d = J(b, 1);
                     return r(a.h ? a.h(c) : a.call(null, c)) ? cd.w(a, c, Wc.j(a.h ? a.h(c) : a.call(null, c), d)) : cd.w(a, c, new S(null, 1, 5, U, [d], null));
                   };
-                }(t, p, z, t, p, v, w, z, d, b);
+                }(t, p, z, v, p, t, w, z, d, b);
               }(), D = Cf, e = function() {
                 return function(a, b, c, d, e, f, g, k, m, p, n, t) {
                   return function vb(v) {
@@ -16709,19 +16636,19 @@ function Nq(a) {
                       };
                     }(a, b, c, d, e, f, g, k, m, p, n, t), null, null);
                   };
-                }(t, p, z, t, p, v, w, z, C, D, d, b);
-              }(), e = e.h ? e.h(z) : e.call(null, z), e = Pa(C, D, e), n = nn.v(H([new y(null, "bib-data", "bib-data", 229158643, null), new y(null, "update", "update", -1608859373, null), e], 0)), E = e.h ? e.h("isbn") : e.call(null, "isbn");
+                }(t, p, z, v, p, t, w, z, C, D, d, b);
+              }(), e = e.h ? e.h(z) : e.call(null, z), e = Pa(C, D, e), n = nn.v(H([new y(null, "bib-data", "bib-data", 229158643, null), new y(null, "update", "update", -1608859373, null), p, e], 0)), E = e.h ? e.h("isbn") : e.call(null, "isbn");
               c[9] = e;
               c[13] = n;
               c[1] = r(E) ? 10 : 11;
               return V;
             }
-            return 5 === d ? (e = c[2], sk(c, e)) : 10 === d ? (t = c[11], p = c[8], v = c[9], e = function() {
+            return 5 === d ? (e = c[2], sk(c, e)) : 10 === d ? (v = c[9], p = c[8], t = c[11], e = function() {
               return function() {
                 return function(b) {
-                  return uq(fi, b, a);
+                  return tq(fi, b, a);
                 };
-              }(t, p, v, t, p, v, d, b);
+              }(t, p, v, v, p, t, d, b);
             }(), n = v.h ? v.h("isbn") : v.call(null, "isbn"), e = R.j(e, n), e = Ng(e), c[2] = e, c[1] = 12, V) : 8 === d ? (e = Xc, c[2] = e, c[1] = 9, V) : null;
           };
         }(b), b);
@@ -16735,7 +16662,7 @@ function Nq(a) {
   }(b));
   return b;
 }
-function Oq(a) {
+function Nq(a) {
   var b = Z(1);
   W(function(b) {
     return function() {
@@ -16793,7 +16720,7 @@ function Oq(a) {
               return b[2] = new S(null, 1, 5, U, [""], null), b[1] = 8, V;
             }
             if (1 === c) {
-              return c = Nq(a), Y(b, 2, c);
+              return c = Mq(a), Y(b, 2, c);
             }
             if (4 === c) {
               return b[2] = null, b[1] = 5, V;
@@ -16803,9 +16730,9 @@ function Oq(a) {
             }
             if (3 === c) {
               var d = b[8], e = c = U, p = [qj], n = [[u("/bibdata/lid/"), u(a)].join("")], p = dd(p, n), n = d.h ? d.h("title") : d.call(null, "title");
-              b[9] = p;
               b[7] = n;
-              b[10] = c;
+              b[9] = c;
+              b[10] = p;
               b[11] = e;
               b[1] = r(n) ? 6 : 7;
               return V;
@@ -16814,12 +16741,12 @@ function Oq(a) {
               return c = b[2], b[8] = c, b[1] = r(c) ? 3 : 4, V;
             }
             if (11 === c) {
-              var p = b[9], v = b[12], n = b[13], c = b[10], e = b[11], d = Ae(1, Ce.j(Be(" \x26 "), b[2])), d = Fe(v, d), d = Wc.j(d, ")"), c = new S(null, 2, 5, c, [Ph, new S(null, 4, 5, e, [wj, p, n, d], null)], null);
+              var n = b[12], c = b[9], v = b[13], p = b[10], e = b[11], d = Ae(1, Ce.j(Be(" \x26 "), b[2])), d = Fe(v, d), d = Wc.j(d, ")"), c = new S(null, 2, 5, c, [Ph, new S(null, 4, 5, e, [wj, p, n, d], null)], null);
               b[2] = c;
               b[1] = 5;
               return V;
             }
-            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], sk(b, c)) : 10 === c ? (c = Xc, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], n = A(b[2]), v = new S(null, 2, 5, U, [Dj, " ("], null), c = d.h ? d.h("creator") : d.call(null, "creator"), b[12] = v, b[13] = n, b[14] = c, b[1] = r(c) ? 9 : 10, V) : null;
+            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], sk(b, c)) : 10 === c ? (c = Xc, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], n = A(b[2]), v = new S(null, 2, 5, U, [Dj, " ("], null), c = d.h ? d.h("creator") : d.call(null, "creator"), b[12] = n, b[14] = c, b[13] = v, b[1] = r(c) ? 9 : 10, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -16832,8 +16759,8 @@ function Oq(a) {
   }(b));
   return b;
 }
-var Pq = new S(null, 1, 5, U, [new S(null, 2, 5, U, ["bibliotek.dk", "http://bibliotek.dk/linkme.php?rec.id\x3d870970-basis:"], null)], null);
-function Qq(a) {
+var Oq = new S(null, 1, 5, U, [new S(null, 2, 5, U, ["bibliotek.dk", "http://bibliotek.dk/linkme.php?rec.id\x3d870970-basis:"], null)], null);
+function Pq(a) {
   var b = J(a, 0), c = J(a, 1), d = J(a, 2), e = Z(1);
   W(function(a, b, c, d, e) {
     return function() {
@@ -16964,7 +16891,7 @@ function Qq(a) {
                     return new S(null, 3, 5, U, [wj, new l(null, 2, [qj, [u(a), u(A(k))].join(""), Hh, "sameAs"], null), b], null);
                   };
                 }(pa, Ja, gb, g, a, b, c, d, e);
-              }(), Pq), k = Ae(1, Ce.j(Be(" "), k)), k = Fe(gb, k);
+              }(), Oq), k = Ae(1, Ce.j(Be(" "), k)), k = Fe(gb, k);
               f[2] = k;
               f[1] = 2;
               return V;
@@ -16975,7 +16902,7 @@ function Qq(a) {
               f[1] = 2;
               return V;
             }
-            return 10 === g ? (k = U, m = new S(null, 1, 5, U, [zh], null), ha = tc(d), ha = R.j(Oq, ze(30, ha)), ha = un(ha), f[7] = m, f[8] = k, Y(f, 11, ha)) : 8 === g ? (m = k = U, ha = dd([Hh], ["isbn"]), Ra = A(d), k = new S(null, 3, 5, k, [pi, "ISBN: ", new S(null, 3, 5, m, [Dj, ha, Ra], null)], null), f[2] = k, f[1] = 2, V) : null;
+            return 10 === g ? (k = U, m = new S(null, 1, 5, U, [zh], null), ha = tc(d), ha = R.j(Nq, ze(30, ha)), ha = un(ha), f[7] = m, f[8] = k, Y(f, 11, ha)) : 8 === g ? (m = k = U, ha = dd([Hh], ["isbn"]), Ra = A(d), k = new S(null, 3, 5, k, [pi, "ISBN: ", new S(null, 3, 5, m, [Dj, ha, Ra], null)], null), f[2] = k, f[1] = 2, V) : null;
           };
         }(a, b, c, d, e), a, b, c, d, e);
       }(), v = function() {
@@ -16988,7 +16915,7 @@ function Qq(a) {
   }(e, a, b, c, d));
   return e;
 }
-function Rq(a) {
+function Qq(a) {
   return [u("http://schema.org/"), u(function() {
     switch(A(a)) {
       case "Bog":
@@ -17004,7 +16931,7 @@ function Rq(a) {
     }
   }())].join("");
 }
-function Sq(a) {
+function Rq(a) {
   var b = Z(1);
   W(function(b) {
     return function() {
@@ -17059,7 +16986,7 @@ function Sq(a) {
           return function(c) {
             var d = c[1];
             if (1 === d) {
-              var e = Nq(a);
+              var e = Mq(a);
               return Y(c, 2, e);
             }
             if (2 === d) {
@@ -17078,29 +17005,29 @@ function Sq(a) {
                     return a.h ? a.h("lid") : a.call(null, "lid");
                   };
                 }(E, p, n, v, t, w, z, C, D, E, L, d, b);
-              }(), e = Aq(a);
+              }(), e = zq(a);
+              c[8] = E;
               c[9] = L;
               c[10] = K;
-              c[8] = E;
               return Y(c, 6, e);
             }
             if (6 === d) {
-              var L = c[9], K = c[10], p = c[8], T = c[2], fa = kh(T), P = R.j(K, fa), pe = ["related", P], ha = new S(null, 2, 5, L, pe, null), pa = Wc.j(p, ha), Ja = U, gb = "title creator date classification isbn lid related".split(" "), Ra = new S(null, 7, 5, Ja, gb, null), Na = Ee(pa, Ra), ub = [Xh, ii, Vh, Bj], vb = pa.h ? pa.h("title") : pa.call(null, "title"), Mb = A(vb), Bb = pa.h ? pa.h("creator") : pa.call(null, "creator"), Wb = q(Bb), hb = [u(Mb), u(" "), u(Wb), u(" bibdata - solsort.com")].join(""), 
-              rc = ["body", ".spaceabove", "ul"], Mc = ["margin"], Nb = ["5%"], td = dd(Mc, Nb), Rd = ["margin-top"], qe = ["1ex"], Ne = dd(Rd, qe), Rf = ["margin-top"], $c = ["0"], Fn = dd(Rf, $c), Gn = [td, Ne, Fn], Hi = dd(rc, Gn), Ii = U, Hn = U, Nn = [ij, Ti], Hg = pa.h ? pa.h("type") : pa.call(null, "type"), In = Rq(Hg), Jn = ["itemscope", In], Kn = dd(Nn, Jn), Ln = [pi, Kn], Ji = new S(null, 2, 5, Hn, Ln, null), e = R.j(function() {
+              var p = c[8], L = c[9], K = c[10], T = c[2], fa = kh(T), P = R.j(K, fa), pe = ["related", P], ha = new S(null, 2, 5, L, pe, null), pa = Wc.j(p, ha), Ja = U, gb = "title creator date classification isbn lid related".split(" "), Ra = new S(null, 7, 5, Ja, gb, null), Na = Ee(pa, Ra), ub = [Xh, ii, Vh, Bj], vb = pa.h ? pa.h("title") : pa.call(null, "title"), Mb = A(vb), Bb = pa.h ? pa.h("creator") : pa.call(null, "creator"), Wb = q(Bb), hb = [u(Mb), u(" "), u(Wb), u(" bibdata - solsort.com")].join(""), 
+              rc = ["body", ".spaceabove", "ul"], Mc = ["margin"], Nb = ["5%"], td = dd(Mc, Nb), Rd = ["margin-top"], qe = ["1ex"], Ne = dd(Rd, qe), Rf = ["margin-top"], $c = ["0"], Fn = dd(Rf, $c), Gn = [td, Ne, Fn], Hi = dd(rc, Gn), Ii = U, Hn = U, Nn = [ij, Ti], Hg = pa.h ? pa.h("type") : pa.call(null, "type"), In = Qq(Hg), Jn = ["itemscope", In], Kn = dd(Nn, Jn), Ln = [pi, Kn], Ji = new S(null, 2, 5, Hn, Ln, null), e = R.j(function() {
                 return function(a) {
                   return function(b) {
                     return Ya(Ya(Ya(uc, a), a.h ? a.h(b) : a.call(null, b)), b);
                   };
-                }(pa, Na, L, K, p, T, fa, P, pe, ha, pa, Ja, gb, Ra, Na, ub, vb, Mb, Bb, Wb, hb, rc, Mc, Nb, td, Rd, qe, Ne, Rf, $c, Fn, Gn, Hi, Ii, Hn, Nn, Hg, In, Jn, Kn, Ln, Ji, d, b);
-              }(), Na), e = R.j(Qq, e), e = un(e);
+                }(pa, Na, p, L, K, T, fa, P, pe, ha, pa, Ja, gb, Ra, Na, ub, vb, Mb, Bb, Wb, hb, rc, Mc, Nb, td, Rd, qe, Ne, Rf, $c, Fn, Gn, Hi, Ii, Hn, Nn, Hg, In, Jn, Kn, Ln, Ji, d, b);
+              }(), Na), e = R.j(Pq, e), e = un(e);
               c[11] = hb;
-              c[12] = Ii;
-              c[13] = Ji;
-              c[14] = ub;
-              c[15] = Hi;
+              c[12] = Ji;
+              c[13] = ub;
+              c[14] = Hi;
+              c[15] = Ii;
               return Y(c, 7, e);
             }
-            return 7 === d ? (hb = c[11], Ii = c[12], Ji = c[13], ub = c[14], Hi = c[15], e = Fe(Ji, Ee(Ed, c[2])), e = dd(ub, ["html", hb, Hi, new S(null, 2, 5, Ii, [pi, e], null)]), sk(c, e)) : null;
+            return 7 === d ? (hb = c[11], Ji = c[12], ub = c[13], Hi = c[14], Ii = c[15], e = Fe(Ji, Ee(Ed, c[2])), e = dd(ub, ["html", hb, Hi, new S(null, 2, 5, Ii, [pi, e], null)]), sk(c, e)) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17113,8 +17040,8 @@ function Sq(a) {
   }(b));
   return b;
 }
-var Tq = new S(null, 14, 5, U, "28511663 28902239 27999441 27541062 25862031 20411724 23917076 29541167 20476079 29815860 27594506 25523911 07203659 44764873".split(" "), null);
-function Uq(a) {
+var Sq = new S(null, 14, 5, U, "28511663 28902239 27999441 27541062 25862031 20411724 23917076 29541167 20476079 29815860 27594506 25523911 07203659 44764873".split(" "), null);
+function Tq(a) {
   var b = Z(1);
   W(function(b) {
     return function() {
@@ -17169,7 +17096,7 @@ function Uq(a) {
           return function(b) {
             var c = b[1];
             if (1 === c) {
-              var d = c = U, e = [qj], p = [[u("/bibdata/lid/"), u(a)].join("")], e = dd(e, p), d = new S(null, 3, 5, d, [wj, e, a], null), e = Nq(a);
+              var d = c = U, e = [qj], p = [[u("/bibdata/lid/"), u(a)].join("")], e = dd(e, p), d = new S(null, 3, 5, d, [wj, e, a], null), e = Mq(a);
               b[7] = c;
               b[8] = d;
               return Y(b, 2, e);
@@ -17187,7 +17114,7 @@ function Uq(a) {
   }(b));
   return b;
 }
-function Vq() {
+function Uq() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -17242,15 +17169,15 @@ function Vq() {
           return function(a) {
             var b = a[1];
             if (1 === b) {
-              var b = [Xh, ii, Vh, Bj], c = dd(["margin"], ["5%"]), d = dd(["margin-top"], ["1ex"]), m = dd(["margin-top"], ["0"]), c = dd(["body", ".spaceabove", "ul"], [c, d, m]), d = U, m = new S(null, 2, 5, U, [hj, "BibData"], null), p = new S(null, 1, 5, U, [zh], null), n = R.j(Uq, Tq), n = un(n);
-              a[7] = c;
-              a[8] = p;
-              a[9] = m;
-              a[10] = b;
+              var b = [Xh, ii, Vh, Bj], c = dd(["margin"], ["5%"]), d = dd(["margin-top"], ["1ex"]), m = dd(["margin-top"], ["0"]), c = dd(["body", ".spaceabove", "ul"], [c, d, m]), d = U, m = new S(null, 2, 5, U, [hj, "BibData"], null), p = new S(null, 1, 5, U, [zh], null), n = R.j(Tq, Sq), n = un(n);
+              a[7] = b;
+              a[8] = c;
+              a[9] = p;
+              a[10] = m;
               a[11] = d;
               return Y(a, 2, n);
             }
-            return 2 === b ? (c = a[7], p = a[8], m = a[9], b = a[10], d = a[11], p = Fe(p, a[2]), b = dd(b, ["html", " bibdata - solsort.com", c, new S(null, 5, 5, d, [pi, m, "Eksempler:", p, new S(null, 2, 5, U, [ki, "Eksemplerne er udvalgt som 1., 10., 100., 1.000., 10.000., 20.000., 30.000., 40.000., 50.000., 60.000., 70.000., 80.000., 90.000., og 100.000. mest popul\u00e6re bog."], null)], null)]), sk(a, b)) : null;
+            return 2 === b ? (b = a[7], c = a[8], p = a[9], m = a[10], d = a[11], p = Fe(p, a[2]), b = dd(b, ["html", " bibdata - solsort.com", c, new S(null, 5, 5, d, [pi, m, "Eksempler:", p, new S(null, 2, 5, U, [ki, "Eksemplerne er udvalgt som 1., 10., 100., 1.000., 10.000., 20.000., 30.000., 40.000., 50.000., 60.000., 70.000., 80.000., 90.000., og 100.000. mest popul\u00e6re bog."], null)], null)]), sk(a, b)) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -17330,7 +17257,7 @@ mn("bibdata", function(a, b) {
               }
               return V;
             }
-            return 2 === d ? (d = c[2], sk(c, d)) : 3 === d ? (d = wq(fi, b), Y(c, 5, d)) : 4 === d ? (d = c[2], c[2] = d, c[1] = 2, V) : 5 === d ? (d = Sq(c[2]), Y(c, 4, d)) : 6 === d ? (d = Sq(b), Y(c, 7, d)) : 7 === d ? (d = c[2], c[2] = d, c[1] = 2, V) : 8 === d ? (d = Vq(), Y(c, 9, d)) : 9 === d ? (d = c[2], c[2] = d, c[1] = 2, V) : null;
+            return 2 === d ? (d = c[2], sk(c, d)) : 3 === d ? (d = vq(fi, b), Y(c, 5, d)) : 4 === d ? (d = c[2], c[2] = d, c[1] = 2, V) : 5 === d ? (d = Rq(c[2]), Y(c, 4, d)) : 6 === d ? (d = Rq(b), Y(c, 7, d)) : 7 === d ? (d = c[2], c[2] = d, c[1] = 2, V) : 8 === d ? (d = Uq(), Y(c, 9, d)) : 9 === d ? (d = c[2], c[2] = d, c[1] = 2, V) : null;
           };
         }(c), c);
       }(), f = function() {
@@ -17343,7 +17270,7 @@ mn("bibdata", function(a, b) {
   }(c));
   return c;
 });
-var Wq = Bn(function() {
+var Vq = Bn(function() {
   var a = Z(1);
   W(function(a) {
     return function() {
@@ -17406,7 +17333,7 @@ var Wq = Bn(function() {
               a[1] = 2;
               return V;
             }
-            return 2 === b ? (b = a[7], b = Nq(b), Y(a, 4, b)) : 3 === b ? (b = a[2], sk(a, b)) : 4 === b ? (b = a[9], c = a[2], b = tc(b), a[10] = c, a[1] = b ? 5 : 6, V) : 5 === b ? (b = a[9], c = A(b), b = tc(b), a[7] = c, a[9] = b, a[2] = null, a[1] = 2, V) : 6 === b ? (a[2] = null, a[1] = 7, V) : 7 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : null;
+            return 2 === b ? (b = a[7], b = Mq(b), Y(a, 4, b)) : 3 === b ? (b = a[2], sk(a, b)) : 4 === b ? (b = a[9], c = a[2], b = tc(b), a[10] = c, a[1] = b ? 5 : 6, V) : 5 === b ? (b = a[9], c = A(b), b = tc(b), a[7] = c, a[9] = b, a[2] = null, a[1] = 2, V) : 6 === b ? (a[2] = null, a[1] = 7, V) : 7 === b ? (b = a[2], a[2] = b, a[1] = 3, V) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -17419,7 +17346,80 @@ var Wq = Bn(function() {
   }(a));
   return a;
 });
-mn("bibdata-process", Wq);
+mn("bibdata-process", Vq);
+var Wq = [u("git pull \x26\x26"), u("cd ../webroot \x26\x26"), u("git checkout . \x26\x26"), u("git pull \x26\x26"), u("cp solsort.js ../solsort/solsort.js")].join("");
+mn("update-server-from-webroot", function() {
+  var a = Z(1);
+  W(function(a) {
+    return function() {
+      var c = function() {
+        return function(a) {
+          return function() {
+            function b(c) {
+              for (;;) {
+                var d;
+                a: {
+                  try {
+                    for (;;) {
+                      var f = a(c);
+                      if (!N(f, V)) {
+                        d = f;
+                        break a;
+                      }
+                    }
+                  } catch (g) {
+                    if (g instanceof Object) {
+                      c[5] = g, tk(c), d = V;
+                    } else {
+                      throw g;
+                    }
+                  }
+                }
+                if (!N(d, V)) {
+                  return d;
+                }
+              }
+            }
+            function c() {
+              var a = [null, null, null, null, null, null, null, null];
+              a[0] = d;
+              a[1] = 1;
+              return a;
+            }
+            var d = null, d = function(a) {
+              switch(arguments.length) {
+                case 0:
+                  return c.call(this);
+                case 1:
+                  return b.call(this, a);
+              }
+              throw Error("Invalid arity: " + arguments.length);
+            };
+            d.l = c;
+            d.h = b;
+            return d;
+          }();
+        }(function() {
+          return function(a) {
+            var b = a[1];
+            if (1 === b) {
+              var b = new y(null, "update-server", "update-server", -82539246, null), c = Xn(Wq);
+              a[7] = b;
+              return Y(a, 2, c);
+            }
+            return 2 === b ? (b = a[7], b = nn.v(H([b, a[2]], 0)), sk(a, b)) : null;
+          };
+        }(a), a);
+      }(), d = function() {
+        var d = c.l ? c.l() : c.call(null);
+        d[6] = a;
+        return d;
+      }();
+      return X(d);
+    };
+  }(a));
+  return a;
+});
 function Xq() {
   var a = Z(1);
   W(function(a) {
@@ -17664,7 +17664,7 @@ mn("dev-server", function() {
               a[8] = b;
               return Y(a, 2, d);
             }
-            return 2 === b ? (b = a[2], c = eo(), a[9] = b, a[10] = c, sk(a, !0)) : null;
+            return 2 === b ? (b = a[2], c = co(), a[9] = b, a[10] = c, sk(a, !0)) : null;
           };
         }(a), a);
       }(), d = function() {
@@ -18259,7 +18259,7 @@ function nr(a, b) {
           return function(c) {
             var d = c[1];
             if (1 === d) {
-              return d = [u("https://dev.vejlebib.dk/ting-visual-relation/get-ting-object/"), u(b), u(":"), u(a)].join(""), d = so(d, H([yh, !0], 0)), Y(c, 2, d);
+              return d = [u("https://dev.vejlebib.dk/ting-visual-relation/get-ting-object/"), u(b), u(":"), u(a)].join(""), d = ro(d, H([yh, !0], 0)), Y(c, 2, d);
             }
             if (2 === d) {
               return d = c[7], d = rn(c[2]), c[7] = d, c[1] = r(d) ? 3 : 4, V;
@@ -18295,9 +18295,9 @@ or.v = function(a, b) {
   nn.v(H([new y(null, "bib", "bib", -491285877, null), a], 0));
   switch(a) {
     case "info":
-      return je(Zp, Wh, b);
+      return je(Yp, Wh, b);
     case "related":
-      return ie(Aq, b);
+      return ie(zq, b);
     case "ting":
       return ie(nr, b);
     default:
@@ -18662,7 +18662,7 @@ function wr() {
     var b = F.h ? F.h(ur) : F.call(null, ur), c = Xc;
     Q.j ? Q.j(ur, c) : Q.call(null, ur, c);
     localStorage.setItem("next-log", a + 1);
-    return uq("log", a, gh(b));
+    return tq("log", a, gh(b));
   }
   return null;
 }
