@@ -16594,13 +16594,13 @@ function Mq(a) {
               return c[2] = null, c[1] = 12, V;
             }
             if (9 === d) {
-              var v = c[9], p = c[8], t = c[11], w = c[2], z = kh(w), C = function() {
+              var v = c[9], t = c[11], p = c[8], w = c[2], z = kh(w), C = function() {
                 return function() {
                   return function(a, b) {
                     var c = J(b, 0), d = J(b, 1);
                     return r(a.h ? a.h(c) : a.call(null, c)) ? cd.w(a, c, Wc.j(a.h ? a.h(c) : a.call(null, c), d)) : cd.w(a, c, new S(null, 1, 5, U, [d], null));
                   };
-                }(t, p, z, v, p, t, w, z, d, b);
+                }(t, p, z, v, t, p, w, z, d, b);
               }(), D = Cf, e = function() {
                 return function(a, b, c, d, e, f, g, k, m, p, n, t) {
                   return function vb(v) {
@@ -16636,19 +16636,19 @@ function Mq(a) {
                       };
                     }(a, b, c, d, e, f, g, k, m, p, n, t), null, null);
                   };
-                }(t, p, z, v, p, t, w, z, C, D, d, b);
+                }(t, p, z, v, t, p, w, z, C, D, d, b);
               }(), e = e.h ? e.h(z) : e.call(null, z), e = Pa(C, D, e), n = nn.v(H([new y(null, "bib-data", "bib-data", 229158643, null), new y(null, "update", "update", -1608859373, null), p, e], 0)), E = e.h ? e.h("isbn") : e.call(null, "isbn");
               c[9] = e;
               c[13] = n;
               c[1] = r(E) ? 10 : 11;
               return V;
             }
-            return 5 === d ? (e = c[2], sk(c, e)) : 10 === d ? (v = c[9], p = c[8], t = c[11], e = function() {
+            return 5 === d ? (e = c[2], sk(c, e)) : 10 === d ? (v = c[9], t = c[11], p = c[8], e = function() {
               return function() {
                 return function(b) {
                   return tq(fi, b, a);
                 };
-              }(t, p, v, v, p, t, d, b);
+              }(t, p, v, v, t, p, d, b);
             }(), n = v.h ? v.h("isbn") : v.call(null, "isbn"), e = R.j(e, n), e = Ng(e), c[2] = e, c[1] = 12, V) : 8 === d ? (e = Xc, c[2] = e, c[1] = 9, V) : null;
           };
         }(b), b);
@@ -16741,12 +16741,12 @@ function Nq(a) {
               return c = b[2], b[8] = c, b[1] = r(c) ? 3 : 4, V;
             }
             if (11 === c) {
-              var n = b[12], c = b[9], v = b[13], p = b[10], e = b[11], d = Ae(1, Ce.j(Be(" \x26 "), b[2])), d = Fe(v, d), d = Wc.j(d, ")"), c = new S(null, 2, 5, c, [Ph, new S(null, 4, 5, e, [wj, p, n, d], null)], null);
+              var c = b[9], p = b[10], n = b[12], e = b[11], v = b[13], d = Ae(1, Ce.j(Be(" \x26 "), b[2])), d = Fe(v, d), d = Wc.j(d, ")"), c = new S(null, 2, 5, c, [Ph, new S(null, 4, 5, e, [wj, p, n, d], null)], null);
               b[2] = c;
               b[1] = 5;
               return V;
             }
-            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], sk(b, c)) : 10 === c ? (c = Xc, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], n = A(b[2]), v = new S(null, 2, 5, U, [Dj, " ("], null), c = d.h ? d.h("creator") : d.call(null, "creator"), b[12] = n, b[14] = c, b[13] = v, b[1] = r(c) ? 9 : 10, V) : null;
+            return 9 === c ? (c = b[14], b[2] = c, b[1] = 11, V) : 5 === c ? (c = b[2], sk(b, c)) : 10 === c ? (c = Xc, b[2] = c, b[1] = 11, V) : 8 === c ? (d = b[8], n = A(b[2]), v = new S(null, 2, 5, U, [Dj, " ("], null), c = d.h ? d.h("creator") : d.call(null, "creator"), b[14] = c, b[12] = n, b[13] = v, b[1] = r(c) ? 9 : 10, V) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17006,28 +17006,28 @@ function Rq(a) {
                   };
                 }(E, p, n, v, t, w, z, C, D, E, L, d, b);
               }(), e = zq(a);
+              c[9] = K;
               c[8] = E;
-              c[9] = L;
-              c[10] = K;
+              c[10] = L;
               return Y(c, 6, e);
             }
             if (6 === d) {
-              var p = c[8], L = c[9], K = c[10], T = c[2], fa = kh(T), P = R.j(K, fa), pe = ["related", P], ha = new S(null, 2, 5, L, pe, null), pa = Wc.j(p, ha), Ja = U, gb = "title creator date classification isbn lid related".split(" "), Ra = new S(null, 7, 5, Ja, gb, null), Na = Ee(pa, Ra), ub = [Xh, ii, Vh, Bj], vb = pa.h ? pa.h("title") : pa.call(null, "title"), Mb = A(vb), Bb = pa.h ? pa.h("creator") : pa.call(null, "creator"), Wb = q(Bb), hb = [u(Mb), u(" "), u(Wb), u(" bibdata - solsort.com")].join(""), 
+              var K = c[9], p = c[8], L = c[10], T = c[2], fa = kh(T), P = R.j(K, fa), pe = ["related", P], ha = new S(null, 2, 5, L, pe, null), pa = Wc.j(p, ha), Ja = U, gb = "title creator date classification isbn lid related".split(" "), Ra = new S(null, 7, 5, Ja, gb, null), Na = Ee(pa, Ra), ub = [Xh, ii, Vh, Bj], vb = pa.h ? pa.h("title") : pa.call(null, "title"), Mb = A(vb), Bb = pa.h ? pa.h("creator") : pa.call(null, "creator"), Wb = q(Bb), hb = [u(Mb), u(" "), u(Wb), u(" bibdata - solsort.com")].join(""), 
               rc = ["body", ".spaceabove", "ul"], Mc = ["margin"], Nb = ["5%"], td = dd(Mc, Nb), Rd = ["margin-top"], qe = ["1ex"], Ne = dd(Rd, qe), Rf = ["margin-top"], $c = ["0"], Fn = dd(Rf, $c), Gn = [td, Ne, Fn], Hi = dd(rc, Gn), Ii = U, Hn = U, Nn = [ij, Ti], Hg = pa.h ? pa.h("type") : pa.call(null, "type"), In = Qq(Hg), Jn = ["itemscope", In], Kn = dd(Nn, Jn), Ln = [pi, Kn], Ji = new S(null, 2, 5, Hn, Ln, null), e = R.j(function() {
                 return function(a) {
                   return function(b) {
                     return Ya(Ya(Ya(uc, a), a.h ? a.h(b) : a.call(null, b)), b);
                   };
-                }(pa, Na, p, L, K, T, fa, P, pe, ha, pa, Ja, gb, Ra, Na, ub, vb, Mb, Bb, Wb, hb, rc, Mc, Nb, td, Rd, qe, Ne, Rf, $c, Fn, Gn, Hi, Ii, Hn, Nn, Hg, In, Jn, Kn, Ln, Ji, d, b);
+                }(pa, Na, K, p, L, T, fa, P, pe, ha, pa, Ja, gb, Ra, Na, ub, vb, Mb, Bb, Wb, hb, rc, Mc, Nb, td, Rd, qe, Ne, Rf, $c, Fn, Gn, Hi, Ii, Hn, Nn, Hg, In, Jn, Kn, Ln, Ji, d, b);
               }(), Na), e = R.j(Pq, e), e = un(e);
-              c[11] = hb;
-              c[12] = Ji;
-              c[13] = ub;
-              c[14] = Hi;
+              c[11] = Hi;
+              c[12] = ub;
+              c[13] = Ji;
+              c[14] = hb;
               c[15] = Ii;
               return Y(c, 7, e);
             }
-            return 7 === d ? (hb = c[11], Ji = c[12], ub = c[13], Hi = c[14], Ii = c[15], e = Fe(Ji, Ee(Ed, c[2])), e = dd(ub, ["html", hb, Hi, new S(null, 2, 5, Ii, [pi, e], null)]), sk(c, e)) : null;
+            return 7 === d ? (Hi = c[11], ub = c[12], Ji = c[13], hb = c[14], Ii = c[15], e = Fe(Ji, Ee(Ed, c[2])), e = dd(ub, ["html", hb, Hi, new S(null, 2, 5, Ii, [pi, e], null)]), sk(c, e)) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17097,11 +17097,11 @@ function Tq(a) {
             var c = b[1];
             if (1 === c) {
               var d = c = U, e = [qj], p = [[u("/bibdata/lid/"), u(a)].join("")], e = dd(e, p), d = new S(null, 3, 5, d, [wj, e, a], null), e = Mq(a);
-              b[7] = c;
-              b[8] = d;
+              b[7] = d;
+              b[8] = c;
               return Y(b, 2, e);
             }
-            return 2 === c ? (c = b[7], d = b[8], e = b[2], e = e.h ? e.h("title") : e.call(null, "title"), e = A(e), c = new S(null, 4, 5, c, [Ph, d, " ", e], null), sk(b, c)) : null;
+            return 2 === c ? (d = b[7], c = b[8], e = b[2], e = e.h ? e.h("title") : e.call(null, "title"), e = A(e), c = new S(null, 4, 5, c, [Ph, d, " ", e], null), sk(b, c)) : null;
           };
         }(b), b);
       }(), e = function() {
@@ -17173,11 +17173,11 @@ function Uq() {
               a[7] = b;
               a[8] = c;
               a[9] = p;
-              a[10] = m;
-              a[11] = d;
+              a[10] = d;
+              a[11] = m;
               return Y(a, 2, n);
             }
-            return 2 === b ? (b = a[7], c = a[8], p = a[9], m = a[10], d = a[11], p = Fe(p, a[2]), b = dd(b, ["html", " bibdata - solsort.com", c, new S(null, 5, 5, d, [pi, m, "Eksempler:", p, new S(null, 2, 5, U, [ki, "Eksemplerne er udvalgt som 1., 10., 100., 1.000., 10.000., 20.000., 30.000., 40.000., 50.000., 60.000., 70.000., 80.000., 90.000., og 100.000. mest popul\u00e6re bog."], null)], null)]), sk(a, b)) : null;
+            return 2 === b ? (b = a[7], c = a[8], p = a[9], d = a[10], m = a[11], p = Fe(p, a[2]), b = dd(b, ["html", " bibdata - solsort.com", c, new S(null, 5, 5, d, [pi, m, "Eksempler:", p, new S(null, 2, 5, U, [ki, "Eksemplerne er udvalgt som 1., 10., 100., 1.000., 10.000., 20.000., 30.000., 40.000., 50.000., 60.000., 70.000., 80.000., 90.000., og 100.000. mest popul\u00e6re bog."], null)], null)]), sk(a, b)) : null;
           };
         }(a), a);
       }(), d = function() {
