@@ -1,0 +1,35 @@
+{
+  "width": 1000,
+  "zoomWidth": 1000,
+  "zoomHeight": 447,
+  "height": 447,
+  "files": [
+{"normal":"http://samlinger.natmus.dk/DO/11006/image/1000/","zoom":"http://samlinger.natmus.dk/DO/11006/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10987/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10987/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10993/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10993/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10999/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10999/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/11005/image/1000/","zoom":"http://samlinger.natmus.dk/DO/11005/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10986/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10986/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10992/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10992/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10998/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10998/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/11004/image/1000/","zoom":"http://samlinger.natmus.dk/DO/11004/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10985/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10985/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10991/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10991/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10997/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10997/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/11003/image/1000/","zoom":"http://samlinger.natmus.dk/DO/11003/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10984/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10984/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10990/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10990/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10996/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10996/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/11002/image/1000/","zoom":"http://samlinger.natmus.dk/DO/11002/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10983/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10983/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10989/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10989/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10995/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10995/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/11001/image/1000/","zoom":"http://samlinger.natmus.dk/DO/11001/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/11007/image/1000/","zoom":"http://samlinger.natmus.dk/DO/11007/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10988/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10988/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/10994/image/1000/","zoom":"http://samlinger.natmus.dk/DO/10994/image/2000/"},
+{"normal":"http://samlinger.natmus.dk/DO/11000/image/1000/","zoom":"http://samlinger.natmus.dk/DO/11000/image/2000/"}
+  ],
+  "baseUrl": "testdata/"
+}
+
