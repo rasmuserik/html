@@ -10,3 +10,4 @@ How to install Piwik.html
 piwik/
 html
 /mysql*
+/apps
